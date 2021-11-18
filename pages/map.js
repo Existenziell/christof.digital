@@ -25,6 +25,7 @@ const MapComponent = () => {
       style: "mapbox://styles/mapbox/satellite-v9",
       // style: "mapbox://styles/mapbox/dark-v10",
       // style: "mapbox://styles/mapbox/streets-v11",
+      // style: "mapbox://styles/mapbox/navigation-night-v1",
       center: [9.565593, 39.124734],
       zoom: 1.5,
       // pitch: 45,
