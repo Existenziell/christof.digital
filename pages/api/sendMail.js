@@ -9,9 +9,18 @@ const sendMail = async (req, res) => {
     to: 'bauer.christof@gmail.com',
     from: 'love@christof.digital',
     subject: `Contact request from ${email}`,
-    text: message,
-    html: message
+    text: message
+    // html: message
   }
+
+  const {
+    classes: {
+      Mail,
+    },
+  } = require('@sendgrid/helpers');
+  const mail = Mail.create(msg);
+  const body = mail.toJSON();
+  console.log(JSON.stringify(body));
 
   try {
     await sgMail.send(msg)
