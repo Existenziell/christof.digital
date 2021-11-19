@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const Social = () => {
   return (
-    <div className="absolute right-12">
+    <div className="absolute right-12 top-4">
       <ul className="flex gap-4">
         <li>
           <Link href="https://github.com/Existenziell">

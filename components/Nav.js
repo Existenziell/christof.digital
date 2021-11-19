@@ -22,10 +22,10 @@ const Nav = () => {
     return (
         <>
             {/* Desktop menu */}
-            <ul className="hidden md:flex justify-between my-4 ml-8 w-max space-x-6">
+            <ul className="hidden md:flex justify-between items-center ml-4 w-max">
                 {links.map((l) => {
                     return (
-                        <li key={l.name}>
+                        <li key={l.name} className='hover:bg-brand hover:text-white transition-all p-4'>
                             <Link href={l.url}>
                                 <a className={`${router.pathname === l.url ? 'active-nav' : ''}`}>
                                     {l.name}
