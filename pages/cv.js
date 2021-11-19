@@ -26,7 +26,7 @@ const Curriculum = () => {
                   </a>
                 </Link>
               </p>
-              <p className='text-base mb-4 bg-gray-100 rounded px-6 py-4 max-w-max'>{desc}</p>
+              <p dangerouslySetInnerHTML={{ __html: desc }} className='text-base mb-4 bg-gray-100 rounded px-6 py-4 max-w-max'></p>
               <p>
                 <span>Skills/Tools:{' '}</span>
                 {skills.join(", ")}
