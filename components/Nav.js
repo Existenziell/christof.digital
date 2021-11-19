@@ -6,9 +6,10 @@ const Nav = () => {
     const router = useRouter()
     const links = [
         { name: "Main", url: "/" },
-        { name: "Contact", url: "/contact" },
+        { name: "Curriculum", url: "/cv" },
         { name: "Yoga", url: "/yoga" },
         { name: "Map", url: "/map" },
+        { name: "Contact", url: "/contact" },
     ]
 
     return (
