@@ -22,7 +22,6 @@ const Contact = () => {
             const res = await fetch("/api/sendMail", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                // Authorization: `Bearer ${process.env.NEXT_PUBLIC_MAIL_API_KEY}`,
                 body: JSON.stringify(formData)
             })
             res.ok ?
