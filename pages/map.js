@@ -52,6 +52,7 @@ const MapComponent = () => {
           href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
           rel="stylesheet"
         />
+        <meta name="description" content="Join me on a visual journey through my life | christof.digital | shift-happens" />
       </Head>
       <Nav />
       <div id="map" className="h-full w-full" />
