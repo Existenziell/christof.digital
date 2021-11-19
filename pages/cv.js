@@ -16,8 +16,8 @@ const Curriculum = () => {
             <li key={index} className='w-full shadow hover:shadow-md p-8 bg-white text-sm'>
               <p className='text-xs mb-3 italic'>{date} ({duration})</p>
               <p className='text-xl mb-3 text-brand'>{title} @ {company}</p>
-              <p className='mb-1'>Type: <span>{companyType}</span></p>
               <p className='mb-1'>Location: <span>{location}</span></p>
+              <p className='mb-1'>Type: <span>{companyType}</span></p>
               <p className='mb-4'>
                 <span>Latest project:{' '}</span>
                 <Link href={latestProject}>
