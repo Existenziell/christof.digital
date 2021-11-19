@@ -18,7 +18,7 @@ export default function Layout({ children, title }) {
       </Head>
       <Social />
       <Nav />
-      <main className="text-center w-screen px-16 pt-16 pb-32 bg-cloth-pattern bg-repeat">
+      <main className="text-center w-screen px-8 pt-16 pb-32 bg-cloth-pattern bg-repeat">
         {children}
       </main>
       <Footer />
