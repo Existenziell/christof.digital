@@ -17,7 +17,6 @@ const Contact = () => {
     const submitForm = async e => {
         e.preventDefault()
         setSending(true)
-        console.log(formData)
 
         try {
             await fetch("/api/sendMail", {
