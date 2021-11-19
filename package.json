@@ -7,11 +7,13 @@
   },
   "dependencies": {
     "@mapbox/mapbox-gl-geocoder": "^4.7.4",
+    "@sendgrid/mail": "^7.6.0",
     "mapbox-gl": "^2.6.0",
     "next": "latest",
     "nextjs-progressbar": "^0.0.13",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-spinners": "^0.11.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.6",

@@ -17,6 +17,18 @@ email: bauer.christof@gmail.com
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+	scroll-behavior: smooth;
+}
+
+::selection {
+  @apply text-brand bg-gray-100;
+}
+
+::-moz-selection {
+  @apply text-brand bg-gray-100;
+}
+
 .active-nav {
   @apply font-bold border-b-2 border-brand;
 }
@@ -68,4 +80,17 @@ textarea {
 
 .popup h1 {
   font-size: 20px;
+}
+
+
+
+/* ==========================================================================
+	Timeline
+	========================================================================== */
+
+.timeline a {
+  color: var(--color-brand);
+}
+.timeline a:hover {
+  text-decoration: underline;
 }

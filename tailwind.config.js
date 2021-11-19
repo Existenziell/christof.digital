@@ -15,6 +15,7 @@ module.exports = {
       },
       backgroundImage: {
         'cloth-pattern': "url('/icons/cloth.jpg')",
+        'chevron-pattern': "url('/icons/chevron.svg')",
       }
     },
   },
