@@ -1,7 +1,7 @@
-import sgMail from '@sendgrid/mail'
-
+// import sgMail from '@sendgrid/mail'
 
 const sendMail = async (req, res) => {
+  const sgMail = require('@sendgrid/mail');
   sgMail.setApiKey(process.env.NEXT_PUBLIC_MAIL_API_KEY);
 
   const { name, email, message } = req.body
@@ -12,15 +12,6 @@ const sendMail = async (req, res) => {
     text: message
     // html: message
   }
-
-  const {
-    classes: {
-      Mail,
-    },
-  } = require('@sendgrid/helpers');
-  const mail = Mail.create(msg);
-  const body = mail.toJSON();
-  console.log(JSON.stringify(body));
 
   try {
     await sgMail.send(msg)
