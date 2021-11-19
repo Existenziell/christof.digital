@@ -14,6 +14,7 @@ export default function Layout({ children, title }) {
         <title>
           {title ? `${title} | christof.digital` : `christof.digital`}
         </title>
+        <meta name="description" content="Join me on a journey through my life | christof.digital | shift-happens" />
       </Head>
       <Social />
       <Nav />
