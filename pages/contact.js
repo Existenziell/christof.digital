@@ -20,9 +20,9 @@ const Contact = () => {
 
         try {
             await fetch("/api/sendMail", {
-                "method": "POST",
-                "headers": { "content-type": "application/json" },
-                "body": JSON.stringify(formData)
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData)
             })
             Router.push("/success")
         } catch (error) {
