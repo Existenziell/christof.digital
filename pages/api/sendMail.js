@@ -16,6 +16,6 @@ export default async (req, res) => {
     await sgMail.send(msg)
     res.status(200).json({ message: `Email has been sent` })
   } catch (error) {
-    res.status(500).json({ error: 'Error sending email' })
+    res.status(500).json({ error: `Error sending email ${error.message}` })
   }
 }
