@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import Layout from '../components/Layout'
 import { curriculum as cv } from '../lib/curriculum'
 
@@ -37,7 +38,7 @@ const Curriculum = () => {
       </ul>
 
       <h2 className='text-xl mb-4 mt-16'>Education:</h2>
-      <div className='w-full shadow hover:shadow-md p-8 bg-white text-sm text-left'>
+      <div className='w-full shadow hover:shadow-md p-8 bg-white text-sm text-left mb-8'>
         <p className='text-xs mb-3 italic'>2001 - 2006</p>
         <p className='text-xl mb-3 text-brand'>Master of Computer Science @ Hochschule Karlsruhe - Technik und Wirtschaft</p>
         <p className='mb-1'>Location: <span>Karlsruhe, Germany</span></p>
@@ -49,6 +50,21 @@ const Curriculum = () => {
         </ul>
       </div>
 
+      <div className='w-full shadow hover:shadow-md p-8 bg-white text-sm text-left mb-8'>
+        <p className='text-xs mb-3 italic'>Jun 2018</p>
+        <p className='text-xl mb-3 text-brand'>Yoga Instructor Certification - Level I</p>
+        <p className='mb-1'>Location: <span>Koh Phangan, Thailand</span></p>
+        <p className='mb-4'>Duration: <span>4 weeks</span></p>
+        <Image src="/icons/ryt-200.png" width={100} height={100} alt="Yoga Alliance Logo" />
+      </div>
+
+      <div className='w-full shadow hover:shadow-md p-8 bg-white text-sm text-left'>
+        <p className='text-xs mb-3 italic'>Jun 2019</p>
+        <p className='text-xl mb-3 text-brand'>Yoga Instructor Certification - Level II</p>
+        <p className='mb-1'>Location: <span>Mysuru, Karnataka, India</span></p>
+        <p className='mb-4'>Duration: <span>6 weeks</span></p>
+        <Image src="/icons/ryt-500.png" width={100} height={100} alt="Yoga Alliance Logo" />
+      </div>
     </div>
   )
 }
