@@ -37,7 +37,7 @@ const Nav = () => {
 
             {/* Mobile Hamburger Button */}
             <div className="flex md:hidden justify-between my-3 ml-8 w-max space-x-6">
-                <button className="outline-none mobile-menu-button" onClick={toggleNav}>
+                <button className="outline-none mobile-menu-button" onClick={toggleNav} aria-label="Open Mobile Navigation">
                     <svg
                         className="w-8 h-8 hover:text-brand text-gray-500"
                         fill="none"

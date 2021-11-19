@@ -53,7 +53,7 @@ const Contact = () => {
                                 <PacmanLoader color={"var(--color-brand)"} size={30} />
                             </div>
                             :
-                            <input type="submit" className='button'></input>
+                            <input type="submit" className='button' aria-label="Send Contact Form"></input>
                     }
                 </form>
             </div>
