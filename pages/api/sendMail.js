@@ -6,10 +6,10 @@ export default async (req, res) => {
   const { name, email, message } = req.body
   const msg = {
     to: 'bauer.christof@gmail.com',
-    from: "bauer.christof@gmail.com",
+    from: 'love@christof.digital',
     subject: `Contact request from ${email}`,
-    name,
     text: message,
+    html: message
   }
 
   try {
