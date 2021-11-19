@@ -1,8 +1,9 @@
 import sgMail from '@sendgrid/mail'
 
-sgMail.setApiKey(process.env.NEXT_PUBLIC_MAIL_API_KEY);
 
 const sendMail = async (req, res) => {
+  sgMail.setApiKey(process.env.NEXT_PUBLIC_MAIL_API_KEY);
+
   const { name, email, message } = req.body
   const msg = {
     to: 'bauer.christof@gmail.com',
