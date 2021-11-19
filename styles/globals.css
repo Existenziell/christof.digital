@@ -45,7 +45,11 @@ textarea {
   @apply bg-brand px-8 py-4 w-48 text-white rounded shadow-2xl hover:shadow transition-all my-8 hover:cursor-pointer
 }
 
-/* Mapbox fix  */
+
+/* ==========================================================================
+	Map overrides
+	========================================================================== */
+
 .mapboxgl-canvas {
   position: absolute;
   top: 0;
@@ -54,10 +58,6 @@ textarea {
   width: 100%;
   height: 100%;
 }
-
-/* ==========================================================================
-	Map overrides
-	========================================================================== */
 
 .mapboxgl-popup {
 	text-align: left;
