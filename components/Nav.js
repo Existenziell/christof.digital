@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import { useEffect } from 'react'
 
 const Nav = () => {
 
@@ -13,15 +12,11 @@ const Nav = () => {
         { name: "Contact", url: "/contact" },
     ]
 
-    useEffect(() => {
-        const btn = document.querySelector("button.mobile-menu-button");
-        const menu = document.querySelector(".mobile-menu");
-
-        btn.addEventListener("click", () => {
-            menu.classList.toggle("hidden");
-        });
-    }, [])
-
+    const toggleNav = (e) => {
+        e.preventDefault()
+        const menu = document.querySelector(".mobile-menu")
+        menu.classList.toggle("hidden")
+    }
 
     return (
         <>
@@ -41,15 +36,14 @@ const Nav = () => {
             </ul>
 
             {/* Mobile Hamburger Button */}
-            <div class="flex md:hidden justify-between my-3 ml-8 w-max space-x-6">
-                <button class="outline-none mobile-menu-button">
+            <div className="flex md:hidden justify-between my-3 ml-8 w-max space-x-6">
+                <button className="outline-none mobile-menu-button" onClick={toggleNav}>
                     <svg
-                        class="w-8 h-8 hover:text-brand text-gray-500"
-                        x-show="!showMenu"
+                        className="w-8 h-8 hover:text-brand text-gray-500"
                         fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
                     >
@@ -59,7 +53,7 @@ const Nav = () => {
             </div>
 
             {/* Mobile menu */}
-            <ul class="hidden mobile-menu ml-8 mb-8">
+            <ul className="hidden mobile-menu ml-8 mb-8">
                 {links.map((l) => {
                     return (
                         <li key={l.name} className='block text-base px-2 py-2 hover:bg-brand hover:text-white transition duration-300'>
