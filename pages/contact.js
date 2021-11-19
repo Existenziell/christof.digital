@@ -19,13 +19,16 @@ const Contact = () => {
         setSending(true)
 
         try {
-            await fetch("/api/sendMail", {
+            const res = await fetch("/api/sendMail", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 // Authorization: `Bearer ${process.env.NEXT_PUBLIC_MAIL_API_KEY}`,
                 body: JSON.stringify(formData)
             })
-            Router.push("/success")
+            res.ok ?
+                Router.push("/success")
+                :
+                setErrorMsg(`Sorry, an error occured: ${res.statusText}`)
         } catch (error) {
             setErrorMsg("Sorry, an error occured. Have you tried turning it off and on again?")
         }
