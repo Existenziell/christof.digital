@@ -5,7 +5,7 @@ import { timeline } from '../lib/timeline'
 const Timeline = () => {
 
   return (
-    <section className='timeline bg-cloth-pattern bg-repeat'>
+    <section className='timeline bg-cloth-pattern bg-repeat dark:bg-cloth-pattern-dark'>
       <h2 className='text-3xl mb-2'>The Timeline</h2>
       <p className='mb-16'>Join me on the journey, as Yoga became part of me.</p>
 
@@ -14,7 +14,7 @@ const Timeline = () => {
           const { id, image, date, name, subname, description, mapOnly } = feature.properties
           if (!mapOnly) {
             return (
-              <li key={index} className={`shadow-xl mb-16 bg-white sm:w-4/5 relative ${index % 2 === 0 && `ml-auto`}`}>
+              <li key={index} className={`shadow-xl mb-16 bg-white sm:w-4/5 relative rounded-md ${index % 2 === 0 && `ml-auto`} dark:bg-black dark:text-gray-300`}>
                 <div>
                   <Image
                     src={`/timeline/${image}.jpg`}

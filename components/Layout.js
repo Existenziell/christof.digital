@@ -16,9 +16,11 @@ export default function Layout({ children, title }) {
         </title>
         <meta name="description" content="Join me on a journey through my life | christof.digital | shift-happens" />
       </Head>
-      <Social />
-      <Nav />
-      <main className="w-full px-8 pt-16 pb-32 text-center bg-cloth-pattern bg-repeat">
+      <div className='dark:bg-black h-full'>
+        <Social />
+        <Nav />
+      </div>
+      <main className="w-full px-8 pt-16 pb-32 text-center bg-cloth-pattern bg-repeat dark:bg-cloth-pattern-dark dark:text-gray-300">
         {children}
       </main>
       <Footer />

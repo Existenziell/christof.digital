@@ -1,7 +1,7 @@
 module.exports = {
   mode: 'jit',
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: "media", // or 'media' or 'class'
   theme: {
     extend: {
       fontFamily: {
@@ -11,10 +11,11 @@ module.exports = {
         ],
       },
       colors: {
-        'brand': '#8F00FF',
+        'brand': '#5D3FD3',
       },
       backgroundImage: {
         'cloth-pattern': "url('/icons/cloth.jpg')",
+        'cloth-pattern-dark': "url('/icons/cloth-dark.jpg')",
         'chevron-pattern': "url('/icons/chevron.svg')",
       }
     },

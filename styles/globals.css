@@ -10,7 +10,7 @@ email: bauer.christof@gmail.com
 @import url("https://fonts.googleapis.com/css?family=Gotu&display=swap");
 
 :root {
-  --color-brand: #8F00FF;
+  --color-brand: #5D3FD3;
 }
 
 @tailwind base;
@@ -38,7 +38,7 @@ html, body {
 }
 
 .active-nav {
-  @apply font-bold border-b-2 border-brand;
+  @apply font-bold border-b-2 border-brand dark:bg-brand;
 }
 
 .mobile-menu .active-nav {
@@ -46,15 +46,22 @@ html, body {
 }
 
 input {
- @apply px-4 py-2 border focus:outline-none focus:ring-1 focus:ring-brand text-brand;
+  @apply px-4 py-2 
+    border focus:outline-none focus:ring-1 focus:ring-brand text-brand 
+    dark:bg-black dark:text-gray-300 dark:border-brand;
 }
 
 textarea {
-  @apply px-4 py-2 border focus:outline-none focus:ring-1 focus:ring-brand text-brand;
+  @apply px-4 py-2 
+    border focus:outline-none focus:ring-1 focus:ring-brand text-brand 
+    dark:bg-black dark:text-gray-300 dark:border-brand;
 }
 
 .button {
-  @apply bg-brand px-8 py-4 w-48 text-white rounded shadow-2xl hover:shadow transition-all my-8 hover:cursor-pointer
+  @apply w-48 my-8 px-8 py-4 
+  bg-brand text-white rounded shadow-2xl
+    hover:shadow hover:cursor-pointer
+    transition-all
 }
 
 
@@ -93,7 +100,6 @@ textarea {
 .popup h1 {
   font-size: 20px;
 }
-
 
 
 /* ==========================================================================
