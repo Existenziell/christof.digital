@@ -5,7 +5,7 @@ import Link from 'next/link'
 const Nav = () => {
 
     const links = [
-        { name: "Main", url: "/" },
+        { name: "Root", url: "/" },
         { name: "Coding", url: "/coding" },
         { name: "Curriculum", url: "/cv" },
         { name: "Yoga", url: "/yoga" },
@@ -31,7 +31,7 @@ const Nav = () => {
                             <a
                                 href={l.url}
                                 onClick={intercept}
-                                className={`${router.pathname === l.url ? 'active-nav' : 'border-b-2 dark:border-brand'} hover:bg-brand hover:text-white transition-all p-4 block`}>
+                                className={`${router.pathname === l.url ? 'active-nav' : 'border-b-2 border-white dark:border-brand'} hover:bg-brand hover:text-white transition-all p-4 block`}>
 
                                 {l.name}
                             </a>

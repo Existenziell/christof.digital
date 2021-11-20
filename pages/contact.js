@@ -37,11 +37,17 @@ const Contact = () => {
         <div className="flex flex-col items-center justify-content text-center w-full">
             <h1 className="text-2xl mb-8">Write me something nice :)</h1>
 
+            <p className='bg-white px-8 py-5 lg:w-1/2 rounded dark:bg-gray-300 dark:text-black leading-relaxed'>
+                I'm excited to hear from you!<br />
+                Please, feel free to write in your own language.<br />
+                Languages I understand without Google Translate are:<br />
+                English, Deutsch, Français, Español, Catalán and नेपाली (well, the basics ッ).
+            </p>
             <div className="p-12 mt-6 shadow w-full lg:w-2/3 bg-white dark:bg-black dark:text-gray-300">
                 <form onSubmit={submitForm} className="flex flex-col space-y-6 ">
-                    <input type="text" name="name" placeholder="Your Name" onChange={setData} required></input>
-                    <input type="email" name="email" placeholder="Your Email" onChange={setData} required></input>
-                    <textarea placeholder="Your Message" name="message" onChange={setData} rows="10" required></textarea>
+                    <input type="text" name="name" placeholder="Name" onChange={setData} required></input>
+                    <input type="email" name="email" placeholder="Email" onChange={setData} required></input>
+                    <textarea placeholder="I am no robot..." name="message" onChange={setData} rows="10" required></textarea>
 
                     {errorMsg ?
                         <div className='text-left bg-red-700 text-white p-4'>

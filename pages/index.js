@@ -1,5 +1,6 @@
 import Layout from '../components/Layout'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Index() {
   return (
@@ -9,9 +10,18 @@ export default function Index() {
       </div>
       <div className="mt-16 flex flex-col gap-8">
         <h1 className="text-4xl">Welcome &#x2661;</h1>
-        <p>Hi, I am Christof.
-          You have come to the right place.
-        </p>
+        <p>Hi, I am Christof.<br />You have come to the right place.</p>
+        <div>
+          <h2>Let's find out what I can do for you!</h2>
+          <p>You most probably came here for one of the following reasons:</p>
+          <ul className='mt-4 flex flex-col gap-2'>
+            <li><Link href="/coding"><a className='link'>Development (Web, Mobile, Blockchain)</a></Link></li>
+            <li><Link href="/cv"><a className='link'>My Curriculum Vitae</a></Link></li>
+            <li><Link href="/yoga"><a className='link'>Yoga (shift_happens?)</a></Link></li>
+          </ul>
+        </div>
+
+
       </div>
     </div>
   )
