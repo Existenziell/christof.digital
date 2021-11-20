@@ -19,14 +19,18 @@ const Curriculum = () => {
               <p className='text-xl mb-3 text-brand'>{title} @ {company}</p>
               <p className='mb-1'>Location: <span>{location}</span></p>
               <p className='mb-1'>Type: <span>{companyType}</span></p>
-              <p className='mb-4'>
+              <div className='mb-4'>
                 <span>Latest project:{' '}</span>
-                <Link href={latestProject}>
-                  <a target="_blank" rel='noopener noreferrer nofollow' className='link'>
-                    {latestProject}
-                  </a>
-                </Link>
-              </p>
+                {latestProject.startsWith("http") ?
+                  <Link href={latestProject}>
+                    <a target="_blank" rel='noopener noreferrer nofollow' className='link'>
+                      {latestProject}
+                    </a>
+                  </Link>
+                  :
+                  <span>{latestProject}</span>
+                }
+              </div>
               <p dangerouslySetInnerHTML={{ __html: desc }} className='text-base mb-4 bg-gray-100 rounded px-6 py-4 max-w-max'></p>
               <p>
                 <span>Skills/Tools:{' '}</span>
