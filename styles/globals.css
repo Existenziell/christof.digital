@@ -29,8 +29,20 @@ html, body {
   @apply text-brand bg-gray-100;
 }
 
+.link {
+  @apply text-brand;
+}
+
+.link:hover {
+  @apply text-brand underline;
+}
+
 .active-nav {
   @apply font-bold border-b-2 border-brand;
+}
+
+.mobile-menu .active-nav {
+  @apply font-bold bg-brand text-white border-b-0;
 }
 
 input {

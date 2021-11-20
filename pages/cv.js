@@ -22,7 +22,7 @@ const Curriculum = () => {
               <p className='mb-4'>
                 <span>Latest project:{' '}</span>
                 <Link href={latestProject}>
-                  <a target="_blank" rel='noopener noreferrer nofollow' className='hover:underline hover:text-brand'>
+                  <a target="_blank" rel='noopener noreferrer nofollow' className='link'>
                     {latestProject}
                   </a>
                 </Link>

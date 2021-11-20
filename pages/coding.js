@@ -16,25 +16,26 @@ const Coding = () => {
     <div className="items-center justify-content text-left w-full">
       <h1 className="text-4xl mb-8 text-center">I love Code!</h1>
 
-      <SyntaxHighlighter language="javascript" style={darcula} showLineNumbers={true}>
-        {code}
-      </SyntaxHighlighter>
-
-      <p className='mt-8 md:w-1/2'>
-        I have been developing Code since the year 2000.
-        Web-Development especially has been changing so much over the years, it has been and still is a pleasure to witness all of this.
-        Having worked mostly in the backend for years (PHP, Ruby on Rails, Java, nodeJS, ...) I later went Fullstack JavaScript and nowadays this distinction is rarely made any more.
-        Modern tooling and build chains are just amazing and make me enjoy development even more today.<br />
-        Current stack: NextJS, TailwindCSS, Vercel, JAM Stack mostly.
-      </p>
-      <p className='mt-8 md:w-1/2'>
-        Recently I also ventured into the realms of the Blockchain, what a time to be alive! Web3 is just amazing and the pace of evolution absolutely breathtaking.
-        Current stack: Solidity, HardHat, ethers.js for smart contracts – NextJS, TailwindCSS, Vercel for the dApp.
-      </p>
-      <div className='mt-8'>
-        <h2 className='text-xl mb-2'>Further resources:</h2>
-        <Link href="/cv"><a>Curriculum Vitae</a></Link><br />
-        <Link href="/contact"><a>Contact me</a></Link>
+      <div className='md:w-1/2 md:mx-auto'>
+        <SyntaxHighlighter language="javascript" style={darcula} showLineNumbers={true}>
+          {code}
+        </SyntaxHighlighter>
+        <p className='mt-8'>
+          I have been developing Code since the year 2000.
+          Web-Development especially has been changing so much over the years, it has been and still is a pleasure to witness all of this.
+          Having worked mostly in the backend for years (PHP, Ruby on Rails, Java, nodeJS, ...) I later went Fullstack JavaScript and nowadays this distinction is rarely made any more.
+          Modern tooling and build chains are just amazing and make me enjoy development even more today.
+          <span className='text-sm block mt-2'>Current stack: NextJS, TailwindCSS, Vercel, JAM Stack mostly.</span>
+        </p>
+        <p className='mt-8'>
+          Recently I also ventured into the realms of the Blockchain, what a time to be alive! Web3 is just amazing and the pace of evolution absolutely breathtaking. The possibilities...!
+          <span className='text-sm block mt-2'>Current stack: Solidity, HardHat, ethers.js for smart contracts – NextJS, TailwindCSS, Vercel for the dApp.</span>
+        </p>
+        <div className='mt-8'>
+          <h2 className='text-xl mb-2'>Further resources:</h2>
+          <Link href="/cv"><a className='link'>Curriculum Vitae</a></Link><br />
+          <Link href="/contact"><a className='link'>Contact me</a></Link>
+        </div>
       </div>
 
     </div>
