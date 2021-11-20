@@ -9,13 +9,12 @@ const Timeline = () => {
       <h2 className='text-3xl mb-2'>The Timeline</h2>
       <p className='mb-16'>Join me on the journey, as Yoga became part of me.</p>
 
-      <ul className='text-left w-screen px-8'>
+      <ul className='text-left w-full'>
         {timeline.features.map((feature, index) => {
           const { id, image, date, name, subname, description, mapOnly } = feature.properties
           if (!mapOnly) {
             return (
               <li key={index} className={`shadow-xl mb-16 bg-white sm:w-4/5 relative ${index % 2 === 0 && `ml-auto`}`}>
-                {/* <div className={`absolute h-full w-8 bg-chevron-pattern overflow-hidden bg-repeat ${index % 2 === 0 ? `-left-24` : `-right-24`}`}></div> */}
                 <div>
                   <Image
                     src={`/timeline/${image}.jpg`}
@@ -38,7 +37,7 @@ const Timeline = () => {
         })}
       </ul>
 
-      <div className='flex flex-col items-center justify-center pb-32 text-center'>
+      <div className='flex flex-col items-center justify-center text-center'>
         <h1>Congratulations, you made it all the way here!</h1>
         <h2>I hope you enjoyed the ride :)</h2>
         <a href="#top" aria-label="Scroll back up">

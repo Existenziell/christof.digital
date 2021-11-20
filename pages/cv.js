@@ -10,7 +10,7 @@ const Curriculum = () => {
       <h1 className='text-4xl mb-8'>Curriculum Vitae</h1>
       <h2 className='text-xl mb-4'>Experiences:</h2>
 
-      <ul className='flex flex-col space-y-8 justify-center items-start w-full text-left'>
+      <ul className='flex flex-col space-y-8 justify-center items-start w-full text-left lg:w-2/3 lg:mx-auto'>
         {cv.map((job, index) => {
           const { company, title, companyType, date, duration, location, desc, latestProject, skills } = job
           return (

@@ -16,7 +16,7 @@ const Coding = () => {
     <div className="items-center justify-content text-left w-full">
       <h1 className="text-4xl mb-8 text-center">I love Code!</h1>
 
-      <div className='md:w-1/2 md:mx-auto'>
+      <div className='lg:w-2/3 lg:mx-auto'>
         <SyntaxHighlighter language="javascript" style={darcula} showLineNumbers={true}>
           {code}
         </SyntaxHighlighter>
