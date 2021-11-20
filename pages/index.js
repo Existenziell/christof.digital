@@ -4,7 +4,14 @@ import Link from 'next/link'
 
 export default function Index() {
   return (
-    <div className='h-screen'>
+    <div className='h-screen relative'>
+
+      <Link href="http://app.christof.digital">
+        <a className='absolute -top-12 right-0 block px-4 py-3 text-sm border-black border border-dashed hover:bg-brand hover:text-white hover:font-extrabold transition-all'>
+          Launch App
+        </a>
+      </Link>
+
       <div className='dark:bg-gray-300 rounded p-6'>
         <Image src="/icons/logo.png" width={600} height={329} alt="Logo" />
       </div>
@@ -20,7 +27,6 @@ export default function Index() {
             <li><Link href="/yoga"><a className='link'>Yoga (shift_happens?)</a></Link></li>
           </ul>
         </div>
-
 
       </div>
     </div>
