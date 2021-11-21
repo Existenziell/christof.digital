@@ -33,7 +33,7 @@ const Curriculum = () => {
                 {skills.join(", ")}
               </p>
 
-              <div>
+              <div className='overflow-hidden'>
                 {!!latestProject && (
                   <>
                     <span>Latest project:{' '}</span>
