@@ -12,30 +12,44 @@ const Curriculum = () => {
 
       <ul className='flex flex-col space-y-8 justify-center items-start w-full text-left lg:w-2/3 lg:mx-auto'>
         {cv.map((job, index) => {
-          const { company, title, companyType, date, duration, location, desc, latestProject, skills } = job
+          const { title, company, companyUrl, companyType, date, duration, location, desc, latestProject, skills } = job
           return (
-            <li key={index} className='w-full shadow hover:shadow-md p-8 bg-white dark:bg-black text-sm'>
-              <p className='text-xs mb-3 italic'>{date} ({duration})</p>
-              <p className='text-xl mb-3 text-brand'>{title} @ {company}</p>
-              <p className='mb-1'>Location: <span>{location}</span></p>
-              <p className='mb-1'>Type: <span>{companyType}</span></p>
-              <div className='mb-4'>
-                <span>Latest project:{' '}</span>
-                {latestProject.startsWith("http") ?
-                  <Link href={latestProject}>
-                    <a target="_blank" rel='noopener noreferrer nofollow' className='link'>
-                      {latestProject}
-                    </a>
-                  </Link>
-                  :
-                  <span>{latestProject}</span>
+            <li key={index} className='w-full shadow hover:shadow-md px-8 py-6 bg-white dark:bg-black text-sm'>
+              <p className='text-xs mb-3 w-max ml-auto'>{date} ({duration})</p>
+              <p className='text-xl mb-3 bg-brand text-white p-3 px-4 rounded-t-md'>{title}</p>
+              <p className='mb-1'>Company:{' '}
+                {companyUrl
+                  ? <Link href={companyUrl}><a target="_blank" className='link'>{company}</a></Link>
+                  : <span>{company}</span>
                 }
-              </div>
-              <p dangerouslySetInnerHTML={{ __html: desc }} className='text-base mb-4 bg-gray-100 rounded px-6 py-4 max-w-max dark:bg-gray-300 dark:text-black'></p>
-              <p>
+              </p>
+              <p className='mb-1'>Location: <span>{location}</span></p>
+              <p className='mb-4'>Type: <span>{companyType}</span></p>
+              <p dangerouslySetInnerHTML={{ __html: desc }}
+                className='text-base mb-4 bg-gray-100 rounded px-4 py-3 max-w-max dark:bg-gray-300 dark:text-black'>
+              </p>
+              <p className='mb-1'>
                 <span>Skills/Tools:{' '}</span>
                 {skills.join(", ")}
               </p>
+
+              <div>
+                {!!latestProject && (
+                  <>
+                    <span>Latest project:{' '}</span>
+                    {latestProject.startsWith("http") ?
+                      <Link href={latestProject}>
+                        <a target="_blank" rel='noopener noreferrer nofollow' className='link'>
+                          {latestProject}
+                        </a>
+                      </Link>
+                      :
+                      <span>{latestProject}</span>
+                    }
+                  </>
+                )}
+              </div>
+
             </li>
           )
         })}
@@ -45,12 +59,12 @@ const Curriculum = () => {
       <div className='w-full shadow hover:shadow-md p-8 bg-white text-sm text-left mb-8 lg:w-2/3 lg:mx-auto dark:bg-black dark:text-gray-300'>
         <p className='text-xs mb-3 italic'>2001 - 2006</p>
         <p className='text-xl mb-3 text-brand'>Master of Computer Science</p>
-        <p className='mb-1'>School: <a href="https://www.h-ka.de/" target="_blank" rel="noreferrer nofollow" className='link'>Hochschule Karlsruhe - Technik und Wirtschaft</a></p>
+        <p className='mb-1'>School: <a href="https://www.h-ka.de/" target="_blank" rel="noreferrer nofollow" className='link'>Hochschule Karlsruhe - University of Applied Sciences (HKA)</a></p>
         <p className='mb-1'>Location: <span>Karlsruhe, Germany</span></p>
         <p className='mb-4'>Duration: <span>6 years</span></p>
         <ul>
           <li>Certificate in Business and Technical French (2003)</li>
-          <li>Foundation Certificate in IT Service Management (2007)</li>
+          <li>Foundation Certificate in IT Service Management ITIL v3 (2007)</li>
           <li>Google Advertising Professional Certificate (2007)</li>
         </ul>
       </div>

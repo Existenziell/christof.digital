@@ -27,7 +27,11 @@ export default function Index() {
             <li><Link href="/yoga"><a className='link'>Yoga (shift_happens?)</a></Link></li>
           </ul>
         </div>
-
+        <p>
+          If not, please have a look around or{' '}
+          <Link href="/contact"><a className='link'>contact me</a></Link>
+          {' '}directly.
+        </p>
       </div>
     </div>
   )

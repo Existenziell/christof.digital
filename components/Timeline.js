@@ -26,7 +26,7 @@ const Timeline = () => {
                 </div>
                 <div className={`absolute top-0 text-white bg-black p-2 ${index % 2 === 0 ? `right-0` : `left-0`}`}>{date}</div>
                 <div className="p-4">
-                  <h3 className='text-xl'>{name}</h3>
+                  <h3 className='text-2xl text-brand'>{name}</h3>
                   <h4 className='text-sm mb-6'>{subname}</h4>
                   <p dangerouslySetInnerHTML={{ __html: description }}></p>
                 </div>

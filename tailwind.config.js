@@ -11,7 +11,7 @@ module.exports = {
         ],
       },
       colors: {
-        'brand': '#5D3FD3',
+        'brand': '#C90076',
       },
       backgroundImage: {
         'cloth-pattern': "url('/icons/cloth.jpg')",
