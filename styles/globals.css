@@ -17,6 +17,11 @@ email: bauer.christof@gmail.com
 @tailwind components;
 @tailwind utilities;
 
+
+/* ==========================================================================
+	General overrides and utilities
+	========================================================================== */
+
 html, body {
 	scroll-behavior: smooth;
 }
@@ -37,6 +42,10 @@ html, body {
   @apply text-brand underline;
 }
 
+/* ==========================================================================
+	Navigation
+	========================================================================== */
+
 .active-nav {
   @apply font-bold border-b-2 border-brand dark:bg-brand;
 }
@@ -44,6 +53,11 @@ html, body {
 .mobile-menu .active-nav {
   @apply font-bold bg-brand text-white border-b-0;
 }
+
+
+/* ==========================================================================
+	Forms 
+	========================================================================== */
 
 input {
   @apply px-4 py-2 
@@ -66,49 +80,50 @@ textarea {
 
 
 /* ==========================================================================
-	Map overrides
-	========================================================================== */
-
-.mapboxgl-canvas {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.mapboxgl-popup {
-	text-align: left;
-	min-width: 50%;
-	overflow: hidden;
-}
-
-.mapboxgl-popup-content {
-	padding: 12px 18px !important;
-}
-
-.mapboxgl-popup-close-button {
-	font-size: 22px;
-	padding: 5px 10px;
-}
-
-.popup p {
-	font-size: 14px;
-}
-
-.popup h1 {
-  font-size: 20px;
-}
-
-
-/* ==========================================================================
 	Timeline
 	========================================================================== */
 
 .timeline a {
   color: var(--color-brand);
 }
+
 .timeline a:hover {
   text-decoration: underline;
+}
+
+
+/* ==========================================================================
+	Mapbox overrides
+	========================================================================== */
+
+.mapboxgl-canvas {
+  @apply absolute top-0 bottom-0 left-0 w-full h-full;
+}
+
+.mapboxgl-popup {
+  @apply text-left min-w-3/4 lg:min-w-1/2 overflow-hidden; 
+}
+
+.mapboxgl-popup-content div {
+  @apply text-sm px-4 py-5 shadow font-sans;
+}
+
+.mapboxgl-popup-content span {
+  @apply text-xs;
+}
+
+.mapboxgl-popup-content h1 {
+  @apply text-2xl leading-7 my-3;
+}
+
+.mapboxgl-popup-content h2 {
+  @apply mt-6 mb-1 text-lg text-brand font-bold;
+}
+
+.mapboxgl-popup-content img {
+  @apply w-full shadow-lg;
+}
+
+.mapboxgl-popup-close-button {
+  @apply text-3xl px-4 py-1;
 }

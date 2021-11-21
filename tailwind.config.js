@@ -17,8 +17,13 @@ module.exports = {
         'cloth-pattern': "url('/icons/cloth.jpg')",
         'cloth-pattern-dark': "url('/icons/cloth-dark.jpg')",
         'chevron-pattern': "url('/icons/chevron.svg')",
-      }
-    },
+      },
+      minWidth: {
+        '1/4': '25%',
+        '1/2': '50%',
+        '3/4': '75%',
+      },
+    }
   },
   variants: {
     extend: {},
