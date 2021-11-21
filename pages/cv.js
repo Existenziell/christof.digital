@@ -14,7 +14,7 @@ const Curriculum = () => {
         {cv.map((job, index) => {
           const { title, company, companyUrl, companyType, date, duration, location, desc, latestProject, skills } = job
           return (
-            <li key={index} className='w-full shadow hover:shadow-md px-8 py-6 bg-white dark:bg-black text-sm'>
+            <li key={index} className='w-full shadow hover:shadow-md px-4 sm:px-8 py-6 bg-white dark:bg-black text-sm'>
               <p className='text-xs mb-3 w-max ml-auto'>{date} ({duration})</p>
               <p className='text-xl mb-3 bg-brand text-white p-3 px-4 rounded-t-md'>{title}</p>
               <p className='mb-1'>Company:{' '}

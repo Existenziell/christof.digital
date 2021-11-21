@@ -43,7 +43,7 @@ const Contact = () => {
                 Languages I understand without Google Translate are:<br />
                 English, Deutsch, Français, Español, Catalán and नेपाली (well, the basics ッ).
             </p>
-            <div className="p-12 mt-6 shadow w-full lg:w-2/3 bg-white dark:bg-black dark:text-gray-300">
+            <div className="p-4 sm:p-12 mt-6 shadow w-full lg:w-2/3 bg-white dark:bg-black dark:text-gray-300">
                 <form onSubmit={submitForm} className="flex flex-col space-y-6 ">
                     <input type="text" name="name" placeholder="Name" onChange={setData} required></input>
                     <input type="email" name="email" placeholder="Email" onChange={setData} required></input>

@@ -20,7 +20,7 @@ export default function Layout({ children, title }) {
         <Social />
         <Nav />
       </div>
-      <main className="w-full px-8 pt-16 pb-32 text-center bg-cloth-pattern bg-repeat dark:bg-cloth-pattern-dark dark:text-gray-300">
+      <main className="w-full px-4 sm:px-8 pt-16 pb-32 text-center bg-cloth-pattern bg-repeat dark:bg-cloth-pattern-dark dark:text-gray-300">
         {children}
       </main>
       <Footer />
