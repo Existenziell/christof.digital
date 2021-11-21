@@ -38,7 +38,7 @@ const Contact = () => {
             <h1 className="text-2xl mb-8">Write me something nice :)</h1>
 
             <p className='bg-white px-8 py-5 lg:w-1/2 rounded dark:bg-gray-300 dark:text-black leading-relaxed'>
-                I'm excited to hear from you!<br />
+                I am excited to hear from you!<br />
                 Please, feel free to write in your own language.<br />
                 Languages I understand without Google Translate are:<br />
                 English, Deutsch, Français, Español, Catalán and नेपाली (well, the basics ッ).
