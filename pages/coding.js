@@ -29,12 +29,12 @@ const Coding = () => {
         </p>
         <p className='mt-8'>
           Recently I also ventured into the realms of the Blockchain, what a time to be alive! Web3 is just amazing and the pace of evolution absolutely breathtaking. The possibilities...!
-          <span className='text-sm block mt-2'>Current stack: Solidity, HardHat, ethers.js for smart contracts – NextJS, TailwindCSS, Vercel for the dApp.</span>
         </p>
         <div className='mt-8'>
           <h2 className='text-xl mb-2'>Further resources:</h2>
           <Link href="/cv"><a className='link'>Curriculum Vitae</a></Link><br />
-          <Link href="/contact"><a className='link'>Contact me</a></Link>
+          <Link href="/contact"><a className='link'>Contact me</a></Link><br />
+          <Link href="https://github.com/Existenziell"><a className='link' target="_blank">Github</a></Link>
         </div>
       </div>
 

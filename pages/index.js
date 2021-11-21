@@ -20,7 +20,7 @@ export default function Index() {
         <p>Hi, I am Christof.<br />You have come to the right place.</p>
         <div>
           <h2>Let&apos;s find out what I can do for you!</h2>
-          <p>You most probably came here for one of the following reasons:</p>
+          <p>Perhaps you came here for one of the following reasons?</p>
           <ul className='mt-4 flex flex-col gap-2'>
             <li><Link href="/coding"><a className='link'>Development (Web, Mobile, Blockchain)</a></Link></li>
             <li><Link href="/cv"><a className='link'>My Curriculum Vitae</a></Link></li>
@@ -28,7 +28,7 @@ export default function Index() {
           </ul>
         </div>
         <p>
-          If not, please have a look around or{' '}
+          If not, please feel at home and/or{' '}
           <Link href="/contact"><a className='link'>contact me</a></Link>
           {' '}directly.
         </p>
