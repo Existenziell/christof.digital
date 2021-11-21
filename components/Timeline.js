@@ -7,7 +7,7 @@ const Timeline = () => {
   return (
     <section className='timeline bg-cloth-pattern bg-repeat dark:bg-cloth-pattern-dark'>
       <h2 className='text-3xl mb-2'>The Timeline</h2>
-      <p className='mb-16'>Join me on the journey, as Yoga became part of me.</p>
+      <p className='mb-16'>Join me, as Yoga became part of me.</p>
 
       <ul className='text-left w-full'>
         {timeline.features.map((feature, index) => {
