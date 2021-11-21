@@ -26,24 +26,24 @@ const Nav = () => {
             {/* Desktop menu */}
             <div className='dark:bg-black dark:text-gray-300 w-full py-3 md:py-0'>
                 <ul className="hidden md:flex justify-between items-center ml-4 w-max ">
-                    {links.map((l) => (
+                    {links.map(l => (
                         <li key={l.name}>
-                            <a
-                                href={l.url}
-                                onClick={intercept}
-                                className={`${router.pathname === l.url ? 'active-nav' : 'border-b-2 border-white dark:border-brand'} hover:bg-brand hover:text-white transition-all p-4 block`}>
+                            <Link href={l.url}>
+                                <a
+                                    href={l.url}
+                                    className={`${router.pathname === l.url ? 'active-nav' : 'border-b-2 border-white dark:border-brand'} hover:bg-brand hover:text-white transition-all p-4 block`}>
 
-                                {l.name}
-                            </a>
+                                    {l.name}
+                                </a>
+                            </Link>
                         </li>
-                    )
-                    )}
+                    ))}
                 </ul>
 
                 {/* Mobile menu */}
                 {isOpen &&
                     <ul className="mobile-menu md:hidden absolute left-0 right-0 top-14 bg-white z-10 dark:bg-black dark:text-gray-300">
-                        {links.map((l) => (
+                        {links.map(l => (
                             <li key={l.name}>
                                 <a
                                     href={l.url}
@@ -53,8 +53,7 @@ const Nav = () => {
                                     {l.name}
                                 </a>
                             </li>
-                        )
-                        )}
+                        ))}
                     </ul>
                 }
 
