@@ -62,7 +62,10 @@ const Curriculum = () => {
         <p className='mb-1'>School: <a href="https://www.h-ka.de/" target="_blank" rel="noreferrer nofollow" className='link'>Hochschule Karlsruhe - University of Applied Sciences (HKA)</a></p>
         <p className='mb-1'>Location: <span>Karlsruhe, Germany</span></p>
         <p className='mb-4'>Duration: <span>6 years</span></p>
-        <ul>
+        <p className='font-bold mb-1 mt-2'>
+          Additional Certificates:
+        </p>
+        <ul className='leading-relaxed'>
           <li>Certificate in Business and Technical French (2003)</li>
           <li>Foundation Certificate in IT Service Management ITIL v3 (2007)</li>
           <li>Google Advertising Professional Certificate (2007)</li>
@@ -75,7 +78,8 @@ const Curriculum = () => {
         <p className='mb-1'>School: <a href="https://www.sammakaruna.org/" target="_blank" rel="noreferrer nofollow" className='link'> Samma Karuna Yoga School - Awakening &amp; Healing</a></p>
         <p className='mb-1'>Location: <span>Koh Phangan, Thailand</span></p>
         <p className='mb-4'>Duration: <span>4 weeks</span></p>
-        <Image src="/icons/ryt-200.png" width={100} height={100} alt="Yoga Alliance Logo" />
+        <Image src="/icons/ryt-200.png" width={200} height={200} alt="Yoga Alliance Logo" />
+        <Link href="/yoga"><a className='block mt-4 text-sm'>&rarr; More Information</a></Link>
       </div>
 
       <div className='w-full shadow hover:shadow-md p-8 bg-white text-sm text-left lg:w-2/3 lg:mx-auto dark:bg-black dark:text-gray-300'>
@@ -84,7 +88,8 @@ const Curriculum = () => {
         <p className='mb-1'>School: <a href="http://www.ashtangayogamysore.net/" target="_blank" rel="noreferrer nofollow" className='link'>Ashtanga Yoga Mysore</a></p>
         <p className='mb-1'>Location: <span>Mysuru, Karnataka, India</span></p>
         <p className='mb-4'>Duration: <span>6 weeks</span></p>
-        <Image src="/icons/ryt-500.png" width={100} height={100} alt="Yoga Alliance Logo" />
+        <Image src="/icons/ryt-500.png" width={200} height={200} alt="Yoga Alliance Logo" />
+        <Link href="/yoga"><a className='block mt-4 text-sm'>&rarr; More Information</a></Link>
       </div>
     </div>
   )
