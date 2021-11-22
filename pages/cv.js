@@ -79,7 +79,7 @@ const Curriculum = () => {
         <p className='mb-1'>Location: <span>Koh Phangan, Thailand</span></p>
         <p className='mb-4'>Duration: <span>4 weeks</span></p>
         <Image src="/icons/ryt-200.png" width={200} height={200} alt="Yoga Alliance Logo" />
-        <Link href="/yoga"><a className='block mt-4 text-sm'>&rarr; More Information</a></Link>
+        <a href="https://yoga.christof.digital/" target="_blank" rel="noreferrer nofollow" className='block mt-4 text-sm'>&rarr; More Information</a>
       </div>
 
       <div className='w-full shadow hover:shadow-md p-8 bg-white text-sm text-left lg:w-2/3 lg:mx-auto dark:bg-black dark:text-gray-300'>
@@ -89,7 +89,7 @@ const Curriculum = () => {
         <p className='mb-1'>Location: <span>Mysuru, Karnataka, India</span></p>
         <p className='mb-4'>Duration: <span>6 weeks</span></p>
         <Image src="/icons/ryt-500.png" width={200} height={200} alt="Yoga Alliance Logo" />
-        <Link href="/yoga"><a className='block mt-4 text-sm'>&rarr; More Information</a></Link>
+        <a href="https://yoga.christof.digital/" target="_blank" rel="noreferrer nofollow" className='block mt-4 text-sm'>&rarr; More Information</a>
       </div>
     </div>
   )
