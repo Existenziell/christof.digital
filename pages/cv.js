@@ -19,7 +19,7 @@ const Curriculum = () => {
               <p className='text-xl mb-3 bg-brand text-white p-3 px-4 rounded-t-md text-center'>{title}</p>
               <p className='mb-1'>Company:{' '}
                 {companyUrl
-                  ? <Link href={companyUrl}><a target="_blank" className='link'>{company}</a></Link>
+                  ? <Link href={companyUrl}><a target="_blank" rel='noopener noreferrer nofollow' className='link'>{company}</a></Link>
                   : <span>{company}</span>
                 }
               </p>
