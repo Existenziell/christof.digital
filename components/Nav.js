@@ -8,8 +8,6 @@ const Nav = () => {
         { name: "Root", url: "/" },
         { name: "Coding", url: "/coding" },
         { name: "Curriculum", url: "/cv" },
-        { name: "Yoga", url: "/yoga" },
-        { name: "Map", url: "/map" },
         { name: "Contact", url: "/contact" },
     ]
     const router = useRouter()

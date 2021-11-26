@@ -15,22 +15,15 @@ export default function Index() {
       <div className='dark:bg-gray-300 rounded p-6'>
         <Image src="/icons/logo.png" width={600} height={329} alt="Logo" />
       </div>
-      <div className="mt-16 flex flex-col gap-8">
-        <h1 className="text-4xl">Welcome &#x2661;</h1>
-        <p>Hi, I am Christof.<br />You have come to the right place.</p>
-        <div>
-          <h2>Let&apos;s find out what I can do for you!</h2>
-          <p>Perhaps you came here for one of the following reasons?</p>
-          <ul className='mt-4 flex flex-col gap-2'>
-            <li><Link href="/coding"><a className='link'>Development (Web, Mobile, Blockchain)</a></Link></li>
-            <li><Link href="/cv"><a className='link'>My Curriculum Vitae</a></Link></li>
-            <li><Link href="/yoga"><a className='link'>Yoga (shift_happens?)</a></Link></li>
-          </ul>
-        </div>
+      <div className="mt-16 flex flex-col gap-8 leading-relaxed">
+        <h1 className="text-4xl">Hi, I am Christof</h1>
+        <p>You have come to the right place.<br />
+          I am a Fullstack App Developer (Web,Blockchain), travelling the world and looking for enticing projects.<br />
+          Please <Link href="/contact"><a className='link'>contact me</a></Link> if you see possible synergies or have questions.
+        </p>
         <p>
-          If not, please feel at home and/or{' '}
-          <Link href="/contact"><a className='link'>contact me</a></Link>
-          {' '}directly.
+          If you came here for Yoga, you&apos;ll find all information on{' '}
+          <Link href="http://yoga.christof.digital/"><a className='link' target="_blank" rel="noopener noreferrer nofollow">yoga.christof.digital</a></Link>.
         </p>
       </div>
     </div>
