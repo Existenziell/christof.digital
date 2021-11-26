@@ -23,7 +23,7 @@ export default function Index() {
         </p>
         <p>
           If you came here for Yoga, you&apos;ll find all information on{' '}
-          <Link href="http://yoga.christof.digital/"><a className='link' target="_blank" rel="noopener noreferrer nofollow">yoga.christof.digital</a></Link>.
+          <Link href="http://yoga.christof.digital/"><a className='link' rel="noopener noreferrer nofollow">yoga.christof.digital</a></Link>.
         </p>
       </div>
     </div>
