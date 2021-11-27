@@ -18,7 +18,7 @@ export default function Index() {
       <div className="mt-16 flex flex-col gap-8 leading-relaxed">
         <h1 className="text-4xl">Hi, I am Christof</h1>
         <p>You have come to the right place.<br />
-          I am a Fullstack App Developer (Web,Blockchain), travelling the world and looking for enticing projects.<br />
+          I am a Fullstack App Developer (Web, Blockchain), travelling the world and looking for enticing projects.<br />
           Please <Link href="/contact"><a className='link'>contact me</a></Link> if you see possible synergies or have questions.
         </p>
         <p>
