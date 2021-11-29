@@ -7,7 +7,7 @@ export default function Index() {
     <div className='h-screen relative'>
 
       <Link href="http://app.christof.digital">
-        <a className='absolute -top-12 right-0 block px-4 py-3 text-sm border-black border border-dashed hover:bg-brand hover:text-white hover:font-extrabold transition-all'>
+        <a className='absolute -top-12 right-0 block px-4 py-3 text-sm border-black border border-dashed hover:bg-brand hover:text-white hover:font-extrabold hover:border-transparent transition-all'>
           Launch App
         </a>
       </Link>
