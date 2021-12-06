@@ -2,16 +2,9 @@ import Layout from '../components/Layout'
 import Link from 'next/link'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { darcula } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
+import { code } from '../lib/code'
 
 const Coding = () => {
-
-  const code = `while (me.alive) {
-  me.wakeUp()
-  me.eat()
-  me.code()
-  me.sleep()
-}`
-
   return (
     <div className="items-center justify-content text-left w-full">
       <h1 className="text-4xl mb-8 text-center">I love Code!</h1>
