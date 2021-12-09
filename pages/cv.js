@@ -16,7 +16,7 @@ const Curriculum = () => {
   }
 
   return (
-    <div className="pb-16 bg-cloth-pattern bg-repeat dark:bg-cloth-pattern-dark dark:text-gray-200">
+    <div className='pb-16 bg-cloth-pattern bg-repeat dark:bg-cloth-pattern-dark dark:text-gray-200'>
       <h1 className='text-4xl'>Curriculum Vitae</h1>
       <p className='text-sm italic mb-8'>&bdquo;Resume of Life&rdquo;</p>
       <div className='bg-white px-4 py-3 rounded mb-16 w-full md:w-1/2 mx-auto shadow dark:bg-gray-700'>This list tries to put all the different jobs/projects/places I was opportune to experience during my life so far in semantic and chronological context.</div>
@@ -29,23 +29,23 @@ const Curriculum = () => {
           <button onClick={() => setSortingVisible(!sortingVisible)} className='flex items-center gap-2 hover:text-brand'>
             <span className='font-bold'>Order by:</span>
             {sortingVisible ?
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              <svg xmlns='http://www.w3.org/2000/svg' className='h-4 w-4' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+                <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M19 9l-7 7-7-7' />
               </svg>
               :
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              <svg xmlns='http://www.w3.org/2000/svg' className='h-4 w-4' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+                <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
               </svg>
             }
           </button>
           {sortingVisible &&
             <div className='flex flex-col mt-1 text-left gap-1'>
-              <label htmlFor="desc" className='cursor-pointer flex items-center'>
-                <input type="radio" id="desc" name="sorting" value="desc" defaultChecked={sorting === "desc"} onChange={toggleOrder} />
+              <label htmlFor='desc' className='cursor-pointer flex items-center'>
+                <input type='radio' id='desc' name='sorting' value='desc' defaultChecked={sorting === 'desc'} onChange={toggleOrder} />
                 <span className='align-text-bottom'>Newest first</span>
               </label>
-              <label htmlFor="asc" className='cursor-pointer flex items-center'>
-                <input type="radio" id="asc" name="sorting" value="asc" defaultChecked={sorting === "asc"} onChange={toggleOrder} />
+              <label htmlFor='asc' className='cursor-pointer flex items-center'>
+                <input type='radio' id='asc' name='sorting' value='asc' defaultChecked={sorting === 'asc'} onChange={toggleOrder} />
                 <span className='align-text-bottom'>Oldest first</span>
               </label>
             </div>
@@ -62,7 +62,7 @@ const Curriculum = () => {
               <p className='text-2xl mb-3 text-white p-3 px-4 text-center'>{title}</p>
               <p className='mb-1'>Company:{' '}
                 {companyUrl
-                  ? <Link href={companyUrl}><a target="_blank" rel='noopener noreferrer nofollow' className='underline'>{company}</a></Link>
+                  ? <Link href={companyUrl}><a target='_blank' rel='noopener noreferrer nofollow' className='underline'>{company}</a></Link>
                   : <span>{company}</span>
                 }
               </p>
@@ -73,16 +73,16 @@ const Curriculum = () => {
               </p>
               <p className='mb-1'>
                 <span>Skills/Tools:{' '}</span>
-                {skills.join(", ")}
+                {skills.join(', ')}
               </p>
 
               <div className='overflow-hidden'>
                 {!!latestProject && (
                   <>
                     <span>Latest project:{' '}</span>
-                    {latestProject.startsWith("http") ?
+                    {latestProject.startsWith('http') ?
                       <Link href={latestProject}>
-                        <a target="_blank" rel='noopener noreferrer nofollow' className='underline'>
+                        <a target='_blank' rel='noopener noreferrer nofollow' className='underline'>
                           {latestProject}
                         </a>
                       </Link>

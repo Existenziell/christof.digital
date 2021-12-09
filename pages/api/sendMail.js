@@ -11,7 +11,6 @@ const sendMail = async (req, res) => {
     from: process.env.NEXT_PUBLIC_MAIL_FROM,
     subject: `Notification: Contact request from ${name} - ${email}`,
     text: message,
-    html: message
   }
 
   // Goes to the user
@@ -19,7 +18,7 @@ const sendMail = async (req, res) => {
     to: email,
     from: process.env.NEXT_PUBLIC_MAIL_FROM,
     subject: `Contact confirmation | christof.digital`,
-    text: `Hello ${name},\nThis is a confirmation, that your message to christof.digital has indeed been received properly.\nI'll come back to you as soon as possible.\nThank you so much.\nChristof`
+    text: `Hello ${name},\nThis is a confirmation, that your message to christof.digital has indeed been received properly.\nI'll come back to you as soon as possible.\nThank you so much.\nChristof`,
   }
 
   try {

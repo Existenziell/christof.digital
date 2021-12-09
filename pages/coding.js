@@ -6,11 +6,11 @@ import { code } from '../lib/code'
 
 const Coding = () => {
   return (
-    <div className="items-center justify-content text-left w-full">
-      <h1 className="text-4xl mb-8 text-center">I love Code!</h1>
+    <div className='items-center justify-content text-left w-full'>
+      <h1 className='text-4xl mb-8 text-center'>I love Code!</h1>
 
       <div className='lg:w-2/3 lg:mx-auto'>
-        <SyntaxHighlighter language="javascript" style={darcula} showLineNumbers={true}>
+        <SyntaxHighlighter language='javascript' style={darcula} showLineNumbers={true}>
           {code}
         </SyntaxHighlighter>
         <p className='mt-8'>
@@ -25,9 +25,9 @@ const Coding = () => {
         </p>
         <div className='mt-8'>
           <h2 className='text-xl mb-2'>Further resources:</h2>
-          <Link href="/cv"><a className='link'>Curriculum Vitae</a></Link><br />
-          <Link href="/contact"><a className='link'>Contact me</a></Link><br />
-          <Link href="https://github.com/Existenziell"><a className='link' target="_blank" rel="noopener noreferrer nofollow">Github</a></Link>
+          <Link href='/cv'><a className='link'>Curriculum Vitae</a></Link><br />
+          <Link href='/contact'><a className='link'>Contact me</a></Link><br />
+          <Link href='https://github.com/Existenziell'><a className='link' target='_blank' rel='noopener noreferrer nofollow'>Github</a></Link>
         </div>
       </div>
 
@@ -37,7 +37,7 @@ const Coding = () => {
 
 Coding.getLayout = function getLayout(page) {
   return (
-    <Layout title="Coding">
+    <Layout title='Coding'>
       {page}
     </Layout>
   )
