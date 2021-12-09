@@ -27,7 +27,7 @@ const Coding = () => {
           <h2 className='text-xl mb-2'>Further resources:</h2>
           <Link href="/cv"><a className='link'>Curriculum Vitae</a></Link><br />
           <Link href="/contact"><a className='link'>Contact me</a></Link><br />
-          <Link href="https://github.com/Existenziell"><a className='link' target="_blank">Github</a></Link>
+          <Link href="https://github.com/Existenziell"><a className='link' target="_blank" rel="noopener noreferrer nofollow">Github</a></Link>
         </div>
       </div>
 
