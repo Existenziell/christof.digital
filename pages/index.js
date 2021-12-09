@@ -14,7 +14,7 @@ export default function Index() {
 
       <section className='lg:flex lg:flex-row-reverse lg:items-center lg:justify-center lg:gap-4 lg:pb-32 w-full'>
         <div className='dark:bg-gray-300 rounded p-6 lg:w-1/2 '>
-          <Image src='/icons/logo.png' width={600} height={329} alt='Logo' />
+          <Image src='/icons/logo.png' width={600} height={329} alt='Logo' priority={true} />
         </div>
         <div className='mt-12 lg:mt-0 flex flex-col gap-8 leading-relaxed lg:w-1/2 lg:text-right'>
           <h1 className='text-4xl'>Hi, I am Christof</h1>
