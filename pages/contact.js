@@ -37,14 +37,14 @@ const Contact = () => {
         <div className="flex flex-col items-center justify-content text-center w-full">
             <h1 className="text-2xl mb-8">Write me something nice :)</h1>
 
-            <p className='bg-white px-8 py-5 lg:w-1/2 rounded dark:bg-gray-300 dark:text-black leading-relaxed'>
+            <p className='bg-white px-8 py-5 lg:w-1/2 rounded dark:bg-gray-700 dark:text-gray-200 leading-relaxed'>
                 I am excited to hear from you!<br />
                 Please, feel free to write in your own language.<br />
                 Languages I understand without Google Translate are:<br />
                 English, Deutsch, Français, Español, Catalán and नेपाली (well, the basics ッ).
             </p>
-            <div className="p-4 sm:p-12 mt-6 shadow w-full lg:w-2/3 bg-white dark:bg-black dark:text-gray-300">
-                <form onSubmit={submitForm} className="flex flex-col space-y-6 ">
+            <div className="p-4 sm:p-12 mt-6 shadow w-full lg:w-2/3 bg-white dark:bg-black dark:text-gray-300 bg-gradient-to-b from-secondary to-primary">
+                <form onSubmit={submitForm} className="flex flex-col space-y-6">
                     <input type="text" name="name" placeholder="Name" onChange={setData} required></input>
                     <input type="email" name="email" placeholder="Email" onChange={setData} required></input>
                     <textarea placeholder="I am no robot..." name="message" onChange={setData} rows="10" required></textarea>
@@ -59,7 +59,7 @@ const Contact = () => {
                                 <PacmanLoader color={"var(--color-brand)"} size={30} />
                             </div>
                             :
-                            <input type="submit" className='button' aria-label="Send Contact Form"></input>
+                            <input type="submit" className='button' aria-label="Send Contact Form" value="Send"></input>
                     }
                 </form>
             </div>

@@ -23,7 +23,20 @@ module.exports = {
         '1/2': '50%',
         '3/4': '75%',
       },
-    }
+    },
+    gradientColorStops: theme => ({
+      // 'primary': '#22c1c3',
+      // 'secondary': '#fdbb2d',
+      // 'primary': '#00c3ff',
+      // 'secondary': '#ffff1c',
+      'primary': '#3a6186',
+      'secondary': '#89253e',
+      // 'primary': '#36D1DC',
+      // 'secondary': '#5B86E5',  
+      // 'primary': '#007991',
+      // 'secondary': '#78ffd6',
+
+    })
   },
   variants: {
     extend: {},

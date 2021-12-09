@@ -27,11 +27,11 @@ html, body {
 }
 
 ::selection {
-  @apply text-brand bg-gray-100;
+  @apply text-brand;
 }
 
 ::-moz-selection {
-  @apply text-brand bg-gray-100;
+  @apply text-brand;
 }
 
 .link {
@@ -59,7 +59,28 @@ html, body {
 	Forms 
 	========================================================================== */
 
-input {
+input[type="radio"] {
+  @apply focus:outline-none hover:cursor-pointer mr-2 align-text-bottom mb-0.5; 
+}
+
+input[type='radio']:after, input[type='radio']:checked:after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  background-color: white;
+  display: inline-block;
+  border: 2px solid white;
+  outline: 2px solid #666; 
+}
+
+input[type='radio']:checked:after {
+  background-color: var(--color-brand);
+  border-color: white;
+  outline: 2px solid #666;
+}
+
+input[type="text"], input[type="email"] {
   @apply px-4 py-2 
     border focus:outline-none focus:ring-1 focus:ring-brand text-brand 
     dark:bg-black dark:text-gray-300 dark:border-brand;

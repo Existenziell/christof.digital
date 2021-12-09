@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function Index() {
   return (
-    <div className='h-screen relative'>
+    <div className='relative'>
 
       <Link href="http://app.christof.digital">
         <a className='absolute -top-12 right-0 block px-4 py-3 text-sm border-black border border-dashed hover:bg-brand hover:text-white hover:font-extrabold hover:border-transparent transition-all'>
@@ -18,7 +18,7 @@ export default function Index() {
       <div className="mt-16 flex flex-col gap-8 leading-relaxed">
         <h1 className="text-4xl">Hi, I am Christof</h1>
         <p>You have come to the right place.<br />
-          I am a Fullstack App Developer (Web, Blockchain), travelling the world and looking for enticing projects.<br />
+          I am a Fullstack App Developer (Web, Blockchain), travelling the world and looking for enticing projects and humans.<br />
           Please <Link href="/contact"><a className='link'>contact me</a></Link> if you see possible synergies or have questions.
         </p>
         <p>
