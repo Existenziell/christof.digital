@@ -5,7 +5,7 @@ const Social = () => {
   return (
     <div className='absolute right-8 top-3 dark:bg-gray-300 rounded-md dark:pt-2 dark:px-4 dark:top-1'>
       <ul className='flex gap-4'>
-        <li className='border-b-2 border-transparent hover:border-b-2 hover:border-brand '>
+        <li className='border-b-2 border-transparent hover:border-b-2 hover:border-brand'>
           <Link href='https://github.com/Existenziell'>
             <a target='_blank' rel='noopener noreferrer nofollow'>
               <Image src='/social/github.png' width={20} height={20} alt='Github'></Image>

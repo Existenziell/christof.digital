@@ -17,11 +17,11 @@ const Sorting = ({ sortBy, sortingVisible, setSortingVisible, toggleSortBy }) =>
         <div className='top-32 flex flex-col mt-1 text-left gap-1'>
           <label htmlFor='desc' className='cursor-pointer flex items-center'>
             <input type='radio' id='desc' name='sortBy' value='desc' checked={sortBy === 'desc'} onChange={toggleSortBy} />
-            <span className='align-text-bottom'>Oldest first</span>
+            <span className='align-text-bottom'>Newest first</span>
           </label>
           <label htmlFor='asc' className='cursor-pointer flex items-center'>
             <input type='radio' id='asc' name='sortBy' value='asc' checked={sortBy === 'asc'} onChange={toggleSortBy} />
-            <span className='align-text-bottom'>Newest first</span>
+            <span className='align-text-bottom'>Oldest first</span>
           </label>
         </div>
       }
