@@ -1,5 +1,5 @@
-import Layout from '../components/Layout'
 import Link from 'next/link'
+import Layout from '../components/Layout'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { darcula } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 import { code } from '../lib/code'
