@@ -15,6 +15,11 @@ export default function Layout({ children, title }) {
           {title ? `${title} | christof.digital` : `christof.digital`}
         </title>
         <meta name='description' content='Join me on a journey through my life | christof.digital | shift-happens' />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Gotu&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <div className='dark:bg-black h-full'>
         <Social />
