@@ -1,6 +1,6 @@
 const Sorting = ({ sortBy, sortingVisible, setSortingVisible, toggleSortBy }) => {
   return (
-    <div className='flex flex-col items-center max-w-max mx-auto text-xs text-center py-1 border border-gray-300 p-4'>
+    <div className='flex flex-col items-center max-w-max mx-auto text-xs text-center py-1 border border-gray-300 dark:border-gray-700 p-4'>
       <button onClick={() => setSortingVisible(!sortingVisible)} className='flex items-center gap-1 hover:text-brand'>
         <span className='font-bold'>Sort by</span>
         {sortingVisible ?

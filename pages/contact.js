@@ -46,11 +46,21 @@ const Contact = () => {
                 </p>
             } />
 
-            <div className='p-4 sm:p-12 mt-6 shadow w-full lg:w-2/3 bg-white dark:bg-black dark:text-gray-300 bg-gradient-to-b from-secondary to-primary'>
-                <form onSubmit={submitForm} className='flex flex-col space-y-6'>
-                    <input type='text' name='name' placeholder='Name' onChange={setData} required></input>
-                    <input type='email' name='email' placeholder='Email' onChange={setData} required></input>
-                    <textarea placeholder='I am no robot...' name='message' onChange={setData} rows='10' required></textarea>
+            <div className='px-4 py-8 sm:p-12 mt-6 shadow w-full lg:w-2/3 bg-white dark:bg-black dark:text-gray-300 '>
+                <form onSubmit={submitForm}>
+
+                    <div className='relative mb-12'>
+                        <input type='text' name='name' placeholder='Name' onChange={setData} required disabled={sending} className='peer h-10 w-full border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-brand dark:bg-gray-700 dark:text-gray-300'></input>
+                        <label htmlFor='name' className='absolute left-0 -top-4 text-gray-600 dark:text-gray-300 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-gray-600 peer-focus:text-sm dark:peer-focus:text-gray-300'>Name</label>
+                    </div>
+                    <div className='relative mb-12'>
+                        <input type='email' name='email' placeholder='Email' onChange={setData} required disabled={sending} className='peer h-10 w-full border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-brand dark:bg-gray-700 dark:text-gray-300'></input>
+                        <label htmlFor='email' className='absolute left-0 -top-4 text-gray-600 dark:text-gray-300 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-gray-600 peer-focus:text-sm dark:peer-focus:text-gray-300'>Email</label>
+                    </div>
+                    <div className='relative'>
+                        <textarea id='message' placeholder='Message' name='message' onChange={setData} rows='10' required disabled={sending} className='peer h-full w-full py-4 border-t-2 border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-brand dark:bg-gray-700 dark:text-gray-300'></textarea>
+                        <label htmlFor='message' className='absolute left-0 -top-5 text-gray-600 dark:text-gray-300 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm dark:peer-focus:text-gray-300'>Message</label>
+                    </div>
 
                     {errorMsg ?
                         <div className='text-left bg-red-700 text-white p-4'>

@@ -28,7 +28,7 @@ const Nav = () => {
                             <Link href={l.url}>
                                 <a
                                     href={l.url}
-                                    className={`${router.pathname === l.url ? 'active-nav' : 'border-b-2 border-white dark:border-brand'} hover:bg-brand hover:text-white transition-all p-4 block`}>
+                                    className={`${router.pathname === l.url ? 'active-nav' : 'border-b-2 border-white dark:border-brand'} hover:border-brand dark:hover:bg-brand transition-all px-4 py-2 block`}>
 
                                     {l.name}
                                 </a>
