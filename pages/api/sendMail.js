@@ -1,4 +1,4 @@
-import ReactDOMServer from 'react-dom/server';
+import ReactDOMServer from 'react-dom/server'
 import sgMail from '@sendgrid/mail'
 import { htmlEmail } from '../../lib/htmlEmail'
 
