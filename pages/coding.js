@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Layout from '../components/Layout'
 import SyntaxHighlighter from 'react-syntax-highlighter'
-import { darcula } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
+import { dracula, atomOneLight } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 import { code } from '../lib/code'
 
 const Coding = () => {
@@ -19,9 +19,18 @@ const Coding = () => {
 
       <h1 className='text-4xl md:text-6xl mb-8 text-center'>I love Code!</h1>
       <div className='lg:w-2/3 lg:mx-auto'>
-        <SyntaxHighlighter language='javascript' style={darcula} showLineNumbers={true}>
-          {code}
-        </SyntaxHighlighter>
+
+        <div className='hidden dark:block'>
+          <SyntaxHighlighter language='javascript' style={dracula} showLineNumbers={true}>
+            {code}
+          </SyntaxHighlighter>
+        </div>
+        <div className='block dark:hidden'>
+          <SyntaxHighlighter language='javascript' style={atomOneLight} showLineNumbers={true}>
+            {code}
+          </SyntaxHighlighter>
+        </div>
+
         <p className='mt-8'>
           I have been developing Code since the year 2000.
           Web-Development especially has been changing so much over the years, it has been and still is a pleasure to witness all of this.

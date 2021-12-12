@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function Index() {
   return (
-    <div>
+    <div className=''>
       <section className='lg:flex lg:flex-row-reverse lg:items-center lg:justify-center lg:gap-8 lg:pb-32 w-full px-8'>
         <div className='dark:bg-gray-300 rounded-sm p-6 lg:w-1/2 '>
           <Image src='/icons/logo.png' width={600} height={329} alt='Logo' priority={true} />

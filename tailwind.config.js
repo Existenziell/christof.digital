@@ -48,16 +48,8 @@ module.exports = {
       },
     },
     gradientColorStops: theme => ({
-      // primary: '#22c1c3',
-      // secondary: '#fdbb2d',
-      // primary: '#00c3ff',
-      // secondary: '#ffff1c',
-      primary: '#3a6186',
-      secondary: '#89253e',
-      // primary: '#36D1DC',
-      // secondary: '#5B86E5',
-      // primary: '#007991',
-      // secondary: '#78ffd6',
+      brand: '#C90076',
+      'brand-dark': '#200530',
     }),
   },
   variants: {

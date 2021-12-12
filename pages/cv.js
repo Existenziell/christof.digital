@@ -32,7 +32,7 @@ const Curriculum = () => {
           {data.map((job, index) => {
             const { title, company, companyUrl, companyType, date, duration, location, desc, latestProject, skills } = job
             return (
-              <li key={index} className='w-full shadow hover:shadow-md px-4 sm:px-8 py-6 bg-white text-gray-200 text-sm bg-gradient-to-b from-primary to-secondary rounded'>
+              <li key={index} className='w-full shadow hover:shadow-md px-4 sm:px-8 py-6 bg-white text-gray-200 text-sm rounded bg-gradient-to-b from-brand-dark to-brand dark:bg-gradient-to-t'>
                 <p className='text-xs mb-3 w-max ml-auto'>{date} ({duration})</p>
                 <p className='text-2xl mb-3 text-white p-3 px-4 text-center'>{title}</p>
                 <p className='mb-1'>Company:{' '}
