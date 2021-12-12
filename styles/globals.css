@@ -69,30 +69,9 @@ html, body {
 	Forms 
 	========================================================================== */
 
-input[type="radio"] {
-  @apply focus:outline-none hover:cursor-pointer mr-2 align-text-bottom mb-0.5; 
-}
-
-input[type='radio']:after, input[type='radio']:checked:after {
-  content: '';
-  width: 12px;
-  height: 12px;
-  border-radius: 12px;
-  background-color: white;
-  display: inline-block;
-  border: 2px solid white;
-  outline: 2px solid #666; 
-}
-
-input[type='radio']:checked:after {
-  background-color: var(--color-brand);
-  border-color: white;
-  outline: 2px solid #666;
-}
-
 .button {
   @apply w-48 my-8 px-8 py-4 
-  bg-brand text-white rounded shadow-2xl
+  bg-brand text-white rounded shadow-lg
     hover:shadow hover:cursor-pointer
     transition-all
 }

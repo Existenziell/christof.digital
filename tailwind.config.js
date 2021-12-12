@@ -16,8 +16,7 @@ module.exports = {
       },
       backgroundImage: {
         'cloth-pattern': 'url(/icons/cloth.jpg)',
-        'cloth-pattern-dark': 'url(/icons/cloth-dark.jpg)',
-        'chevron-pattern': 'url(/icons/chevron.svg)',
+        poly: 'url(/icons/poly.svg)',
       },
       minWidth: {
         '1/4': '25%',
