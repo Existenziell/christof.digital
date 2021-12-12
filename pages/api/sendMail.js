@@ -6,6 +6,7 @@ sgMail.setApiKey(process.env.NEXT_PUBLIC_MAIL_API_KEY)
 
 const sendMail = async (req, res) => {
   const { name, email, message } = req.body
+  const html = ReactDOMServer.renderToStaticMarkup(htmlEmail(name, message))
 
   // Goes to me
   const notificationMsg = {
@@ -14,8 +15,6 @@ const sendMail = async (req, res) => {
     subject: `Notification: Contact request from ${name} - ${email}`,
     text: message,
   }
-
-  const html = ReactDOMServer.renderToStaticMarkup(htmlEmail(name, message))
 
   // Goes to the user
   const confirmationMsg = {
