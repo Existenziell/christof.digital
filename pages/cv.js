@@ -7,27 +7,24 @@ import Sorting from '../components/Sorting'
 
 const Curriculum = () => {
   const [sortBy, setSortBy] = useState('desc')
-  const [sortingVisible, setSortingVisible] = useState(false)
   const [data, setData] = useState(cv)
 
-  const toggleSortBy = (e) => {
-    setSortBy(e.target.value)
+  const toggleSortBy = () => {
     setData(data.slice().reverse())
+    setSortBy(!sortBy)
   }
 
   return (
-    <div className='pb-16 bg-cloth-pattern bg-repeat dark:bg-cloth-pattern-dark dark:text-gray-200'>
-      <h1 className='text-4xl'>Curriculum Vitae</h1>
+    <div className='pb-16 bg-cloth-pattern bg-repeat dark:bg-none dark:bg-brand-dark dark:text-gray-200'>
+      <h1 className='text-4xl md:text-6xl mb-1'>Curriculum Vitae</h1>
       <p className='text-sm italic mb-8'>&bdquo;Resume of Life&rdquo;</p>
       <div className='bg-white px-4 py-3 rounded mb-16 w-full md:w-1/2 mx-auto shadow dark:bg-gray-700'>This list tries to put all the different jobs/projects/places I was opportune to experience during my life so far in semantic and chronological context.</div>
 
       <div className='w-full text-center'>
-        <h2 className='text-2xl mb-1'>Experiences:</h2>
+        <h2 className='text-4xl mb-1'>Experiences:</h2>
 
         <Sorting
           sortBy={sortBy}
-          sortingVisible={sortingVisible}
-          setSortingVisible={setSortingVisible}
           toggleSortBy={toggleSortBy}
         />
 
@@ -70,7 +67,6 @@ const Curriculum = () => {
                     </>
                   )}
                 </div>
-
               </li>
             )
           })}

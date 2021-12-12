@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Router from 'next/router'
 import Layout from '../components/Layout'
 import Blob from '../components/Blob'
+import Social from '../components/Social'
 import PacmanLoader from 'react-spinners/PacmanLoader'
 
 const Contact = () => {
@@ -34,8 +35,8 @@ const Contact = () => {
     }
 
     return (
-        <div className='flex flex-col items-center justify-content text-center w-full'>
-            <h1 className='text-2xl mb-8'>Write me something nice :)</h1>
+        <div className='flex flex-col items-center justify-center px-4 md:px-8 lg:w-2/3 lg:mx-auto'>
+            <h1 className='text-4xl md:text-6xl mb-8'>Let&apos;s connect</h1>
 
             <Blob node={
                 <p className='bg-white px-8 py-5 rounded dark:bg-gray-700 dark:text-gray-200 leading-relaxed'>
@@ -45,8 +46,9 @@ const Contact = () => {
                     English, Deutsch, Français, Español, Catalán and नेपाली (well, the basics ッ).
                 </p>
             } />
+            <Social />
 
-            <div className='px-4 py-8 sm:p-12 mt-6 shadow w-full lg:w-2/3 bg-white dark:bg-black dark:text-gray-300 '>
+            <div className='px-4 py-8 sm:p-12 mt-6 shadow w-full bg-white dark:bg-gray-700'>
                 <form onSubmit={submitForm}>
 
                     <div className='relative mb-12'>

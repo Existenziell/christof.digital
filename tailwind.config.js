@@ -1,7 +1,7 @@
 module.exports = {
   mode: 'jit',
   content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: 'media', // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
       fontFamily: {
@@ -12,6 +12,7 @@ module.exports = {
       },
       colors: {
         brand: '#C90076',
+        'brand-dark': '#200530',
       },
       backgroundImage: {
         'cloth-pattern': 'url(/icons/cloth.jpg)',

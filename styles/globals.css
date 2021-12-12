@@ -11,6 +11,7 @@ email: bauer.christof@gmail.com
 
 :root {
   --color-brand: #C90076;
+  --color-brand-dark: #200530;
 }
 
 @tailwind base;
@@ -44,11 +45,11 @@ html, body {
 }
 
 .link {
-  @apply text-brand;
+  @apply underline underline-offset-2 outline-none;
 }
 
 .link:hover {
-  @apply text-brand underline;
+  @apply no-underline bg-brand rounded transition-all duration-500 text-white px-1;
 }
 
 /* ==========================================================================

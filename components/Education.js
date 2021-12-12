@@ -3,7 +3,7 @@ import Image from 'next/image'
 const Education = () => {
   return (
     <>
-      <h2 className='text-2xl mb-6'>Education:</h2>
+      <h2 className='text-4xl mb-6'>Education:</h2>
       <div className='w-full shadow rounded  p-8 text-sm text-left mb-8 lg:w-2/3 lg:mx-auto bg-gradient-to-b from-primary to-secondary text-gray-200 dark:bg-black dark:text-gray-300'>
         <p className='text-xs mb-3 italic'>2001 - 2006</p>
         <p className='text-2xl mb-4 text-center'>Master of Computer Science</p>

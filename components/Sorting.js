@@ -1,30 +1,25 @@
-const Sorting = ({ sortBy, sortingVisible, setSortingVisible, toggleSortBy }) => {
+import { Switch } from '@headlessui/react'
+
+const Sorting = ({ sortBy, toggleSortBy }) => {
   return (
-    <div className='flex flex-col items-center max-w-max mx-auto text-xs text-center py-1 border border-gray-300 dark:border-gray-700 p-4'>
-      <button onClick={() => setSortingVisible(!sortingVisible)} className='flex items-center gap-1 hover:text-brand'>
-        <span className='font-bold'>Sort by</span>
-        {sortingVisible ?
-          <svg xmlns='http://www.w3.org/2000/svg' className='h-4 w-4' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
-            <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M19 9l-7 7-7-7' />
-          </svg>
-          :
-          <svg xmlns='http://www.w3.org/2000/svg' className='h-4 w-4' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
-            <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
-          </svg>
-        }
-      </button>
-      {sortingVisible &&
-        <div className='top-32 flex flex-col mt-1 text-left gap-1'>
-          <label htmlFor='desc' className='cursor-pointer flex items-center'>
-            <input type='radio' id='desc' name='sortBy' value='desc' checked={sortBy === 'desc'} onChange={toggleSortBy} />
-            <span className='align-text-bottom'>Newest first</span>
-          </label>
-          <label htmlFor='asc' className='cursor-pointer flex items-center'>
-            <input type='radio' id='asc' name='sortBy' value='asc' checked={sortBy === 'asc'} onChange={toggleSortBy} />
-            <span className='align-text-bottom'>Oldest first</span>
-          </label>
+    <div className='mx-auto w-max'>
+      <Switch.Group>
+        <div className="flex items-center text-sm">
+          <Switch.Label className="mr-3">Oldest first</Switch.Label>
+          <Switch
+            checked={sortBy}
+            onChange={toggleSortBy}
+            className={`${sortBy ? 'bg-brand' : 'bg-gray-400'} 
+            relative inline-flex items-center h-6 rounded-sm w-11 transition-colors 
+            focus:outline-none focus:ring-2 focus:ring-offset-2 ring-brand-dark`}>
+            <span
+              className={`${sortBy ? 'translate-x-6' : 'translate-x-1'} 
+              inline-block w-4 h-4 transform bg-white rounded-sm transition-transform`}
+            />
+          </Switch>
+          <Switch.Label className="ml-3">Newest first</Switch.Label>
         </div>
-      }
+      </Switch.Group>
     </div>
   )
 }
