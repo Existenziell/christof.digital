@@ -35,12 +35,12 @@ const Coding = () => {
 
       <div>
         <div className='hidden dark:block text-6xl'>
-          <SyntaxHighlighter language='javascript' style={dracula} showLineNumbers={true} customStyle={{ fontSize: "14px", lineHeight: "20px" }}>
+          <SyntaxHighlighter language='javascript' style={dracula} showLineNumbers={true} customStyle={{ fontSize: '14px', lineHeight: '20px' }}>
             {code}
           </SyntaxHighlighter>
         </div>
         <div className='block dark:hidden'>
-          <SyntaxHighlighter language='javascript' style={atomOneLight} showLineNumbers={true} customStyle={{ fontSize: "14px", lineHeight: "20px" }}>
+          <SyntaxHighlighter language='javascript' style={atomOneLight} showLineNumbers={true} customStyle={{ fontSize: '14px', lineHeight: '20px' }}>
             {code}
           </SyntaxHighlighter>
         </div>
