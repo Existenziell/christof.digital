@@ -26,7 +26,7 @@ const Curriculum = () => {
         <h2 className='text-4xl mb-1'>Experiences:</h2>
         <Sorting sortBy={sortBy} toggleSortBy={toggleSortBy} />
 
-        <ul className='flex flex-col space-y-8 justify-center items-start w-full text-left md:w-2/3 md:mx-auto mb-32 mt-12'>
+        <ul className='flex flex-col space-y-8 justify-center items-start text-left w-full md:w-2/3 md:mx-auto mb-32 mt-12'>
           {data.map((job, index) => {
             const { title, company, companyUrl, companyType, date, duration, location, desc, latestProject, skills } = job
 
