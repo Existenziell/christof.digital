@@ -27,7 +27,7 @@ export const ScrollIndicator = () => {
       />
       <motion.path
         fill='none'
-        strokeWidth='5'
+        strokeWidth='2'
         stroke='currentColor'
         d='M14,26 L 22,33 L 35,16'
         initial={false}
