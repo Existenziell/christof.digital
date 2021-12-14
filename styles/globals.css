@@ -45,7 +45,7 @@ html, body {
 }
 
 .link {
-  @apply underline underline-offset-2 outline-none;
+  @apply underline underline-offset-2 outline-none transition-all duration-300;
 }
 
 .link:hover {
