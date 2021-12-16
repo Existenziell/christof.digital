@@ -9,11 +9,11 @@ const Coding = () => {
   return (
     <div className='text-left w-full'>
 
-      <Link href='http://app.christof.digital'>
+      <Link href='http://localhost:3001'>
         <a className='fixed right-2 sm:right-0 bottom-0 block py-2 px-1 sm:p-2 text-sm
           border border-dashed border-gray-500 transition-all dark:bg-brand dark:border-none
         hover:bg-brand hover:text-white hover:font-extrabold hover:px-3'
-          style={{ writingMode: 'vertical-rl' }} target='_blank' rel='noopener noreferrer nofollow'>
+          style={{ writingMode: 'vertical-rl' }}>
           Launch App
         </a>
       </Link>
