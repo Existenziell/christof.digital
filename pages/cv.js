@@ -26,7 +26,7 @@ const Curriculum = () => {
       <div className='w-full text-center'>
         <h2 className='text-4xl mb-1'>Experiences:</h2>
         <Sorting sortBy={sortBy} toggleSortBy={toggleSortBy} />
-        <a href="curriculum.pdf" download="curriculum" className='flex items-center justify-center gap-1 text-xs w-max mx-auto mt-4'>
+        <a href="curriculum.pdf" download="curriculum" className='flex items-center justify-center gap-1 text-xs w-max mx-auto mt-4 hover:text-highlight'>
           <ArrowDownTrayIcon className='w-4' />
           <span>Download</span>
         </a>
