@@ -4,7 +4,7 @@ import { education } from '../lib/education'
 const Education = () => {
   return (
     <div className='w-full md:w-2/3 md:mx-auto'>
-      <h2 className='text-4xl mb-6'>Education:</h2>
+      <h2 className='text-4xl mb-10'>Education</h2>
 
       {education.map((e, i) => {
         const { title, school, location, link, date, duration, image, addon } = e
@@ -27,6 +27,18 @@ const Education = () => {
           </div>
         )
       })}
+
+      <div className='shadow-sm rounded p-8 relative text-sm text-left mb-8 bg-white dark:bg-gray-dark dark:text-white'>
+        <p className='text-2xl mb-8 text-center'>Additional Certifications</p>
+        <ul className=' leading-loose list-disc pl-6'>
+          <li>Certificate in Business and Technical French (2003)</li>
+          <li>Foundation Certificate in IT Service Management (2007)</li>
+          <li>Google Advertising Professional Certificate (2007)</li>
+          <li>Foundation Certificate in IT Service Management ITIL v3 (2014)</li>
+          <li>Certified First Aider (2014/2016)</li>
+          <li>Certified Fire Safety Assistant (2016)</li>
+        </ul>
+      </div>
     </div>
   )
 }

@@ -66,9 +66,12 @@ html, body {
 	========================================================================== */
 
 .active-nav {
-  @apply dark:bg-brand dark:text-brand-dark bg-brand-dark text-brand ;
+  @apply dark:bg-brand dark:text-brand-dark bg-brand-dark text-brand;
 }
 
+.active-tab {
+  @apply border-b-2 border-highlight font-bold dark:border-highlight;
+}
 
 /* ==========================================================================
 	Forms 
