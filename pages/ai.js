@@ -90,7 +90,7 @@ const AI = () => {
     {
       image: '/ai/tiny.jpg',
       prompt: "An ultra modern tiny house",
-      remarks: "One day I want to live in one of those. Let us get some inspiration.",
+      remarks: "One day I want to live in one of those. Let us get some inspiration, shall we?",
       generator: 'Stable Diffusion (Stability AI)',
     },
     {
