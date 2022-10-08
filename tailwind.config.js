@@ -23,7 +23,7 @@ module.exports = {
         'gray-dark': '#323232',
       },
       backgroundImage: {
-        poly: 'url(/icons/poly.svg)',
+        poly: 'url(/icons/poly.png)',
       },
       animation: {
         blob: 'blob 7s infinite',
