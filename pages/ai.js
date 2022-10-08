@@ -87,6 +87,18 @@ const AI = () => {
       remarks: "You can even see the bubbles floating to the surface.",
       generator: 'DALL·E 2 (OpenAI)',
     },
+    {
+      image: '/ai/tiny.jpg',
+      prompt: "An ultra modern tiny house",
+      remarks: "One day I want to live in one of those. Let us get some inspiration.",
+      generator: 'Stable Diffusion (Stability AI)',
+    },
+    {
+      image: '/ai/peace.jpg',
+      prompt: "World peace.",
+      remarks: "Very interesting result, Africa and Europe seem to be somehow bound together and South America is all shattered?",
+      generator: 'Stable Diffusion (Stability AI)',
+    },
   ]
 
   return (
