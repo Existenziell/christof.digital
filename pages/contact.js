@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import Router from 'next/router'
 import Layout from '../components/Layout'
-import Blob from '../components/Blob'
 import Social from '../components/Social'
 import PacmanLoader from 'react-spinners/PacmanLoader'
 
@@ -36,16 +35,16 @@ const Contact = () => {
 
     return (
         <div className='flex flex-col items-center justify-center px-4 md:px-8 lg:w-2/3 lg:mx-auto'>
-            <h1 className='text-4xl md:text-6xl mb-8'>Let&apos;s connect</h1>
+            <h1 className='text-4xl md:text-6xl'>Let&apos;s connect</h1>
 
-            <Blob node={
+            {/* <Blob node={
                 <p className='bg-white px-8 py-5 rounded dark:bg-gray-700 dark:text-gray-200 leading-relaxed'>
                     I am excited to hear from you!<br />
                     Please, feel free to write in your own language.<br />
                     Languages I understand without Google Translate are:<br />
                     English, Deutsch, Français, Español, Catalán ッ
                 </p>
-            } />
+            } /> */}
             <Social />
 
             <div className='px-4 pt-8 pb-0 sm:px-12 mt-6 shadow w-full bg-cover bg-no-repeat bg-poly rounded-lg bg-white/10 backdrop-blur-md text-white'>
@@ -82,7 +81,7 @@ const Contact = () => {
                                 <PacmanLoader color={'white'} size={30} />
                             </div>
                             :
-                            <input type='submit' className='button' aria-label='Send Contact Form'></input>
+                            <input type='submit' className='button' aria-label='Send Contact Form' value='Send'></input>
                     }
                 </form>
             </div>

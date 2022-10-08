@@ -9,12 +9,12 @@ const Sorting = ({ sortBy, toggleSortBy }) => {
           <Switch
             checked={sortBy}
             onChange={toggleSortBy}
-            className={`${sortBy ? 'bg-brand' : 'bg-gray-400'} 
+            className={`bg-gray-dark dark:bg-gray 
             relative inline-flex items-center h-6 rounded-sm w-11 transition-colors 
             focus:outline-none focus:ring-2 focus:ring-offset-2 ring-brand-dark`}>
             <span
               className={`${sortBy ? 'translate-x-6' : 'translate-x-1'} 
-              inline-block w-4 h-4 transform bg-white rounded-sm transition-transform`}
+              inline-block w-4 h-4 transform bg-highlight rounded-sm transition-transform`}
             />
           </Switch>
           <Switch.Label className="ml-3">Newest first</Switch.Label>

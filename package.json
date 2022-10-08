@@ -3,11 +3,14 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@headlessui/react": "^1.4.2",
+    "@heroicons/react": "^2.0.12",
     "@sendgrid/mail": "^7.6.0",
+    "caniuse-lite": "^1.0.30001418",
     "framer-motion": "^5.4.5",
     "next": "latest",
     "nextjs-progressbar": "^0.0.13",

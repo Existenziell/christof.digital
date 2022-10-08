@@ -10,7 +10,7 @@ export const ScrollIndicator = () => {
   useEffect(() => yRange.onChange(v => setIsComplete(v >= 1)), [yRange])
 
   return (
-    <svg className='fixed w-10 md:w-20 bottom-1 right-1 md:bottom-4 md:right-4 text-brand z-10' viewBox='0 0 60 60'>
+    <svg className='fixed w-10 md:w-20 bottom-1 right-1 md:bottom-4 md:right-4 text-brand-dark dark:text-brand z-10' viewBox='0 0 60 60'>
       <motion.path
         fill='none'
         strokeWidth='5'

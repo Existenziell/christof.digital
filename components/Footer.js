@@ -6,8 +6,8 @@ const Footer = () => {
 
   return (
     <footer className='static bottom-0 flex items-center justify-center w-full py-1 text-xs
-    text-gray-500 transition-all bg-cloth-pattern border-t border-black border-opacity-10
-      dark:bg-none dark:bg-brand-dark dark:border-brand dark:border-opacity-10'>
+      transition-all border-t border-black border-opacity-10
+    bg-brand text-brand-dark dark:bg-brand-dark dark:text-brand dark:border-brand dark:border-opacity-10'>
 
       <a href='#top' aria-label='Scroll back up'>
         <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 hover:text-brand transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -22,7 +22,7 @@ export default function Layout({ children, title }) {
         <Nav />
         <DarkModeToggle />
       </div>
-      <main className='w-full px-4 sm:px-8 py-32 text-center bg-cloth-pattern bg-repeat dark:bg-none dark:bg-brand-dark dark:text-gray-300'>
+      <main className='w-full min-h-[calc(100vh-55px)] px-4 sm:px-8 py-20 md:pt-32 text-center bg-brand text-brand-dark dark:bg-brand-dark dark:text-brand'>
         {children}
       </main>
       <Footer />

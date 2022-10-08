@@ -10,8 +10,16 @@ email: bauer.christof@gmail.com
 @import url("https://fonts.googleapis.com/css?family=Gotu&display=swap");
 
 :root {
-  --color-brand: #C90076;
-  --color-brand-dark: #200530;
+  /* --color-brand: #C90076;
+  --color-brand-dark: #200530;  */
+  
+  /* --color-brand: #a6d1c9;
+  --color-brand-dark: #282b29;
+  --color-highlight: #C90076; */
+
+  --color-brand: #DBDBDB;
+  --color-brand-dark: #242424;
+  --color-highlight: #D6A269;
 }
 
 @tailwind base;
@@ -37,31 +45,28 @@ html, body {
 }
 
 ::selection {
-  @apply text-brand;
+  @apply text-highlight;
 }
 
 ::-moz-selection {
-  @apply text-brand;
+  @apply text-highlight;
 }
 
 .link {
-  @apply underline underline-offset-2 outline-none transition-all duration-300;
+  @apply underline underline-offset-2 outline-none;
 }
 
 .link:hover {
-  @apply no-underline bg-brand rounded transition-all duration-500 text-white px-1;
+  @apply no-underline text-highlight transition-all;
 }
+
 
 /* ==========================================================================
 	Navigation
 	========================================================================== */
 
 .active-nav {
-  @apply font-bold border-b-2 border-brand dark:bg-brand;
-}
-
-.mobile-menu .active-nav {
-  @apply font-bold bg-brand text-white border-b-0;
+  @apply dark:bg-brand dark:text-brand-dark bg-brand-dark text-brand ;
 }
 
 
@@ -71,7 +76,7 @@ html, body {
 
 .button {
   @apply w-48 my-8 px-8 py-4 
-  bg-brand text-white rounded shadow-lg
+    bg-brand text-brand-dark dark:bg-brand-dark dark:text-brand rounded shadow-lg
     hover:shadow hover:cursor-pointer
     transition-all
 }

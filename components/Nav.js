@@ -4,7 +4,7 @@ import { useState } from 'react'
 const Nav = () => {
     const links = [
         { name: 'Root', url: '/' },
-        { name: 'Coding', url: '/coding' },
+        // { name: 'Coding', url: '/coding' },
         { name: 'Curriculum', url: '/cv' },
         { name: 'Contact', url: '/contact' },
     ]
@@ -21,7 +21,7 @@ const Nav = () => {
         <nav>
             {/* Mobile menu */}
             {isOpen &&
-                <ul className='mobile-menu left-0 right-0 top-0 bottom-0 pt-20 bg-white z-10 dark:bg-none dark:bg-brand-dark dark:text-gray-300 relative h-screen'>
+                <ul className='left-0 right-0 top-0 bottom-0 pt-20 z-10 bg-brand text-brand-dark dark:bg-brand-dark dark:text-brand relative h-screen'>
                     {links.map(l => (
                         <li key={l.name}>
                             <a
@@ -29,7 +29,7 @@ const Nav = () => {
                                 onClick={intercept}
                                 className={`${router.pathname === l.url && 'active-nav shadow-sm'} 
                                 w-full block text-2xl md:text-4xl text-center leading-loose px-8 py-2 md:py-8 
-                                hover:bg-brand hover:text-white transition-all`}
+                                hover:bg-brand-dark hover:text-highlight dark:hover:bg-brand transition-all`}
                             >
                                 {l.name}
                             </a>
@@ -40,13 +40,13 @@ const Nav = () => {
 
             {/* Mobile Hamburger Button */}
             <div className='absolute left-4 top-4 z-20'>
-                <button className='mobile-menu-button outline-none' onClick={() => setIsOpen(!isOpen)} aria-label='Open Mobile Navigation'>
+                <button className='outline-none' onClick={() => setIsOpen(!isOpen)} aria-label='Open Mobile Navigation'>
                     {!isOpen ?
-                        <svg xmlns='http://www.w3.org/2000/svg' className='h-12 w-12 text-brand hover:text-gray-500 transition-all duration-300' fill='none' strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' viewBox='0 0 24 24' stroke='currentColor'>
+                        <svg xmlns='http://www.w3.org/2000/svg' className='h-12 w-12 text-brand-dark hover:text-brand-dark/70 dark:text-brand dark:hover:text-brand/70 transition-all' fill='none' strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' viewBox='0 0 24 24' stroke='currentColor'>
                             <path d='M4 6h16M4 12h16M4 18h16'></path>
                         </svg>
                         :
-                        <svg xmlns='http://www.w3.org/2000/svg' className='h-12 w-12 text-gray-500 hover:text-brand dark:text-gray-300 transition-all duration-300' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+                        <svg xmlns='http://www.w3.org/2000/svg' className='h-12 w-12 text-brand-dark hover:text-brand-dark/70 dark:text-brand dark:hover:text-brand/70 transition-all' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
                             <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M6 18L18 6M6 6l12 12' />
                         </svg>
                     }

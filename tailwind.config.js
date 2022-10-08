@@ -11,11 +11,19 @@ module.exports = {
         ],
       },
       colors: {
-        brand: '#C90076',
-        'brand-dark': '#200530',
+        // brand: '#C90076',
+        // 'brand-dark': '#200530',
+        // 'brand': '#a6d1c9',
+        // 'brand-dark': '#282b29',
+        // 'highlight': '#C90076',
+        'brand': '#DBDBDB',
+        'brand-dark': '#242424',
+        'highlight': '#D6A269',
+        'gray': '#CFCFCF',
+        'gray-dark': '#323232',
       },
       backgroundImage: {
-        'cloth-pattern': 'url(/icons/cloth.jpg)',
+        // 'cloth-pattern': 'url(/icons/cloth.jpg)',
         poly: 'url(/icons/poly.svg)',
       },
       minWidth: {
