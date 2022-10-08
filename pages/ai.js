@@ -12,7 +12,7 @@ const AI = () => {
     {
       image: '/ai/frog.jpg',
       prompt: "A colorful frog on a leaf, looking curiously at the camera, dense jungle in the background",
-      remarks: "I just love frogs, and this one is just amazing.",
+      remarks: "I just love frogs, and this one is just amazing. Getting lost in its eyes that resemble galaxies...",
       generator: 'Stable Diffusion (Stability AI)',
     },
     {
