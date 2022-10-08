@@ -29,7 +29,7 @@ const Coding = () => {
           <span className='text-sm block mt-2'>Current stack: NextJS, TailwindCSS, Vercel, JAM Stack mostly.</span>
         </p>
         <div className='my-8'>
-          <Image src='/icons/firmware.svg' width={300} height={150} alt='Firmware' />
+          <Image src='/icons/coding.svg' width={300} height={150} alt='Coding' />
         </div>
       </div>
 

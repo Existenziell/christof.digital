@@ -23,9 +23,6 @@ export default function Index() {
           <p>
             Please <Link href='/contact'><a className='link'>contact me</a></Link> if you see possible synergies or have questions.
           </p>
-          {/* <div className='lg:ml-auto'>
-            <Image src='/icons/programming.svg' width={200} height={150} alt='Coder' />
-          </div> */}
           <p>
             If you came here for Yoga, you&apos;ll find all information on{' '}
             <Link href='http://yoga.christof.digital/'><a className='link' rel='noopener noreferrer nofollow'>yoga.christof.digital</a></Link>.

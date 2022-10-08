@@ -23,16 +23,7 @@ module.exports = {
         'gray-dark': '#323232',
       },
       backgroundImage: {
-        // 'cloth-pattern': 'url(/icons/cloth.jpg)',
         poly: 'url(/icons/poly.svg)',
-      },
-      minWidth: {
-        '1/4': '25%',
-        '1/3': '33%',
-        '1/2': '50%',
-        '2/3': '66%',
-        '3/4': '75%',
-        '4/5': '80%',
       },
       animation: {
         blob: 'blob 7s infinite',
@@ -54,10 +45,6 @@ module.exports = {
         },
       },
     },
-    gradientColorStops: theme => ({
-      brand: '#C90076',
-      'brand-dark': '#200530',
-    }),
   },
   variants: {
     extend: {},
