@@ -36,7 +36,7 @@ const AI = () => {
     {
       image: '/ai/jungle.jpg',
       prompt: "A 3d render of a synthwave neon jungle forest, lush and dense, monkeys playing, sun shafts",
-      remarks: "Can not find the monkeys!",
+      remarks: "I cannot find the monkeys, can you?",
       generator: 'Stable Diffusion (Stability AI)',
     },
     {
