@@ -6,16 +6,10 @@ module.exports = {
     extend: {
       fontFamily: {
         // https://tailwindcss.com/docs/font-family#customizing
-        sans: [
-          'Gotu',
-        ],
+        sans: ['Gotu', 'Arial', 'sans-serif'],
+        serif: ['Lora', 'serif'],
       },
       colors: {
-        // brand: '#C90076',
-        // 'brand-dark': '#200530',
-        // 'brand': '#a6d1c9',
-        // 'brand-dark': '#282b29',
-        // 'highlight': '#C90076',
         'brand': '#DBDBDB',
         'brand-dark': '#242424',
         'highlight': '#D6A269',

@@ -2,21 +2,15 @@
 Style Sheet for christof.digital
 
 version: 0.9
-last modified: 3.11.2021 by Christof Bauer
+last modified: 3.11.2022 by Christof Bauer
 author: Christof Bauer
 email: bauer.christof@gmail.com
 ----------------------------------------------------------*/
 
 @import url("https://fonts.googleapis.com/css?family=Gotu&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lora&display=swap");
 
 :root {
-  /* --color-brand: #C90076;
-  --color-brand-dark: #200530;  */
-  
-  /* --color-brand: #a6d1c9;
-  --color-brand-dark: #282b29;
-  --color-highlight: #C90076; */
-
   --color-brand: #DBDBDB;
   --color-brand-dark: #242424;
   --color-highlight: #D6A269;
@@ -58,6 +52,12 @@ html, body {
 
 .link:hover {
   @apply no-underline text-highlight transition-all;
+}
+
+.nextimg {
+  font-size: 0;
+  letter-spacing: 0;
+  word-spacing: 0;
 }
 
 

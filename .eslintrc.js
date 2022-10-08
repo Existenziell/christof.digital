@@ -25,11 +25,11 @@ module.exports = {
     },
   },
   rules: {
-    'comma-dangle': ['error', 'always-multiline'],
-    'react/react-in-jsx-scope': 'off',
-    'react/prop-types': 0,
+    'comma-dangle': 'off',
+    quotes: 'off',
     indent: 'off',
-    quotes: ['error', 'single', { allowTemplateLiterals: true }],
+    // 'react/react-in-jsx-scope': 'off',
+    // 'react/prop-types': 0,
     'space-before-function-paren': ['error', {
       anonymous: 'never',
       named: 'never',
@@ -37,5 +37,5 @@ module.exports = {
     }],
     'operator-linebreak': ['off'],
   },
-  ignorePatterns: ['coverage.json', '/coverage/*', '/test/*', '/pages/_app.js'],
+  ignorePatterns: ['coverage.json', '/coverage/*', '/test/*'],
 }

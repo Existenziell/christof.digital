@@ -6,6 +6,7 @@ const Nav = () => {
         { name: 'Root', url: '/' },
         // { name: 'Coding', url: '/coding' },
         { name: 'Curriculum', url: '/cv' },
+        { name: 'AI', url: '/ai' },
         { name: 'Contact', url: '/contact' },
     ]
     const router = useRouter()
