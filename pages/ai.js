@@ -6,7 +6,7 @@ const AI = () => {
     {
       image: '/ai/programmer.png',
       prompt: "A programmer trying to build a web3 website in his hut in the jungle, struggling with the purpose of life, glancing into the distance.",
-      remarks: "This was my first ever AI generated image - funnily enough, people say it resembles me... should I be scared? ",
+      remarks: "This was my first ever AI generated image - funnily enough, there are some resemblances with myself... should I be scared, Dall-E? ",
       generator: 'DALL·E 2 (OpenAI)',
     },
     {
@@ -95,7 +95,7 @@ const AI = () => {
 
       <p className='flex flex-col md:flex-row-reverse items-center justify-center text-center mx-auto w-full md:w-2/3 mb-16'>
         There have recently been an number of AI projects especially in the space of image generation that have absolutely amazed me.
-        Here are a few outcomes of my interactions with these new systems.
+        Here are a few outcomes of my interactions with these new systems. Remember, that all these images have been created by Artificial Intelligence, the 'only' input is the prompt.
       </p>
       {creations.map(creation =>
         <div key={creation.prompt} className='flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mb-16'>
