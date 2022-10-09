@@ -82,3 +82,9 @@ html, body {
     bg-brand-dark text-brand dark:bg-brand dark:text-brand-dark rounded shadow-lg
     hover:shadow hover:cursor-pointer hover:text-highlight dark:hover:text-highlight transition-all;
 }
+
+.button-highlight {
+  @apply w-48 my-8 px-8 py-4 
+    bg-highlight text-brand-dark rounded shadow-lg
+    hover:shadow hover:cursor-pointer transition-all;
+}
