@@ -1,13 +1,11 @@
 import 'tailwindcss/tailwind.css'
 import '../styles/globals.css'
 import NextNprogress from 'nextjs-progressbar'
+import Layout from '../components/_Layout'
 
-function MyApp({ Component, pageProps }) {
-  // Use the layout defined at the page level, if available
-  const getLayout = Component.getLayout || ((page) => page)
-
-  return getLayout(
-    <>
+function Zooloo({ Component, pageProps }) {
+  return (
+    <Layout >
       <NextNprogress
         color='var(--color-brand)'
         startPosition={0.3}
@@ -16,8 +14,8 @@ function MyApp({ Component, pageProps }) {
         showOnShallow={true}
       />
       <Component {...pageProps} />
-    </>
+    </Layout>
   )
 }
 
-export default MyApp
+export default Zooloo

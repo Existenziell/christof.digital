@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import Layout from '../components/Layout'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { dracula, atomOneLight } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 import { code } from '../lib/code'
@@ -68,14 +67,6 @@ const Coding = () => {
         </div>
       </div>
     </div >
-  )
-}
-
-Coding.getLayout = function getLayout(page) {
-  return (
-    <Layout title='Coding'>
-      {page}
-    </Layout>
   )
 }
 

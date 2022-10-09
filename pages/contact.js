@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import Router from 'next/router'
-import Layout from '../components/Layout'
 import Social from '../components/Social'
 import PacmanLoader from 'react-spinners/PacmanLoader'
+import Head from 'next/head'
 
 const Contact = () => {
     const [formData, setFormData] = useState()
@@ -33,18 +33,14 @@ const Contact = () => {
         }
     }
 
-    return (
+    return <>
+        <Head>
+            <title>Contact | christof.digital</title>
+            <meta name='description' content="Contact | christof.digital" />
+        </Head>
+
         <div className='flex flex-col items-center justify-center px-4 md:px-8 lg:w-2/3 lg:mx-auto'>
             <h1 className='text-4xl md:text-6xl'>Let&apos;s connect</h1>
-
-            {/* <Blob node={
-                <p className='bg-white px-8 py-5 rounded dark:bg-gray-700 dark:text-gray-200 leading-relaxed'>
-                    I am excited to hear from you!<br />
-                    Please, feel free to write in your own language.<br />
-                    Languages I understand without Google Translate are:<br />
-                    English, Deutsch, Français, Español, Catalán ッ
-                </p>
-            } /> */}
             <Social />
 
             <div className='px-4 pt-8 pb-0 sm:px-12 mt-6 shadow w-full bg-cover bg-no-repeat bg-poly rounded bg-white/10 backdrop-blur-md text-white'>
@@ -86,15 +82,7 @@ const Contact = () => {
                 </form>
             </div>
         </div>
-    )
-}
-
-Contact.getLayout = function getLayout(page) {
-    return (
-        <Layout title='Contact'>
-            {page}
-        </Layout>
-    )
+    </>
 }
 
 export default Contact
