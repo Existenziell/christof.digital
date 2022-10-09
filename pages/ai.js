@@ -5,7 +5,7 @@ const AI = () => {
   const creations = [
     {
       image: '/ai/programmer.png',
-      prompt: "A programmer trying to build a web3 website in his hut in the jungle, struggling with the purpose of life, glancing into the distance.",
+      prompt: "A programmer trying to build a website in his hut in the jungle, struggling with the purpose of life, glancing into the distance.",
       remarks: "This was my first ever AI generated image - funnily enough, there are some resemblances with myself... should I be scared, Dall-E? ",
       generator: 'DALL·E 2 (OpenAI)',
     },
