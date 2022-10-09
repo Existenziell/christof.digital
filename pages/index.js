@@ -10,7 +10,7 @@ export default function Index() {
       <div className='hidden dark:block lg:w-1/2'>
         <Image src='/icons/logo-dark.png' width={600} height={329} alt='Logo' priority={true} />
       </div>
-      <div className='mt-12 lg:mt-0 flex flex-col leading-relaxed lg:w-1/2 lg:text-right lg:border-r-2 lg:border-highlight lg:pr-12 rounded'>
+      <div className='mt-12 lg:mt-0 flex flex-col leading-relaxed lg:w-1/2 lg:text-right lg:border-r-2 lg:border-cta lg:pr-12 rounded'>
         <h1 className='text-5xl lg:text-4xl my-8 lg:mt-0'>Hi, I am Christof</h1>
         <p className='mb-3'>You have come to the right place.</p>
         <p className='mb-3'>

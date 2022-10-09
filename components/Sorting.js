@@ -13,7 +13,7 @@ const Sorting = ({ sortBy, toggleSortBy }) => {
             focus:outline-none focus:ring-2 focus:ring-offset-2 ring-brand-dark`}>
           <span
             className={`${sortBy ? 'translate-x-6' : 'translate-x-1'} 
-              inline-block w-4 h-4 transform bg-highlight rounded-sm transition-transform`}
+              inline-block w-4 h-4 transform bg-cta rounded-sm transition-transform`}
           />
         </Switch>
         <Switch.Label className="ml-3">Newer</Switch.Label>

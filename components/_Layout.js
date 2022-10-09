@@ -14,7 +14,7 @@ export default function Layout({ children }) {
         <link rel='icon' type='image/png' sizes='32x32' href='/favicon/favicon-32x32.png' />
         <link rel='icon' type='image/png' sizes='16x16' href='/favicon/favicon-16x16.png' />
       </Head>
-      <div className='dark:bg-black h-full'>
+      <div className='flex justify-between items-start h-full p-4 bg-brand text-brand-dark dark:bg-brand-dark dark:text-brand'>
         <Nav />
         <DarkModeToggle />
       </div>

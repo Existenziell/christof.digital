@@ -4,7 +4,7 @@ import { education } from '../lib/education'
 const Education = () => {
   return (
     <div className='w-full md:w-2/3 md:mx-auto'>
-      <h2 className='text-4xl mb-10'>Education</h2>
+      <h2 className='text-4xl mb-12'>Education</h2>
 
       {education.map((e, i) => {
         const { title, school, location, link, date, duration, image, addon } = e

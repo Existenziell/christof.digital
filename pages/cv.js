@@ -43,11 +43,11 @@ const Curriculum = () => {
 
         {view === 'experiences' &&
           <div className='w-full text-center'>
-            <h2 className='text-4xl mb-2'>Experiences</h2>
+            <h2 className='text-4xl mb-4'>Experiences</h2>
 
             <div className='flex items-center justify-between w-full md:w-2/3 md:mx-auto'>
               <Sorting sortBy={sortBy} toggleSortBy={toggleSortBy} />
-              <a href="curriculum.pdf" download="curriculum" className='flex items-center justify-center gap-1 text-xs hover:text-highlight'>
+              <a href="curriculum.pdf" download="curriculum" className='flex items-center justify-center gap-1 text-xs hover:text-cta'>
                 <ArrowDownTrayIcon className='w-4' />
                 <span>Download</span>
               </a>

@@ -13,7 +13,7 @@ email: bauer.christof@gmail.com
 :root {
   --color-brand: #DBDBDB;
   --color-brand-dark: #242424;
-  --color-highlight: #D6A269;
+  --color-cta: #D6A269;
 }
 
 @tailwind base;
@@ -39,11 +39,11 @@ html, body {
 }
 
 ::selection {
-  @apply text-highlight;
+  @apply text-cta;
 }
 
 ::-moz-selection {
-  @apply text-highlight;
+  @apply text-cta;
 }
 
 .link {
@@ -51,7 +51,7 @@ html, body {
 }
 
 .link:hover {
-  @apply no-underline text-highlight transition-all;
+  @apply no-underline text-cta transition-all;
 }
 
 .nextimg {
@@ -66,11 +66,11 @@ html, body {
 	========================================================================== */
 
 .active-nav {
-  @apply dark:bg-brand dark:text-brand-dark bg-brand-dark text-brand;
+  @apply text-cta;
 }
 
 .active-tab {
-  @apply border-b-2 border-highlight font-bold dark:border-highlight;
+  @apply border-b-2 border-cta font-bold dark:border-cta;
 }
 
 /* ==========================================================================
@@ -80,11 +80,11 @@ html, body {
 .button {
   @apply w-48 my-8 px-8 py-4 
     bg-brand-dark text-brand dark:bg-brand dark:text-brand-dark rounded shadow-lg
-    hover:shadow hover:cursor-pointer hover:text-highlight dark:hover:text-highlight transition-all;
+    hover:shadow hover:cursor-pointer hover:text-cta dark:hover:text-cta transition-all;
 }
 
-.button-highlight {
+.button-cta {
   @apply w-48 my-8 px-8 py-4 
-    bg-highlight text-brand-dark rounded shadow-lg
+    bg-cta text-brand-dark rounded shadow-lg
     hover:shadow hover:cursor-pointer transition-all;
 }
