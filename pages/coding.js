@@ -56,7 +56,7 @@ const Coding = () => {
             <div className='hidden md:block' style={{ transform: 'rotateY(180deg)' }}>
               <Image src='/icons/hacker.svg' width={350} height={250} alt='Coder' />
             </div>
-            <div className=''>
+            <div>
               <h2 className='text-xl mb-2'>Further resources:</h2>
               <Link href='/cv'><a className='link'>Curriculum Vitae</a></Link><br />
               <Link href='/contact'><a className='link'>Contact me</a></Link><br />
