@@ -31,11 +31,7 @@ module.exports = {
     indent: 'off',
     // 'react/react-in-jsx-scope': 'off',
     // 'react/prop-types': 0,
-    'space-before-function-paren': ['error', {
-      anonymous: 'never',
-      named: 'never',
-      asyncArrow: 'always',
-    }],
+    'space-before-function-paren': 'off',
     'operator-linebreak': ['off'],
   },
   ignorePatterns: ['coverage.json', '/coverage/*', '/test/*'],

@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function Index() {
   return (
-    <section className='lg:flex lg:flex-row-reverse lg:items-center lg:justify-center lg:gap-8 lg:pb-32 w-full px-8'>
+    <section className='lg:flex lg:flex-row-reverse lg:items-center lg:justify-center lg:gap-8 lg:pb-32 w-full px-8 md:pt-16'>
       <div className='block dark:hidden lg:w-1/2'>
         <Image src='/icons/logo.png' width={600} height={329} alt='Logo' priority={true} />
       </div>

@@ -5,9 +5,9 @@ import { useState } from 'react'
 const Nav = () => {
   const links = [
     { name: 'Root', url: '/' },
-    // { name: 'Coding', url: '/coding' },
     { name: 'Curriculum', url: '/cv' },
     { name: 'AI', url: '/ai' },
+    { name: 'Playground', url: '/play' },
     { name: 'Contact', url: '/contact' },
   ]
   const router = useRouter()
@@ -21,8 +21,9 @@ const Nav = () => {
 
   return (
     <nav className=' w-full'>
+
       {/* Desktop Menu */}
-      <ul className='hidden md:flex z-20'>
+      <ul className='hidden md:flex z-20 gap-1 mt-2'>
         {links.map(l => {
           return (
             <li key={l.name} className=''>

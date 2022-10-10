@@ -66,7 +66,7 @@ html, body {
 	========================================================================== */
 
 .active-nav {
-  @apply text-cta;
+  @apply text-cta bg-gray-dark dark:bg-gray dark:text-gray-dark;
 }
 
 .active-tab {
@@ -87,4 +87,8 @@ html, body {
   @apply w-48 my-8 px-8 py-4 
     bg-cta text-brand-dark rounded shadow-lg
     hover:shadow hover:cursor-pointer transition-all;
+}
+
+:disabled {
+  @apply cursor-not-allowed hover:text-brand dark:hover:text-brand-dark hover:shadow-lg;
 }

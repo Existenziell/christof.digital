@@ -1,20 +1,16 @@
+import { QueryClient, QueryClientProvider } from 'react-query'
+import Layout from '../components/_Layout'
 import 'tailwindcss/tailwind.css'
 import '../styles/globals.css'
-import NextNprogress from 'nextjs-progressbar'
-import Layout from '../components/_Layout'
 
 function Zooloo({ Component, pageProps }) {
+  const queryClient = new QueryClient()
   return (
-    <Layout >
-      <NextNprogress
-        color='var(--color-brand)'
-        startPosition={0.3}
-        stopDelayMs={100}
-        height={3}
-        showOnShallow={true}
-      />
-      <Component {...pageProps} />
-    </Layout>
+    <QueryClientProvider client={queryClient}>
+      <Layout >
+        <Component {...pageProps} />
+      </Layout>
+    </QueryClientProvider>
   )
 }
 
