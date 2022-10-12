@@ -6,6 +6,7 @@ const Sorting = ({ sortBy, toggleSortBy }) => {
       <div className="flex items-center text-sm">
         <Switch.Label className="mr-3">Older</Switch.Label>
         <Switch
+          aria-label='Switch Sorting'
           checked={sortBy}
           onChange={toggleSortBy}
           className={`bg-gray-dark dark:bg-gray 
