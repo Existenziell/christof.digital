@@ -47,11 +47,11 @@ html, body {
 }
 
 .link {
-  @apply underline underline-offset-2 outline-none;
+  @apply border-b border-dotted border-cta outline-none;
 }
 
 .link:hover {
-  @apply no-underline text-cta transition-all;
+  @apply border-none text-cta transition-all;
 }
 
 .nextimg {
@@ -67,7 +67,7 @@ html, body {
 	========================================================================== */
 
 .active-nav {
-  @apply text-cta bg-gray-dark dark:bg-gray dark:text-gray-dark;
+  @apply bg-gray dark:bg-gray-dark text-gray-dark dark:text-gray; 
 }
 
 .active-tab {

@@ -8,8 +8,10 @@ const Nav = () => {
     { name: 'Curriculum', url: '/cv' },
     { name: 'Projects', url: '/projects' },
     // { name: 'AI', url: '/ai' },
+    // { name: 'Playground', url: '/play' },
     { name: 'Contact', url: '/contact' },
   ]
+
   const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
 
@@ -20,13 +22,13 @@ const Nav = () => {
   }
 
   return (
-    <nav className=' w-full'>
+    <nav className='w-full'>
 
       {/* Desktop Menu */}
-      <ul className='hidden md:flex z-20 gap-1 mt-2'>
+      <ul className='hidden md:flex z-20 gap-1'>
         {links.map(l => {
           return (
-            <li key={l.name} className=''>
+            <li key={l.name}>
               <Link href={l.url}>
                 <a className={`px-4 py-2 hover:bg-gray hover:text-cta dark:hover:bg-gray-dark transition-all ${router.pathname === l.url && 'active-nav'}`}>
                   {l.name}

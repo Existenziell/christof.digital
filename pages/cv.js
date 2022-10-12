@@ -63,7 +63,7 @@ const Curriculum = () => {
                     <p className='text-2xl mb-3 p-3 px-4 text-center'>{title}</p>
                     <p className='mb-1'>Company:{' '}
                       {companyUrl
-                        ? <Link href={companyUrl}><a target='_blank' rel='noopener noreferrer nofollow' className='underline'>{company}</a></Link>
+                        ? <Link href={companyUrl}><a target='_blank' rel='noopener noreferrer nofollow' className='underline hover:text-cta hover:no-underline'>{company}</a></Link>
                         : <span>{company}</span>
                       }
                     </p>
@@ -82,7 +82,7 @@ const Curriculum = () => {
                           <span>Latest project:{' '}</span>
                           {latestProject.startsWith('http') ?
                             <Link href={latestProject}>
-                              <a target='_blank' rel='noopener noreferrer nofollow' className='underline'>
+                              <a target='_blank' rel='noopener noreferrer nofollow' className='underline hover:text-cta hover:no-underline'>
                                 {latestProject}
                               </a>
                             </Link>

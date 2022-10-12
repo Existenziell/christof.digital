@@ -13,7 +13,7 @@ const Projects = () => {
       </Head>
 
       <div className='w-full'>
-        <h1 className='text-4xl lg:text-6xl mb-4 text-center'>Projects</h1>
+        <h1 className='text-4xl md:text-6xl mb-4 text-center'>Projects</h1>
         <p className='mx-auto max-w-xl text-center mb-16'>I thoroughly enjoy working on these smaller projects, as a tech demo, a MVP or just to play around with a new technology.</p>
 
         <div className='w-full text-left flex flex-wrap justify-evenly items-start gap-8'>
