@@ -43,7 +43,6 @@ const Curriculum = () => {
 
         {view === 'experiences' &&
           <div className='w-full text-center'>
-            <h2 className='text-4xl mb-4'>Experiences</h2>
 
             <div className='flex items-center justify-between w-full md:w-2/3 md:mx-auto'>
               <Sorting sortBy={sortBy} toggleSortBy={toggleSortBy} />
@@ -53,7 +52,7 @@ const Curriculum = () => {
               </a>
             </div>
 
-            <ul className='flex flex-col space-y-8 justify-center items-start text-left w-full md:w-2/3 md:mx-auto mb-32 mt-2'>
+            <ul className='flex flex-col space-y-8 justify-center items-start text-left w-full md:w-2/3 md:mx-auto mt-2'>
               {data.map((job, index) => {
                 const { title, company, companyUrl, companyType, date, duration, location, desc, latestProject, skills } = job
 
@@ -99,9 +98,12 @@ const Curriculum = () => {
             </ul>
           </div>
         }
+
         {view === 'education' &&
           <Education />
         }
+
+        <Link href='/projects'><a className='button button-sm mx-auto'>Even more projects</a></Link>
       </div>
     </>
   )

@@ -7,14 +7,14 @@ const Projects = () => {
   return (
     <div className='w-full'>
       <h1 className='text-4xl lg:text-6xl mb-4 text-center'>Projects</h1>
-      <p className='mx-auto max-w-xl text-center mb-12'>I really enjoy working on these smaller projects, as a tech demo, a MVP or just to play around with a new technology.</p>
+      <p className='mx-auto max-w-xl text-center mb-16'>I thoroughly enjoy working on these smaller projects, as a tech demo, a MVP or just to play around with a new technology.</p>
 
-      <div className='w-full text-left'>
+      <div className='w-full text-left flex flex-wrap justify-evenly items-start gap-8'>
         {projects.map(project => (
-          <div key={project.name} className='mb-16 w-full bg-gray dark:bg-gray-dark p-4 text-brand-dark dark:text-brand rounded-sm'>
+          <div key={project.name} className='md:max-w-[calc(30vw)] bg-gray dark:bg-gray-dark p-4 text-brand-dark dark:text-brand rounded-sm'>
 
-            <div className='flex justify-between w-full items-center'>
-              <h2 className='text-2xl mb-4'>{project.name}</h2>
+            <div className='flex justify-between w-full items-center mb-4'>
+              <h2 className='text-2xl'>{project.name}</h2>
               <a href={project.link} target='_blank' rel='noopener noreferrer nofollow'>
                 <LinkIcon className='w-6 hover:text-cta' />
               </a>
@@ -30,16 +30,11 @@ const Projects = () => {
                 objectFit="contain"
               />
             </div>
-            <div className='flex justify-between items-center'>
-              <ul className='flex gap-2 my-4'>
-                {project.tech.map(t => (
-                  <li key={t} className='bg-gray-dark dark:bg-gray text-gray dark:text-gray-dark p-2 rounded-full px-4 text-xs'>{t}</li>
-                ))}
-              </ul>
-              <a href={project.link} target='_blank' rel='noopener noreferrer nofollow'>
-                <LinkIcon className='w-6 hover:text-cta' />
-              </a>
-            </div>
+            <ul className='flex flex-wrap gap-2 my-4'>
+              {project.tech.map(t => (
+                <li key={t} className='bg-gray-dark dark:bg-gray text-gray dark:text-gray-dark p-2 rounded-full px-3 py-1 text-xs'>{t}</li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>

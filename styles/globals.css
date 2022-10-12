@@ -84,6 +84,10 @@ html, body {
     hover:shadow hover:cursor-pointer hover:text-cta dark:hover:text-cta transition-all;
 }
 
+.button-sm {
+  @apply w-auto px-4 py-2 text-sm block max-w-max;
+}
+
 .button-cta {
   @apply w-48 my-8 px-8 py-4 
     bg-cta text-brand-dark rounded shadow-lg
