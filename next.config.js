@@ -1,5 +1,10 @@
-/* next.config.js  */
-module.exports = {
+const withPWA = require('next-pwa')({
+  dest: 'public',
+  register: true,
+  disable: process.env.NODE_ENV === 'devlopment',
+})
+
+module.exports = withPWA({
   i18n: {
     locales: ['en'],
     defaultLocale: 'en',
@@ -7,4 +12,4 @@ module.exports = {
   images: {
     domains: ['rickandmortyapi.com'],
   },
-}
+})
