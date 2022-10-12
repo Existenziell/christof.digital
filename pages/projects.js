@@ -22,9 +22,15 @@ const Projects = () => {
 
               <div className='flex justify-between w-full items-center mb-4'>
                 <h2 className='text-2xl'>{project.name}</h2>
-                <a href={project.link} target='_blank' rel='noopener noreferrer nofollow'>
-                  <LinkIcon className='w-6 hover:text-cta' />
-                </a>
+                {project.external ?
+                  <a href={project.link} target='_blank' rel='noopener noreferrer nofollow'>
+                    <LinkIcon className='w-6 hover:text-cta' />
+                  </a>
+                  :
+                  <Link href={project.link}>
+                    <a><LinkIcon className='w-6 hover:text-cta' /></a>
+                  </Link>
+                }
               </div>
               <p className='text-sm mb-2'>{project.desc}</p>
               <div className='nextimg'>
