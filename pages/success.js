@@ -24,8 +24,8 @@ const Success = () => {
             <Link href='/cv'>
               <a className='mt-48 text-sm button'>CV</a>
             </Link>
-            <Link href='/ai'>
-              <a className='text-sm button'>AI</a>
+            <Link href='/projects'>
+              <a className='text-sm button'>Projects</a>
             </Link>
           </div>
         </div>

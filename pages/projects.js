@@ -11,7 +11,7 @@ const Projects = () => {
 
       <div className='w-full text-left flex flex-wrap justify-evenly items-start gap-8'>
         {projects.map(project => (
-          <div key={project.name} className='md:max-w-[calc(30vw)] bg-gray dark:bg-gray-dark p-4 text-brand-dark dark:text-brand rounded-sm'>
+          <div key={project.name} className='w-full md:max-w-[calc(30vw)] bg-gray dark:bg-gray-dark p-4 text-brand-dark dark:text-brand rounded-sm'>
 
             <div className='flex justify-between w-full items-center mb-4'>
               <h2 className='text-2xl'>{project.name}</h2>
