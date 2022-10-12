@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function Index() {
   return (
-    <section className='lg:flex lg:flex-row lg:items-start lg:justify-center lg:gap-8 w-full px-8'>
+    <section className='lg:flex lg:flex-row lg:items-center lg:justify-center lg:gap-8 w-full px-8'>
       <div className='flex flex-col leading-relaxed lg:w-1/2 lg:text-right lg:border-r-2 lg:border-cta lg:pr-12 rounded'>
         <h1 className='text-4xl md:text-6xl mb-8'>Hi, I am Christof</h1>
         <p className='mb-3'>You have come to the right place.</p>
