@@ -7,7 +7,7 @@ function Zooloo({ Component, pageProps }) {
   const queryClient = new QueryClient()
   return (
     <QueryClientProvider client={queryClient}>
-      <Layout >
+      <Layout>
         <Component {...pageProps} />
       </Layout>
     </QueryClientProvider>

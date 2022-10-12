@@ -6,8 +6,8 @@ const Nav = () => {
   const links = [
     { name: 'Root', url: '/' },
     { name: 'Curriculum', url: '/cv' },
-    { name: 'AI', url: '/ai' },
-    { name: 'Playground', url: '/play' },
+    { name: 'Projects', url: '/projects' },
+    // { name: 'AI', url: '/ai' },
     { name: 'Contact', url: '/contact' },
   ]
   const router = useRouter()

@@ -21,7 +21,7 @@ const Play = () => {
       <h1 className='text-4xl lg:text-6xl mb-3 text-center'>Playground</h1>
       <p className='text-sm text-center'>Using react-query and the open Rick&amp;Morty API to test Pagination.</p>
       <Pagination data={data} page={page} setPage={setPage} status={status} />
-    </div >
+    </div>
   )
 }
 

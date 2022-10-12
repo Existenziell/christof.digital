@@ -58,6 +58,7 @@ html, body {
   font-size: 0;
   letter-spacing: 0;
   word-spacing: 0;
+  position: relative;
 }
 
 
