@@ -69,8 +69,8 @@ const Curriculum = () => {
                     </p>
                     <p className='mb-1'>Location: <span>{location}</span></p>
                     <p className='mb-1'>Type: <span>{companyType}</span></p>
-                    <p className='mb-4'>Duration: <span>{duration}</span></p>
-                    <p dangerouslySetInnerHTML={{ __html: desc }} className='text-base mb-4 bg-gray dark:text-gray-dark rounded-sm px-8 py-6 max-w-max'></p>
+                    {duration && <p>Duration: <span>{duration}</span></p>}
+                    <p dangerouslySetInnerHTML={{ __html: desc }} className='text-base my-4 bg-gray dark:text-gray-dark rounded-sm px-8 py-6 max-w-max'></p>
                     <p className='mb-1'>
                       <span>Skills/Tools:{' '}</span>
                       {skills.join(', ')}
