@@ -9,7 +9,7 @@ export default function Index() {
         <h1 className='text-4xl md:text-6xl mb-8'>Hi, I am Christof</h1>
         <p className='mb-3'>You have come to the right place.</p>
         <p className='mb-3 text-justify lg:text-right'>
-          If you are looking for a Fullstack App Developer (Web, Mobile, Blockchain) with more than 15 years of experience.
+          If you are looking for a Fullstack Engineer (Web, Mobile, Blockchain) with more than 15 years of experience.
           I am always looking for enticing projects and connections.
           You can find more information in my {` `}
           <Link href='/cv'><a className='link'>CV</a></Link>{` `}
