@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import CleverLink from '../components/CleverLink'
+import ProjectLink from '../components/ProjectLink'
 import AppLauncher from '../components/AppLauncher'
 import { LinkIcon } from '@heroicons/react/24/solid'
 import { projects } from '../lib/projects'
@@ -23,13 +23,13 @@ const Projects = () => {
 
               <div className='flex justify-between w-full items-center mb-4'>
                 <h2 className='text-2xl truncate' title={project.name}>{project.name}</h2>
-                <CleverLink href={project.link} external={project.external}>
+                <ProjectLink href={project.link} external={project.external}>
                   <LinkIcon className='w-6 hover:text-cta' />
-                </CleverLink>
+                </ProjectLink>
               </div>
               <p className='text-sm mb-2 h-16'>{project.desc}</p>
               <div className='nextimg'>
-                <CleverLink href={project.link} classes={'w-6 hover:text-cta'} external={project.external}>
+                <ProjectLink href={project.link} classes={'w-6 hover:text-cta'} external={project.external}>
                   <Image
                     src={`/projects/${project.image}`}
                     alt={project.name}
@@ -38,7 +38,7 @@ const Projects = () => {
                     layout="responsive"
                     objectFit="contain"
                   />
-                </CleverLink>
+                </ProjectLink>
               </div>
               <ul className='flex flex-wrap items-start gap-1 mt-4 h-12'>
                 {project.tech.map(t => (
