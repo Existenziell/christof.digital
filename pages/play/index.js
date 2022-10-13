@@ -1,11 +1,12 @@
 import Image from 'next/image'
-import fetchApi from '../lib/fetchApi'
-import Pagination from '../components/Pagination'
-import Search from '../components/Search'
-import AppLauncher from '../components/AppLauncher'
+import fetchApi from '../../lib/fetchApi'
+import Pagination from '../../components/Pagination'
+import Search from '../../components/Search'
+import AppLauncher from '../../components/AppLauncher'
 import { useQuery } from 'react-query'
 import { useState } from 'react'
 import { SyncLoader } from 'react-spinners'
+import Link from 'next/link'
 
 const Play = () => {
   const [page, setPage] = useState(1)
@@ -46,18 +47,20 @@ const Play = () => {
           <div className='flex flex-wrap gap-4 justify-evenly items-center w-full md:pb-16'>
             {data?.results.map(person => {
               return (
-                <div key={person.id} className='bg-gray dark:bg-gray-dark p-4 rounded-sm text-sm'>
-                  <h2 className='text-xl font-serif w-48 truncate' title={person.name}>{person.name}</h2>
-                  <div className='nextimg w-48 h-48 relative my-2'>
-                    <Image src={person.image} alt={person.name} layout='fill' />
-                  </div>
-                  <div>
-                    <p className='w-48 truncate'>{person.gender}: {person.species} <span title={person.type}>{person.type && `(${person.type})`}</span></p>
-                    <p className='w-48 truncate' title={person.origin.name}>Origin: {person.origin.name}</p>
-                    <p className='w-48 truncate' title={person.location.name}>Location: {person.location.name}</p>
-                    <p>Status: {person.status}</p>
-                  </div>
-                </div>
+                <Link href={`/play/${person.id}`} key={person.id}>
+                  <a className='bg-gray dark:bg-gray-dark p-4 rounded-sm text-sm'>
+                    <h2 className='text-xl font-serif w-48 truncate' title={person.name}>{person.name}</h2>
+                    <div className='nextimg w-48 h-48 relative my-2'>
+                      <Image src={person.image} alt={person.name} layout='fill' />
+                    </div>
+                    <div>
+                      <p className='w-48 truncate'>{person.gender}: {person.species} <span title={person.type}>{person.type && `(${person.type})`}</span></p>
+                      <p className='w-48 truncate' title={person.origin.name}>Origin: {person.origin.name}</p>
+                      <p className='w-48 truncate' title={person.location.name}>Location: {person.location.name}</p>
+                      <p>Status: {person.status}</p>
+                    </div>
+                  </a>
+                </Link>
               )
             })}
           </div>
