@@ -15,14 +15,14 @@ const Projects = () => {
 
       <div className='w-full'>
         <h1 className='text-4xl md:text-6xl mb-4 text-center'>Projects</h1>
-        <p className='mx-auto max-w-xl text-center mb-16'>I thoroughly enjoy working on these smaller projects, as a tech demo, a MVP or just to play around with a new technology.</p>
+        <p className='mx-auto max-w-xl text-center mb-16'>I thoroughly enjoy working on these smaller projects, as a tech demo, a MVP or just to play around with a new technology. Here are a few examples:</p>
 
         <div className='w-full text-left flex flex-wrap justify-evenly items-start'>
           {projects.map(project => (
             <div key={project.name} className='w-full md:max-w-[calc(40vw)] lg:max-w-[calc(30vw)] mb-8 bg-gray dark:bg-gray-dark p-4 text-brand-dark dark:text-brand rounded-sm'>
 
               <div className='flex justify-between w-full items-center mb-4'>
-                <h2 className='text-2xl'>{project.name}</h2>
+                <h2 className='text-2xl truncate' title={project.name}>{project.name}</h2>
                 <CleverLink href={project.link} external={project.external}>
                   <LinkIcon className='w-6 hover:text-cta' />
                 </CleverLink>
