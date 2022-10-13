@@ -30,7 +30,6 @@ export default function Index() {
         <Image src='/root.webp'
           width={2000}
           height={1225}
-          // layout='responsive'
           alt='Logo'
           priority={true}
           objectFit='contain'

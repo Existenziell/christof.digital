@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import Image from 'next/image'
 import { socialLinks } from '../lib/socialLinks'
 
@@ -10,11 +9,15 @@ const Social = () => {
           const { name, link, image } = l
           return (
             <li className='border-b-2 border-transparent hover:border-b-2 hover:border-brand-dark dark:hover:border-brand transition-all' key={name}>
-              <Link href={link}>
-                <a target='_blank' rel='noopener noreferrer nofollow'>
-                  <Image src={image} width={32} height={32} alt={name} className='dark:invert'></Image>
-                </a>
-              </Link>
+              <a href={link} target='_blank' rel='noopener noreferrer nofollow'>
+                <Image
+                  src={image}
+                  width={32}
+                  height={32}
+                  alt={name}
+                  className='dark:invert'
+                />
+              </a>
             </li>
           )
         })}

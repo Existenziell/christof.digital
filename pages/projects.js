@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from 'next/link'
+import CleverLink from '../components/CleverLink'
+import AppLauncher from '../components/AppLauncher'
 import { LinkIcon } from '@heroicons/react/24/solid'
 import { projects } from '../lib/projects'
 
@@ -16,48 +17,39 @@ const Projects = () => {
         <h1 className='text-4xl md:text-6xl mb-4 text-center'>Projects</h1>
         <p className='mx-auto max-w-xl text-center mb-16'>I thoroughly enjoy working on these smaller projects, as a tech demo, a MVP or just to play around with a new technology.</p>
 
-        <div className='w-full text-left flex flex-wrap justify-evenly items-start gap-8'>
+        <div className='w-full text-left flex flex-wrap justify-evenly items-start'>
           {projects.map(project => (
-            <div key={project.name} className='w-full md:max-w-[calc(30vw)] bg-gray dark:bg-gray-dark p-4 text-brand-dark dark:text-brand rounded-sm'>
+            <div key={project.name} className='w-full md:max-w-[calc(40vw)] lg:max-w-[calc(30vw)] mb-8 bg-gray dark:bg-gray-dark p-4 text-brand-dark dark:text-brand rounded-sm'>
 
               <div className='flex justify-between w-full items-center mb-4'>
                 <h2 className='text-2xl'>{project.name}</h2>
-                {project.external ?
-                  <a href={project.link} target='_blank' rel='noopener noreferrer nofollow'>
-                    <LinkIcon className='w-6 hover:text-cta' />
-                  </a>
-                  :
-                  <Link href={project.link}>
-                    <a><LinkIcon className='w-6 hover:text-cta' /></a>
-                  </Link>
-                }
+                <CleverLink href={project.link} external={project.external}>
+                  <LinkIcon className='w-6 hover:text-cta' />
+                </CleverLink>
               </div>
-              <p className='text-sm mb-2'>{project.desc}</p>
+              <p className='text-sm mb-2 h-16'>{project.desc}</p>
               <div className='nextimg'>
-                <Image
-                  src={`/projects/${project.image}`}
-                  alt={project.name}
-                  width={1000}
-                  height={600}
-                  layout="responsive"
-                  objectFit="contain"
-                />
+                <CleverLink href={project.link} classes={'w-6 hover:text-cta'} external={project.external}>
+                  <Image
+                    src={`/projects/${project.image}`}
+                    alt={project.name}
+                    width={1000}
+                    height={600}
+                    layout="responsive"
+                    objectFit="contain"
+                  />
+                </CleverLink>
               </div>
-              <ul className='flex flex-wrap gap-2 my-4'>
+              <ul className='flex flex-wrap items-start gap-1 mt-4 h-12'>
                 {project.tech.map(t => (
-                  <li key={t} className='bg-gray-dark dark:bg-gray text-gray dark:text-gray-dark p-2 rounded-full px-3 py-1 text-xs'>{t}</li>
+                  <li key={t} className='bg-gray-dark dark:bg-gray text-gray dark:text-gray-dark p-2 rounded-xl px-3 py-1 text-xs'>{t}</li>
                 ))}
               </ul>
             </div>
           ))}
         </div>
 
-        <Link href='http://app.christof.digital'>
-          <a className='fixed right-2 sm:right-0 bottom-0 block py-2 px-1 sm:p-2 text-sm transition-all bg-cta text-gray-dark hover:px-3'
-            style={{ writingMode: 'vertical-rl' }}>
-            Launch App
-          </a>
-        </Link>
+        <AppLauncher />
       </div>
     </>
   )

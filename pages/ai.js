@@ -24,7 +24,12 @@ const AI = () => {
         {creations.map(creation =>
           <div key={creation.prompt} className='flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mb-16'>
             <div className='bg-gray dark:bg-gray-dark p-4 rounded nextimg'>
-              <Image src={creation.image} alt={creation.prompt} width={800} height={800} />
+              <Image
+                src={creation.image}
+                alt={creation.prompt}
+                width={800}
+                height={800}
+              />
             </div>
             <div className='md:w-1/2 font-serif'>
               <p className='text-lg md:text-2xl mb-2'>&quot;{creation.prompt}&quot;</p>

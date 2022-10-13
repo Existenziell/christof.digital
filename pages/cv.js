@@ -81,11 +81,9 @@ const Curriculum = () => {
                         <>
                           <span>Latest project:{' '}</span>
                           {latestProject.startsWith('http') ?
-                            <Link href={latestProject}>
-                              <a target='_blank' rel='noopener noreferrer nofollow' className='underline hover:text-cta hover:no-underline'>
-                                {latestProject}
-                              </a>
-                            </Link>
+                            <a href={latestProject} target='_blank' rel='noopener noreferrer nofollow' className='underline hover:text-cta hover:no-underline'>
+                              {latestProject}
+                            </a>
                             :
                             <span>{latestProject}</span>
                           }

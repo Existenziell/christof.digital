@@ -18,7 +18,13 @@ const Education = () => {
             <div className='flex items-center justify-start gap-4 mt-8'>
               {image &&
                 <div>
-                  <Image src={image} width={100} height={100} alt={title} className={i === 0 ? `invert dark:invert-0` : ``} />
+                  <Image
+                    src={image}
+                    width={100}
+                    height={100}
+                    alt={title}
+                    className={i === 0 ? `invert dark:invert-0` : ``}
+                  />
                 </div>
               }
               <p dangerouslySetInnerHTML={{ __html: addon }}></p>
