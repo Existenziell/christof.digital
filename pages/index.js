@@ -17,11 +17,10 @@ export default function Index() {
           <Link href='/projects'><a className='link'>projects page</a></Link>
           <br /><br />
           Please <Link href='/contact'><a className='link'>contact me</a></Link> if you see possible synergies or have questions.
-          And in case you came here for Yoga, you&apos;ll find all information on{' '}
+          And in case you came here for Yoga, you&apos;ll find all information at{' '}
           <Link href='http://yoga.christof.digital/'>
             <a className='link' rel='noopener noreferrer nofollow'>yoga.christof.digital</a>
-          </Link>
-          <FaceSmileIcon className='w-5 inline-block relative bottom-[1px] ml-2' />
+          </Link>.
         </p>
         <h1 className='text-4xl lg:text-6xl mt-8'>Enjoy</h1>
 

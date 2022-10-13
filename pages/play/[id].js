@@ -37,8 +37,8 @@ const Play = () => {
               />
             </div>
             <div>
-              <p>Gender: {character.gender}</p>
               <p>Species: {character.species}</p>
+              <p>Gender: {character.gender}</p>
               {character.type && <p>Type: {character.type}</p>}
               <p className='mt-4'>Origin: {character.origin.name}</p>
               <p>Location: {character.location.name}</p>
