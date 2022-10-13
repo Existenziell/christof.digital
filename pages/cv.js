@@ -60,7 +60,7 @@ const Curriculum = () => {
                   <li key={index} className='w-full shadow hover:shadow-md px-4 sm:px-8 pt-6 pb-8 bg-white dark:bg-gray-dark dark:text-white text-sm rounded relative'>
                     <p className={`absolute top-0 bg-gray dark:text-gray-dark px-2 py-1 right-0 rounded-bl rounded-tr`}>{date}</p>
 
-                    <p className='text-2xl mb-3 text-center pt-6'>{title}</p>
+                    <p className='text-2xl mb-6 text-center pt-6'>{title}</p>
                     <p className='mb-1'>Company:{' '}
                       {companyUrl
                         ? <Link href={companyUrl}><a target='_blank' rel='noopener noreferrer nofollow' className='underline hover:text-cta hover:no-underline'>{company}</a></Link>
