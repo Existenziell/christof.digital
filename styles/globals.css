@@ -66,13 +66,23 @@ html, body {
 	Navigation
 	========================================================================== */
 
+/*
 .active-nav {
   @apply bg-gray dark:bg-gray-dark text-gray-dark dark:text-gray; 
+}
+*/
+.active-nav {
+  @apply md:border-b-2 md:border-cta md:border-spacing-2; 
+}
+
+.mobile-nav .active-nav {
+  @apply bg-gray dark:bg-gray-dark dark:text-gray;
 }
 
 .active-tab {
   @apply border-b-2 border-cta font-bold dark:border-cta;
 }
+
 
 /* ==========================================================================
 	Forms 

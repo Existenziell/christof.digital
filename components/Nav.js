@@ -25,13 +25,13 @@ const Nav = () => {
     <nav className='w-full'>
 
       {/* Desktop Menu */}
-      <ul className='hidden md:flex z-20 gap-1'>
+      <ul className='hidden md:flex z-20 gap-8'>
         {links.map(l => {
           return (
             <li key={l.name}>
               <Link href={l.url}>
-                <a className={`px-4 py-2 hover:bg-gray hover:text-cta dark:hover:bg-gray-dark transition-all ${router.pathname === l.url && 'active-nav'}`}>
-                  {l.name}
+                <a className={`hover:animate-pulse pb-1 hover:text-cta font-mono transition-all ${router.pathname === l.url && 'active-nav'}`}>
+                  {`/* ${l.name} */`}
                 </a>
               </Link>
             </li>
@@ -56,7 +56,7 @@ const Nav = () => {
 
       {/* Mobile menu */}
       {isOpen &&
-        <ul className='block md:hidden pt-20 z-10 bg-brand text-brand-dark dark:bg-brand-dark dark:text-brand h-screen'>
+        <ul className='mobile-nav block md:hidden pt-20 z-10 bg-brand text-brand-dark dark:bg-brand-dark dark:text-brand h-screen'>
           {links.map(l => (
             <li key={l.name}>
               <a
