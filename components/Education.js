@@ -3,7 +3,7 @@ import { education } from '../lib/education'
 
 const Education = () => {
   return (
-    <div className='w-full md:w-2/3 md:mx-auto'>
+    <div className='w-full lg:w-2/3 lg:mx-auto'>
 
       {education.map((e, i) => {
         const { title, school, location, link, date, duration, image, addon } = e
@@ -11,7 +11,7 @@ const Education = () => {
           <div key={title} className='shadow-sm rounded p-8 relative text-sm text-left mb-8 bg-white dark:bg-gray-dark dark:text-white'>
             <p className={`absolute top-0 bg-gray dark:text-gray-dark px-2 py-1 right-0 rounded-bl rounded-tr`}>{date}</p>
             <p className='text-2xl mb-6 text-center pt-6'>{title}</p>
-            <p className='mb-1'>School: <a href={link} target="_blank" rel="noreferrer nofollow" className='underline'>{school}</a></p>
+            <p className='mb-1'>School: <a href={link} target="_blank" rel="noreferrer nofollow" className='underline hover:text-cta hover:no-underline'>{school}</a></p>
             <p className='mb-1'>Location: <span>{location}</span></p>
             <p className='mb-4'>Duration: <span>{duration}</span></p>
 

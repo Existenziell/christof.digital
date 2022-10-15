@@ -45,7 +45,7 @@ const Curriculum = () => {
         {view === 'experiences' &&
           <div className='w-full text-center'>
 
-            <div className='flex items-center justify-between w-full md:w-2/3 md:mx-auto'>
+            <div className='flex items-center justify-between w-full lg:w-2/3 lg:mx-auto'>
               <Sorting sortBy={sortBy} toggleSortBy={toggleSortBy} />
               <a href="curriculum.pdf" download="curriculum" className='flex items-center justify-center gap-1 text-xs hover:text-cta'>
                 <ArrowDownTrayIcon className='w-4' />
@@ -53,7 +53,7 @@ const Curriculum = () => {
               </a>
             </div>
 
-            <ul className='flex flex-col space-y-8 justify-center items-start text-left w-full md:w-2/3 md:mx-auto mt-2'>
+            <ul className='flex flex-col space-y-8 justify-center items-start text-left w-full lg:w-2/3 lg:mx-auto mt-2'>
               {data.map((job, index) => {
                 const { title, company, companyUrl, companyType, date, duration, location, desc, latestProject, skills } = job
 
