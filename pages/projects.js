@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import ProjectLink from '../components/ProjectLink'
 import AppLauncher from '../components/AppLauncher'
+import TagList from '../components/TagList'
 import { LinkIcon } from '@heroicons/react/24/solid'
 import { projects } from '../lib/projects'
 
@@ -19,7 +20,8 @@ const Projects = () => {
 
         <div className='w-full text-left flex flex-wrap justify-evenly items-start'>
           {projects.map(project => (
-            <div key={project.name} className='w-full md:max-w-[calc(40vw)] lg:max-w-[calc(30vw)] mb-8 bg-gray dark:bg-gray-dark p-4 text-brand-dark dark:text-brand rounded-sm'>
+            <div key={project.name}
+              className='w-full md:max-w-[calc(40vw)] lg:max-w-[calc(30vw)] p-4 mb-8 hover:scale-105 hover:shadow-2xl transition-all duration-500 bg-gray dark:bg-gray-dark text-brand-dark dark:text-brand rounded-sm'>
 
               <div className='flex justify-between w-full items-center mb-4'>
                 <h2 className='text-2xl truncate' title={project.name}>{project.name}</h2>
@@ -28,7 +30,7 @@ const Projects = () => {
                 </ProjectLink>
               </div>
               <p className='text-sm mb-2 h-16'>{project.desc}</p>
-              <div className='nextimg'>
+              <div className='nextimg mb-4'>
                 <ProjectLink href={project.link} classes={'w-6 hover:text-cta'} external={project.external}>
                   <Image
                     src={`/projects/${project.image}`}
@@ -40,11 +42,8 @@ const Projects = () => {
                   />
                 </ProjectLink>
               </div>
-              <ul className='flex flex-wrap items-start gap-1 mt-4 h-12'>
-                {project.tech.map(t => (
-                  <li key={t} className='bg-gray-dark dark:bg-gray text-gray dark:text-gray-dark p-2 rounded-xl px-3 py-1 text-xs'>{t}</li>
-                ))}
-              </ul>
+
+              <TagList items={project.tech} />
             </div>
           ))}
         </div>

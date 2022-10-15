@@ -28,7 +28,7 @@ export default function Layout({ children }) {
         showOnShallow={true}
       />
 
-      <div className='flex justify-between items-start h-full p-4 bg-brand text-brand-dark dark:bg-brand-dark dark:text-brand'>
+      <div className='flex justify-between items-start h-full p-4 md:px-8 bg-brand text-brand-dark dark:bg-brand-dark dark:text-brand'>
         <Nav />
         <DarkModeToggle />
       </div>

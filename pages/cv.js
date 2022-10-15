@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import Education from '../components/Education'
 import Sorting from '../components/Sorting'
+import TagList from '../components/TagList'
 import { useState } from 'react'
 import { ScrollIndicator } from '../components/ScrollIndicator'
 import { ArrowDownTrayIcon } from '@heroicons/react/24/solid'
@@ -57,8 +58,8 @@ const Curriculum = () => {
                 const { title, company, companyUrl, companyType, date, duration, location, desc, latestProject, skills } = job
 
                 return (
-                  <li key={index} className='w-full shadow hover:shadow-md px-4 sm:px-8 pt-6 pb-8 bg-white dark:bg-gray-dark dark:text-white text-sm rounded relative'>
-                    <p className={`absolute top-0 bg-gray dark:text-gray-dark px-2 py-1 right-0 rounded-bl rounded-tr`}>{date}</p>
+                  <li key={index} className='w-full shadow hover:shadow-md px-4 sm:px-8 pt-6 pb-8 bg-gray dark:bg-gray-dark dark:text-gray text-sm rounded relative'>
+                    <p className={`absolute top-0 bg-gray-dark/20 dark:bg-gray/20 dark:text-gray px-2 py-1 right-0 rounded-bl rounded-tr`}>{date}</p>
 
                     <p className='text-2xl mb-6 text-center pt-6'>{title}</p>
                     <p className='mb-1'>Company:{' '}
@@ -70,16 +71,16 @@ const Curriculum = () => {
                     <p className='mb-1'>Location: <span>{location}</span></p>
                     <p className='mb-1'>Type: <span>{companyType}</span></p>
                     {duration && <p>Duration: <span>{duration}</span></p>}
-                    <p dangerouslySetInnerHTML={{ __html: desc }} className='text-base my-4 bg-gray dark:text-gray-dark rounded-sm px-8 py-6 max-w-max'></p>
-                    <p className='mb-1'>
-                      <span>Skills/Tools:{' '}</span>
-                      {skills.join(', ')}
-                    </p>
+                    <p dangerouslySetInnerHTML={{ __html: desc }} className='text-base my-4 bg-gray-dark/20 dark:bg-gray/20 dark:text-gray rounded-sm px-6 py-3 max-w-max'></p>
+                    <div className='mb-2 flex items-center gap-2'>
+                      <span>Skills/Tools:</span>
+                      <TagList items={skills} />
+                    </div>
 
                     <div className='overflow-hidden'>
                       {!!latestProject && (
                         <>
-                          <span>Latest project:{' '}</span>
+                          <span>Last project:{' '}</span>
                           {latestProject.startsWith('http') ?
                             <a href={latestProject} target='_blank' rel='noopener noreferrer nofollow' className='underline hover:text-cta hover:no-underline'>
                               {latestProject}
