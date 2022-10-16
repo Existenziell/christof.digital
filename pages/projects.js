@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import ProjectLink from '../components/ProjectLink'
-// import AppLauncher from '../components/AppLauncher'
+import AppLauncher from '../components/AppLauncher'
 import TagList from '../components/TagList'
 import { LinkIcon } from '@heroicons/react/24/solid'
 import { projects } from '../lib/projects'
@@ -48,7 +48,7 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* <AppLauncher /> */}
+        <AppLauncher />
       </div>
     </>
   )
