@@ -51,7 +51,13 @@ const Play = () => {
                   <a className='bg-gray dark:bg-gray-dark p-4 rounded-sm text-sm'>
                     <h2 className='text-xl font-serif w-48 truncate' title={person.name}>{person.name}</h2>
                     <div className='nextimg w-48 h-48 relative my-2'>
-                      <Image src={person.image} alt={person.name} layout='fill' />
+                      <Image
+                        src={person.image}
+                        alt={person.name}
+                        layout='fill'
+                        placeholder="blur"
+                        blurDataURL={person.image}
+                      />
                     </div>
                     <div>
                       <p className='w-48 truncate'>{person.gender}: {person.species} <span title={person.type}>{person.type && `(${person.type})`}</span></p>

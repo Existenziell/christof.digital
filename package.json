@@ -4,8 +4,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "cypress": "cypress open"
+    "lint": "next lint"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.3",
@@ -13,7 +12,7 @@
     "@sendgrid/mail": "^7.7.0",
     "caniuse-lite": "^1.0.30001418",
     "framer-motion": "^7.5.3",
-    "next": "latest",
+    "next": "12.3.1",
     "next-pwa": "^5.6.0",
     "nextjs-progressbar": "^0.0.14",
     "react": "^18.2.0",

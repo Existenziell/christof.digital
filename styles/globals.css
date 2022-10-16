@@ -114,7 +114,7 @@ html, body {
 	========================================================================== */
 
 .search input[type='search']:not(:disabled) {
-  @apply h-[40px] min-w-[150px] pl-2 text-sm ml-2 border-2 border-gray rounded-sm focus:outline-none focus:ring-0 focus:border-cta dark:focus:border-cta dark:border-brand-dark bg-brand dark:bg-brand-dark text-black dark:text-white;
+  @apply h-[40px] min-w-[150px] pl-2 text-sm ml-2 border-2 border-gray rounded-sm focus:outline-none focus:ring-0 focus:border-cta dark:focus:border-cta dark:border-gray-dark bg-brand dark:bg-brand-dark text-black dark:text-white;
 }
 
 .search input[type='search']::-webkit-search-cancel-button{

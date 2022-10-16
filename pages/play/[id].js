@@ -30,10 +30,11 @@ const Play = () => {
               <Image
                 src={character.image}
                 alt={character.name}
-                width={300}
-                height={300}
-                // layout='responsive'
-                objectFit='contain'
+                width={500}
+                height={500}
+                className='rounded'
+                placeholder="blur"
+                blurDataURL={character.image}
               />
             </div>
             <div>

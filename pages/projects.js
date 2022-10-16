@@ -37,8 +37,8 @@ const Projects = () => {
                     alt={project.name}
                     width={1000}
                     height={600}
-                    layout="responsive"
-                    objectFit="contain"
+                    placeholder="blur"
+                    blurDataURL={`/projects/${project.image}`}
                   />
                 </ProjectLink>
               </div>

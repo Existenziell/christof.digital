@@ -29,6 +29,8 @@ const AI = () => {
                 alt={creation.prompt}
                 width={800}
                 height={800}
+                placeholder="blur"
+                blurDataURL={creation.image}
               />
             </div>
             <div className='md:w-1/2 font-serif'>
