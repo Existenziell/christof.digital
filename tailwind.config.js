@@ -5,7 +5,6 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        // https://tailwindcss.com/docs/font-family#customizing
         sans: ['Gotu', 'Arial', 'sans-serif'],
         serif: ['Lora', 'serif'],
       },
