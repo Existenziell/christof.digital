@@ -1,9 +1,9 @@
-import { motion, useViewportScroll, useSpring, useTransform } from 'framer-motion'
+import { motion, useScroll, useSpring, useTransform } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
 export const ScrollIndicator = () => {
   const [isComplete, setIsComplete] = useState(false)
-  const { scrollYProgress } = useViewportScroll()
+  const { scrollYProgress } = useScroll()
   const yRange = useTransform(scrollYProgress, [0, 0.9], [0, 1])
   const pathLength = useSpring(yRange, { stiffness: 400, damping: 90 })
 
