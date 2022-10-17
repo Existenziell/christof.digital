@@ -1,4 +1,7 @@
 {
+  "name": "christof.digital",
+  "author": "Christof Bauer <bauer.christof@gmail.com> (http://christof.digital/)",
+  "version": "1.1.0",
   "private": false,
   "scripts": {
     "dev": "next dev",

@@ -27,10 +27,9 @@ module.exports = {
   },
   rules: {
     'comma-dangle': 'off',
-    quotes: 'off',
-    indent: 'off',
-    // 'react/react-in-jsx-scope': 'off',
-    // 'react/prop-types': 0,
+    '@next/next/no-page-custom-font': 'off',
+    '@next/next/no-img-element': 'off',
+    'quotes': 'off',
     'space-before-function-paren': 'off',
     'operator-linebreak': ['off'],
   },
