@@ -17,7 +17,6 @@ export default function Layout({ children }) {
         <link rel="manifest" href="/manifest.json" />
         <meta name="msapplication-TileColor" content="#242424" />
         <meta name="theme-color" content="#242424" />
-
       </Head>
 
       <NextNprogress
