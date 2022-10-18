@@ -4,6 +4,7 @@ import { VideoCameraIcon } from '@heroicons/react/24/outline'
 const Recording = () => {
   const [recording, setRecording] = useState(false)
   const [videoEnabled, setVideoEnabled] = useState(false)
+  const [stream, setStream] = useState()
 
   const openVideo = () => {
     setVideoEnabled(true)
@@ -11,6 +12,10 @@ const Recording = () => {
   }
 
   const closeVideo = () => {
+    const tracks = stream.getTracks()
+    tracks.forEach((track) => {
+      track.stop()
+    })
     setVideoEnabled(false)
   }
 
@@ -32,6 +37,7 @@ const Recording = () => {
     const audioStream = await navigator.mediaDevices.getUserMedia(constraintsAudio)
     // combine the streams
     const combinedStream = new MediaStream([...videoStream.getVideoTracks(), ...audioStream.getAudioTracks()])
+    setStream(combinedStream)
     // const devices = await navigator.mediaDevices.enumerateDevices()
     // console.log(devices)
 
