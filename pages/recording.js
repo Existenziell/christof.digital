@@ -99,7 +99,7 @@ const Recording = () => {
             </div>
           </div>
           <button disabled className='link mt-8'>Upload (Coming soon)</button>
-          <button onClick={closeVideo} className='link mt-8'>Close Video</button>
+          <button onClick={closeVideo} className='link mt-2'>Close Video</button>
         </>
         :
         <button onClick={openVideo} className='button-sm mt-8'>Open Video</button>
