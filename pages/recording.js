@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { VideoCameraIcon } from '@heroicons/react/24/outline'
 
 const Recording = () => {
