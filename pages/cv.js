@@ -17,6 +17,7 @@ const Curriculum = () => {
     setData(data.slice().reverse())
     setSortBy(!sortBy)
   }
+
   return (
     <>
       <Head>
