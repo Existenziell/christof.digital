@@ -102,7 +102,7 @@ const Curriculum = () => {
           <Education />
         }
 
-        <Link href='/projects'><a className='button button-sm mx-auto'>Even more projects</a></Link>
+        <Link href='/projects'><a className='button-sm mx-auto block mt-16'>Even more projects</a></Link>
       </div>
     </>
   )

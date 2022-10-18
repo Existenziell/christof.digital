@@ -51,7 +51,11 @@ html, body {
 }
 
 .link:hover {
-  @apply border-none text-cta transition-all;
+  @apply border-transparent text-cta transition-all;
+}
+
+.link:disabled {
+  @apply cursor-not-allowed;
 }
 
 .nextimg {
@@ -95,7 +99,8 @@ html, body {
 }
 
 .button-sm {
-  @apply w-auto px-4 py-2 text-sm block max-w-max;
+  @apply w-auto px-4 py-2 text-sm max-w-max bg-brand-dark text-brand dark:bg-brand dark:text-brand-dark rounded shadow-lg
+  hover:shadow hover:cursor-pointer hover:text-cta dark:hover:text-cta transition-all;
 }
 
 .button-cta {
@@ -104,7 +109,7 @@ html, body {
     hover:shadow hover:cursor-pointer transition-all;
 }
 
-:disabled {
+.button:disabled, .button-sm:disabled {
   @apply cursor-not-allowed hover:text-brand dark:hover:text-brand-dark hover:shadow-lg;
 }
 
