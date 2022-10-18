@@ -5,10 +5,6 @@ const Recording = () => {
   const [recording, setRecording] = useState(false)
   const [videoEnabled, setVideoEnabled] = useState(false)
 
-  useEffect(() => {
-    // recordStream()
-  }, [])
-
   const openVideo = () => {
     setVideoEnabled(true)
     recordStream()
@@ -57,13 +53,13 @@ const Recording = () => {
     let chunks = []
 
     start.addEventListener("click", (ev) => {
-      mediaRecorder.start()
       // console.log(mediaRecorder.state)
+      mediaRecorder.start()
       setRecording(true)
     })
     stop.addEventListener("click", (ev) => {
-      mediaRecorder.stop()
       // console.log(mediaRecorder.state)
+      mediaRecorder.stop()
       setRecording(false)
     })
     mediaRecorder.ondataavailable = function (ev) {
