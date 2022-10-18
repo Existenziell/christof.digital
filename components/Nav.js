@@ -31,7 +31,7 @@ const Nav = () => {
             <li key={l.name}>
               <Link href={l.url}>
                 <a className={`hover:animate-pulse pb-1 hover:text-cta font-mono transition-all ${router.pathname === l.url && 'active-nav'}`}>
-                  {`/* ${l.name} */`}
+                  {`// ${l.name}`}
                 </a>
               </Link>
             </li>
