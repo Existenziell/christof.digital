@@ -22,9 +22,10 @@ const RansomNote = () => {
       <h2>RansomNote</h2>
       <p>
         Given a magazine of words and a ransom note, determine if it&apos;s possible to “cut out” and create the ransom note from the magazine words.
+        Enter the magazine as a list of words separated by spaces.
       </p>
-      <input type='text' placeholder="Note" onChange={(e) => setNote(e.target.value)} />
-      <input type='text' placeholder="Magazine" onChange={(e) => setMagazine(e.target.value)} />
+      <input type='text' placeholder="Note" onChange={(e) => setNote(e.target.value)} spellCheck='false' />
+      <input type='text' placeholder="Magazine" onChange={(e) => setMagazine(e.target.value)} spellCheck='false' />
       <div className="output">Output: {output.toString()}</div>
 
       <button onClick={() => setVisible(!visible)} className='mt-2 button-sm'>

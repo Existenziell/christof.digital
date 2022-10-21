@@ -96,7 +96,7 @@ export const fizzBuzzSnippet = `const fizzBuzz = (input) => {
     if (i % 6 === 0) output.push("Fizz Buzz")
     else if (i % 2 === 0) output.push("Fizz")
     else if (i % 3 === 0) output.push("Buzz")
-    else output.push(i);
+    else output.push(i)
   }
   return output
 }`
@@ -150,7 +150,7 @@ export const ransomNoteSnippet = `const ransomNote = (note, magazine) => {
 }`
 
 export const primeNumbersSnippet = `const primeNumbers = number => {
-  let numbers = new Array(number + 1);
+  let numbers = new Array(number + 1)
   numbers.fill(true)
   numbers[0] = numbers[1] = false
 
@@ -195,3 +195,7 @@ export const primeFactorsSnippet = `const primeFactors = n => {
   }
   return a
 }`
+
+
+export const euclideanDistanceSnippet = `const euclideanDistance = (a, b) =>
+  Math.hypot(...Object.keys(a).map(k => b[k] - a[k]))`

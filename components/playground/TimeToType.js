@@ -26,7 +26,7 @@ const TimeToType = () => {
         It takes |a - b| milliseconds to move from index a to index b.
         Calculate the number of milliseconds needed to type a number with one finger.
       </p>
-      <input type='text' placeholder="Digits 0-9" onChange={(e) => setDigits(e.target.value)} />
+      <input type='text' placeholder="Digits 0-9" onChange={(e) => setDigits(e.target.value)} spellCheck='false' />
       <input type='number' placeholder="Number to be typed" onChange={(e) => setNum(e.target.value)} />
       <div className="output">Output: {output}</div>
 

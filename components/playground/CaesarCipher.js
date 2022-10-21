@@ -23,7 +23,7 @@ const CaesarCipher = () => {
       <p>
         Given a phrase, substitute each character by shifting it up or down the alphabet by a given integer. If necessary, the shifting should wrap around back to the beginning or end of the alphabet.
       </p>
-      <input type='text' placeholder="Phrase" onChange={(e) => setPhrase(e.target.value)} />
+      <input type='text' placeholder="Phrase" onChange={(e) => setPhrase(e.target.value)} spellCheck='false' />
       <input type='number' placeholder="Number" onChange={(e) => setNumber(e.target.value)} />
       <div className="output">Output: {output}</div>
 

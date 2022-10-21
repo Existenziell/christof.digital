@@ -27,7 +27,7 @@ const DownloadTime = () => {
         Z - Last Z observations to be considered
       </p>
       <input type='number' placeholder="X: 100" onChange={(e) => setFilesize(e.target.value)} />
-      <input type='text' placeholder="[B]: 8,7,6,9,4,11" onChange={(e) => setTrend(e.target.value)} />
+      <input type='text' placeholder="[B]: 8,7,6,9,4,11" onChange={(e) => setTrend(e.target.value)} spellCheck='false' />
       <input type='number' placeholder="Z: 2" onChange={(e) => setObservations(e.target.value)} />
       <div className="output">Output: {output ? `${output} minutes` : ``}</div>
 

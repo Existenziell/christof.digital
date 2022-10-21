@@ -24,8 +24,8 @@ const RotateArray = () => {
         {`[1, 2, 3, 4, 5] steps: 1 => [5, 1, 2, 3, 4]`}<br />
         {`[1, 2, 3, 4, 5] steps: 3 => [3, 4, 5, 1, 2]`}
       </p>
-      <input type='text' placeholder="CSV style numbers" onChange={(e) => setInput(e.target.value)} />
-      <input type='text' placeholder="Steps" onChange={(e) => setSteps(e.target.value)} />
+      <input type='text' placeholder="Input (e.g. 2,3,6,5)" onChange={(e) => setInput(e.target.value)} spellCheck='false' />
+      <input type='number' placeholder="Steps" onChange={(e) => setSteps(e.target.value)} />
       <div className="output">Output: {output}</div>
 
       <button onClick={() => setVisible(!visible)} className='mt-2 button-sm'>
