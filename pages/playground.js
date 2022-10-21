@@ -11,6 +11,7 @@ import PrimeNumbers from '../components/playground/PrimeNumbers'
 import Factorial from "../components/playground/Factorial"
 import IsPrime from "../components/playground/IsPrime"
 import PrimeFactors from "../components/playground/PrimeFactors"
+import EuclideanDistance from "../components/playground/EuclideanDistance"
 
 const Playground = () => {
   return (
@@ -28,6 +29,7 @@ const Playground = () => {
           <Fibonacci />
           <TimeToType />
           <CaesarCipher />
+          <EuclideanDistance />
           <RotateArray />
           <InvertStringSpecial />
           <RansomNote />
