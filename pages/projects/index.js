@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import ProjectLink from '../components/ProjectLink'
-import AppLauncher from '../components/AppLauncher'
-import TagList from '../components/TagList'
-import Sorting from '../components/Sorting'
+import ProjectLink from '../../components/ProjectLink'
+import AppLauncher from '../../components/AppLauncher'
+import TagList from '../../components/TagList'
+import Sorting from '../../components/Sorting'
 import { LinkIcon } from '@heroicons/react/24/solid'
-import { projects } from '../lib/projects'
+import { projects } from '../../lib/projects'
 import { useState } from 'react'
 
 const Projects = () => {

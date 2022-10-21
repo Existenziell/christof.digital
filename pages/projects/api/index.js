@@ -1,14 +1,14 @@
 import Image from 'next/image'
-import fetchApi from '../../lib/fetchApi'
-import Pagination from '../../components/Pagination'
-import Search from '../../components/Search'
-import AppLauncher from '../../components/AppLauncher'
+import fetchApi from '../../../lib/fetchApi'
+import Pagination from '../../../components/Pagination'
+import Search from '../../../components/Search'
+import AppLauncher from '../../../components/AppLauncher'
 import { useQuery } from 'react-query'
 import { useState } from 'react'
 import { SyncLoader } from 'react-spinners'
 import Link from 'next/link'
 
-const Play = () => {
+const Api = () => {
   const [page, setPage] = useState(1)
   const [search, setSearch] = useState('')
 
@@ -34,8 +34,8 @@ const Play = () => {
   return (
     <div className='text-left w-full'>
       <AppLauncher />
-      <h1 className='text-4xl md:text-6xl mb-3 text-center'>Playground</h1>
-      <p className='text-sm text-center'>Using react-query and the open Rick&amp;Morty API to test Pagination.</p>
+      <h1 className='text-4xl md:text-6xl mb-4 text-center'>API</h1>
+      <p className='text-center'>Using react-query and the open Rick&amp;Morty API to test Pagination.</p>
 
       <Search search={search} setSearch={setSearch} />
       <Pagination data={data} page={page} setPage={setPage} status={status} setSearch={setSearch} />
@@ -47,7 +47,7 @@ const Play = () => {
           <div className='flex flex-wrap gap-4 justify-evenly items-center w-full md:pb-16'>
             {data?.results.map(person => {
               return (
-                <Link href={`/play/${person.id}`} key={person.id}>
+                <Link href={`/projects/api/${person.id}`} key={person.id}>
                   <a className='bg-gray dark:bg-gray-dark p-4 rounded-sm text-sm'>
                     <h2 className='text-xl font-serif w-48 truncate' title={person.name}>{person.name}</h2>
                     <div className='nextimg w-48 h-48 relative my-2'>
@@ -77,4 +77,4 @@ const Play = () => {
   )
 }
 
-export default Play
+export default Api

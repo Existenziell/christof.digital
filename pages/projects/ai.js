@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { ScrollIndicator } from '../components/ScrollIndicator'
-import { creations } from '../lib/creations'
+import { ScrollIndicator } from '../../components/ScrollIndicator'
+import { creations } from '../../lib/creations'
 
 const AI = () => {
   return (
@@ -14,7 +14,7 @@ const AI = () => {
       <div className='text-left w-full'>
         <ScrollIndicator />
 
-        <h1 className='text-4xl md:text-6xl mb-8 text-center'>AI</h1>
+        <h1 className='text-4xl md:text-6xl mb-4 text-center'>AI</h1>
 
         <p className='flex flex-col md:flex-row-reverse items-center justify-center text-center mx-auto w-full md:w-2/3 mb-16'>
           There have recently been an number of AI projects especially in the space of image generation that have absolutely amazed me.

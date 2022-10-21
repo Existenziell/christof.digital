@@ -1,11 +1,11 @@
 import Image from 'next/image'
-import fetchApi from '../../lib/fetchApi'
+import fetchApi from '../../../lib/fetchApi'
 import { useQuery } from 'react-query'
 import { SyncLoader } from 'react-spinners'
-import BackBtn from '../../components/BackBtn'
+import BackBtn from '../../../components/BackBtn'
 import { useRouter } from 'next/router'
 
-const Play = () => {
+const ApiDetail = () => {
   const router = useRouter()
 
   const { status, data: character } = useQuery(["character", router.query.id], () =>
@@ -23,7 +23,7 @@ const Play = () => {
         <>
           <div className='w-full flex flex-col items-center justify-center'>
             <div className='flex items-center mb-4 gap-8'>
-              <BackBtn link='/play' />
+              <BackBtn link='/projects/api' />
               <h2 className='text-4xl font-serif inline-block'>{character.name}</h2>
             </div>
             <div className='nextimg relative my-2 shadow-xl mb-8'>
@@ -52,4 +52,4 @@ const Play = () => {
   )
 }
 
-export default Play
+export default ApiDetail

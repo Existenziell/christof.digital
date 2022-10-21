@@ -8,8 +8,8 @@ const Nav = () => {
     { name: 'Curriculum', url: '/cv' },
     { name: 'Projects', url: '/projects' },
     { name: 'Playground', url: '/playground' },
-    // { name: 'AI', url: '/ai' },
-    // { name: 'Playground', url: '/play' },
+    // { name: 'AI', url: '/projects/ai' },
+    // { name: 'Playground', url: '/projects/api' },
     { name: 'Contact', url: '/contact' },
   ]
 
