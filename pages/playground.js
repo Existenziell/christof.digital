@@ -8,7 +8,9 @@ import FizzBuzz from '../components/playground/FizzBuzz'
 import CaesarCipher from '../components/playground/CaesarCipher'
 import RansomNote from '../components/playground/RansomNote'
 import PrimeNumbers from '../components/playground/PrimeNumbers'
-import Factorial from "../components/playground/ Factorial"
+import Factorial from "../components/playground/Factorial"
+import IsPrime from "../components/playground/IsPrime"
+import PrimeFactors from "../components/playground/PrimeFactors"
 
 const Playground = () => {
   return (
@@ -30,6 +32,8 @@ const Playground = () => {
           <CaesarCipher />
           <RansomNote />
           <PrimeNumbers />
+          <IsPrime />
+          <PrimeFactors />
           <Factorial />
           <FizzBuzz />
         </div>

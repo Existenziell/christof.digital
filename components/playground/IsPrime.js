@@ -1,27 +1,31 @@
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { useEffect, useState } from "react"
-import { fibonacci } from "../../util/fibonacci"
+import { isPrime } from "../../util/isPrime"
 import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
-import { fibonacciSnippet } from '../../util/codeSnippets'
+import { isPrimeSnippet } from '../../util/codeSnippets'
 
-const Fibonacci = () => {
-  const [depth, setDepth] = useState()
+const IsPrime = () => {
+  const [number, setNumber] = useState()
   const [output, setOutput] = useState('')
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
-    if (depth) {
-      const output = fibonacci(parseInt(depth))
+    if (number) {
+      const output = isPrime(parseInt(number))
       setOutput(output)
     }
-  }, [depth])
+  }, [number])
 
   return (
     <div className="experiment">
-      <h2>Fibonacci sequence</h2>
-      <p>Return the fibonacci sequence up to the desired depth.</p>
-      <input type='number' placeholder="depth" onChange={(e) => setDepth(e.target.value)} />
-      <div className="output">Output: {output}</div>
+      <h2>Number is prime</h2>
+      <p>
+        Checks if the provided integer is a prime number.
+        By only checking numbers from 2 to the square root of the given number the complexity can be massively reduced (boundary).
+        Returns false if any of them divides the given number, else return true, unless the number is less than 2.
+      </p>
+      <input type='number' placeholder="Number" onChange={(e) => setNumber(e.target.value)} />
+      <div className="output">Output: {output.toString()}</div>
 
       <button onClick={() => setVisible(!visible)} className='mt-2 button-sm'>
         {visible ? `Hide Code` : `Unveil code`}
@@ -35,7 +39,7 @@ const Fibonacci = () => {
             showLineNumbers={true}
             customStyle={{ fontSize: '14px', lineHeight: '20px' }}
           >
-            {fibonacciSnippet}
+            {isPrimeSnippet}
           </SyntaxHighlighter>
         </div>
       }
@@ -43,4 +47,4 @@ const Fibonacci = () => {
   )
 }
 
-export default Fibonacci
+export default IsPrime

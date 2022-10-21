@@ -28,7 +28,7 @@ const PrimeNumbers = () => {
       </button>
 
       {visible &&
-        <div className="mt-4">
+        <div className="mt-2">
           <SyntaxHighlighter
             language='javascript'
             style={dracula}

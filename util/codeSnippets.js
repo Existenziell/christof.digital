@@ -173,3 +173,25 @@ export const factorialSnippet = `const factorial = (n) => {
     return n * factorial(n - 1)
   }
 }`
+
+export const isPrimeSnippet = `const isPrime = num => {
+  const boundary = Math.floor(Math.sqrt(num))
+  for (let i = 2; i <= boundary; i++) {
+    if (num % i === 0) return false
+  }
+  return num >= 2
+}`
+
+
+export const primeFactorsSnippet = `const primeFactors = n => {
+  let a = [], f = 2
+  while (n > 1) {
+    if (n % f === 0) {
+      a.push(f)
+      n /= f
+    } else {
+      f++
+    }
+  }
+  return a
+}`
