@@ -7,6 +7,7 @@ const Nav = () => {
     { name: 'Root', url: '/' },
     { name: 'Curriculum', url: '/cv' },
     { name: 'Projects', url: '/projects' },
+    { name: 'Playground', url: '/playground' },
     // { name: 'AI', url: '/ai' },
     // { name: 'Playground', url: '/play' },
     { name: 'Contact', url: '/contact' },

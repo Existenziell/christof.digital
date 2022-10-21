@@ -125,3 +125,28 @@ html, body {
 .search input[type='search']::-webkit-search-cancel-button{
   display: none;    
 }
+
+
+/* ==========================================================================
+	React Playground
+	========================================================================== */
+
+.experiment {
+  @apply rounded bg-gray dark:bg-gray-dark p-8 w-full md:max-w-4xl md:mx-auto text-left;
+}
+
+.experiment h2 {
+  @apply text-2xl mb-2;
+}
+
+.experiment p {
+  @apply text-sm mb-4;
+}
+
+.experiment input {
+  @apply px-4 py-2 mr-1 mb-1 text-black;
+}
+
+.output {
+  @apply mb-0 bg-white text-black px-4 py-2;
+}
