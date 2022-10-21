@@ -8,6 +8,7 @@ import FizzBuzz from '../components/playground/FizzBuzz'
 import CaesarCipher from '../components/playground/CaesarCipher'
 import RansomNote from '../components/playground/RansomNote'
 import PrimeNumbers from '../components/playground/PrimeNumbers'
+import Factorial from "../components/playground/ Factorial"
 
 const Playground = () => {
   return (
@@ -18,8 +19,8 @@ const Playground = () => {
       </Head>
 
       <div>
-        <h1 className='text-4xl md:text-6xl mb-1'>React Playground</h1>
-        <p className='text-sm italic mb-8'>&bdquo;Algorithmic fun...&rdquo;</p>
+        <h1 className='text-4xl md:text-6xl mb-2'>React Playground</h1>
+        <p className='text-sm italic mb-8'>Algorithmic fun...</p>
         <div className="flex flex-col gap-8 w-full">
           <RotateArray />
           <InvertStringSpecial />
@@ -29,6 +30,7 @@ const Playground = () => {
           <CaesarCipher />
           <RansomNote />
           <PrimeNumbers />
+          <Factorial />
           <FizzBuzz />
         </div>
       </div>

@@ -27,7 +27,7 @@ const Curriculum = () => {
 
       <div>
         <ScrollIndicator />
-        <h1 className='text-4xl md:text-6xl mb-1'>Curriculum Vitae</h1>
+        <h1 className='text-4xl md:text-6xl mb-2'>Curriculum Vitae</h1>
         <p className='text-sm italic mb-8'>&bdquo;Resume of Life&rdquo;</p>
 
         <div className="w-full flex justify-center mb-8">
