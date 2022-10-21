@@ -182,7 +182,6 @@ export const isPrimeSnippet = `const isPrime = num => {
   return num >= 2
 }`
 
-
 export const primeFactorsSnippet = `const primeFactors = n => {
   let a = [], f = 2
   while (n > 1) {
@@ -195,7 +194,6 @@ export const primeFactorsSnippet = `const primeFactors = n => {
   }
   return a
 }`
-
 
 export const euclideanDistanceSnippet = `const euclideanDistance = (a, b) =>
   Math.hypot(...Object.keys(a).map(k => b[k] - a[k]))`
