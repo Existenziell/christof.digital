@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { VideoCameraIcon } from '@heroicons/react/24/outline'
+import { VideoCameraIcon, XCircleIcon } from '@heroicons/react/24/outline'
 
 const Recording = () => {
   const [recording, setRecording] = useState(false)
@@ -81,15 +81,18 @@ const Recording = () => {
 
   return (
     <div className="w-full flex flex-col items-center justify-center">
-      <h1 className="text-2xl">MediaCapture, MediaRecorder and Streams API</h1>
-
+      <h1 className="text-4xl md:text-6xl mb-4">Native Video Recording</h1>
+      <p>Using MediaCapture, MediaRecorder and Streams API</p>
       {videoEnabled ?
         <>
           <div className="flex gap-4 justify-center items-center w-full mt-8">
             <button id="btnStart" className={`button-sm ${recording && `hidden`}`} disabled={recording}>Start Recording</button>
             <button id="btnStop" className={`button-sm ${!recording && `hidden`}`} disabled={!recording}>Stop Recording</button>
+            <button onClick={closeVideo} className='absolute right-2 md:right-8 hover:text-cta'>
+              <XCircleIcon className="w-6" />
+            </button>
           </div>
-          <VideoCameraIcon className={`w-8 my-4 ${recording ? `animate-pulse text-red-700` : `text-gray dark:text-gray-dark`}`} />
+          <VideoCameraIcon className={`w-12 my-4 ${recording ? `animate-pulse text-red-700` : `text-gray dark:text-gray-dark`}`} />
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 w-full">
             <div className="md:w-1/2">
               <video className="h-72 rounded md:ml-auto"></video>
