@@ -20,7 +20,7 @@ const DownloadTime = () => {
 
   return (
     <div className="experiment">
-      <h2>Estimate the remaining download time in minutes.</h2>
+      <h2>Estimate remaining download time in minutes</h2>
       <p>
         X - Filesize<br />
         [B] - Trend - Array of integers listing the bytes downloaded at each minute<br />
