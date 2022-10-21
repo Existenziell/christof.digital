@@ -17,7 +17,10 @@ const InvertStringSpecial = () => {
   return (
     <div className="experiment">
       <h2>Invert string - but only the letters</h2>
-      <p>{`__aa**bb))cc => __cc**bb))aa`}</p>
+      <p>
+        {`__aa**bb))cc  =>  __cc**bb))aa`}<br />
+        {`xxx-yyy&&zzz7qqq  =>  qqq-zzz&&yyy7xxx`}
+      </p>
       <input type='text' placeholder="Enter String" onChange={(e) => setInput(e.target.value)} />
       <div className="output">Output: {output}</div>
 

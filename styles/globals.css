@@ -132,21 +132,17 @@ html, body {
 	========================================================================== */
 
 .experiment {
-  @apply rounded bg-gray dark:bg-gray-dark p-8 w-full md:max-w-4xl md:mx-auto text-left;
+  @apply rounded bg-gray dark:bg-gray-dark p-8 w-full md:max-w-4xl md:mx-auto text-left transition-all;
 }
-
 .experiment h2 {
   @apply text-2xl mb-2;
 }
-
 .experiment p {
   @apply text-sm mb-4;
 }
-
 .experiment input {
   @apply px-4 py-2 mr-1 mb-1 rounded-sm text-black border-none outline-none focus:ring-2 focus:ring-cta;
 }
-
 .output {
-  @apply px-4 py-2 mb-0 bg-white text-black rounded-sm;
+  @apply px-4 py-2 mb-0 bg-white text-slate-900 rounded-sm;
 }

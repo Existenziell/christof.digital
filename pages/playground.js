@@ -24,12 +24,12 @@ const Playground = () => {
         <h1 className='text-4xl md:text-6xl mb-2'>React Playground</h1>
         <p className='text-sm italic mb-8'>Algorithmic fun...</p>
         <div className="flex flex-col gap-8 w-full">
-          <RotateArray />
-          <InvertStringSpecial />
           <DownloadTime />
           <Fibonacci />
           <TimeToType />
           <CaesarCipher />
+          <RotateArray />
+          <InvertStringSpecial />
           <RansomNote />
           <PrimeNumbers />
           <IsPrime />
