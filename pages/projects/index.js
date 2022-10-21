@@ -50,7 +50,7 @@ const Projects = () => {
               </div>
               <div className='flex flex-col justify-between w-full items-start md:mb-4'>
 
-                <div className='mb-8 md:mb-0'>
+                <div className='mb-8 md:mb-0 w-full'>
                   <div className='flex justify-between items-center w-full'>
                     <h2 className='text-2xl truncate' title={project.name}>{project.name}</h2>
                     <ProjectLink href={project.link} external={project.external}>
