@@ -1,10 +1,26 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { VideoCameraIcon, XCircleIcon } from '@heroicons/react/24/outline'
 
 const Recording = () => {
   const [recording, setRecording] = useState(false)
   const [videoEnabled, setVideoEnabled] = useState(false)
   const [stream, setStream] = useState()
+
+  useEffect(() => {
+    window.addEventListener('resize', function () {
+      resizeOutput()
+    }, true)
+  }, [videoEnabled])
+
+  const resizeOutput = () => {
+    const width = document.getElementById('input')?.offsetWidth
+    const height = document.getElementById('input')?.offsetHeight
+    const output = document.getElementById('output')
+    if (output) {
+      output.style.width = `${width}px`
+      output.style.height = `${height}px`
+    }
+  }
 
   const openVideo = () => {
     setVideoEnabled(true)
@@ -88,17 +104,17 @@ const Recording = () => {
           <div className="flex gap-4 justify-center items-center w-full mt-8">
             <button id="btnStart" className={`button-sm ${recording && `hidden`}`} disabled={recording}>Start Recording</button>
             <button id="btnStop" className={`button-sm ${!recording && `hidden`}`} disabled={!recording}>Stop Recording</button>
-            <button onClick={closeVideo} className='absolute right-2 md:right-8 hover:text-cta'>
+            <button onClick={closeVideo} className='absolute right-2 md:right-8 hover:text-cta' title="Close Video" aria-label="Close Video">
               <XCircleIcon className="w-6" />
             </button>
           </div>
           <VideoCameraIcon className={`w-12 my-4 ${recording ? `animate-pulse text-red-700` : `text-gray dark:text-gray-dark`}`} />
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 w-full">
             <div className="md:w-1/2">
-              <video className="h-72 rounded md:ml-auto"></video>
+              <video id='input' className="md:ml-auto border-4 border-gray dark:border-gray-dark shadow-lg"></video>
             </div>
-            <div className="md:w-1/2">
-              <video id="output" className="h-72 rounded" controls></video>
+            <div className="md:w-1/2 w-full h-full">
+              <video id="output" className="border-4 border-gray dark:border-gray-dark shadow-lg" controls></video>
             </div>
           </div>
           <button disabled className='link mt-8'>Upload (Coming soon)</button>
