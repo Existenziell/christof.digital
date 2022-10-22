@@ -19,7 +19,7 @@ const RansomNote = () => {
 
   return (
     <div className="experiment">
-      <h2>RansomNote</h2>
+      <h2>Ransom Note</h2>
       <p>
         Given a magazine of words and a ransom note, determine if it&apos;s possible to “cut out” and create the ransom note from the magazine words.
         Enter the magazine as a list of words separated by spaces.
