@@ -163,8 +163,8 @@ html, body {
 	SVGs 
 	========================================================================== */
 
- /* Arrow */ 
- :root {
+/* Arrow */ 
+:root {
   --dark-svg-color: #635bff;
   --light-svg-color: #80e9ff;
 }
@@ -195,7 +195,6 @@ svg:hover #dark1 {
 svg:hover #dark2 {
   transform: translateX(0%);
 }
-
 
 /* Phone */
 #skeleton {
