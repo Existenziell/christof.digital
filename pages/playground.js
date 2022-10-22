@@ -13,6 +13,7 @@ import IsPrime from "../components/playground/IsPrime"
 import PrimeFactors from "../components/playground/PrimeFactors"
 import EuclideanDistance from "../components/playground/EuclideanDistance"
 import Banana from "../components/playground/Banana"
+import AppLauncher from "../components/AppLauncher"
 
 const Playground = () => {
   return (
@@ -42,6 +43,7 @@ const Playground = () => {
           <Banana />
         </div>
       </div>
+      <AppLauncher />
     </>
   )
 }

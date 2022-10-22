@@ -2,7 +2,6 @@ import Image from 'next/image'
 import fetchApi from '../../../lib/fetchApi'
 import Pagination from '../../../components/Pagination'
 import Search from '../../../components/Search'
-import AppLauncher from '../../../components/AppLauncher'
 import { useQuery } from 'react-query'
 import { useState } from 'react'
 import { SyncLoader } from 'react-spinners'
@@ -33,7 +32,6 @@ const Api = () => {
 
   return (
     <div className='text-left w-full'>
-      <AppLauncher />
       <h1 className='text-4xl md:text-6xl mb-4 text-center'>API</h1>
       <p className='text-center'>Using react-query and the open Rick&amp;Morty API to test Pagination.</p>
 
