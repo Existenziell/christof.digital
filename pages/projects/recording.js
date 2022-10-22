@@ -88,7 +88,7 @@ const Recording = () => {
       chunks.push(ev.data)
     }
     mediaRecorder.onstop = (ev) => {
-      const blob = new Blob(chunks, { type: "video/mp4" })
+      const blob = new Blob(chunks, { type: "video/webm" })
       chunks = []
       const videoURL = window.URL.createObjectURL(blob)
       vidSave.src = videoURL
