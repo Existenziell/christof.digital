@@ -19,11 +19,11 @@ const Fibonacci = () => {
   return (
     <div className="experiment">
       <h2>Fibonacci sequence</h2>
-      <p>Return the fibonacci sequence up to the desired depth.</p>
+      <p>Return the Fibonacci sequence up to the desired depth.</p>
       <input type='number' placeholder="Depth" onChange={(e) => setDepth(e.target.value)} />
       <div className="output">Output: {output}</div>
 
-      <button onClick={() => setVisible(!visible)} className='mt-2 button-sm'>
+      <button onClick={() => setVisible(!visible)} className='button-sm'>
         {visible ? `Hide Code` : `Unveil code`}
       </button>
 

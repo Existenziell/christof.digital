@@ -20,8 +20,10 @@ const DownloadTime = () => {
 
   return (
     <div className="experiment">
-      <h2>Estimate remaining download time in minutes</h2>
+      <h2>Estimate remaining download time</h2>
       <p>
+        A user is downloading a file which is X bytes in size. The system keeps a record of the amount (in bytes) B
+        downloaded each minute. Calculate the remaining download time in minutes.<br />
         X - Filesize<br />
         B - Trend, listing the past bytes downloaded at each minute<br />
         Z - Last Z number of observations to be considered
@@ -31,7 +33,7 @@ const DownloadTime = () => {
       <input type='number' placeholder="Z: 2" onChange={(e) => setObservations(e.target.value)} />
       <div className="output">Output: {output ? `${output} minutes` : ``}</div>
 
-      <button onClick={() => setVisible(!visible)} className='mt-2 button-sm'>
+      <button onClick={() => setVisible(!visible)} className='button-sm'>
         {visible ? `Hide Code` : `Unveil code`}
       </button>
 

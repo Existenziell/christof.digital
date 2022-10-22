@@ -28,7 +28,7 @@ const RansomNote = () => {
       <input type='text' placeholder="Magazine" onChange={(e) => setMagazine(e.target.value)} spellCheck='false' />
       <div className="output">Output: {output.toString()}</div>
 
-      <button onClick={() => setVisible(!visible)} className='mt-2 button-sm'>
+      <button onClick={() => setVisible(!visible)} className='button-sm'>
         {visible ? `Hide Code` : `Unveil code`}
       </button>
 

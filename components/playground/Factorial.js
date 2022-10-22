@@ -26,7 +26,7 @@ const Factorial = () => {
       <input type='number' placeholder="Number" onChange={(e) => setNumber(e.target.value)} />
       <div className="output">Output: {output}</div>
 
-      <button onClick={() => setVisible(!visible)} className='mt-2 button-sm'>
+      <button onClick={() => setVisible(!visible)} className='button-sm'>
         {visible ? `Hide Code` : `Unveil code`}
       </button>
 

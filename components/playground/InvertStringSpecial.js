@@ -24,7 +24,7 @@ const InvertStringSpecial = () => {
       <input type='text' placeholder="Enter String" onChange={(e) => setInput(e.target.value)} spellCheck='false' />
       <div className="output">Output: {output}</div>
 
-      <button onClick={() => setVisible(!visible)} className='mt-2 button-sm'>
+      <button onClick={() => setVisible(!visible)} className='button-sm'>
         {visible ? `Hide Code` : `Unveil code`}
       </button>
 
