@@ -23,7 +23,9 @@ const DownloadTime = () => {
       <h2>Estimate remaining download time</h2>
       <p>
         A user is downloading a file which is X bytes in size. The system keeps a record of the amount (in bytes) B
-        downloaded each minute. Calculate the remaining download time in minutes.<br />
+        downloaded each minute. Calculate the remaining download time in minutes.
+      </p>
+      <p>
         X - Filesize<br />
         B - Trend, listing the past bytes downloaded at each minute<br />
         Z - Last Z number of observations to be considered

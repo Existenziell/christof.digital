@@ -20,7 +20,7 @@ const Factorial = () => {
     <div className="experiment">
       <h2>Factorial of Number</h2>
       <p>
-        Calculates the factorial of a number using recursion.
+        Calculates the factorial of a number using recursion.<br />
         Returns a notice if n is a negative number. Please don&apos;t crush the server ;-)
       </p>
       <input type='number' placeholder="Number" onChange={(e) => setNumber(e.target.value)} />

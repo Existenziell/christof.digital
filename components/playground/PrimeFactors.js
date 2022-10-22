@@ -20,7 +20,7 @@ const PrimeFactors = () => {
     <div className="experiment">
       <h2>Prime factors decomposition</h2>
       <p>
-        Finds the prime factors of a given number using the trial division algorithm.
+        Finds the prime factors of a given number using the trial division algorithm.<br />
         Trial division is the most laborious but easiest to understand of the integer factorization algorithms.
       </p>
       <input type='number' placeholder="Number" onChange={(e) => setNumber(e.target.value)} />
