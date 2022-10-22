@@ -3,24 +3,19 @@ import { useRouter } from 'next/router'
 import { useState } from 'react'
 
 const Nav = () => {
-  const links = [
-    { name: 'Root', url: '/' },
-    { name: 'Curriculum', url: '/cv' },
-    { name: 'Projects', url: '/projects' },
-    { name: 'Playground', url: '/playground' },
-    // { name: 'AI', url: '/projects/ai' },
-    // { name: 'Playground', url: '/projects/api' },
-    { name: 'Contact', url: '/contact' },
-  ]
-
   const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
 
-  const intercept = (e) => {
-    e.preventDefault()
-    setIsOpen(false)
-    router.push(e.target.href)
-  }
+  const projects = ['/projects/ai', '/projects/api', '/projects/recording']
+  const urlIsProject = projects.includes(router.pathname)
+
+  const links = [
+    { name: 'Root', url: '/', active: router.pathname === '/' },
+    { name: 'Curriculum', url: '/cv', active: router.pathname === '/cv' },
+    { name: 'Projects', url: '/projects', active: router.pathname === '/projects' || urlIsProject },
+    { name: 'Playground', url: '/playground', active: router.pathname === '/playground' },
+    { name: 'Contact', url: '/contact', active: router.pathname === '/contact' },
+  ]
 
   return (
     <nav className='w-full'>
@@ -29,11 +24,9 @@ const Nav = () => {
       <ul className='desktop-nav hidden md:flex z-20 gap-2'>
         {links.map(l => {
           return (
-            <li key={l.name} className={router.pathname === l.url ? 'active-nav' : 'nav'}>
+            <li key={l.name} className={(l.active) ? 'active-nav' : 'nav'}>
               <Link href={l.url}>
-                <a className={``}>
-                  {`// ${l.name}`}
-                </a>
+                <a className={``}>{`// ${l.name}`}</a>
               </Link>
             </li>
           )
@@ -57,15 +50,13 @@ const Nav = () => {
 
       {/* Mobile menu */}
       {isOpen &&
-        <ul className='mobile-nav block md:hidden pt-20 z-10 bg-brand text-brand-dark dark:bg-brand-dark dark:text-brand h-screen'>
+        <ul className='mobile-nav absolute left-0 right-0 w-full md:hidden pt-20 z-10 bg-brand text-brand-dark dark:bg-brand-dark dark:text-brand h-screen'>
           {links.map(l => (
             <li key={l.name}>
               <a
                 href={l.url}
-                onClick={intercept}
-                className={`${router.pathname === l.url && 'active-nav'} 
-                                w-full block text-2xl md:text-4xl text-center leading-loose px-8 py-2 md:py-8 
-                                hover:bg-brand-dark hover:text-cta dark:hover:bg-brand transition-all`}
+                onClick={(e) => setIsOpen(false) && router.push(e.target.href)}
+                className={l.active ? 'active-nav' : 'nav'}
               >
                 {l.name}
               </a>
