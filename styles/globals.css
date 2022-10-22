@@ -70,13 +70,16 @@ html, body {
 	Navigation
 	========================================================================== */
 
-/*
-.active-nav {
-  @apply bg-gray dark:bg-gray-dark text-gray-dark dark:text-gray; 
+.nav {
+  @apply px-4 py-2 rounded-sm bg-gray dark:bg-gray-dark text-gray-dark dark:text-gray transition-all; 
 }
-*/
-.active-nav {
-  @apply md:border-b-2 md:border-cta md:border-spacing-2; 
+
+.nav:hover {
+  @apply text-gray bg-gray-dark dark:bg-gray dark:text-gray-dark;
+}
+
+.desktop-nav .active-nav {
+  @apply px-4 py-2 border-b-2 border-cta border-spacing-2; 
 }
 
 .mobile-nav .active-nav {

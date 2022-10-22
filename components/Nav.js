@@ -26,12 +26,12 @@ const Nav = () => {
     <nav className='w-full'>
 
       {/* Desktop Menu */}
-      <ul className='hidden md:flex z-20 gap-8'>
+      <ul className='desktop-nav hidden md:flex z-20 gap-2'>
         {links.map(l => {
           return (
-            <li key={l.name}>
+            <li key={l.name} className={router.pathname === l.url ? 'active-nav' : 'nav'}>
               <Link href={l.url}>
-                <a className={`hover:animate-pulse pb-1 hover:text-cta font-mono transition-all ${router.pathname === l.url && 'active-nav'}`}>
+                <a className={``}>
                   {`// ${l.name}`}
                 </a>
               </Link>
