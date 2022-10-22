@@ -12,6 +12,7 @@ import Factorial from "../components/playground/Factorial"
 import IsPrime from "../components/playground/IsPrime"
 import PrimeFactors from "../components/playground/PrimeFactors"
 import EuclideanDistance from "../components/playground/EuclideanDistance"
+import Banana from "../components/playground/Banana"
 
 const Playground = () => {
   return (
@@ -25,19 +26,20 @@ const Playground = () => {
         <h1 className='text-4xl md:text-6xl mb-2'>Playground</h1>
         <p className='text-sm italic mb-8'>Algorithmic fun with React</p>
         <div className="flex flex-col gap-8 w-full">
-          <DownloadTime />
+          <RansomNote />
+          <PrimeNumbers />
           <Fibonacci />
           <TimeToType />
           <CaesarCipher />
           <EuclideanDistance />
+          <DownloadTime />
           <RotateArray />
           <InvertStringSpecial />
-          <RansomNote />
-          <PrimeNumbers />
           <IsPrime />
           <PrimeFactors />
           <Factorial />
           <FizzBuzz />
+          <Banana />
         </div>
       </div>
     </>

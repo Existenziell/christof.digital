@@ -197,3 +197,8 @@ export const primeFactorsSnippet = `const primeFactors = n => {
 
 export const euclideanDistanceSnippet = `const euclideanDistance = (a, b) =>
   Math.hypot(...Object.keys(a).map(k => b[k] - a[k]))`
+
+export const bananaSnippet = `const getBanana = () => {
+  const banana = "b" + "a" + +"a" + "a"
+  return banana // prints baNaNa
+}`

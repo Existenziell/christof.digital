@@ -154,3 +154,6 @@ html, body {
 .output {
   @apply px-4 py-2 mb-0 bg-white text-slate-900 rounded-sm w-full;
 }
+.experiment .button-sm {
+  @apply mt-4; 
+}
