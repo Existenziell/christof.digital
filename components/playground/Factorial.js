@@ -1,8 +1,8 @@
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { useEffect, useState } from "react"
 import { factorial } from "../../util/factorial"
-import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 import { factorialSnippet } from '../../util/codeSnippets'
+import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 
 const Factorial = () => {
   const [number, setNumber] = useState()

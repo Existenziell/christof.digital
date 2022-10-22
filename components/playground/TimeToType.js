@@ -1,8 +1,8 @@
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { useEffect, useState } from "react"
 import { timeToType } from "../../util/timeToType"
-import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 import { timeToTypeSnippet } from '../../util/codeSnippets'
+import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 
 const TimeToType = () => {
   const [digits, setDigits] = useState()

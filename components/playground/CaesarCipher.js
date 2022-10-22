@@ -1,8 +1,8 @@
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { useEffect, useState } from "react"
 import { caesarCipher } from "../../util/caesarCipher"
-import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 import { caesarCipherSnippet } from '../../util/codeSnippets'
+import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 
 const CaesarCipher = () => {
   const [phrase, setPhrase] = useState()

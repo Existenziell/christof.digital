@@ -1,8 +1,8 @@
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { useEffect, useState } from "react"
 import { primeFactors } from "../../util/primeFactors"
-import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 import { primeFactorsSnippet } from '../../util/codeSnippets'
+import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 
 const PrimeFactors = () => {
   const [number, setNumber] = useState()

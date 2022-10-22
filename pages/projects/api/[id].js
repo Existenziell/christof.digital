@@ -21,7 +21,7 @@ const ApiDetail = () => {
         <div className='mx-auto w-max mt-16'><SyncLoader size={10} color='var(--color-cta)' /></div>
         :
         <>
-          <div className='w-full flex flex-col items-center justify-center'>
+          <div className='flex flex-col items-center justify-center w-full'>
             <div className='flex items-center mb-4 gap-8'>
               <BackBtn link='/projects/api' />
               <h2 className='text-4xl font-serif inline-block'>{character.name}</h2>

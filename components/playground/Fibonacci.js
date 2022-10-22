@@ -1,8 +1,8 @@
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { useEffect, useState } from "react"
 import { fibonacci } from "../../util/fibonacci"
-import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 import { fibonacciSnippet } from '../../util/codeSnippets'
+import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 
 const Fibonacci = () => {
   const [depth, setDepth] = useState()

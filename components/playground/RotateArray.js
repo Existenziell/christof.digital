@@ -1,8 +1,8 @@
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { useEffect, useState } from "react"
 import { rotateArray } from "../../util/rotateArray"
-import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 import { rotateArraySnippet } from '../../util/codeSnippets'
+import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 
 const RotateArray = () => {
   const [input, setInput] = useState()
