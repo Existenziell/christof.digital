@@ -71,7 +71,7 @@ html, body {
 	========================================================================== */
 
 .desktop-nav .nav {
-  @apply px-4 py-2 rounded-sm bg-gray dark:bg-gray-dark text-gray-dark dark:text-gray transition-all; 
+  @apply rounded-sm bg-gray dark:bg-gray-dark text-gray-dark dark:text-gray transition-all border-b-2 border-t-2 border-transparent border-spacing-2; 
 }
 
 .desktop-nav .nav:hover {
@@ -79,7 +79,7 @@ html, body {
 }
 
 .desktop-nav .active-nav {
-  @apply px-4 py-2 border-b-2 border-cta border-spacing-2; 
+  @apply border-b-2 border-t-2 border-t-transparent border-cta border-spacing-2; 
 }
 
 .mobile-nav .nav {

@@ -26,7 +26,7 @@ const Nav = () => {
           return (
             <li key={l.name} className={(l.active) ? 'active-nav' : 'nav'}>
               <Link href={l.url}>
-                <a className={``}>{`// ${l.name}`}</a>
+                <a className='px-4 py-2 block'>{`// ${l.name}`}</a>
               </Link>
             </li>
           )
