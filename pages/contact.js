@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Router from 'next/router'
-import Social from '../components/Social'
+import Socials from '../components/Socials'
 import SyncLoader from 'react-spinners/SyncLoader'
 import Head from 'next/head'
 
@@ -42,7 +42,7 @@ const Contact = () => {
     <div className='flex flex-col items-center justify-center px-4 md:px-8 lg:w-2/3 lg:mx-auto'>
       <h1 className='h1'>Let&apos;s connect</h1>
 
-      <Social />
+      <Socials />
 
       <div className='px-4 pt-8 pb-0 sm:px-12 mt-6 shadow w-full bg-cover bg-no-repeat bg-poly rounded bg-white/10 backdrop-blur-md text-white'>
         <form onSubmit={submitForm}>

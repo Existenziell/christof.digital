@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { socialLinks } from '../lib/socialLinks'
 
-const Social = () => {
+const Socials = () => {
   return (
     <div className='z-20 dark:bg-gray-300 rounded pt-2 px-4'>
       <ul className='flex items-center justify-center gap-4'>
@@ -26,4 +26,4 @@ const Social = () => {
   )
 }
 
-export default Social
+export default Socials
