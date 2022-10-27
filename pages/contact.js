@@ -40,7 +40,8 @@ const Contact = () => {
     </Head>
 
     <div className='flex flex-col items-center justify-center px-4 md:px-8 lg:w-2/3 lg:mx-auto'>
-      <h1 className='text-4xl md:text-6xl'>Let&apos;s connect</h1>
+      <h1 className='h1'>Let&apos;s connect</h1>
+
       <Social />
 
       <div className='px-4 pt-8 pb-0 sm:px-12 mt-6 shadow w-full bg-cover bg-no-repeat bg-poly rounded bg-white/10 backdrop-blur-md text-white'>
