@@ -95,7 +95,7 @@ const Recording = () => {
 
   return (
     <div className="flex flex-col items-center justify-center w-full">
-      <h1 className="text-4xl md:text-6xl mb-4">Native Video Recording</h1>
+      <h1 className="h1">Native Video Recording</h1>
       <p>Using MediaCapture, MediaRecorder and Streams API</p>
       {videoEnabled ?
         <>

@@ -31,9 +31,9 @@ const Api = () => {
   if (status === "error") return <p>{status}</p>
 
   return (
-    <div className='text-left w-full'>
-      <h1 className='text-4xl md:text-6xl mb-4 text-center'>API</h1>
-      <p className='text-center'>Using react-query and the open Rick&amp;Morty API to test Pagination.</p>
+    <div className='text-left w-full flex flex-col items-center'>
+      <h1 className='h1'>API</h1>
+      <p>Using react-query and the open Rick&amp;Morty API to test Pagination.</p>
 
       <Search search={search} setSearch={setSearch} />
       <Pagination data={data} page={page} setPage={setPage} status={status} setSearch={setSearch} />

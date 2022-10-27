@@ -19,7 +19,7 @@ export default function Layout({ children }) {
         <DarkModeToggle />
       </div>
 
-      <main className='w-full min-h-[calc(100vh-115px)] px-4 sm:px-8 pb-20 pt-4 md:pt-20 text-center bg-brand text-brand-dark dark:bg-brand-dark dark:text-brand'>
+      <main className='w-full min-h-[calc(100vh-117px)] px-4 sm:px-8 pb-20 pt-4 md:pt-20 text-center bg-brand text-brand-dark dark:bg-brand-dark dark:text-brand'>
         {children}
       </main>
 

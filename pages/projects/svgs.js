@@ -7,7 +7,7 @@ const SVG = () => {
   const [drawing, setDrawing] = useState(false)
   return (
     <div className="flex flex-col items-center justify-center w-full">
-      <h1 className="text-4xl md:text-6xl mb-4">Fun with SVGs</h1>
+      <h1 className="h1">Fun with SVGs</h1>
       <p className='mb-8'>Animating SVGs with CSS</p>
       {!drawing ?
         <div className='flex flex-col items-center justify-center'>

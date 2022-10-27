@@ -8,7 +8,7 @@ const Education = () => {
       {education.map((e, i) => {
         const { title, school, location, link, date, duration, image, addon, more } = e
         return (
-          <div key={title} className='shadow-sm rounded p-8 relative text-sm text-left mb-8 bg-gray dark:bg-gray-dark dark:text-gray'>
+          <div key={title} className='shadow-sm rounded p-8 relative text-sm text-left mb-8 bg-gray dark:bg-gray-dark dark:text-gray mt-16'>
             <p className={`absolute top-0 bg-gray-dark/20 dark:bg-gray/20 dark:text-gray px-2 py-1 right-0 rounded-bl rounded-tr`}>{date}</p>
             <p className='text-2xl mb-6 text-center pt-6'>{title}</p>
             <p className='mb-1'>School: <a href={link} target="_blank" rel="noreferrer nofollow" className='underline hover:text-cta hover:no-underline'>{school}</a></p>

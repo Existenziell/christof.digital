@@ -11,7 +11,7 @@ const Success = () => {
 
       <div>
         <div className='flex flex-col items-center justify-center text-center text-3xl h-full'>
-          <h1 className='text-4xl md:text-6xl'>Thank you!</h1>
+          <h1 className='h1'>Thank you!</h1>
           <Link href='/'>
             <a className='mt-20'>
               <svg xmlns='http://www.w3.org/2000/svg' className='h-32 w-32 hover:scale-[102%] hover:text-cta transition-all' viewBox='0 0 20 20' fill='currentColor'>

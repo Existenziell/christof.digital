@@ -27,18 +27,18 @@ const Curriculum = () => {
 
       <div>
         <ScrollIndicator />
-        <h1 className='text-4xl md:text-6xl mb-2'>Curriculum Vitae</h1>
-        <p className='text-sm italic mb-8'>&bdquo;Resume of Life&rdquo;</p>
+        <h1 className='h1'>Curriculum Vitae</h1>
+        <p className='mb-8'>&bdquo;Resume of Life&rdquo;</p>
 
         <div className="w-full flex justify-center mb-8">
           <ul className="flex">
             <li className="mr-2">
               <a href="#experiences" onClick={() => setView('experiences')}
-                className={`inline-block p-4 ${view === 'experiences' && `active-tab`}`}>Experiences</a>
+                className={`inline-block p-2 ${view === 'experiences' && `active-tab`}`}>Experiences</a>
             </li>
             <li className="mr-2">
               <a href="#education" onClick={() => setView('education')}
-                className={`inline-block p-4 ${view === 'education' && `active-tab`}`}>Education</a>
+                className={`inline-block p-2 ${view === 'education' && `active-tab`}`}>Education</a>
             </li>
           </ul>
         </div>

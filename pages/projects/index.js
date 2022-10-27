@@ -25,7 +25,7 @@ const Projects = () => {
       </Head>
 
       <div className='w-full'>
-        <h1 className='text-4xl md:text-6xl mb-4 text-center'>Projects</h1>
+        <h1 className='h1'>Projects</h1>
         <p className='mx-auto max-w-xl text-center mb-12'>I thoroughly enjoy working on these smaller projects, as a tech demo, a MVP or just to play around with a new technology. Here are a few examples:</p>
         <div className='flex items-center justify-center w-full'>
           <Sorting sortBy={sortBy} toggleSortBy={toggleSortBy} />
