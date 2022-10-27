@@ -75,12 +75,10 @@ const Recording = () => {
     let chunks = []
 
     start.addEventListener("click", (ev) => {
-      // console.log(mediaRecorder.state)
       mediaRecorder.start()
       setRecording(true)
     })
     stop.addEventListener("click", (ev) => {
-      // console.log(mediaRecorder.state)
       mediaRecorder.stop()
       setRecording(false)
     })
