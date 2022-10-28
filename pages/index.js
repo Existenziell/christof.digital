@@ -22,7 +22,6 @@ export default function Home() {
           </Link>.
         </p>
         <h1 className='text-4xl md:text-6xl dark:text-cta mt-8'>Enjoy</h1>
-
       </div>
       <div className='lg:w-1/2 mt-8 lg:mt-0 align-top nextimg shadow-2xl' data-testid="image">
         <Image src='/root.webp'

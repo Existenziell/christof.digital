@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import gsap from "gsap"
 
 const DarkModeToggle = () => {
   const [darkmode, setDarkmode] = useState()
@@ -18,6 +19,12 @@ const DarkModeToggle = () => {
     }
   }, [])
   /* eslint-enable react-hooks/exhaustive-deps */
+
+  useEffect(() => {
+    let timeline = gsap.timeline({ smoothChildTiming: true, autoRemoveChildren: true })
+    timeline
+      .fromTo("#toggle", { opacity: 0 }, { opacity: 1, delay: 1.5, duration: 1.5 })
+  }, [])
 
   const setLight = () => {
     localStorage.theme = 'light'
@@ -46,7 +53,7 @@ const DarkModeToggle = () => {
   }
 
   return (
-    <div className='pt-1 md:pt-0'>
+    <div className='pt-1 md:pt-0' id='toggle'>
       {darkmode === 'light' ?
         <svg onClick={setDark} xmlns='http://www.w3.org/2000/svg' className='h-8 w-8 md:h-6 md:w-6 cursor-pointer text-brand-dark hover:text-cta transition-colors' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
           <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z' />

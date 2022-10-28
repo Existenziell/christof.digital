@@ -1,6 +1,7 @@
-import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import Link from 'next/link'
+import gsap from "gsap"
 
 const Nav = () => {
   const router = useRouter()
@@ -17,8 +18,23 @@ const Nav = () => {
     { name: 'Contact', url: '/contact', active: router.pathname === '/contact' },
   ]
 
+  useEffect(() => {
+    let timeline = gsap.timeline({
+      delay: 1,
+      defaults: {
+        // duration: 1.5,
+        ease: "power4.out"
+      },
+      smoothChildTiming: true,
+      autoRemoveChildren: true,
+    })
+
+    timeline
+      .fromTo("#nav", { y: -100 }, { y: 0, duration: 1.5, ease: "elastic.out(1, 0.3)" })
+  }, [])
+
   return (
-    <nav className='w-full'>
+    <nav className='w-full' id='nav'>
 
       {/* Desktop Menu */}
       <ul className='desktop-nav hidden md:flex z-20 gap-2'>

@@ -16,6 +16,7 @@
     "@sendgrid/mail": "^7.7.0",
     "caniuse-lite": "^1.0.30001418",
     "framer-motion": "^7.5.3",
+    "gsap": "^3.11.3",
     "next": "^12.3.1",
     "next-pwa": "^5.6.0",
     "nextjs-progressbar": "^0.0.14",

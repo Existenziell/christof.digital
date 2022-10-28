@@ -14,8 +14,32 @@ import PrimeFactors from "../components/playground/PrimeFactors"
 import EuclideanDistance from "../components/playground/EuclideanDistance"
 import Banana from "../components/playground/Banana"
 import AppLauncher from "../components/AppLauncher"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
+import { useEffect } from "react"
 
 const Playground = () => {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger)
+    gsap.utils.toArray('.panel').forEach((p) => {
+      gsap.fromTo(
+        p,
+        { y: 200, opacity: 0, },
+        {
+          scrollTrigger: {
+            trigger: p,
+            toggleActions: "play none none reverse",
+            start: '50px 80%',
+          },
+          y: 0,
+          opacity: 1,
+          duration: 2,
+          ease: 'power4.out',
+        }
+      )
+    })
+  }, [])
+
   return (
     <>
       <Head >
