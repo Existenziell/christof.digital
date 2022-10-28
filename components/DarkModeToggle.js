@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import gsap from "gsap"
+import { gsap } from 'gsap'
 
 const DarkModeToggle = () => {
   const [darkmode, setDarkmode] = useState()
@@ -21,9 +21,7 @@ const DarkModeToggle = () => {
   /* eslint-enable react-hooks/exhaustive-deps */
 
   useEffect(() => {
-    let timeline = gsap.timeline({ smoothChildTiming: true, autoRemoveChildren: true })
-    timeline
-      .fromTo("#toggle", { opacity: 0 }, { opacity: 1, delay: 1.5, duration: 1.5 })
+    gsap.fromTo("#toggle", { opacity: 0 }, { opacity: 1, delay: 1, duration: 1.5 })
   }, [])
 
   const setLight = () => {

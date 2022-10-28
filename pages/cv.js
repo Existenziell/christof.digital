@@ -7,8 +7,8 @@ import { useEffect, useState } from 'react'
 import { ScrollIndicator } from '../components/ScrollIndicator'
 import { ArrowDownTrayIcon } from '@heroicons/react/24/solid'
 import { curriculum as cv } from '../lib/curriculum'
-import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
 const Curriculum = () => {
   useEffect(() => {
