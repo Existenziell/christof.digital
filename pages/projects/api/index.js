@@ -26,7 +26,7 @@ const Api = () => {
   if (status === "error") return <p>{status}</p>
 
   return (
-    <div className='text-left w-full flex flex-col items-center'>
+    <div className='w-full flex flex-col items-center'>
       <h1 className='h1'>API</h1>
       <p>Using react-query and the open Rick&amp;Morty API to test Pagination.</p>
 
@@ -40,7 +40,7 @@ const Api = () => {
         <>
           {data.error !== "There is nothing here" &&
             <>
-              <div className='flex flex-wrap gap-6 justify-evenly items-center w-full md:pb-16'>
+              <div className='flex flex-wrap gap-6 justify-evenly items-center w-full md:pb-16 text-left'>
                 {data?.results?.map(person => {
                   return (
                     <Link href={`/projects/api/${person.id}`} key={person.id}>
