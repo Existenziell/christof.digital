@@ -6,20 +6,15 @@ const Filters = ({ showFilter, setShowFilter, filterStatus, setFilterStatus, fil
 
   const handleStatus = (e) => {
     const value = e.target.value
-    value === 'all'
-      ? setFilterStatus('')
-      : setFilterStatus(value)
+    value === 'all' ? setFilterStatus('') : setFilterStatus(value)
   }
 
   const handleGender = (e) => {
     const value = e.target.value
-    value === 'all'
-      ? setFilterGender('')
-      : setFilterGender(value)
+    value === 'all' ? setFilterGender('') : setFilterGender(value)
   }
 
   return (
-
     <div className="my-2 w-full">
 
       <div className="flex items-center gap-1 hover:cursor-pointer mx-auto w-max hover:text-cta" onClick={() => setShowFilter(!showFilter)}>
@@ -46,8 +41,8 @@ const Filters = ({ showFilter, setShowFilter, filterStatus, setFilterStatus, fil
             <div className="flex flex-col md:flex-row items-start gap-1 md:gap-4">
               {gender.map(g => (
                 <div key={g}>
-                  <input type="radio" id={g} name="gender" value={g} defaultChecked={g === 'all'} />
-                  <label className="capitalize hover:cursor-pointer ml-[6px] text-sm" htmlFor={g}>{g}</label>
+                  <input type="radio" id={`${g}_gender`} name="gender" value={g} defaultChecked={g === 'all'} />
+                  <label className="capitalize hover:cursor-pointer ml-[6px] text-sm" htmlFor={`${g}_gender`}>{g}</label>
                 </div>
               ))}
             </div>
