@@ -98,6 +98,10 @@ html, body {
   @apply border-b-2 border-cta font-bold dark:border-cta;
 }
 
+.arrow-nav {
+  @apply w-8 h-8 hover:text-cta hover:bg-gray dark:hover:bg-gray-dark rounded;
+}
+
 
 /* ==========================================================================
 	Forms 

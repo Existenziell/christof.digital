@@ -23,7 +23,7 @@ const AI = () => {
         </p>
         {creations.map(creation =>
           <div key={creation.prompt} className='flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mb-16 text-left'>
-            <div className='bg-gray dark:bg-gray-dark p-4 rounded nextimg'>
+            <div className='bg-gray dark:bg-gray-dark p-4 rounded shadow-lg nextimg'>
               <Image
                 src={creation.image}
                 alt={creation.prompt}
@@ -31,6 +31,7 @@ const AI = () => {
                 height={800}
                 placeholder="blur"
                 blurDataURL={creation.image}
+                className='rounded'
               />
             </div>
             <div className='md:w-1/2'>
