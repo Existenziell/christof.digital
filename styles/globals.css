@@ -69,6 +69,16 @@ html, body {
   @apply text-4xl md:text-6xl dark:text-cta mb-4;
 }
 
+input[type='radio']:after {
+  @apply w-4 h-4 content-[''] cursor-pointer inline-block relative -top-[2px] -left-[1px]
+  bg-gray dark:bg-gray-dark border-2 border-white rounded-full;
+}
+
+input[type='radio']:checked:after {
+  @apply bg-cta;
+}
+
+
 /* ==========================================================================
 	Navigation
 	========================================================================== */
