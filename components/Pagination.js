@@ -15,10 +15,14 @@ const Pagination = ({ data, page, setPage, status }) => {
       >
         <ChevronLeftIcon />
       </button>
-      <div className='flex flex-col items-center'>
-        <p className='text-xs'>({data?.info?.count} total)</p>
-        <p>{page} / {data?.info?.pages}</p>
-      </div>
+
+      {data?.info &&
+        <div className='flex flex-col items-center'>
+          <p>{data?.info?.count} results</p>
+          <p>{page} / {data?.info?.pages}</p>
+        </div>
+      }
+
       <button
         onClick={() => setPage(oldPage => oldPage + 1)}
         disabled={isDisabledNext}

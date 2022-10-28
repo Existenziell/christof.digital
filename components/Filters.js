@@ -28,7 +28,7 @@ const Filters = ({ showFilter, setShowFilter, filterStatus, setFilterStatus, fil
       </div>
 
       {showFilter &&
-        <div className="bg-gray dark:bg-gray-dark p-4 rounded-sm">
+        <div className="bg-gray dark:bg-gray-dark p-4 rounded-sm flex gap-4 justify-evenly">
           <fieldset onChange={handleStatus}>
             <legend>Status:</legend>
             <div className="flex flex-col md:flex-row items-start gap-1 md:gap-4">
@@ -41,7 +41,7 @@ const Filters = ({ showFilter, setShowFilter, filterStatus, setFilterStatus, fil
             </div>
           </fieldset>
 
-          <fieldset onChange={handleGender} className='mt-2'>
+          <fieldset onChange={handleGender} className=''>
             <legend>Gender:</legend>
             <div className="flex flex-col md:flex-row items-start gap-1 md:gap-4">
               {gender.map(g => (
