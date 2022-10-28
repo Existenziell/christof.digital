@@ -1,7 +1,6 @@
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
 
 const Pagination = ({ data, page, setPage, status }) => {
-
   const isDisabledPrev = page === 1
   const isDisabledNext = !data?.info?.next
 
