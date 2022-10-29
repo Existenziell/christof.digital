@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { gsap } from 'gsap'
 import Router from 'next/router'
 import Socials from '../components/Socials'
 import SyncLoader from 'react-spinners/SyncLoader'
@@ -33,6 +34,10 @@ const Contact = () => {
     }
   }
 
+  useEffect(() => {
+    gsap.fromTo("#form", { opacity: 0, y: 400 }, { opacity: 1, y: 0, delay: 0.5, ease: 'expo.out', duration: 1.2 })
+  }, [])
+
   return <>
     <Head>
       <title>Contact | christof.digital</title>
@@ -45,7 +50,7 @@ const Contact = () => {
       <Socials />
 
       <div className='px-4 pt-8 pb-0 sm:px-12 mt-6 shadow w-full bg-cover bg-no-repeat bg-poly rounded bg-white/10 backdrop-blur-md text-white'>
-        <form onSubmit={submitForm}>
+        <form onSubmit={submitForm} id='form'>
           <div className='relative mb-8'>
             <input id='name' name='name' type='text' onChange={setData} required disabled={sending} className='peer h-10 w-full placeholder-transparent focus:outline-none bg-white/10 backdrop-blur-md rounded pl-4' placeholder='Name' />
             <label htmlFor='name'
