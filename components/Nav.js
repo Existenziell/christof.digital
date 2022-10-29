@@ -19,7 +19,7 @@ const Nav = () => {
   ]
 
   useEffect(() => {
-    gsap.fromTo("#nav", { y: -100 }, { y: 0, duration: 1.5, delay: 1, ease: "elastic.out(1, 0.3)" })
+    gsap.fromTo("#nav", { opacity: 0 }, { opacity: 1, delay: 0.5 })
   }, [])
 
   return (

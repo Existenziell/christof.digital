@@ -21,7 +21,7 @@ const DarkModeToggle = () => {
   /* eslint-enable react-hooks/exhaustive-deps */
 
   useEffect(() => {
-    gsap.fromTo("#toggle", { opacity: 0 }, { opacity: 1, delay: 1, duration: 1.5 })
+    gsap.fromTo("#toggle", { opacity: 0 }, { opacity: 1, delay: 0.5 })
   }, [])
 
   const setLight = () => {
