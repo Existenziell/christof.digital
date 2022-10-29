@@ -32,7 +32,7 @@ const Api = () => {
 
       <Search search={search} setSearch={setSearch} />
       <Filters showFilter={showFilter} setShowFilter={setShowFilter} filterStatus={filterStatus} setFilterStatus={setFilterStatus} filterGender={filterGender} setFilterGender={setFilterGender} />
-      <Pagination data={data} page={page} setPage={setPage} status={status} />
+      <Pagination data={data} page={page} setPage={setPage} />
 
       {status === "loading" ?
         <div className='mx-auto w-max mt-16'><SyncLoader size={10} color='var(--color-cta)' /></div>
@@ -69,7 +69,7 @@ const Api = () => {
                   )
                 })}
               </div>
-              <Pagination data={data} page={page} setPage={setPage} status={status} setSearch={setSearch} />
+              <Pagination data={data} page={page} setPage={setPage} />
             </>
           }
         </>
