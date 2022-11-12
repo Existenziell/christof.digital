@@ -1,7 +1,8 @@
-import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { gsap } from 'gsap'
+import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
+import { Bars3Icon, Bars4Icon, XMarkIcon } from '@heroicons/react/24/solid'
 
 const Nav = () => {
   const router = useRouter()
@@ -40,17 +41,13 @@ const Nav = () => {
 
       {/* Mobile Hamburger Button */}
       <div className='block md:hidden z-20'>
-        <button className='outline-none' onClick={() => setIsOpen(!isOpen)} aria-label='Open Mobile Navigation'>
+        <div onClick={() => setIsOpen(!isOpen)} aria-label='Open Mobile Navigation'>
           {!isOpen ?
-            <svg xmlns='http://www.w3.org/2000/svg' className='h-12 w-12 text-brand-dark hover:text-cta dark:text-brand dark:hover:text-cta transition-all' fill='none' strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' viewBox='0 0 24 24' stroke='currentColor'>
-              <path d='M4 6h16M4 12h16M4 18h16'></path>
-            </svg>
+            <Bars4Icon className='h-12 w-12 p-0 m-0 text-brand-dark hover:text-cta dark:text-brand dark:hover:text-cta transition-all' />
             :
-            <svg xmlns='http://www.w3.org/2000/svg' className='h-12 w-12 text-brand-dark hover:text-cta dark:text-brand dark:hover:text-cta transition-all' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
-              <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M6 18L18 6M6 6l12 12' />
-            </svg>
+            <XMarkIcon className='h-12 w-12 p-0 m-0 text-brand-dark hover:text-cta dark:text-brand dark:hover:text-cta transition-all' />
           }
-        </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
