@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { gsap } from 'gsap'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
-import { Bars3Icon, Bars4Icon, XMarkIcon } from '@heroicons/react/24/solid'
+import { Bars4Icon, XMarkIcon } from '@heroicons/react/24/solid'
 
 const Nav = () => {
   const router = useRouter()
