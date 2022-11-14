@@ -8,7 +8,7 @@ export default function Home() {
         <h1 className='text-4xl md:text-6xl dark:text-cta mb-8'>Hi, I am Christof</h1>
         <p className='mb-3'>I love problems. And computers. And to solve the former with the latter.</p>
         <p className='mb-3 lg:text-right'>
-          I deeply enjoy coding and especially to build and witness the full journey, from the moment the user request first hit the server until the actual pixels are drawn to the screen and in extension, to the retina of the user.
+          I deeply enjoy coding and especially to build and witness the full journey, from the moment the user request first hits the server until the actual pixels are drawn to the screen and in extension, to the retina of the user.
           If you are looking for a Fullstack Engineer (Web, Mobile, Blockchain) with more than 15 years of experience, you&apos;ll find more information in my {` `}
           <Link href='/cv'><a className='link'>CV</a></Link>{` `}
           and on my{` `}
