@@ -275,6 +275,7 @@ svg:hover #dark2 {
 #results .content, #instructions .content {
   padding: 50px;
   border-radius: 20px;
+  color: white;
 }
 
 #score {
