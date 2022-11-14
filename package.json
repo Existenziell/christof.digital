@@ -15,6 +15,7 @@
     "@heroicons/react": "^2.0.12",
     "@sendgrid/mail": "^7.7.0",
     "caniuse-lite": "^1.0.30001418",
+    "cannon": "^0.6.2",
     "framer-motion": "^7.5.3",
     "gsap": "^3.11.3",
     "next": "^12.3.1",

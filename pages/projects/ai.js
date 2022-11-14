@@ -39,7 +39,6 @@ const AI = () => {
         <ScrollIndicator />
 
         <h1 className='h1'>AI</h1>
-
         <p className='flex flex-col md:flex-row-reverse items-center justify-center w-full md:w-2/3 mb-16'>
           There have recently been an number of AI projects especially in the space of image generation that have absolutely amazed me.
           Here are a few outcomes of my interactions with these new systems.

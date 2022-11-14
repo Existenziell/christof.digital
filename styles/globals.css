@@ -246,3 +246,42 @@ svg:hover #dark2 {
     transform: translateY(0);
   }
 }
+
+
+/* ==========================================================================
+	THREEJS 
+	========================================================================== */
+
+#instructions {
+  position: absolute;
+  display: none;
+}
+
+#results, body:hover #instructions {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(20, 20, 20, 0.75);
+}
+
+#results {
+  display: none;
+  cursor: default;
+}
+
+#results .content, #instructions .content {
+  padding: 50px;
+  border-radius: 20px;
+}
+
+#score {
+  position: absolute;
+  color: white;
+  font-size: 3em;
+  font-weight: bold;
+  top: 30px;
+  right: 30px;
+}
