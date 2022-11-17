@@ -134,6 +134,12 @@ input[type='radio']:checked:after {
     hover:shadow hover:cursor-pointer transition-all;
 }
 
+.button-margin-off {
+  @apply px-8 py-4
+    bg-brand-dark text-brand dark:bg-brand dark:text-brand-dark rounded shadow-lg
+    hover:shadow hover:cursor-pointer hover:text-cta dark:hover:text-cta transition-all;
+}
+
 .button:disabled, .button-sm:disabled {
   @apply cursor-not-allowed hover:text-brand dark:hover:text-brand-dark hover:shadow-lg;
 }
@@ -245,44 +251,4 @@ svg:hover #dark2 {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-
-/* ==========================================================================
-	THREEJS 
-	========================================================================== */
-
-#instructions {
-  position: absolute;
-  display: none;
-}
-
-#results, body:hover #instructions {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(20, 20, 20, 0.75);
-}
-
-#results {
-  display: none;
-  cursor: default;
-}
-
-#results .content, #instructions .content {
-  padding: 50px;
-  border-radius: 20px;
-  color: white;
-}
-
-#score {
-  position: absolute;
-  color: white;
-  font-size: 3em;
-  font-weight: bold;
-  top: 30px;
-  right: 30px;
 }

@@ -1,11 +1,13 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 import * as THREE from 'three'
 import CANNON from 'cannon'
 
 const ThreeJS = () => {
-  useEffect(() => {
-    window.focus() // Capture keys right away (by default focus is on editor)
+  const router = useRouter()
+  const [score, setScore] = useState(0)
 
+  useEffect(() => {
     let camera, scene, renderer // ThreeJS globals
     let world // CannonJs world
     let lastTime // Last timestamp of animation
@@ -17,8 +19,9 @@ const ThreeJS = () => {
     let gameEnded
     let robotPrecision // Determines how precise the game is on autopilot
 
+    window.focus() // Capture keys right away (by default focus is on editor)
+
     const anchor = document.getElementById('anchor')
-    const scoreElement = document.getElementById("score")
     const instructionsElement = document.getElementById("instructions")
     const resultsElement = document.getElementById("results")
 
@@ -94,6 +97,8 @@ const ThreeJS = () => {
     }
 
     function startGame() {
+      setScore(0)
+
       autopilot = false
       gameEnded = false
       lastTime = 0
@@ -102,7 +107,6 @@ const ThreeJS = () => {
 
       if (instructionsElement) instructionsElement.style.display = "none"
       if (resultsElement) resultsElement.style.display = "none"
-      if (scoreElement) scoreElement.innerText = 0
 
       if (world) {
         // Remove every object from world
@@ -148,7 +152,7 @@ const ThreeJS = () => {
     function generateBox(x, y, z, width, depth, falls) {
       // ThreeJS
       const geometry = new THREE.BoxGeometry(width, boxHeight, depth)
-      const color = new THREE.Color(`hsl(${30 + stack.length * 4}, 100%, 50%)`)
+      const color = new THREE.Color(`hsl(${60 + stack.length * 4}, 100%, 50%)`)
       const material = new THREE.MeshLambertMaterial({ color })
       const mesh = new THREE.Mesh(geometry, material)
       mesh.position.set(x, y, z)
@@ -197,8 +201,8 @@ const ThreeJS = () => {
       topLayer.cannonjs.addShape(shape)
     }
 
-    window.addEventListener("mousedown", eventHandler)
-    window.addEventListener("touchstart", eventHandler)
+    anchor.addEventListener("mousedown", eventHandler)
+    anchor.addEventListener("touchstart", eventHandler)
     window.addEventListener("keydown", function (event) {
       if (event.key === " ") {
         event.preventDefault()
@@ -256,7 +260,7 @@ const ThreeJS = () => {
         const newDepth = topLayer.depth // New layer has the same size as the cut top layer
         const nextDirection = direction === "x" ? "z" : "x"
 
-        if (scoreElement) scoreElement.innerText = stack.length - 1
+        setScore(stack.length - 1)
         addLayer(nextX, nextZ, newWidth, newDepth, nextDirection)
       } else {
         missedTheSpot()
@@ -339,7 +343,6 @@ const ThreeJS = () => {
 
     window.addEventListener("resize", () => {
       // Adjust camera
-      console.log("resize", window.innerWidth, window.innerHeight)
       const aspect = window.innerWidth / window.innerHeight
       const width = 10
       const height = width / aspect
@@ -352,31 +355,44 @@ const ThreeJS = () => {
       renderer.render(scene, camera)
     })
   }, [])
-
+  /* eslint-disable no-undef */
   return (
     <div className="flex flex-col items-center justify-center w-full">
       <h1 className="h1">ThreeJS</h1>
-      <p className='w-full md:w-2/3 mb-16'>
-        Stack game with Three.js and Cannon.js.
-        ThreeJS renders the material world whereas CannonJS is responsible for
-        calculating the physics for each object on every tick.
-      </p>
+      <div className='w-full md:w-2/3 mb-8'>
+        <p className='mb-4'>
+          Stack game with Three.js and Cannon.js.
+          ThreeJS renders the material world whereas CannonJS is responsible for
+          calculating the physics for each object on every tick.
+        </p>
+        <p className='mb-4'>Goal is to stack the blocks on top of each other. Click, tap or press Space when a block is above the stack.</p>
+        <p>Can you reach the blue colored blocks?</p>
+      </div>
+      {/* <p className='font-bold mb-12'>Click, tap or press Space to start game</p> */}
       <div id='anchor' className='shadow-2xl rounded relative'>
-        <div id="instructions">
+        <div id="instructions" className='absolute  flex items-center justify-center h-full w-full'>
           <div className="content">
-            <p>Goal is to stack the blocks on top of each other.</p>
-            <p>Click, tap or press Space when a block is above the stack.</p>
-            <p className='mb-2'>Can you reach the blue color blocks?</p>
-            <p className='font-bold'>Click, tap or press Space to start game</p>
+            <button className='button '>Start Game</button>
           </div>
         </div>
-        <div id="results">
+        <div id="results" className='hidden absolute items-center justify-center w-full h-full bg-black/75'>
           <div className="content">
-            <p>You missed the block</p>
-            <p>To reset the game press R</p>
+            <p>Game Over</p>
+            <p className='mb-4'>You scored {score} {score === 1 ? `point` : `points`}</p>
+            <p className='text-2xl text-cta'>
+              {score === 0 && `Better luck next time`}
+              {(score > 0 && score < 5) && `Not bad, but you can do better!`}
+              {(score > 5 && score < 10) && `Awesome!`}
+              {(score >= 10 && score < 15) && `MonsterKill!`}
+              {(score >= 15 && score < 20) && `Unstoppable!`}
+              {(score >= 20 && score < 25) && `This is getting ridiculous!`}
+              {(score >= 25) && `You are unbelievable!`}
+            </p>
+            <p className='hidden sm:block text-sm mt-4'>To restart the game press R</p>
+            <button className='button-margin-off sm:hidden mt-4' onClick={() => router.reload()}>Play again</button>
           </div>
         </div>
-        <div id="score">0</div>
+        <div id="score" className='absolute top-8 right-8 text-6xl text-white'>{score}</div>
       </div>
     </div>
   )
