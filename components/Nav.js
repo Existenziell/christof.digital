@@ -8,7 +8,7 @@ const Nav = () => {
   const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
 
-  const projects = ['/projects/ai', '/projects/api', '/projects/recording']
+  const projects = ['/projects/ai', '/projects/api', '/projects/recording', '/projects/threejs']
   const urlIsProject = projects.includes(router.pathname)
 
   const links = [
