@@ -15,6 +15,7 @@ const ThreeJS = () => {
     let overhangs // Overhanging parts that fall down
     const boxHeight = 1 // Height of each layer
     const originalBoxSize = 3 // Original width and height of a box
+    let sound // Global Sound object
     let autopilot
     let gameEnded
     let robotPrecision // Determines how precise the game is on autopilot
@@ -98,6 +99,7 @@ const ThreeJS = () => {
 
     function startGame() {
       setScore(0)
+      playSound('start.mp3')
 
       autopilot = false
       gameEnded = false
@@ -215,6 +217,26 @@ const ThreeJS = () => {
       }
     })
 
+    function playSound(file, volume = 0.5) {
+      if (sound) sound.isPlaying = false
+      enableAudio()
+      // load a sound and set it as the Audio object's buffer
+      const audioLoader = new THREE.AudioLoader()
+      audioLoader.load(`/audio/${file}`, function (buffer) {
+        sound.setBuffer(buffer)
+        sound.setVolume(volume)
+        sound.play()
+      })
+    }
+
+    function enableAudio() {
+      // Set up sound
+      const listener = new THREE.AudioListener()
+      camera.add(listener)
+      // create a global audio source
+      sound = new THREE.Audio(listener)
+    }
+
     function eventHandler() {
       if (autopilot) startGame()
       else splitBlockAndAddNextOneIfOverlaps()
@@ -260,7 +282,20 @@ const ThreeJS = () => {
         const newDepth = topLayer.depth // New layer has the same size as the cut top layer
         const nextDirection = direction === "x" ? "z" : "x"
 
-        setScore(stack.length - 1)
+        if (!autopilot) {
+          const score = stack.length - 1
+          setScore(score)
+          // Play sounds according to current score
+          if (score === 5) playSound("firstblood.mp3")
+          if (score === 10) playSound("ultrakill.mp3")
+          if (score === 15) playSound("dominating.mp3")
+          if (score === 20) playSound("killingspree.mp3")
+          if (score === 25) playSound("monsterkill.mp3")
+          if (score === 30) playSound("unstoppable.mp3")
+          if (score === 35) playSound("godlike.mp3")
+          if (score % 5 !== 0) playSound('scratch.mp3', 0.1)
+        }
+
         addLayer(nextX, nextZ, newWidth, newDepth, nextDirection)
       } else {
         missedTheSpot()
@@ -268,6 +303,7 @@ const ThreeJS = () => {
     }
 
     function missedTheSpot() {
+      playSound('cv2.mp3')
       const topLayer = stack[stack.length - 1]
 
       // Turn to top layer into an overhang and let it fall down
@@ -375,18 +411,20 @@ const ThreeJS = () => {
             <button className='button '>Start Game</button>
           </div>
         </div>
-        <div id="results" className='hidden absolute items-center justify-center w-full h-full bg-black/75'>
+        <div id="results" className='hidden absolute items-center justify-center w-full h-full bg-black/75 text-white'>
           <div className="content">
             <p>Game Over</p>
             <p className='mb-4'>You scored {score} {score === 1 ? `point` : `points`}</p>
             <p className='text-2xl text-cta'>
               {score === 0 && `Better luck next time`}
               {(score > 0 && score < 5) && `Not bad, but you can do better!`}
-              {(score > 5 && score < 10) && `Awesome!`}
-              {(score >= 10 && score < 15) && `MonsterKill!`}
-              {(score >= 15 && score < 20) && `Unstoppable!`}
-              {(score >= 20 && score < 25) && `This is getting ridiculous!`}
-              {(score >= 25) && `You are unbelievable!`}
+              {(score > 5 && score < 10) && `UltraKill!`}
+              {(score >= 10 && score < 15) && `Dominating!`}
+              {(score >= 15 && score < 20) && `Killing Spree!`}
+              {(score >= 20 && score < 25) && `MonsterKill!`}
+              {(score >= 25 && score < 30) && `Unstoppable!`}
+              {(score >= 30 && score < 35) && `Godlike!`}
+              {(score >= 35) && `You are unbelievable!`}
             </p>
             <p className='hidden sm:block text-sm mt-4'>To restart the game press R</p>
             <button className='button-margin-off sm:hidden mt-4' onClick={() => router.reload()}>Play again</button>
