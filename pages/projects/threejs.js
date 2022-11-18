@@ -303,7 +303,7 @@ const ThreeJS = () => {
     }
 
     function missedTheSpot() {
-      playSound('cv2.mp3')
+      if (!autopilot) playSound('cv2.mp3')
       const topLayer = stack[stack.length - 1]
 
       // Turn to top layer into an overhang and let it fall down
