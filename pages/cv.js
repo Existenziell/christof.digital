@@ -3,35 +3,12 @@ import Head from 'next/head'
 import Education from '../components/Education'
 import Sorting from '../components/Sorting'
 import TagList from '../components/TagList'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { ScrollIndicator } from '../components/ScrollIndicator'
 import { ArrowDownTrayIcon } from '@heroicons/react/24/solid'
 import { curriculum as cv } from '../lib/curriculum'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
 const Curriculum = () => {
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
-    gsap.utils.toArray('.panel').forEach((p) => {
-      gsap.fromTo(
-        p,
-        { y: 200, opacity: 0, },
-        {
-          scrollTrigger: {
-            trigger: p,
-            toggleActions: "play none none reverse",
-            start: '50px 80%',
-          },
-          y: 0,
-          opacity: 1,
-          duration: 2,
-          ease: 'power4.out',
-        }
-      )
-    })
-  }, [])
-
   const [sortBy, setSortBy] = useState('desc')
   const [data, setData] = useState(cv)
   const [view, setView] = useState('experiences')
@@ -82,7 +59,7 @@ const Curriculum = () => {
                 const { title, company, companyUrl, companyType, date, duration, location, desc, latestProject, skills } = job
 
                 return (
-                  <li key={index} className='panel w-full shadow-md px-4 sm:px-8 pt-6 pb-8 bg-gray dark:bg-gray-dark dark:text-gray text-sm rounded relative'>
+                  <li key={index} className='w-full shadow-md px-4 sm:px-8 pt-6 pb-8 bg-gray dark:bg-gray-dark dark:text-gray text-sm rounded relative'>
                     <p className={`absolute top-0 bg-gray-dark/20 dark:bg-gray/20 dark:text-gray px-2 py-1 right-0 rounded-bl rounded-tr`}>{date}</p>
 
                     <p className='text-2xl mb-6 text-center pt-6'>{title}</p>

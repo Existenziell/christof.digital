@@ -1,7 +1,6 @@
 import Link from 'next/link'
-import { gsap } from 'gsap'
 import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Bars4Icon, XMarkIcon } from '@heroicons/react/24/solid'
 
 const Nav = () => {
@@ -18,10 +17,6 @@ const Nav = () => {
     { name: 'Playground', url: '/playground', active: router.pathname === '/playground' },
     { name: 'Contact', url: '/contact', active: router.pathname === '/contact' },
   ]
-
-  useEffect(() => {
-    gsap.fromTo("#nav", { opacity: 0 }, { opacity: 1, delay: 0.5 })
-  }, [])
 
   return (
     <nav className='w-full' id='nav'>

@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import { gsap } from 'gsap'
 
 const DarkModeToggle = () => {
   const [darkmode, setDarkmode] = useState()
@@ -19,10 +18,6 @@ const DarkModeToggle = () => {
     }
   }, [])
   /* eslint-enable react-hooks/exhaustive-deps */
-
-  useEffect(() => {
-    gsap.fromTo("#toggle", { opacity: 0 }, { opacity: 1, delay: 0.5 })
-  }, [])
 
   const setLight = () => {
     localStorage.theme = 'light'

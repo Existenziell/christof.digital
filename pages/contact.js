@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react'
-import { gsap } from 'gsap'
+import { useState } from 'react'
 import Router from 'next/router'
 import Socials from '../components/Socials'
 import SyncLoader from 'react-spinners/SyncLoader'
@@ -33,10 +32,6 @@ const Contact = () => {
       setErrorMsg('Sorry, an error occured. Have you tried turning it off and on again?')
     }
   }
-
-  useEffect(() => {
-    gsap.fromTo("#form", { opacity: 0, y: 400 }, { opacity: 1, y: 0, delay: 0.5, ease: 'expo.out', duration: 1.2 })
-  }, [])
 
   return <>
     <Head>

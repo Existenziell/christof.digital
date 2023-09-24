@@ -2,32 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { ScrollIndicator } from '../../components/ScrollIndicator'
 import { creations } from '../../lib/creations'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
-import { useEffect } from 'react'
 
 const AI = () => {
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
-    gsap.utils.toArray('.panel').forEach((p) => {
-      gsap.fromTo(
-        p,
-        { y: 200, opacity: 0, },
-        {
-          scrollTrigger: {
-            trigger: p,
-            toggleActions: "play none none reverse",
-            start: '100px bottom',
-          },
-          y: 0,
-          opacity: 1,
-          duration: 2,
-          ease: 'expo.out',
-        }
-      )
-    })
-  }, [])
-
   return (
     <>
       <Head>
@@ -45,7 +21,7 @@ const AI = () => {
           Remember that all these images have been created by Artificial Intelligence, the &apos;only&apos; input was the prompt.
         </p>
         {creations.map(creation =>
-          <div key={creation.prompt} className='panel flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mb-16 text-left'>
+          <div key={creation.prompt} className='flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mb-16 text-left'>
             <div className='bg-gray dark:bg-gray-dark p-4 rounded shadow-lg nextimg'>
               <Image
                 src={creation.image}
