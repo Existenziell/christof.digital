@@ -21,7 +21,7 @@ const AI = () => {
           Remember that all these images have been created by Artificial Intelligence, the &apos;only&apos; input was the prompt.
         </p>
         {creations.map(creation =>
-          <div key={creation.prompt} className='flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mb-16 text-left'>
+          <div key={creation.prompt} className='flex flex-col md:flex-row items-center justify-center w-full gap-4 md:gap-8 mb-16 text-left'>
             <div className='bg-gray dark:bg-gray-dark p-4 rounded shadow-lg nextimg'>
               <Image
                 src={creation.image}
