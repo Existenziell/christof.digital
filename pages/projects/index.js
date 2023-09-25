@@ -7,6 +7,7 @@ import Sorting from '../../components/Sorting'
 import { LinkIcon } from '@heroicons/react/24/solid'
 import { projects } from '../../lib/projects'
 import { useState } from 'react'
+import BitcoinLauncher from '../../components/BitcoinLauncher'
 
 const Projects = () => {
   const [sortBy, setSortBy] = useState('desc')
@@ -63,6 +64,7 @@ const Projects = () => {
         </div>
 
         <AppLauncher />
+        <BitcoinLauncher />
       </div>
     </>
   )

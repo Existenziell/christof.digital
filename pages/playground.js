@@ -14,6 +14,7 @@ import PrimeFactors from '../components/playground/PrimeFactors'
 import EuclideanDistance from '../components/playground/EuclideanDistance'
 import Banana from '../components/playground/Banana'
 import AppLauncher from '../components/AppLauncher'
+import BitcoinLauncher from '../components/BitcoinLauncher'
 
 const Playground = () => {
   return (
@@ -44,6 +45,7 @@ const Playground = () => {
         </div>
       </div>
       <AppLauncher />
+      <BitcoinLauncher />
     </>
   )
 }
