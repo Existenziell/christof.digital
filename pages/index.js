@@ -13,15 +13,13 @@ export default function Home() {
           <Link href='/cv'><a className='link'>CV</a></Link>{` `}
           and on my{` `}
           <Link href='/projects'><a className='link'>projects page</a></Link>.
-          <br /><br />
-          Please <Link href='/contact'><a className='link'>contact me</a></Link> if you see possible synergies or have questions.
         </p>
         <p>
           In case you came here for Bitcoin, you&apos;ll find all information at{' '}
           <Link href='http://bplusplus.info/'>
             <a className='link' rel='noopener noreferrer nofollow'>bplusplus.info</a>
           </Link>.
-          <br /><br />
+          <br />
           In case you came here for Yoga, you&apos;ll find all information at{' '}
           <Link href='http://yoga.christof.digital/'>
             <a className='link' rel='noopener noreferrer nofollow'>yoga.christof.digital</a>
