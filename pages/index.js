@@ -9,13 +9,20 @@ export default function Home() {
         <p className='mb-3'>I love problems. And computers. And to solve the former with the latter.</p>
         <p className='mb-3 lg:text-right'>
           I deeply enjoy coding and especially to build and witness the full journey, from the moment the user request first hits the server until the actual pixels are drawn to the screen and in extension, to the retina of the user.
-          If you are looking for a Fullstack Engineer (Web, Mobile, Blockchain) with more than 15 years of experience, you&apos;ll find more information in my {` `}
+          If you are looking for a Fullstack Engineer (Web, Mobile) with more than 15 years of experience, you&apos;ll find more information in my {` `}
           <Link href='/cv'><a className='link'>CV</a></Link>{` `}
           and on my{` `}
-          <Link href='/projects'><a className='link'>projects page</a></Link>
+          <Link href='/projects'><a className='link'>projects page</a></Link>.
           <br /><br />
           Please <Link href='/contact'><a className='link'>contact me</a></Link> if you see possible synergies or have questions.
-          And in case you came here for Yoga, you&apos;ll find all information at{' '}
+        </p>
+        <p>
+          In case you came here for Bitcoin, you&apos;ll find all information at{' '}
+          <Link href='http://bplusplus.info/'>
+            <a className='link' rel='noopener noreferrer nofollow'>bplusplus.info</a>
+          </Link>.
+          <br /><br />
+          In case you came here for Yoga, you&apos;ll find all information at{' '}
           <Link href='http://yoga.christof.digital/'>
             <a className='link' rel='noopener noreferrer nofollow'>yoga.christof.digital</a>
           </Link>.
