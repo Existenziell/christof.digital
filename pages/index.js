@@ -16,8 +16,8 @@ export default function Home() {
         </p>
         <p>
           In case you came here for Bitcoin, you&apos;ll find all information at{' '}
-          <Link href='http://bplusplus.info/'>
-            <a className='link' rel='noopener noreferrer nofollow'>bplusplus.info</a>
+          <Link href='https://bitcoindev.info/'>
+            <a className='link' rel='noopener noreferrer nofollow'>bitcoindev.info</a>
           </Link>.
           <br />
           In case you came here for Yoga, you&apos;ll find all information at{' '}
