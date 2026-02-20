@@ -82,7 +82,7 @@ export default function CVContent() {
         </div>
       )}
       {view === 'education' && <Education />}
-      <Link href='/software-engineer/projects' className='button-sm mx-auto block mt-16'>Even more projects</Link>
+      <Link href='/software-engineer' className='button-sm mx-auto block mt-16'>Even more projects</Link>
     </div>
   )
 }

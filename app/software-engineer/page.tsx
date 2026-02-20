@@ -1,10 +1,14 @@
+import { projects } from '@/content/projects'
+import SortableProjectsList from '@/components/projects/SortableProjectsList'
+
 export default function SoftwareEngineer() {
   return (
-    <div className='flex flex-col items-center justify-center px-4 md:px-8 lg:w-2/3 lg:mx-auto'>
+    <div className='w-full px-4 md:px-8'>
       <h1 className='header'>Software Engineer</h1>
-      <p className='body-text mb-8'>
-        I build and ship software. Here you can browse projects and try some playground tools.
+      <p className='subtitle mx-auto max-w-xl text-center mb-12'>
+        I have over 20 years of software development experience. Please see below a selection of my latest projects.
       </p>
+      <SortableProjectsList projects={projects} />
     </div>
   )
 }
