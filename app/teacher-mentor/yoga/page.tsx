@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 export default function Yoga() {
   return (
     <div className="flex flex-col items-center justify-center px-4 md:px-8 lg:w-2/3 lg:mx-auto">
