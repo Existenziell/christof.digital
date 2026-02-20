@@ -1,19 +1,21 @@
+const { colors: themeColors } = require('./lib/theme.js')
+
 module.exports = {
   mode: 'jit',
-  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: 'class', // or 'media' or 'class'
+  content: ['./pages/**/*.{js,ts,jsx,tsx}', './app/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}', './hooks/**/*.{js,ts,jsx,tsx}'],
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Gotu', 'Arial', 'sans-serif'],
-        serif: ['Lora', 'serif'],
+        sans: ['var(--font-gotu)', 'Gotu', 'Arial', 'sans-serif'],
+        serif: ['var(--font-lora)', 'Lora', 'serif'],
       },
       colors: {
-        'brand': '#DBDBDB',
-        'brand-dark': '#242424',
-        'cta': '#D6A269',
-        'gray': '#CFCFCF',
-        'gray-dark': '#323232',
+        brand: themeColors.brand,
+        'brand-dark': themeColors.brandDark,
+        cta: themeColors.cta,
+        gray: themeColors.gray,
+        'gray-dark': themeColors.grayDark,
       },
       backgroundImage: {
         poly: 'url(/icons/poly.png)',
@@ -33,7 +35,7 @@ module.exports = {
             transform: 'translate(-20px, 20px) scale(0.9)',
           },
           '100%': {
-            transform: 'tranlate(0px, 0px) scale(1)',
+            transform: 'translate(0px, 0px) scale(1)',
           },
         },
       },

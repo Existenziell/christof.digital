@@ -1,0 +1,60 @@
+import { ChevronDoubleDownIcon, ChevronDoubleRightIcon } from '@heroicons/react/24/solid'
+
+interface FiltersProps {
+  showFilter: boolean
+  setShowFilter: (v: boolean) => void
+  filterStatus: string
+  setFilterStatus: (v: string) => void
+  filterGender: string
+  setFilterGender: (v: string) => void
+}
+
+export default function Filters({ showFilter, setShowFilter, filterStatus, setFilterStatus, filterGender, setFilterGender }: FiltersProps) {
+  const status = ['all', 'alive', 'dead', 'unknown']
+  const gender = ['all', 'female', 'male', 'genderless', 'unknown']
+
+  const handleStatus = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value
+    setFilterStatus(value === 'all' ? '' : value)
+  }
+
+  const handleGender = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value
+    setFilterGender(value === 'all' ? '' : value)
+  }
+
+  return (
+    <div className="my-2 w-full">
+      <div className="flex items-center gap-1 hover:cursor-pointer mx-auto w-max hover:text-cta" onClick={() => setShowFilter(!showFilter)} role="button" tabIndex={0} onKeyDown={(e) => e.key === 'Enter' && setShowFilter(!showFilter)}>
+        <h2>Filters</h2>
+        {showFilter ? <ChevronDoubleDownIcon className="w-4" /> : <ChevronDoubleRightIcon className="w-4" />}
+      </div>
+      {showFilter && (
+        <div className="bg-gray dark:bg-gray-dark p-4 rounded-sm flex gap-4 justify-evenly">
+          <fieldset>
+            <legend>Status:</legend>
+            <div className="flex flex-col md:flex-row items-start gap-1 md:gap-4">
+              {status.map((s) => (
+                <div key={s}>
+                  <input type="radio" id={s} name="status" value={s} checked={filterStatus === '' ? s === 'all' : filterStatus === s} onChange={handleStatus} />
+                  <label className="capitalize hover:cursor-pointer ml-[6px] text-sm" htmlFor={s}>{s}</label>
+                </div>
+              ))}
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Gender:</legend>
+            <div className="flex flex-col md:flex-row items-start gap-1 md:gap-4">
+              {gender.map((g) => (
+                <div key={g}>
+                  <input type="radio" id={`${g}_gender`} name="gender" value={g} checked={filterGender === '' ? g === 'all' : filterGender === g} onChange={handleGender} />
+                  <label className="capitalize hover:cursor-pointer ml-[6px] text-sm" htmlFor={`${g}_gender`}>{g}</label>
+                </div>
+              ))}
+            </div>
+          </fieldset>
+        </div>
+      )}
+    </div>
+  )
+}
