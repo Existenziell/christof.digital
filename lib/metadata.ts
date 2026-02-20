@@ -12,7 +12,6 @@ import {
   FAVICON_32,
   FAVICON_16,
   APPLE_TOUCH_ICON,
-  MANIFEST_PATH,
 } from '@/lib/constants'
 
 export { SITE_NAME } from '@/lib/constants'
@@ -54,7 +53,6 @@ export function getRootMetadata(): Metadata {
       ],
       apple: APPLE_TOUCH_ICON,
     },
-    manifest: MANIFEST_PATH,
     openGraph: {
       type: 'website',
       siteName: SITE_NAME,

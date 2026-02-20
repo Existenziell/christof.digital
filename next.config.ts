@@ -1,15 +1,10 @@
 import type { NextConfig } from 'next'
-import withPWA from '@ducanh2912/next-pwa'
-
-const pwa = withPWA({
-  dest: 'public',
-  register: true,
-  disable: process.env.NODE_ENV === 'development',
-})
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  turbopack: {},
+  turbopack: {
+    root: process.cwd(),
+  },
   async redirects() {
     return [
       { source: '/contact', destination: '/about', permanent: true },
@@ -30,4 +25,4 @@ const nextConfig: NextConfig = {
   },
 }
 
-export default pwa(nextConfig)
+export default nextConfig

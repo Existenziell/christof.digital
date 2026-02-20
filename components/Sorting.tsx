@@ -9,7 +9,7 @@ export default function Sorting({ sortBy, toggleSortBy }: SortingProps) {
   return (
     <Switch.Group>
       <div className="flex items-center text-sm">
-        <Switch.Label className="mr-3">Older</Switch.Label>
+        <Switch.Label className="mr-3">Newer</Switch.Label>
         <Switch
           aria-label='Switch Sorting'
           checked={sortBy}
@@ -18,7 +18,7 @@ export default function Sorting({ sortBy, toggleSortBy }: SortingProps) {
         >
           <span className={`${sortBy ? 'translate-x-6' : 'translate-x-1'} inline-block w-4 h-4 transform bg-cta rounded-sm transition-transform`} />
         </Switch>
-        <Switch.Label className="ml-3">Newer</Switch.Label>
+        <Switch.Label className="ml-3">Older</Switch.Label>
       </div>
     </Switch.Group>
   )

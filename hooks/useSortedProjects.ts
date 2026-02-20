@@ -1,17 +1,17 @@
 import { useMemo, useState, useCallback } from 'react'
-import type { Project } from '@/lib/projects'
+import type { Project } from '@/content/projects'
 
 export function useSortedProjects(initialList: Project[]) {
-  const [isNewerFirst, setIsNewerFirst] = useState(false)
+  const [isOlderFirst, setIsOlderFirst] = useState(false)
 
   const data = useMemo(
-    () => (isNewerFirst ? [...initialList].reverse() : initialList),
-    [initialList, isNewerFirst]
+    () => (isOlderFirst ? initialList : [...initialList].reverse()),
+    [initialList, isOlderFirst]
   )
 
   const toggleSort = useCallback(() => {
-    setIsNewerFirst((prev) => !prev)
+    setIsOlderFirst((prev) => !prev)
   }, [])
 
-  return { data, isNewerFirst, toggleSort }
+  return { data, isOlderFirst, toggleSort }
 }

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { socialLinks } from '@/lib/constants'
+import { socialLinks } from '@/content/site'
 
 export default function Socials() {
   return (

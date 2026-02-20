@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { ScrollIndicator } from '@/components/ScrollIndicator'
-import { creations } from '@/lib/creations'
+import { creations } from '@/content/creations'
 
 export default function AI() {
   return (

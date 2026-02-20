@@ -5,7 +5,7 @@ import '@/styles/globals.css'
 import Providers from './Providers'
 import { getRootMetadata } from '@/lib/metadata'
 import Nav from '@/components/Nav'
-import DarkModeToggle from '@/components/DarkModeToggle'
+import ThemeToggle from '@/components/ThemeToggle'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = getRootMetadata()
@@ -23,9 +23,9 @@ export default function RootLayout({
       <body>
         <div className='flex justify-between items-start p-4 md:px-8 bg-brand text-brand-dark dark:bg-brand-dark dark:text-brand'>
           <Nav />
-          <DarkModeToggle />
+          <ThemeToggle />
         </div>
-        <main className='w-full min-h-[calc(100vh-121px)] md:min-h-[calc(100vh-117px)] px-4 sm:px-8 pb-20 pt-4 md:pt-20 text-center bg-brand text-brand-dark dark:bg-brand-dark dark:text-brand'>
+        <main className='flex flex-col w-full min-h-[calc(100vh-121px)] md:min-h-[calc(100vh-117px)] px-4 sm:px-8 pb-20 pt-4 text-center bg-brand text-brand-dark dark:bg-brand-dark dark:text-brand'>
           <Providers>{children}</Providers>
         </main>
         <Footer />

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { education } from '@/lib/education'
+import { education } from '@/content/education'
 
 export default function Education() {
   return (

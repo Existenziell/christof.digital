@@ -28,8 +28,6 @@ const eslintConfig = defineConfig([
     'coverage.json',
     'coverage/**',
     'test/**',
-    'public/sw.js',
-    'public/workbox-*.js',
   ]),
 ])
 

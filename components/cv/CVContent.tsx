@@ -7,7 +7,7 @@ import TagList from '@/components/TagList'
 import { useState } from 'react'
 import { ScrollIndicator } from '@/components/ScrollIndicator'
 import { ArrowDownTrayIcon } from '@heroicons/react/24/solid'
-import { curriculum as cv } from '@/lib/curriculum'
+import { curriculum as cv } from '@/content/curriculum'
 
 export default function CVContent() {
   const [sortBy, setSortBy] = useState(false)
@@ -36,7 +36,7 @@ export default function CVContent() {
         <div className='w-full text-center'>
           <div className='flex items-center justify-between w-full lg:w-2/3 lg:mx-auto'>
             <Sorting sortBy={sortBy} toggleSortBy={toggleSortBy} />
-            <a href="curriculum.pdf" download="curriculum" className='flex items-center justify-center gap-1 text-xs hover:text-cta'>
+            <a href="/curriculum.pdf" download="curriculum" className='flex items-center justify-center gap-1 text-xs hover:text-cta'>
               <ArrowDownTrayIcon className='w-4' />
               <span>Download</span>
             </a>

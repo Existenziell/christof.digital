@@ -11,6 +11,5 @@ I have worked with JavaScript for over 20 years and always loved web development
 - NextJS
 - TailwindCSS
 - framer-motion
-- PWA
 - react-query
 - Vercel
