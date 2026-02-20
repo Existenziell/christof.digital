@@ -37,7 +37,7 @@ export default function ApiDetail() {
         <>
           <div className='flex flex-col items-center justify-center w-full'>
             <div className='flex items-center mb-4 gap-8'>
-              <BackBtn link='/projects/api' />
+              <BackBtn link='/software-engineer/projects/api' />
               <h2 className='text-4xl font-serif inline-block'>{character.name}</h2>
             </div>
             <div className='nextimg relative my-2 shadow-xl mb-8'>

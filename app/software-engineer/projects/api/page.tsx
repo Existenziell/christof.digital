@@ -60,7 +60,7 @@ export default function Api() {
             <>
               <div className='flex flex-wrap gap-6 justify-evenly items-center w-full md:pb-16 text-left'>
                 {data.results.map((person) => (
-                  <Link href={`/projects/api/${person.id}`} key={person.id} className='bg-gray dark:bg-gray-dark p-4 rounded-sm text-sm flex-grow max-w-[300px]'>
+                  <Link href={`/software-engineer/projects/api/${person.id}`} key={person.id} className='bg-gray dark:bg-gray-dark p-4 rounded-sm text-sm flex-grow max-w-[300px]'>
                     <h2 className='text-xl font-serif w-48 truncate' title={person.name}>{person.name}</h2>
                     <div className='nextimg my-4'>
                       <Image

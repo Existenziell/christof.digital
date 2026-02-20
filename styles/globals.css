@@ -121,6 +121,14 @@ input[type='radio']:checked:after {
   @apply w-full block text-2xl md:text-4xl text-center leading-loose py-2 md:py-8 bg-brand-dark text-cta dark:bg-gray-dark dark:text-cta;
 }
 
+.nav-dropdown {
+  @apply bg-brand text-brand-dark dark:bg-brand-dark dark:text-brand;
+}
+
+.nav-dropdown .nav:hover {
+  @apply text-cta;
+}
+
 .active-tab {
   @apply border-b-2 border-cta font-bold dark:border-cta;
 }

@@ -14,6 +14,9 @@ const nextConfig: NextConfig = {
     return [
       { source: '/contact', destination: '/about', permanent: true },
       { source: '/cv', destination: '/about/cv', permanent: true },
+      { source: '/playground', destination: '/software-engineer/playground', permanent: true },
+      { source: '/projects', destination: '/software-engineer/projects', permanent: true },
+      { source: '/projects/:path*', destination: '/software-engineer/projects/:path*', permanent: true },
     ]
   },
   images: {

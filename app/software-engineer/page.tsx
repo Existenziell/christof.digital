@@ -8,8 +8,8 @@ export default function SoftwareEngineer() {
         I build and ship software. Here you can browse projects and try some playground tools.
       </p>
       <nav className='flex flex-wrap gap-4'>
-        <Link href='/projects' className='link'>Projects</Link>
-        <Link href='/playground' className='link'>Playground</Link>
+        <Link href='/software-engineer/projects' className='link'>Projects</Link>
+        <Link href='/software-engineer/playground' className='link'>Playground</Link>
       </nav>
     </div>
   )
