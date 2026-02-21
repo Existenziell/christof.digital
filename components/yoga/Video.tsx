@@ -4,7 +4,7 @@ import { useRef, useState } from 'react'
 import Link from 'next/link'
 import { PlayCircleIcon } from '@/components/Icons'
 
-export default function VideoSection() {
+export default function Video() {
   const [playing, setPlaying] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
 

@@ -9,7 +9,7 @@ import { timeline } from '@/content/timeline'
 import type { TimelineFeature } from '@/types/yoga'
 import { useSortableData } from '@/hooks/useSortableData'
 
-export default function TimelineSection() {
+export default function Timeline() {
   const { data, sortBy, toggleSortBy } = useSortableData<TimelineFeature>(timeline.features)
 
   return (

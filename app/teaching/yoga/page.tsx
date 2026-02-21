@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import TimelineSection from '@/components/yoga/TimelineSection'
-import VideoSection from '@/components/yoga/VideoSection'
+import Timeline from '@/components/yoga/Timeline'
+import Video from '@/components/yoga/Video'
 
 export const metadata: Metadata = {
   title: 'Yoga | christof.digital',
@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 export default function Yoga() {
   return (
     <div>
-      <TimelineSection />
-      <VideoSection />
+      <Timeline />
+      <Video />
     </div>
   )
 }
