@@ -14,12 +14,12 @@ export default function Teaching() {
         </div>
       </section>
       <section className='section--alt'>
-        <div className='w-full text-left grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8'>
+        <div className='w-full text-left grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8'>
         {teachings.map((teaching) => {
           const cardContent = (
             <>
               <p className='card-date-badge'>{teaching.date}</p>
-              <h2 className='text-2xl font-serif mb-3 pt-4'>{teaching.title}</h2>
+              <h2 className='text-2xl mb-3 pt-6'>{teaching.title}</h2>
               <p className='body-text text-sm flex-grow mb-6'>{teaching.description}</p>
               {teaching.image && (
                 <div className='block mb-4 rounded overflow-hidden'>

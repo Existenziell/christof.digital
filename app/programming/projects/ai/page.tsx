@@ -1,6 +1,10 @@
+import type { Metadata } from 'next'
+import { createPageMetadata } from '@/lib/metadata'
 import Image from 'next/image'
 import { ScrollIndicator } from '@/components/ScrollIndicator'
 import { aiImages } from '@/content/aiImages'
+
+export const metadata: Metadata = createPageMetadata({ title: 'AI' })
 
 export default function AI() {
   return (

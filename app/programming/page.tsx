@@ -1,5 +1,9 @@
+import type { Metadata } from 'next'
+import { createPageMetadata } from '@/lib/metadata'
 import { projects } from '@/content/projects'
 import ProjectsList from '@/components/projects/ProjectsList'
+
+export const metadata: Metadata = createPageMetadata({ title: 'Programming' })
 
 export default function Programming() {
   return (

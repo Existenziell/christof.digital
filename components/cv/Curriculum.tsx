@@ -21,10 +21,10 @@ export default function Curriculum() {
       <div className="w-full flex justify-center mb-8">
         <ul className="flex">
           <li className="mr-2">
-            <a href="#experiences" onClick={() => setView('experiences')} className={`inline-block p-2 ${view === 'experiences' ? 'active-tab' : ''}`}>Experiences</a>
+            <a href="#experiences" onClick={() => setView('experiences')} className={`inline-block p-2 w-28 text-center ${view === 'experiences' ? 'active-tab' : ''}`}>Experiences</a>
           </li>
           <li className="mr-2">
-            <a href="#education" onClick={() => setView('education')} className={`inline-block p-2 ${view === 'education' ? 'active-tab' : ''}`}>Education</a>
+            <a href="#education" onClick={() => setView('education')} className={`inline-block p-2 w-28 text-center ${view === 'education' ? 'active-tab' : ''}`}>Education</a>
           </li>
         </ul>
       </div>

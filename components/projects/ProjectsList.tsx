@@ -1,8 +1,8 @@
 'use client'
 
 import Image from 'next/image'
-import ProjectLink from '@/components/projects/ProjectLink'
 import TagList from '@/components/TagList'
+import Link from 'next/link'
 import type { Project } from '@/types/project'
 
 interface ProjectsListProps {
@@ -34,15 +34,15 @@ export default function ProjectsList({ projects }: ProjectsListProps) {
     <div className='w-full text-left grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
       {projects.map((project) =>
         project.link ? (
-          <ProjectLink
-            key={project.name}
-            href={project.link}
-            external={project.external}
-            classes='card card--link'
-            aria-label={`Link to ${project.name}`}
-          >
-            <ProjectCardContent project={project} />
-          </ProjectLink>
+          project.external ? (
+            <a href={project.link} target='_blank' rel='noopener noreferrer nofollow' className='card card--link' aria-label={`Link to ${project.name}`}>
+              <ProjectCardContent project={project} />
+            </a>
+          ) : (
+            <Link href={project.link} className='card card--link' aria-label={`Link to ${project.name}`}>
+              <ProjectCardContent project={project} />
+            </Link>
+          )
         ) : (
           <article key={project.name} className='card relative flex flex-col'>
             <ProjectCardContent project={project} />

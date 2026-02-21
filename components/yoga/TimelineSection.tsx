@@ -22,7 +22,7 @@ export default function TimelineSection() {
         <Sorting sortBy={sortBy} toggleSortBy={toggleSortBy} />
       </div>
 
-      <ul className="w-full mt-12 max-w-7xl mx-auto space-y-4">
+      <ul className="w-full mt-12 max-w-7xl mx-auto space-y-8">
         {data.map((feature, index) => {
           const { image, date, name, subname, description, mapOnly } =
             feature.properties
@@ -57,7 +57,7 @@ export default function TimelineSection() {
                 }`}
               >
                 <p className={`card-date-badge ${!imageLeft ? 'card-date-badge--left' : ''}`}>{date}</p>
-                <h3 className="text-2xl md:text-3xl text-cta mb-1">{name}</h3>
+                <h3 className="text-2xl md:text-3xl text-cta mb-1 pt-4">{name}</h3>
                 <h4 className="text-sm text-primary mb-4">
                   {subname}
                 </h4>

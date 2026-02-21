@@ -19,29 +19,13 @@ Theme vars generated from lib/theme.js (run: node scripts/generate-theme-css.js)
     @apply text-4xl md:text-6xl text-primary dark:text-cta mb-8;
   }
 
-  .section-title {
-    @apply text-2xl mb-2 font-serif text-primary;
-  }
-
   .body-text {
     @apply text-base text-primary;
-  }
-
-  .caption {
-    @apply text-sm text-muted;
-  }
-
-  .label {
-    @apply text-xs text-muted;
   }
 
   /* Layout */
   .main-layout {
     @apply flex flex-col w-full min-h-[calc(100vh-134px)] px-4 sm:px-8 pb-20 pt-6 text-center;
-  }
-
-  .full-bleed {
-    @apply w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] max-w-none;
   }
 
   .section {
@@ -54,10 +38,6 @@ Theme vars generated from lib/theme.js (run: node scripts/generate-theme-css.js)
 
   .header-bar {
     @apply flex justify-between items-center p-6 sm:px-12 bg-header-bg text-header-fg;
-  }
-
-  .brand-bg {
-    @apply bg-brand text-brand-dark dark:bg-brand-dark dark:text-brand;
   }
 
   .intro-text {
