@@ -37,7 +37,7 @@ Theme vars generated from lib/theme.js (run: node scripts/generate-theme-css.js)
 
   /* Layout */
   .main-layout {
-    @apply flex flex-col w-full min-h-[calc(100vh-121px)] md:min-h-[calc(100vh-117px)] px-4 sm:px-8 pb-20 pt-6 text-center;
+    @apply flex flex-col w-full min-h-[calc(100vh-134px)] px-4 sm:px-8 pb-20 pt-6 text-center;
   }
 
   .full-bleed {
