@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import TagList from '@/components/TagList'
 import Link from 'next/link'
+import ExternalLink from '@/components/ExternalLink'
 import type { Project, ProjectsListProps } from '@/types'
 
 function ProjectCardContent({ project }: { project: Project }) {
@@ -31,9 +32,9 @@ export default function ProjectsList({ projects }: ProjectsListProps) {
       {projects.map((project) =>
         project.link ? (
           project.external ? (
-            <a href={project.link} target='_blank' rel='noopener noreferrer nofollow' className='card card--link' aria-label={`Link to ${project.name}`}>
+            <ExternalLink href={project.link} nofollow className='card card--link' aria-label={`Link to ${project.name}`}>
               <ProjectCardContent project={project} />
-            </a>
+            </ExternalLink>
           ) : (
             <Link href={project.link} className='card card--link' aria-label={`Link to ${project.name}`}>
               <ProjectCardContent project={project} />

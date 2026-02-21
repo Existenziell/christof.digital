@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${gotu.variable} ${lora.variable}`}>
-      <body>
+      <body id="top">
         <ThemeProvider>
           <div className='header-bar'>
             <Nav />

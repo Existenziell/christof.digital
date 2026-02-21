@@ -25,7 +25,7 @@ Theme vars generated from lib/theme.js (run: node scripts/generate-theme-css.js)
 
   /* Layout */
   .main-layout {
-    @apply flex flex-col w-full min-h-[calc(100vh-133px)] px-4 sm:px-8 pb-20 pt-6 text-center;
+    @apply flex flex-col w-full min-h-[calc(100vh-149px)] px-4 sm:px-8 pb-20 pt-6 text-center;
   }
 
   .section {
@@ -175,7 +175,7 @@ input[type='radio']:checked:after {
 }
 
 .button-cta {
-  @apply inline-flex items-center justify-center px-6 py-3 bg-cta text-mauve-1 rounded cursor-pointer transition-all shadow-md hover:shadow-lg hover:brightness-105 dark:shadow-lg dark:hover:shadow-xl dark:hover:brightness-110;
+  @apply inline-flex items-center justify-center px-6 py-3 bg-cta text-mauve-1 rounded cursor-pointer transition-all shadow-md hover:shadow-lg hover:brightness-105 dark:shadow-lg dark:hover:shadow-xl dark:hover:brightness-110 font-bold;
 }
 
 .button-margin-off {

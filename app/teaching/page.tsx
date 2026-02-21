@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { teachings } from '@/content/teachings'
 import Link from 'next/link'
+import ExternalLink from '@/components/ExternalLink'
 
 export default function Teaching() {
   return (
@@ -37,16 +38,15 @@ export default function Teaching() {
           )
           return teaching.link ? (
             teaching.external ? (
-              <a
+              <ExternalLink
                 key={teaching.title}
                 href={teaching.link}
-                target='_blank'
-                rel='noopener noreferrer nofollow'
+                nofollow
                 className="card card--link relative"
                 aria-label={`Link to ${teaching.title}`}
               >
                 {cardContent}
-              </a>
+              </ExternalLink>
             ) : (
               <Link key={teaching.title} href={teaching.link} className="card card--link relative" aria-label={`Link to ${teaching.title}`}>
                 {cardContent}

@@ -1,7 +1,7 @@
 'use client'
 
 import { useRef, useState } from 'react'
-import Link from 'next/link'
+import ExternalLink from '@/components/ExternalLink'
 import { PlayCircleIcon } from '@/components/Icons'
 
 export default function Video() {
@@ -40,14 +40,9 @@ export default function Video() {
       </div>
       <p className="mt-4">
         Inspired by{' '}
-        <Link
-          href="https://tylandrum.com/"
-          target="_blank"
-          rel="noopener noreferrer nofollow"
-          className="link"
-        >
+        <ExternalLink href="https://tylandrum.com/" nofollow className="link">
           Ty Landrum
-        </Link>
+        </ExternalLink>
         .
       </p>
     </>

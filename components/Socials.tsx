@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { socialLinks } from '@/content/socialLinks'
+import ExternalLink from '@/components/ExternalLink'
 
 export default function Socials() {
   return (
@@ -8,10 +9,9 @@ export default function Socials() {
         const { name, link, image } = l
         return (
           <li key={name}>
-            <a
+            <ExternalLink
               href={link}
-              target='_blank'
-              rel='noopener noreferrer nofollow'
+              nofollow
               title={name}
               className='group relative block w-8 h-8 transition-all hover:text-cta'
             >
@@ -36,7 +36,7 @@ export default function Socials() {
                 }}
                 aria-hidden
               />
-            </a>
+            </ExternalLink>
           </li>
         )
       })}

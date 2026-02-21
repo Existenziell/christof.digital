@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import ExternalLink from '@/components/ExternalLink'
 import Sorting from '@/components/Sorting'
 import TagList from '@/components/TagList'
 import Image from 'next/image'
@@ -46,7 +47,7 @@ export default function Curriculum() {
                   <p className='text-2xl mb-6 text-center'>{title}</p>
                   <p className='mb-1'>Company:{' '}
                     {companyUrl ? (
-                      <Link href={companyUrl} target='_blank' rel='noopener noreferrer nofollow' className='underline hover:text-cta hover:no-underline'>{company}</Link>
+                      <ExternalLink href={companyUrl} nofollow className='underline hover:text-cta hover:no-underline'>{company}</ExternalLink>
                     ) : (
                       <span>{company}</span>
                     )}
@@ -64,7 +65,7 @@ export default function Curriculum() {
                       <>
                         <span>Last project:{' '}</span>
                         {latestProject.startsWith('http') ? (
-                          <a href={latestProject} target='_blank' rel='noopener noreferrer nofollow' className='underline hover:text-cta hover:no-underline'>{latestProject}</a>
+                          <ExternalLink href={latestProject} nofollow className='underline hover:text-cta hover:no-underline'>{latestProject}</ExternalLink>
                         ) : (
                           <span>{latestProject}</span>
                         )}
@@ -85,7 +86,7 @@ export default function Curriculum() {
               <div key={title} className='card card--large relative text-sm text-left mb-8'>
                 <p className='card-date-badge'>{date}</p>
                 <p className='text-2xl mb-6 text-center pt-2'>{title}</p>
-                <p className='mb-1'>School: <a href={link} target="_blank" rel="noreferrer nofollow" className='underline hover:text-cta hover:no-underline'>{school}</a></p>
+                <p className='mb-1'>School: <ExternalLink href={link} nofollow className='underline hover:text-cta hover:no-underline'>{school}</ExternalLink></p>
                 <p className='mb-1'>Location: <span>{location}</span></p>
                 <p className='mb-4'>Duration: <span>{duration}</span></p>
                 <div className='flex items-center justify-start gap-4 mt-8'>

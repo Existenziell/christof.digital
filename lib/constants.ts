@@ -22,3 +22,6 @@ export const FAVICON_ICO = '/icons/favicon/favicon.ico'
 export const FAVICON_32 = '/icons/favicon/favicon-32x32.png'
 export const FAVICON_16 = '/icons/favicon/favicon-16x16.png'
 export const APPLE_TOUCH_ICON = '/icons/favicon/apple-touch-icon.png'
+
+export const GITHUB_URL = 'https://github.com/Existenziell?tab=repositories'
+export const BITCOINDEV_URL = 'https://bitcoindev.info/'
