@@ -1,4 +1,4 @@
-import type { Teaching } from '@/types/teaching'
+import type { Teaching } from '@/types'
 
 export const teachings: Teaching[] = [
     {

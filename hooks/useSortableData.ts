@@ -2,7 +2,10 @@
 
 import { useState } from 'react'
 
-export function useSortableData<T>(initial: T[], initialSortBy = true) {
+export function useSortableData<T>(
+  initial: T[],
+  initialSortBy = true
+): { data: T[]; sortBy: boolean; toggleSortBy: () => void } {
   const [data, setData] = useState(
     initialSortBy ? initial : initial.slice().reverse()
   )

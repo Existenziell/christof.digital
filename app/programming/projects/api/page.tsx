@@ -9,7 +9,7 @@ import { useQuery } from '@tanstack/react-query'
 import { useState } from 'react'
 import { SyncLoader } from 'react-spinners'
 import { XIcon } from '@/components/Icons'
-import type { ApiResponse } from '@/types/api'
+import type { ApiResponse } from '@/types'
 
 export default function Api() {
   const [page, setPage] = useState(1)

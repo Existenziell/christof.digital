@@ -2,15 +2,10 @@ import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder'
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css'
 import type { Map as MapboxMap } from 'mapbox-gl'
 import { timeline as mapdata } from '@/content/timeline'
-import type { TimelineFeature } from '@/types/yoga'
+import type { TimelineFeature, FeatureWithCenter } from '@/types'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type MapboxGL = any
-
-interface FeatureWithCenter extends TimelineFeature {
-  center?: [number, number]
-  place_name?: string
-}
 
 function createMarkerHtml(data: TimelineFeature): string {
   const { date, name, subname, image, description } = data.properties

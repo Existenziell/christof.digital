@@ -1,4 +1,4 @@
-import type { CurriculumEntry } from '@/types/curriculum'
+import type { CurriculumEntry } from '@/types'
 
 export const curriculum: CurriculumEntry[] = [
   {

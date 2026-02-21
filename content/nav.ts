@@ -1,4 +1,4 @@
-import type { MainLink } from '@/types/nav'
+import type { MainLink } from '@/types'
 
 export const mainLinks: MainLink[] = [
   { label: 'Programming', url: '/programming' },

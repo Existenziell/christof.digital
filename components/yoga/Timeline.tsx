@@ -6,7 +6,7 @@ import Sorting from '@/components/Sorting'
 import { ScrollIndicator } from '@/components/ScrollIndicator'
 import { HeartIcon } from '@/components/Icons'
 import { timeline } from '@/content/timeline'
-import type { TimelineFeature } from '@/types/yoga'
+import type { TimelineFeature } from '@/types'
 import { useSortableData } from '@/hooks/useSortableData'
 
 export default function Timeline() {

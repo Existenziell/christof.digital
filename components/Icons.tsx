@@ -1,9 +1,5 @@
-import type { ReactNode, SVGProps } from 'react'
 import { cn } from '@/lib/cn'
-
-interface IconProps extends SVGProps<SVGSVGElement> {
-  className?: string
-}
+import type { IconProps, ScrollIndicatorSvgProps } from '@/types'
 
 // ============================================================================
 // Chevrons / Directional Navigation
@@ -576,10 +572,7 @@ export const SCROLL_INDICATOR_CHECK_D = 'M14,26 L 22,33 L 35,16'
 export function ScrollIndicatorSvg({
   className,
   children,
-}: {
-  className?: string
-  children: ReactNode
-}) {
+}: ScrollIndicatorSvgProps) {
   return (
     <svg
       className={cn('w-10 md:w-12', className)}

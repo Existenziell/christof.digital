@@ -3,11 +3,7 @@
 import Image from 'next/image'
 import TagList from '@/components/TagList'
 import Link from 'next/link'
-import type { Project } from '@/types/project'
-
-interface ProjectsListProps {
-  projects: Project[]
-}
+import type { Project, ProjectsListProps } from '@/types'
 
 function ProjectCardContent({ project }: { project: Project }) {
   return (

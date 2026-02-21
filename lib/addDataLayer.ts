@@ -1,5 +1,5 @@
 import type mapboxgl from 'mapbox-gl'
-import type { TimelineFeatureCollection } from '@/types/yoga'
+import type { TimelineFeatureCollection } from '@/types'
 
 export function addDataLayer(
   map: mapboxgl.Map,

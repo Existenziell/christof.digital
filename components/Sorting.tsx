@@ -1,9 +1,5 @@
 import { Switch } from '@headlessui/react'
-
-interface SortingProps {
-  sortBy: boolean
-  toggleSortBy: () => void
-}
+import type { SortingProps } from '@/types'
 
 export default function Sorting({ sortBy, toggleSortBy }: SortingProps) {
   return (

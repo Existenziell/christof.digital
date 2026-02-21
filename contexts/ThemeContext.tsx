@@ -7,14 +7,9 @@ import {
   useEffect,
   useCallback,
 } from 'react'
+import type { Theme, ThemeContextValue } from '@/types'
 
-export type Theme = 'light' | 'dark' | 'auto' | undefined
-
-type ThemeContextValue = {
-  theme: Theme
-  setLight: () => void
-  setDark: () => void
-}
+export type { Theme }
 
 const ThemeContext = createContext<ThemeContextValue | null>(null)
 

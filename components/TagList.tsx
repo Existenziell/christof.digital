@@ -1,6 +1,4 @@
-interface TagListProps {
-  items: string[]
-}
+import type { TagListProps } from '@/types'
 
 export default function TagList({ items }: TagListProps) {
   return (

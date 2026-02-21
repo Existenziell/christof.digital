@@ -1,13 +1,5 @@
 import { ChevronDoubleDown, ChevronDoubleRight } from '@/components/Icons'
-
-interface FiltersProps {
-  showFilter: boolean
-  setShowFilter: (v: boolean) => void
-  filterStatus: string
-  setFilterStatus: (v: string) => void
-  filterGender: string
-  setFilterGender: (v: string) => void
-}
+import type { FiltersProps } from '@/types'
 
 export default function Filters({ showFilter, setShowFilter, filterStatus, setFilterStatus, filterGender, setFilterGender }: FiltersProps) {
   const status = ['all', 'alive', 'dead', 'unknown']

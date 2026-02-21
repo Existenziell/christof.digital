@@ -1,10 +1,5 @@
 import { ChevronLeft, ChevronRight } from '@/components/Icons'
-
-interface PaginationProps {
-  data?: { info?: { next?: string; count?: number; pages?: number }; error?: string }
-  page: number
-  setPage: (fn: (p: number) => number) => void
-}
+import type { PaginationProps } from '@/types'
 
 export default function Pagination({ data, page, setPage }: PaginationProps) {
   const isDisabledPrev = page === 1

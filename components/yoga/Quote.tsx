@@ -1,7 +1,4 @@
-interface QuoteProps {
-  text: string
-  classes?: string
-}
+import type { QuoteProps } from '@/types'
 
 export default function Quote({ text, classes = '' }: QuoteProps) {
   return (

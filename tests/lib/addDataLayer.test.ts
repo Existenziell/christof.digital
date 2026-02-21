@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest'
 import { addDataLayer } from '@/lib/addDataLayer'
-import type { TimelineFeatureCollection } from '@/types/yoga'
+import type { TimelineFeatureCollection } from '@/types'
 
 describe('addDataLayer()', () => {
   it('adds yoga source with geojson and cluster config', () => {

@@ -7,7 +7,7 @@ import { SyncLoader } from 'react-spinners'
 import { useParams } from 'next/navigation'
 import Link from 'next/link'
 import { ChevronLeft } from '@/components/Icons'
-import type { Character } from '@/types/api'
+import type { Character } from '@/types'
 
 export default function ApiDetail() {
   const params = useParams()

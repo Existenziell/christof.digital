@@ -2,14 +2,8 @@
 
 import Link from 'next/link'
 import { PanelExpandIcon, XIcon } from '@/components/Icons'
-import type { MainLink } from '@/types/nav'
+import type { MobileNavProps } from '@/types'
 import { useToggle } from '@/hooks/useToggle'
-
-type MobileNavProps = {
-  mainLinks: MainLink[]
-  pathname: string | null
-  isPathInSection: (pathname: string | null, url: string) => boolean
-}
 
 export default function MobileNav({
   mainLinks,
