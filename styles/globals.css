@@ -9,17 +9,6 @@ Theme vars generated from lib/theme.js (run: node scripts/generate-theme-css.js)
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .animation-delay-2000 {
-    animation-delay: 2s;
-  }
-
-  .animation-delay-4000 {
-    animation-delay: 4s;
-  }
-}
-
-
 /* ==========================================================================
 	Typography (semantic classes)
 	========================================================================== */
@@ -27,40 +16,44 @@ Theme vars generated from lib/theme.js (run: node scripts/generate-theme-css.js)
 @layer components {
 
   .header {
-    @apply text-4xl md:text-6xl dark:text-cta mb-8;
-  }
-
-  .subtitle {
-    @apply text-xl md:text-2xl text-brand-dark dark:text-brand mb-6;
+    @apply text-4xl md:text-6xl text-primary dark:text-cta mb-8;
   }
 
   .section-title {
-    @apply text-2xl mb-2 font-serif;
+    @apply text-2xl mb-2 font-serif text-primary;
   }
 
   .body-text {
-    @apply text-base text-brand-dark dark:text-brand;
+    @apply text-base text-primary;
   }
 
   .caption {
-    @apply text-sm text-brand-dark dark:text-brand;
+    @apply text-sm text-muted;
   }
 
   .label {
-    @apply text-xs text-brand-dark dark:text-brand;
+    @apply text-xs text-muted;
   }
 
   /* Layout */
-  .main-content {
-    @apply flex flex-col w-full min-h-[calc(100vh-121px)] md:min-h-[calc(100vh-117px)] px-4 sm:px-8 pb-20 pt-4 text-center;
+  .main-layout {
+    @apply flex flex-col w-full min-h-[calc(100vh-121px)] md:min-h-[calc(100vh-117px)] px-4 sm:px-8 pb-20 pt-6 text-center;
   }
 
   .full-bleed {
     @apply w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] max-w-none;
   }
 
+  .section {
+    @apply w-full px-4 sm:px-8 bg-section;
+  }
+
+  .section--alt {
+    @apply w-full py-12 px-4 sm:px-8 bg-section-alt;
+  }
+
   .header-bar {
-    @apply flex justify-between items-start p-4 sm:px-8 bg-brand text-brand-dark dark:bg-brand-dark dark:text-brand;
+    @apply flex justify-between items-center p-6 sm:px-12 bg-header-bg text-header-fg;
   }
 
   .brand-bg {
@@ -71,21 +64,17 @@ Theme vars generated from lib/theme.js (run: node scripts/generate-theme-css.js)
     @apply body-text mx-auto max-w-xl text-center mb-6;
   }
 
-  .intro-text--spacing-lg {
-    @apply body-text mx-auto max-w-xl text-center mb-12;
-  }
-
-  /* Cards */
+  /* Cards – unified surface and theme text */
   .card {
-    @apply rounded shadow bg-gray dark:bg-gray-dark text-brand-dark dark:text-brand p-6 transition-all;
+    @apply rounded shadow bg-surface text-primary p-6 transition-all;
   }
 
   .card--link {
-    @apply card p-4 hover:scale-[102%] hover:shadow-2xl duration-500 flex flex-col;
+    @apply card p-4 hover:shadow-2xl duration-500 flex flex-col;
   }
 
   .card--compact {
-    @apply rounded-sm shadow bg-gray dark:bg-gray-dark text-brand-dark dark:text-brand p-4 transition-all;
+    @apply rounded-sm shadow bg-surface text-primary p-4 transition-all;
   }
 
   .card--large {
@@ -93,27 +82,23 @@ Theme vars generated from lib/theme.js (run: node scripts/generate-theme-css.js)
   }
 
   .card--large-subtle {
-    @apply rounded shadow-sm bg-gray dark:bg-gray-dark text-brand-dark dark:text-brand p-8 transition-all;
-  }
-
-  .card--testimonial {
-    @apply rounded-lg shadow-lg bg-white/10 dark:bg-white/5 backdrop-blur-sm p-6 border border-white/10;
+    @apply rounded shadow-sm bg-surface text-primary p-8 transition-all;
   }
 
   .card--timeline-image {
-    @apply relative rounded overflow-hidden shadow-lg bg-gray dark:bg-gray-dark;
+    @apply relative rounded overflow-hidden shadow-lg bg-surface;
   }
 
   .card--timeline-text {
-    @apply flex flex-col rounded bg-gray dark:bg-gray-dark p-6 md:p-8 shadow-md text-left;
+    @apply flex flex-col rounded bg-surface text-primary p-6 md:p-8 shadow-md text-left transition-all;
   }
 
   .quote {
-    @apply relative max-w-lg mx-auto pl-6 pr-6 py-5 rounded-r-lg shadow bg-gray/60 dark:bg-gray-dark/60 border-l-4 border-cta text-brand-dark dark:text-brand;
+    @apply relative max-w-lg mx-auto pl-6 pr-6 py-5 rounded-r-lg shadow bg-surface border-l-4 border-cta text-primary;
   }
 
   .card-date-badge {
-    @apply absolute top-0 bg-gray-dark/10 dark:bg-gray/10 dark:text-gray px-2 py-1 right-0 rounded-bl rounded-tr;
+    @apply absolute top-0 bg-surface-muted text-muted px-2 py-1 right-0 rounded-bl rounded-tr;
   }
 
   .card-date-badge--left {
@@ -121,11 +106,7 @@ Theme vars generated from lib/theme.js (run: node scripts/generate-theme-css.js)
   }
 
   .card--minimal {
-    @apply rounded-sm shadow bg-gray dark:bg-gray-dark p-1 block hover:text-cta hover:shadow-none transition-all text-brand-dark dark:text-brand;
-  }
-
-  .socials-bar {
-    @apply rounded pt-2 px-4 dark:bg-gray;
+    @apply rounded-sm shadow bg-surface p-1 block hover:text-cta hover:shadow-none transition-all text-primary;
   }
 }
 
@@ -140,11 +121,11 @@ body {
 }
 
 ::selection {
-  @apply text-cta;
+  @apply bg-cta text-mauve-1;
 }
 
 ::-moz-selection {
-  @apply text-cta;
+  @apply bg-cta text-mauve-1;
 }
 
 .link {
@@ -160,7 +141,7 @@ body {
 }
 
 input[type='radio']:after {
-  @apply w-4 h-4 content-[''] cursor-pointer inline-block relative -top-[2px] -left-[1px] bg-gray dark:bg-gray-dark border-2 border-white rounded-full;
+  @apply w-4 h-4 content-[''] cursor-pointer inline-block relative -top-[2px] -left-[1px] bg-surface border-2 border-white rounded-full;
 }
 
 input[type='radio']:checked:after {
@@ -173,7 +154,7 @@ input[type='radio']:checked:after {
 	========================================================================== */
 
 .desktop-nav .nav {
-  @apply text-gray-dark dark:text-gray transition-all border-b-2 border-t-2 border-transparent border-spacing-2;
+  @apply text-muted transition-all border-b-2 border-t-2 border-transparent border-spacing-2;
 }
 
 .desktop-nav .nav:hover {
@@ -185,11 +166,11 @@ input[type='radio']:checked:after {
 }
 
 .mobile-nav .nav {
-  @apply w-full block text-2xl md:text-4xl text-center leading-loose py-2 md:py-8 hover:bg-brand-dark hover:text-gray dark:hover:bg-brand dark:hover:text-gray-dark transition-all;
+  @apply w-full block text-2xl md:text-4xl text-center leading-loose py-2 md:py-8 hover:bg-surface-muted hover:text-cta transition-all;
 }
 
 .mobile-nav .active-nav {
-  @apply w-full block text-2xl md:text-4xl text-center leading-loose py-2 md:py-8 bg-brand-dark text-cta dark:bg-gray-dark dark:text-cta;
+  @apply w-full block text-2xl md:text-4xl text-center leading-loose py-2 md:py-8 bg-surface-muted text-cta;
 }
 
 .active-tab {
@@ -197,7 +178,7 @@ input[type='radio']:checked:after {
 }
 
 .arrow-nav {
-  @apply w-8 h-8 hover:text-cta hover:bg-gray dark:hover:bg-gray-dark rounded;
+  @apply w-8 h-8 hover:text-cta hover:bg-surface rounded;
 }
 
 
@@ -214,7 +195,7 @@ input[type='radio']:checked:after {
 }
 
 .button-cta {
-  @apply px-8 py-4 bg-cta text-brand-dark rounded shadow-lg hover:shadow hover:cursor-pointer transition-all;
+  @apply inline-flex items-center justify-center px-6 py-3 bg-cta text-mauve-1 rounded cursor-pointer transition-all shadow-md hover:shadow-lg hover:brightness-105 dark:shadow-lg dark:hover:shadow-xl dark:hover:brightness-110;
 }
 
 .button-margin-off {
@@ -232,40 +213,11 @@ input[type='radio']:checked:after {
 	========================================================================== */
 
 .search input[type='search']:not(:disabled) {
-  @apply h-[40px] min-w-[150px] pl-2 text-sm ml-2 border-2 border-gray rounded-sm focus:outline-none focus:ring-0 focus:border-cta dark:focus:border-cta dark:border-gray-dark bg-brand dark:bg-brand-dark text-black dark:text-white;
+  @apply h-[40px] min-w-[150px] pl-2 text-sm ml-2 border-2 border-border rounded-sm focus:outline-none focus:ring-0 focus:border-cta bg-surface text-primary;
 }
 
 .search input[type='search']::-webkit-search-cancel-button {
   display: none;
-}
-
-
-/* ==========================================================================
-	JavaScript Playground
-	========================================================================== */
-
-.experiment {
-  @apply rounded bg-gray dark:bg-gray-dark p-8 w-full md:max-w-4xl md:mx-auto text-left transition-all;
-}
-
-.experiment h2 {
-  @apply section-title;
-}
-
-.experiment p {
-  @apply caption mb-4;
-}
-
-.experiment input {
-  @apply px-4 py-2 mr-1 mb-1 rounded-sm text-black border-none outline-none focus:ring-2 focus:ring-cta w-full md:w-auto;
-}
-
-.output {
-  @apply px-4 py-2 mb-0 bg-white text-slate-900 rounded-sm w-full;
-}
-
-.experiment .button-sm {
-  @apply mt-4;
 }
 
 
@@ -368,7 +320,7 @@ svg:hover #dark2 {
   background: transparent !important;
 }
 
-/* Yoga map popups: proportions, readability, custom close button */
+/* Yoga map popups: theme-driven colours */
 .yoga-map-popup {
   position: relative;
   min-width: 360px;
@@ -381,9 +333,13 @@ svg:hover #dark2 {
   flex-direction: column;
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  background: #fff;
-  color: #242424;
+  background: var(--color-surface);
+  color: var(--color-text-primary);
   font-family: var(--font-gotu), Gotu, Arial, sans-serif;
+}
+
+.dark .yoga-map-popup {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
 }
 
 /* Custom close button: absolute top-right corner of the card */
@@ -396,8 +352,8 @@ svg:hover #dark2 {
   padding: 0;
   font-size: 22px;
   line-height: 36px;
-  color: #555;
-  background: rgba(0, 0, 0, 0.06);
+  color: var(--color-text-muted);
+  background: var(--color-border);
   border: none;
   border-radius: 0 8px 0 6px;
   cursor: pointer;
@@ -406,23 +362,13 @@ svg:hover #dark2 {
 }
 
 .yoga-popup-close:hover {
-  color: #242424;
-  background: rgba(0, 0, 0, 0.1);
-}
-
-.dark .yoga-popup-close {
-  color: #b0b0b0;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.dark .yoga-popup-close:hover {
-  color: #fff;
-  background: rgba(255, 255, 255, 0.2);
+  color: var(--color-text-primary);
+  background: color-mix(in srgb, var(--color-text-muted) 20%, transparent);
 }
 
 .yoga-map-popup-date {
   font-size: 12px;
-  color: #555;
+  color: var(--color-text-muted);
   display: block;
   margin-bottom: 4px;
 }
@@ -431,7 +377,7 @@ svg:hover #dark2 {
   margin: 0 0 6px;
   font-size: 17px;
   font-weight: 700;
-  color: #242424;
+  color: var(--color-text-primary);
   line-height: 1.25;
 }
 
@@ -447,50 +393,22 @@ svg:hover #dark2 {
 .yoga-map-popup-subname {
   margin: 0 0 8px;
   font-size: 13px;
-  color: #555;
+  color: var(--color-text-muted);
   font-weight: 400;
 }
 
 .yoga-map-popup-desc {
   font-size: 13px;
   line-height: 1.5;
-  color: #333;
+  color: var(--color-text-primary);
   padding-right: 4px;
 }
 
 .yoga-map-popup-desc a {
-  color: #D6A269;
+  color: var(--color-cta);
   text-decoration: underline;
 }
 
 .yoga-map-popup-desc a:hover {
-  color: #b8864a;
-}
-
-/* Dark mode: high-contrast text on dark background */
-.dark .yoga-map-popup {
-  background: #323232;
-  color: #DBDBDB;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
-}
-
-.dark .yoga-map-popup-date,
-.dark .yoga-map-popup-subname {
-  color: #b0b0b0;
-}
-
-.dark .yoga-map-popup-title {
-  color: #fff;
-}
-
-.dark .yoga-map-popup-desc {
-  color: #e0e0e0;
-}
-
-.dark .yoga-map-popup-desc a {
-  color: #D6A269;
-}
-
-.dark .yoga-map-popup-desc a:hover {
-  color: #e4b882;
+  opacity: 0.9;
 }

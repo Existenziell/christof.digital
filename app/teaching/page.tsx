@@ -4,12 +4,17 @@ import Link from 'next/link'
 
 export default function Teaching() {
   return (
-    <div className='w-full'>
-      <h1 className='header'>Teaching</h1>
-      <p className='intro-text--spacing-lg'>
-        I have always enjoyed teaching and sharing my knowledge with others. I just cannot get enough of the delight to see students&apos; eyes light up when they have one of these incredible &quot;aha&quot; moments.
-      </p>
-      <div className='w-full text-left grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8'>
+    <>
+      <section className='section'>
+        <div className='w-full'>
+          <h1 className='header'>Teaching</h1>
+          <p className='intro-text'>
+            I have always enjoyed teaching and sharing my knowledge with others. I just cannot get enough of the delight to see students&apos; eyes light up when they have one of these incredible &quot;aha&quot; moments.
+          </p>
+        </div>
+      </section>
+      <section className='section--alt'>
+        <div className='w-full text-left grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8'>
         {teachings.map((teaching) => {
           const cardContent = (
             <>
@@ -53,7 +58,8 @@ export default function Teaching() {
             </article>
           )
         })}
-      </div>
-    </div>
+        </div>
+      </section>
+    </>
   )
 }

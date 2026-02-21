@@ -2,6 +2,11 @@
 
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion'
 import { useEffect, useState } from 'react'
+import {
+  SCROLL_INDICATOR_CIRCLE_D,
+  SCROLL_INDICATOR_CHECK_D,
+  ScrollIndicatorSvg,
+} from '@/components/Icons'
 
 export function ScrollIndicator() {
   const [isComplete, setIsComplete] = useState(false)
@@ -15,13 +20,13 @@ export function ScrollIndicator() {
   }, [yRange])
 
   return (
-    <svg className='fixed w-10 md:w-12 bottom-1 right-1 md:bottom-2 md:right-2 text-brand-dark dark:text-brand z-10' viewBox='0 0 60 60'>
+    <ScrollIndicatorSvg className="fixed bottom-1 right-1 md:bottom-2 md:right-2 text-primary z-10">
       <motion.path
-        fill='none'
-        strokeWidth='5'
-        stroke='var(--color-cta)'
-        strokeDasharray='0 1'
-        d='M 0, 20 a 20, 20 0 1,0 40,0 a 20, 20 0 1,0 -40,0'
+        fill="none"
+        strokeWidth="5"
+        stroke="var(--color-cta)"
+        strokeDasharray="0 1"
+        d={SCROLL_INDICATOR_CIRCLE_D}
         style={{
           pathLength,
           rotate: 90,
@@ -31,14 +36,14 @@ export function ScrollIndicator() {
         }}
       />
       <motion.path
-        fill='none'
-        strokeWidth='2'
-        stroke='var(--color-cta)'
-        d='M14,26 L 22,33 L 35,16'
+        fill="none"
+        strokeWidth="2"
+        stroke="var(--color-cta)"
+        d={SCROLL_INDICATOR_CHECK_D}
         initial={false}
-        strokeDasharray='0 1'
+        strokeDasharray="0 1"
         animate={{ pathLength: isComplete ? 1 : 0 }}
       />
-    </svg>
+    </ScrollIndicatorSvg>
   )
 }

@@ -83,7 +83,7 @@ export default function YogaMap() {
         <h2 className="text-xl font-semibold text-red-600 dark:text-red-400 mb-4">
           Mapbox Configuration Error
         </h2>
-        <p className="text-brand-dark dark:text-brand mb-2">{error}</p>
+        <p className="text-primary mb-2">{error}</p>
         <p className="text-sm opacity-80">
           Set NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN in your environment and redeploy.
         </p>

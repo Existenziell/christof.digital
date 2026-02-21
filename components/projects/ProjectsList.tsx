@@ -1,9 +1,9 @@
 'use client'
 
 import Image from 'next/image'
-import ProjectLink from '@/components/ProjectLink'
+import ProjectLink from '@/components/projects/ProjectLink'
 import TagList from '@/components/TagList'
-import type { Project } from '@/content/projects'
+import type { Project } from '@/types/project'
 
 interface ProjectsListProps {
   projects: Project[]

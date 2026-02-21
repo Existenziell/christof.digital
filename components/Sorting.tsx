@@ -14,7 +14,7 @@ export default function Sorting({ sortBy, toggleSortBy }: SortingProps) {
           aria-label='Switch Sorting'
           checked={sortBy}
           onChange={toggleSortBy}
-          className="bg-gray-dark dark:bg-gray relative inline-flex items-center h-6 rounded-sm w-11 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 ring-brand-dark"
+          className="bg-surface border border-border relative inline-flex items-center h-6 rounded-sm w-11 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-surface ring-primary"
         >
           <span className={`${sortBy ? 'translate-x-6' : 'translate-x-1'} inline-block w-4 h-4 transform bg-cta rounded-sm transition-transform`} />
         </Switch>

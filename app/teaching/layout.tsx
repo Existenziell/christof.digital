@@ -6,9 +6,5 @@ export const metadata: Metadata = createPageMetadata({ title: 'Teaching' })
 export default function TeachingLayout({
   children,
 }: { children: React.ReactNode }) {
-  return (
-    <div className="pt-4">
-      <main className="min-w-0 flex-1">{children}</main>
-    </div>
-  )
+  return <div className="min-w-0 flex-1">{children}</div>
 }

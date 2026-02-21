@@ -3,28 +3,13 @@
 import Image from 'next/image'
 import fetchApi from '@/lib/fetchApi'
 import Pagination from '@/components/Pagination'
-import Search from '@/components/Search'
 import Link from 'next/link'
 import Filters from '@/components/Filters'
 import { useQuery } from '@tanstack/react-query'
 import { useState } from 'react'
 import { SyncLoader } from 'react-spinners'
-
-interface ApiResponse {
-  info?: { next?: string; count?: number; pages?: number }
-  error?: string
-  results?: Array<{
-    id: number
-    name: string
-    image: string
-    gender: string
-    species: string
-    type?: string
-    origin: { name: string }
-    location: { name: string }
-    status: string
-  }>
-}
+import { XIcon } from '@/components/Icons'
+import type { ApiResponse } from '@/types/api'
 
 export default function Api() {
   const [page, setPage] = useState(1)
@@ -43,13 +28,36 @@ export default function Api() {
       ) as Promise<ApiResponse>,
   })
 
-  if (status === 'error') return <p>error</p>
+  if (status === 'error') {
+    return (
+      <div className="w-full flex flex-col items-center gap-4">
+        <p className="body-text">Something went wrong loading the API data.</p>
+        <Link href="/programming/projects/api" className="button-sm">
+          Try again
+        </Link>
+      </div>
+    )
+  }
 
   return (
     <div className='w-full flex flex-col items-center'>
       <h1 className='header'>API</h1>
       <p>Using react-query and the open Rick&amp;Morty API to test Pagination.</p>
-      <Search search={search} setSearch={setSearch} />
+      <div className='search relative w-max flex items-center justify-center mx-auto mt-8'>
+        <input
+          type='search'
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          name='search'
+          placeholder='Search'
+          autoComplete='off'
+          autoCorrect='off'
+          spellCheck={false}
+        />
+        <button type="button" onClick={() => setSearch('')} className='absolute right-2 text-muted hover:text-cta h-max' aria-label='Reset search'>
+          <XIcon className="w-5 h-5" />
+        </button>
+      </div>
       <Filters showFilter={showFilter} setShowFilter={setShowFilter} filterStatus={filterStatus} setFilterStatus={setFilterStatus} filterGender={filterGender} setFilterGender={setFilterGender} />
       <Pagination data={data} page={page} setPage={setPage} />
       {status === 'pending' ? (

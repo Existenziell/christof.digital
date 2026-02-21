@@ -4,19 +4,10 @@ import Image from 'next/image'
 import fetchApi from '@/lib/fetchApi'
 import { useQuery } from '@tanstack/react-query'
 import { SyncLoader } from 'react-spinners'
-import BackBtn from '@/components/BackBtn'
 import { useParams } from 'next/navigation'
-
-interface Character {
-  name: string
-  image: string
-  species: string
-  gender: string
-  type?: string
-  origin: { name: string }
-  location: { name: string }
-  status: string
-}
+import Link from 'next/link'
+import { ChevronLeft } from '@/components/Icons'
+import type { Character } from '@/types/api'
 
 export default function ApiDetail() {
   const params = useParams()
@@ -27,7 +18,16 @@ export default function ApiDetail() {
     queryFn: () => fetchApi(`https://rickandmortyapi.com/api/character/${id}`) as Promise<Character>,
   })
 
-  if (status === 'error') return <p>error</p>
+  if (status === 'error') {
+    return (
+      <div className="w-full flex flex-col items-center gap-4">
+        <p className="body-text">Something went wrong loading this character.</p>
+        <Link href="/programming/projects/api" className="button-sm">
+          Back to API
+        </Link>
+      </div>
+    )
+  }
 
   return (
     <div className='text-left w-full'>
@@ -37,7 +37,9 @@ export default function ApiDetail() {
         <>
           <div className='flex flex-col items-center justify-center w-full'>
             <div className='flex items-center mb-4 gap-8'>
-              <BackBtn link='/programming/projects/api' />
+              <Link href='/programming/projects/api' className="card--minimal">
+                <ChevronLeft className="w-6 h-6" />
+              </Link>
               <h2 className='text-4xl font-serif inline-block'>{character.name}</h2>
             </div>
             <div className='block relative my-2 shadow-xl mb-8'>

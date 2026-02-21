@@ -3,17 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import MobileNav from '@/components/MobileNav'
-
-const mainLinks: { label: string; url: string }[] = [
-  { label: 'Programming', url: '/programming' },
-  { label: 'Teaching', url: '/teaching' },
-  { label: 'About', url: '/about' },
-]
-
-function isPathInSection(pathname: string | null, url: string): boolean {
-  if (!pathname) return false
-  return pathname === url || pathname.startsWith(url + '/')
-}
+import { mainLinks, isPathInSection } from '@/content/nav'
 
 export default function Nav() {
   const pathname = usePathname()

@@ -1,10 +1,9 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
-import { Bars4Icon, XMarkIcon } from '@heroicons/react/24/solid'
-
-type MainLink = { label: string; url: string }
+import { PanelExpandIcon, XIcon } from '@/components/Icons'
+import type { MainLink } from '@/types/nav'
+import { useToggle } from '@/hooks/useToggle'
 
 type MobileNavProps = {
   mainLinks: MainLink[]
@@ -17,29 +16,26 @@ export default function MobileNav({
   pathname,
   isPathInSection,
 }: MobileNavProps) {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, toggleMenu, setOpen] = useToggle(false)
+  const closeMobileMenu = () => setOpen(false)
   const rootActive = pathname === '/'
-
-  function closeMobileMenu() {
-    setIsOpen(false)
-  }
 
   return (
     <div className='block md:hidden z-20'>
       <button
         type='button'
-        onClick={() => setIsOpen((open) => !open)}
+        onClick={toggleMenu}
         aria-label={isOpen ? 'Close menu' : 'Open menu'}
         aria-expanded={isOpen}
       >
         {!isOpen ? (
-          <Bars4Icon className='h-12 w-12 p-0 m-0 text-brand-dark hover:text-cta dark:text-brand dark:hover:text-cta transition-all' />
+          <PanelExpandIcon className="h-8 w-8 p-0 m-0 text-header-fg hover:text-cta transition-all" />
         ) : (
-          <XMarkIcon className='h-12 w-12 p-0 m-0 text-brand-dark hover:text-cta dark:text-brand dark:hover:text-cta transition-all' />
+          <XIcon className="h-8 w-8 p-0 m-0 text-header-fg hover:text-cta transition-all" />
         )}
       </button>
       {isOpen && (
-        <ul className='mobile-nav absolute left-0 right-0 w-full md:hidden pt-20 z-10 bg-brand text-brand-dark dark:bg-brand-dark dark:text-brand h-screen'>
+        <ul className='mobile-nav absolute left-0 right-0 w-full md:hidden pt-20 z-10 bg-header-bg text-header-fg h-screen'>
           <li>
             <Link href='/' onClick={closeMobileMenu} className={rootActive ? 'active-nav' : 'nav'}>
               Root

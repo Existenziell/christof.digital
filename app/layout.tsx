@@ -3,6 +3,7 @@ import { Gotu, Lora } from 'next/font/google'
 import 'tailwindcss/tailwind.css'
 import '@/styles/globals.css'
 import Providers from '@/app/Providers'
+import { ThemeProvider } from '@/contexts/ThemeContext'
 import { getRootMetadata } from '@/lib/metadata'
 import Nav from '@/components/Nav'
 import ThemeToggle from '@/components/ThemeToggle'
@@ -21,14 +22,16 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${gotu.variable} ${lora.variable}`}>
       <body>
-        <div className='header-bar'>
-          <Nav />
-          <ThemeToggle />
-        </div>
-        <main className='main-content brand-bg'>
-          <Providers>{children}</Providers>
-        </main>
-        <Footer />
+        <ThemeProvider>
+          <div className='header-bar'>
+            <Nav />
+            <ThemeToggle />
+          </div>
+          <main className='main-layout bg-page text-primary'>
+            <Providers>{children}</Providers>
+          </main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   )

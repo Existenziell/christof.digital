@@ -1,4 +1,4 @@
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
+import { ChevronLeft, ChevronRight } from '@/components/Icons'
 
 interface PaginationProps {
   data?: { info?: { next?: string; count?: number; pages?: number }; error?: string }
@@ -15,7 +15,7 @@ export default function Pagination({ data, page, setPage }: PaginationProps) {
   return (
     <div className='flex justify-between items-center mt-4 mb-4 w-full'>
       <button type="button" onClick={() => setPage((oldPage) => oldPage - 1)} disabled={isDisabledPrev} className={isDisabledPrev ? 'opacity-0 w-8' : 'arrow-nav'}>
-        <ChevronLeftIcon />
+        <ChevronLeft />
       </button>
       {data?.info && (
         <div className='flex flex-col items-center'>
@@ -24,7 +24,7 @@ export default function Pagination({ data, page, setPage }: PaginationProps) {
         </div>
       )}
       <button type="button" onClick={() => setPage((oldPage) => oldPage + 1)} disabled={isDisabledNext} className={isDisabledNext ? 'opacity-0 w-8' : 'arrow-nav'}>
-        <ChevronRightIcon />
+        <ChevronRight />
       </button>
     </div>
   )

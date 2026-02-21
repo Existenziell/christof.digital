@@ -1,4 +1,4 @@
-import type { TimelineFeatureCollection } from '@/app/teaching/yoga/types'
+import type { TimelineFeatureCollection } from '@/types/yoga'
 
 export const timeline: TimelineFeatureCollection = {
   type: 'FeatureCollection',

@@ -2,7 +2,7 @@ import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder'
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css'
 import type { Map as MapboxMap } from 'mapbox-gl'
 import { timeline as mapdata } from '@/content/timeline'
-import type { TimelineFeature } from '@/app/teaching/yoga/types'
+import type { TimelineFeature } from '@/types/yoga'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type MapboxGL = any

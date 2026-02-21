@@ -1,21 +1,16 @@
 'use client'
 
-import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Sorting from '@/components/Sorting'
 import { ScrollIndicator } from '@/components/ScrollIndicator'
+import { HeartIcon } from '@/components/Icons'
 import { timeline } from '@/content/timeline'
-import type { TimelineFeature } from '@/app/teaching/yoga/types'
+import type { TimelineFeature } from '@/types/yoga'
+import { useSortableData } from '@/hooks/useSortableData'
 
 export default function TimelineSection() {
-  const [sortBy, setSortBy] = useState(true)
-  const [data, setData] = useState<TimelineFeature[]>(timeline.features)
-
-  const toggleSortBy = () => {
-    setData(data.slice().reverse())
-    setSortBy(!sortBy)
-  }
+  const { data, sortBy, toggleSortBy } = useSortableData<TimelineFeature>(timeline.features)
 
   return (
     <section className="timeline">
@@ -63,12 +58,12 @@ export default function TimelineSection() {
               >
                 <p className={`card-date-badge ${!imageLeft ? 'card-date-badge--left' : ''}`}>{date}</p>
                 <h3 className="text-2xl md:text-3xl text-cta mb-1">{name}</h3>
-                <h4 className="text-sm text-brand-dark dark:text-brand/80 mb-4">
+                <h4 className="text-sm text-primary mb-4">
                   {subname}
                 </h4>
                 <p
                   dangerouslySetInnerHTML={{ __html: description }}
-                  className="leading-relaxed text-brand-dark dark:text-brand body-text mb-6 [&_.link]:link"
+                  className="leading-relaxed body-text mb-6 [&_.link]:link"
                 />
                 <Link
                   href={`/teaching/yoga/map?location=${image}`}
@@ -106,18 +101,7 @@ export default function TimelineSection() {
         </h2>
         <p className="mb-8">I hope you enjoyed the ride :)</p>
         <a href="#top" aria-label="Scroll back up">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-32 w-32 text-brand-dark dark:text-brand hover:text-cta transition-colors"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path
-              fillRule="evenodd"
-              d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-              clipRule="evenodd"
-            />
-          </svg>
+          <HeartIcon className="h-32 w-32 text-primary hover:text-cta transition-colors" />
         </a>
       </div>
     </section>

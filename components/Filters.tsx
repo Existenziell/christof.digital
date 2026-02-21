@@ -1,4 +1,4 @@
-import { ChevronDoubleDownIcon, ChevronDoubleRightIcon } from '@heroicons/react/24/solid'
+import { ChevronDoubleDown, ChevronDoubleRight } from '@/components/Icons'
 
 interface FiltersProps {
   showFilter: boolean
@@ -27,7 +27,7 @@ export default function Filters({ showFilter, setShowFilter, filterStatus, setFi
     <div className="my-2 w-full">
       <div className="flex items-center gap-1 hover:cursor-pointer mx-auto w-max hover:text-cta" onClick={() => setShowFilter(!showFilter)} role="button" tabIndex={0} onKeyDown={(e) => e.key === 'Enter' && setShowFilter(!showFilter)}>
         <h2>Filters</h2>
-        {showFilter ? <ChevronDoubleDownIcon className="w-4" /> : <ChevronDoubleRightIcon className="w-4" />}
+        {showFilter ? <ChevronDoubleDown className="w-4 h-4" /> : <ChevronDoubleRight className="w-4 h-4" />}
       </div>
       {showFilter && (
         <div className="card card--compact flex gap-4 justify-evenly">

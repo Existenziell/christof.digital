@@ -1,15 +1,4 @@
-export interface CurriculumEntry {
-  company: string
-  title: string
-  companyType: string
-  date: string
-  location: string
-  desc: string
-  latestProject?: string
-  skills: string[]
-  companyUrl?: string
-  duration?: string
-}
+import type { CurriculumEntry } from '@/types/curriculum'
 
 export const curriculum: CurriculumEntry[] = [
   {
