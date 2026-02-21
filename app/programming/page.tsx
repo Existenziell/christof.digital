@@ -16,7 +16,7 @@ export default function Programming() {
           </p>
         </div>
       </section>
-      <section className='section--alt'>
+      <section className='section--alt max-w-7xl mx-auto'>
         <div className='w-full'>
           <ProjectsList projects={projects} />
         </div>

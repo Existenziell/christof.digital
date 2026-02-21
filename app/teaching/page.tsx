@@ -14,53 +14,53 @@ export default function Teaching() {
           </p>
         </div>
       </section>
-      <section className='section--alt'>
-        <div className='w-full text-left grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8'>
-        {teachings.map((teaching, index) => {
-          const isLcpImage = index === 0 && !!teaching.image
-          const cardContent = (
-            <>
-              <p className='card-date-badge'>{teaching.date}</p>
-              <h2 className='text-2xl mb-3 pt-6'>{teaching.title}</h2>
-              <p className='body-text text-sm flex-grow mb-6'>{teaching.description}</p>
-              {teaching.image && (
-                <div className='block mb-4 rounded overflow-hidden'>
-                  <Image
-                    src={`/images/teachings/${teaching.image}`}
-                    alt=''
-                    width={600}
-                    height={360}
-                    sizes='(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw'
-                    className='w-full h-[400px] object-cover block'
-                    priority={isLcpImage}
-                  />
+      <section className='section--alt max-w-7xl mx-auto'>
+        <ul className='w-full text-left list-none p-0 grid grid-cols-1 gap-10 md:gap-12'>
+          {teachings.map((teaching, index) => {
+            const isLcpImage = index === 0 && !!teaching.image
+            const cardLayoutClasses = 'relative flex flex-col md:flex-row gap-6 md:gap-8 p-6 md:p-8'
+            const cardContent = (
+              <>
+                {teaching.image && (
+                  <div className='w-full md:max-w-lg md:shrink-0'>
+                    <div className='relative aspect-video rounded overflow-hidden mb-4 md:mb-0'>
+                      <Image
+                        src={`/images/teachings/${teaching.image}`}
+                        alt=''
+                        fill
+                        sizes='(max-width: 768px) 100vw, min(400px, 40vw)'
+                        className='object-cover'
+                        priority={isLcpImage}
+                      />
+                    </div>
+                  </div>
+                )}
+                <div className='flex flex-col min-w-0 flex-1'>
+                  <p className='card-date-badge'>{teaching.date}</p>
+                  <h2 className='text-xl md:text-3xl mb-3 pt-2 md:pt-0'>{teaching.title}</h2>
+                  <p className='body-text text-base flex-grow'>{teaching.description}</p>
+                  {teaching.link &&
+                    (teaching.external ? (
+                      <ExternalLink href={teaching.link} nofollow className='button-sm'>
+                        {teaching.linkText}
+                      </ExternalLink>
+                    ) : (
+                      <Link href={teaching.link} className='button-sm'>
+                        {teaching.linkText}
+                      </Link>
+                    ))}
                 </div>
-              )}
-            </>
-          )
-          return teaching.link ? (
-            teaching.external ? (
-              <ExternalLink
-                key={teaching.title}
-                href={teaching.link}
-                nofollow
-                className="card card--link relative"
-                aria-label={`Link to ${teaching.title}`}
-              >
-                {cardContent}
-              </ExternalLink>
-            ) : (
-              <Link key={teaching.title} href={teaching.link} className="card card--link relative" aria-label={`Link to ${teaching.title}`}>
-                {cardContent}
-              </Link>
+              </>
             )
-          ) : (
-            <article key={teaching.title} className="card relative flex flex-col">
-              {cardContent}
-            </article>
-          )
-        })}
-        </div>
+            return (
+              <li key={teaching.title}>
+                <article className={`card ${cardLayoutClasses}`}>
+                  {cardContent}
+                </article>
+              </li>
+            )
+          })}
+        </ul>
       </section>
     </>
   )

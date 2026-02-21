@@ -9,44 +9,53 @@ import type { Project, ProjectsListProps } from '@/types'
 function ProjectCardContent({ project, priority }: { project: Project; priority?: boolean }) {
   return (
     <>
-      <h2 className='text-2xl truncate mb-4' title={project.name}>{project.name}</h2>
-      <div className='block mb-6'>
-        <Image
-          src={`/images/projects/${project.image}`}
-          alt={project.name}
-          width={1000}
-          height={600}
-          sizes='(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw'
-          className='rounded block'
-          priority={priority}
-        />
+      <div className='w-full md:max-w-md md:shrink-0'>
+        <div className='relative aspect-video rounded overflow-hidden mb-4 md:mb-0'>
+          <Image
+            src={`/images/projects/${project.image}`}
+            alt={project.name}
+            fill
+            sizes='(max-width: 768px) 100vw, min(400px, 40vw)'
+            className='object-contain'
+            priority={priority}
+          />
+        </div>
       </div>
-      <p className='text-sm mb-2'>{project.desc}</p>
-      <TagList items={project.tech} />
+      <div className='flex flex-col min-w-0 flex-1 justify-between'>
+        <div>
+          <h2 className='text-xl md:text-3xl mb-4'>{project.name}</h2>
+          <p className='text-base mb-4'>{project.desc}</p>
+        </div>
+        <div>
+          <div className='flex flex-col items-start gap-4'>
+            {project.link &&
+              (project.external ? (
+                <ExternalLink href={project.link} nofollow className='button-sm'>
+                  {project.linkText}
+                </ExternalLink>
+              ) : (
+                <Link href={project.link} className='button-sm'>
+                  {project.linkText}
+                </Link>
+              ))}
+            <TagList items={project.tech} />
+          </div>
+        </div>
+      </div>
     </>
   )
 }
 
 export default function ProjectsList({ projects }: ProjectsListProps) {
   return (
-    <div className='w-full text-left grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
-      {projects.map((project, index) =>
-        project.link ? (
-          project.external ? (
-            <ExternalLink key={project.name} href={project.link} nofollow className='card card--link' aria-label={`Link to ${project.name}`}>
-              <ProjectCardContent project={project} priority={index === 0} />
-            </ExternalLink>
-          ) : (
-            <Link key={project.name} href={project.link} className='card card--link' aria-label={`Link to ${project.name}`}>
-              <ProjectCardContent project={project} priority={index === 0} />
-            </Link>
-          )
-        ) : (
-          <article key={project.name} className='card relative flex flex-col'>
+    <ul className='w-full text-left list-none p-0 grid grid-cols-1 gap-10 md:gap-12'>
+      {projects.map((project, index) => (
+        <li key={project.name}>
+          <article className='card relative flex flex-col md:flex-row gap-6 md:gap-8 p-6 md:p-8'>
             <ProjectCardContent project={project} priority={index === 0} />
           </article>
-        )
-      )}
-    </div>
+        </li>
+      ))}
+    </ul>
   )
 }

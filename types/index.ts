@@ -19,6 +19,7 @@ export interface Teaching {
   description: string
   image?: string
   link?: string
+  linkText?: string
   external?: boolean
 }
 
@@ -52,6 +53,7 @@ export interface Project {
   tech: string[]
   image: string
   link?: string
+  linkText?: string
   external?: boolean
 }
 

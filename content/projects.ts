@@ -3,10 +3,11 @@ import type { Project } from '@/types'
 export const projects: Project[] = [
   {
     name: 'Solo Mining Dashboard  ',
-    desc: 'A real-time monitoring dashboard for the NerdQaxe++ Bitcoin Solo Miner, or similar devices.',
+    desc: 'A real-time monitoring dashboard for the NerdQaxe++ Bitcoin Solo Miner and similar ESP based devices.',
     tech: ['websocket', 'Node.js', 'ASIC'],
     image: 'dashboard.png',
     link: 'https://github.com/Existenziell/miner-dashboard',
+    linkText: 'Solo Mining Dashboard',
     external: true,
   },
   {
@@ -15,6 +16,7 @@ export const projects: Project[] = [
     tech: ['Script', 'Bitcoin', 'RPC/CLI'],
     image: 'bitcoindev.png',
     link: 'https://bitcoindev.info/',
+    linkText: 'Bitcoindev.info',
     external: true,
   },
   {
@@ -23,6 +25,7 @@ export const projects: Project[] = [
     tech: ['Python', 'ZMQ', 'Blockchain'],
     image: 'monitoring.png',
     link: 'https://github.com/Existenziell/chain-monitor',
+    linkText: 'Bitcoin Monitoring Suite',
     external: true,
   },
   {
@@ -31,6 +34,7 @@ export const projects: Project[] = [
     tech: ['i18n', 'QR Codes', 'Admin Dashboard'],
     image: 'sucre.webp',
     link: 'https://sucre-sale.vercel.app/',
+    linkText: 'Sucré Salé Bakery',
     external: true,
   },
   {
@@ -39,6 +43,7 @@ export const projects: Project[] = [
     tech: ['react-query', 'Pagination', 'Search'],
     image: 'rick.webp',
     link: '/programming/projects/api',
+    linkText: 'Rick&Morty API',
     external: false,
   },
   {
@@ -47,6 +52,7 @@ export const projects: Project[] = [
     tech: ['framer-motion', 'Mapbox', 'Microservices'],
     image: 'rateme.webp',
     link: 'https://rate-me-cozumel.vercel.app/',
+    linkText: 'RateMe',
     external: true,
   },
   {
@@ -55,6 +61,7 @@ export const projects: Project[] = [
     tech: ['useSWR', 'iNaturalist API', 'Taxonomy'],
     image: 'cozumon.webp',
     link: 'https://cozumel-taxonomy.vercel.app/',
+    linkText: 'Cozumel Taxonomy',
     external: true,
   },
   {
@@ -69,6 +76,7 @@ export const projects: Project[] = [
     tech: ['ThreeJS', 'WebGL', 'Game Physics'],
     image: 'threejs.webp',
     link: '/programming/projects/threejs',
+    linkText: 'ThreeJS Game',
     external: false,
   },
   {
@@ -77,6 +85,7 @@ export const projects: Project[] = [
     tech: ['Mapbox', 'Geolocation', 'Clustering'],
     image: 'annapurna.webp',
     link: 'https://annapurna-trek-map.vercel.app/',
+    linkText: 'Annapurna Trek Map',
     external: true,
   },
   {
@@ -85,6 +94,7 @@ export const projects: Project[] = [
     tech: ['Solidity', 'ether.js', 'hardhat', 'NFTs'],
     image: 'moonshire.webp',
     link: 'https://moonshire.vercel.app/',
+    linkText: 'Moonshire NFT platform',
     external: true,
   },
   {
@@ -93,6 +103,7 @@ export const projects: Project[] = [
     tech: ['Dall-E', 'stable diffusion', 'AI'],
     image: 'ai.webp',
     link: '/programming/projects/ai',
+    linkText: 'AI Image Generation',
     external: false,
   },
 ]

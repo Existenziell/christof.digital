@@ -2,18 +2,19 @@ import type { Teaching } from '@/types'
 
 export const teachings: Teaching[] = [
     {
-        date: '2004 - today',
-        title: 'Language Teacher',
-        description: 'I speak and write English, French and German fluently and have been teaching these languages in a private setting for many years. Communication is the key to understanding the world.',
-        image: 'language-teacher.jpg',
-    },
-    {
         date: '2019 - today',
         title: 'Yoga Teacher',
         description: 'I am fascinated by Yoga, breathwork and the power it gives me to ovecome my internal struggles. It has helped me tremendously and I love to share this knowledge with others. I am Yoga Alliance RYT-500 and ERYT-200 certified.',
         image: 'yoga.jpg',
         link: '/teaching/yoga',
+        linkText: 'Shift Happens Yoga',
         external: false,
+    },
+    {
+        date: '2004 - today',
+        title: 'Language Teacher',
+        description: 'I speak and write English, French and German fluently and have been teaching these languages in a private setting for many years. Communication is the key to understanding the world.',
+        image: 'language-teacher.jpg',
     },
     {
         date: '2018 - today',
@@ -27,6 +28,7 @@ export const teachings: Teaching[] = [
         description: 'I had the pleasure to teach a workshop for Bitcoin Beginners at the Bitcoin Atlantis Conference on Madeira Island. Introducing the basics of Bitcoin and the beautiful potential of this open source technology.',
         image: 'bitcoin-atlantis.png',
         link: 'https://bitcoinatlantis.com/',
+        linkText: 'Bitcoin Atlantis Conference',
         external: true,
     },
     {
@@ -35,6 +37,7 @@ export const teachings: Teaching[] = [
         description: 'I was a teacher for the Hacker School (Germany), teaching students the basics of software engineering, programming languages, software development, and software engineering principles.',
         image: 'hacker-school.png',
         link: 'https://hacker-school.de/',
+        linkText: 'Hacker School',
         external: true,
     },
     {
@@ -43,6 +46,7 @@ export const teachings: Teaching[] = [
         description: 'Bali Children Foundation helps thousands of children to complete school, to find employment, and to improve their lives and the life of their community. I participated in the annual Bali Children Foundation Yoga Days, teaching Yoga to the children.',
         image: 'bali-children-foundation.png',
         link: 'https://www.balichildrenfoundation.org/',
+        linkText: 'Bali Children Foundation',
         external: true,
     },
     {
@@ -51,6 +55,7 @@ export const teachings: Teaching[] = [
         description: 'The Lernstudio Barbarossa is a learning institute for customized education. During my computer science studies in Karlsruhe, I worked as a tutor for the subjects Mathematics, Physics, Programming and Foreign Languages (English, French, German).',
         image: 'lernstudio-barbarossa.png',
         link: 'https://www.lernstudio-barbarossa.de/en/locations/karlsruhe/',
+        linkText: 'Lernstudio Barbarossa',
         external: true,
     },
 ]

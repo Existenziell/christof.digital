@@ -25,7 +25,7 @@ Theme vars generated from lib/theme.js (run: node scripts/generate-theme-css.js)
 
   /* Layout */
   .main-layout {
-    @apply flex flex-col w-full min-h-[calc(100vh-137px)] px-4 sm:px-8 pb-20 pt-6 text-center;
+    @apply flex flex-col w-full min-h-[calc(100vh-137px)] px-4 sm:px-8 pb-20 pt-8 text-center;
   }
 
   .section {
@@ -41,7 +41,7 @@ Theme vars generated from lib/theme.js (run: node scripts/generate-theme-css.js)
   }
 
   .intro-text {
-    @apply body-text mx-auto max-w-xl text-center mb-6;
+    @apply body-text mx-auto max-w-xl text-center mb-8;
   }
 
   /* Cards – unified surface and theme text */
