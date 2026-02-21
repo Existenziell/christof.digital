@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Gotu, Lora } from 'next/font/google'
 import 'tailwindcss/tailwind.css'
 import '@/styles/globals.css'
-import Providers from './Providers'
+import Providers from '@/app/Providers'
 import { getRootMetadata } from '@/lib/metadata'
 import Nav from '@/components/Nav'
 import ThemeToggle from '@/components/ThemeToggle'
@@ -21,11 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${gotu.variable} ${lora.variable}`}>
       <body>
-        <div className='flex justify-between items-start p-4 md:px-8 bg-brand text-brand-dark dark:bg-brand-dark dark:text-brand'>
+        <div className='header-bar'>
           <Nav />
           <ThemeToggle />
         </div>
-        <main className='flex flex-col w-full min-h-[calc(100vh-121px)] md:min-h-[calc(100vh-117px)] px-4 sm:px-8 pb-20 pt-4 text-center bg-brand text-brand-dark dark:bg-brand-dark dark:text-brand'>
+        <main className='main-content brand-bg'>
           <Providers>{children}</Providers>
         </main>
         <Footer />

@@ -30,7 +30,7 @@ export default function Filters({ showFilter, setShowFilter, filterStatus, setFi
         {showFilter ? <ChevronDoubleDownIcon className="w-4" /> : <ChevronDoubleRightIcon className="w-4" />}
       </div>
       {showFilter && (
-        <div className="bg-gray dark:bg-gray-dark p-4 rounded-sm flex gap-4 justify-evenly">
+        <div className="card card--compact flex gap-4 justify-evenly">
           <fieldset>
             <legend>Status:</legend>
             <div className="flex flex-col md:flex-row items-start gap-1 md:gap-4">

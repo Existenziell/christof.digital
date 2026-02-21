@@ -12,7 +12,7 @@ export const DEFAULT_BASE_URL = 'https://christof.digital'
 export const OG_IMAGE_PATH = '/social/og.png'
 export const OG_IMAGE_WIDTH = 1200
 export const OG_IMAGE_HEIGHT = 630
-export const OG_IMAGE_ALT = 'Christof - Software Engineer, Teacher/Mentor'
+export const OG_IMAGE_ALT = 'Christof - Programming, Teaching'
 
 /** Theme color for meta (msapplication-TileColor, theme-color) */
 export const THEME_COLOR = '#242424'

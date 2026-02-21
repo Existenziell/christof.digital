@@ -1,0 +1,37 @@
+import Image from 'next/image'
+import { ScrollIndicator } from '@/components/ScrollIndicator'
+import { creations } from '@/content/creations'
+
+export default function AI() {
+  return (
+    <div className='w-full flex flex-col items-center'>
+      <ScrollIndicator />
+      <h1 className='header'>AI</h1>
+      <p className='flex flex-col md:flex-row-reverse items-center justify-center w-full md:w-2/3 mb-16'>
+        There have recently been an number of AI projects especially in the space of image generation that have absolutely amazed me.
+        Here are a few outcomes of my interactions with these new systems.
+        Remember that all these images have been created by Artificial Intelligence, the &apos;only&apos; input was the prompt.
+      </p>
+      {creations.map((creation) => (
+        <div key={creation.prompt} className='flex flex-col md:flex-row items-center justify-center w-full gap-4 md:gap-8 mb-16 text-left'>
+          <div className='card p-4 shadow-lg block'>
+            <Image
+              src={creation.image}
+              alt={creation.prompt}
+              width={800}
+              height={800}
+              placeholder="blur"
+              blurDataURL={creation.image}
+              className='rounded block'
+            />
+          </div>
+          <div className='md:w-1/2'>
+            <p className='text-lg md:text-2xl mb-6 font-serif'>&quot;{creation.prompt}&quot;</p>
+            {creation.remarks && <p className='text-sm'>Remarks: {creation.remarks}</p>}
+            <p className='text-sm'>Generator: {creation.generator}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  )
+}

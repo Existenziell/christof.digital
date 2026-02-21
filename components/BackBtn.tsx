@@ -7,7 +7,7 @@ interface BackBtnProps {
 
 export default function BackBtn({ link }: BackBtnProps) {
   return (
-    <Link href={link} className="bg-gray dark:bg-gray-dark shadow hover:text-cta hover:shadow-none transition-all p-1 rounded-sm block">
+    <Link href={link} className="card--minimal">
       <ChevronLeftIcon className='w-6' />
     </Link>
   )

@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import { createPageMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = createPageMetadata({ title: 'About' })
+export const metadata: Metadata = createPageMetadata({ title: 'Teaching' })
 
-export default function AboutLayout({
+export default function TeachingLayout({
   children,
 }: { children: React.ReactNode }) {
   return (

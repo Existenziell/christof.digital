@@ -26,9 +26,8 @@ Theme vars generated from lib/theme.js (run: node scripts/generate-theme-css.js)
 
 @layer components {
 
-  .header,
-  .h1 {
-    @apply text-4xl md:text-6xl dark:text-cta mb-4;
+  .header {
+    @apply text-4xl md:text-6xl dark:text-cta mb-8;
   }
 
   .subtitle {
@@ -49,6 +48,84 @@ Theme vars generated from lib/theme.js (run: node scripts/generate-theme-css.js)
 
   .label {
     @apply text-xs text-brand-dark dark:text-brand;
+  }
+
+  /* Layout */
+  .main-content {
+    @apply flex flex-col w-full min-h-[calc(100vh-121px)] md:min-h-[calc(100vh-117px)] px-4 sm:px-8 pb-20 pt-4 text-center;
+  }
+
+  .full-bleed {
+    @apply w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] max-w-none;
+  }
+
+  .header-bar {
+    @apply flex justify-between items-start p-4 sm:px-8 bg-brand text-brand-dark dark:bg-brand-dark dark:text-brand;
+  }
+
+  .brand-bg {
+    @apply bg-brand text-brand-dark dark:bg-brand-dark dark:text-brand;
+  }
+
+  .intro-text {
+    @apply body-text mx-auto max-w-xl text-center mb-6;
+  }
+
+  .intro-text--spacing-lg {
+    @apply body-text mx-auto max-w-xl text-center mb-12;
+  }
+
+  /* Cards */
+  .card {
+    @apply rounded shadow bg-gray dark:bg-gray-dark text-brand-dark dark:text-brand p-6 transition-all;
+  }
+
+  .card--link {
+    @apply card p-4 hover:scale-[102%] hover:shadow-2xl duration-500 flex flex-col;
+  }
+
+  .card--compact {
+    @apply rounded-sm shadow bg-gray dark:bg-gray-dark text-brand-dark dark:text-brand p-4 transition-all;
+  }
+
+  .card--large {
+    @apply card shadow-md p-8;
+  }
+
+  .card--large-subtle {
+    @apply rounded shadow-sm bg-gray dark:bg-gray-dark text-brand-dark dark:text-brand p-8 transition-all;
+  }
+
+  .card--testimonial {
+    @apply rounded-lg shadow-lg bg-white/10 dark:bg-white/5 backdrop-blur-sm p-6 border border-white/10;
+  }
+
+  .card--timeline-image {
+    @apply relative rounded overflow-hidden shadow-lg bg-gray dark:bg-gray-dark;
+  }
+
+  .card--timeline-text {
+    @apply flex flex-col rounded bg-gray dark:bg-gray-dark p-6 md:p-8 shadow-md text-left;
+  }
+
+  .quote {
+    @apply relative max-w-lg mx-auto pl-6 pr-6 py-5 rounded-r-lg shadow bg-gray/60 dark:bg-gray-dark/60 border-l-4 border-cta text-brand-dark dark:text-brand;
+  }
+
+  .card-date-badge {
+    @apply absolute top-0 bg-gray-dark/10 dark:bg-gray/10 dark:text-gray px-2 py-1 right-0 rounded-bl rounded-tr;
+  }
+
+  .card-date-badge--left {
+    @apply left-0 right-auto rounded-br rounded-tl rounded-tr-none rounded-bl-none;
+  }
+
+  .card--minimal {
+    @apply rounded-sm shadow bg-gray dark:bg-gray-dark p-1 block hover:text-cta hover:shadow-none transition-all text-brand-dark dark:text-brand;
+  }
+
+  .socials-bar {
+    @apply rounded pt-2 px-4 dark:bg-gray;
   }
 }
 
@@ -82,13 +159,6 @@ body {
   @apply cursor-not-allowed;
 }
 
-.nextimg {
-  font-size: 0;
-  letter-spacing: 0;
-  word-spacing: 0;
-  position: relative;
-}
-
 input[type='radio']:after {
   @apply w-4 h-4 content-[''] cursor-pointer inline-block relative -top-[2px] -left-[1px] bg-gray dark:bg-gray-dark border-2 border-white rounded-full;
 }
@@ -120,14 +190,6 @@ input[type='radio']:checked:after {
 
 .mobile-nav .active-nav {
   @apply w-full block text-2xl md:text-4xl text-center leading-loose py-2 md:py-8 bg-brand-dark text-cta dark:bg-gray-dark dark:text-cta;
-}
-
-.nav-dropdown {
-  @apply bg-brand text-brand-dark dark:bg-brand-dark dark:text-brand;
-}
-
-.nav-dropdown .nav:hover {
-  @apply text-cta;
 }
 
 .active-tab {
@@ -283,4 +345,152 @@ svg:hover #dark2 {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Yoga map popups: hide Mapbox default wrapper so only our styled box shows.
+   Mapbox injects .mapboxgl-popup-content with its own styles (mapbox-gl.css);
+   override with higher specificity and !important so a single tooltip is visible. */
+.mapboxgl-popup .mapboxgl-popup-content {
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  min-width: 0 !important;
+}
+
+.mapboxgl-popup .mapboxgl-popup-tip {
+  display: none !important;
+}
+
+/* Remove any outer popup container background */
+.mapboxgl-popup {
+  background: transparent !important;
+}
+
+/* Yoga map popups: proportions, readability, custom close button */
+.yoga-map-popup {
+  position: relative;
+  min-width: 360px;
+  max-width: 420px;
+  height: auto;
+  max-height: 90vh;
+  padding: 14px 16px 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  background: #fff;
+  color: #242424;
+  font-family: var(--font-gotu), Gotu, Arial, sans-serif;
+}
+
+/* Custom close button: absolute top-right corner of the card */
+.yoga-popup-close {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  font-size: 22px;
+  line-height: 36px;
+  color: #555;
+  background: rgba(0, 0, 0, 0.06);
+  border: none;
+  border-radius: 0 8px 0 6px;
+  cursor: pointer;
+  transition: color 0.15s, background 0.15s;
+  flex-shrink: 0;
+}
+
+.yoga-popup-close:hover {
+  color: #242424;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.dark .yoga-popup-close {
+  color: #b0b0b0;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dark .yoga-popup-close:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.yoga-map-popup-date {
+  font-size: 12px;
+  color: #555;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.yoga-map-popup-title {
+  margin: 0 0 6px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #242424;
+  line-height: 1.25;
+}
+
+.yoga-map-popup-img {
+  width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+.yoga-map-popup-subname {
+  margin: 0 0 8px;
+  font-size: 13px;
+  color: #555;
+  font-weight: 400;
+}
+
+.yoga-map-popup-desc {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #333;
+  padding-right: 4px;
+}
+
+.yoga-map-popup-desc a {
+  color: #D6A269;
+  text-decoration: underline;
+}
+
+.yoga-map-popup-desc a:hover {
+  color: #b8864a;
+}
+
+/* Dark mode: high-contrast text on dark background */
+.dark .yoga-map-popup {
+  background: #323232;
+  color: #DBDBDB;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+}
+
+.dark .yoga-map-popup-date,
+.dark .yoga-map-popup-subname {
+  color: #b0b0b0;
+}
+
+.dark .yoga-map-popup-title {
+  color: #fff;
+}
+
+.dark .yoga-map-popup-desc {
+  color: #e0e0e0;
+}
+
+.dark .yoga-map-popup-desc a {
+  color: #D6A269;
+}
+
+.dark .yoga-map-popup-desc a:hover {
+  color: #e4b882;
 }

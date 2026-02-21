@@ -5,18 +5,20 @@ interface ProjectLinkProps {
   children: React.ReactNode
   classes?: string
   external?: boolean
+  'aria-label'?: string
 }
 
-export default function ProjectLink({ href, children, classes, external }: ProjectLinkProps) {
+export default function ProjectLink({ href, children, classes, external, 'aria-label': ariaLabel }: ProjectLinkProps) {
+  const label = ariaLabel ?? 'Link to Project'
   if (external) {
     return (
-      <a href={href} target='_blank' rel='noopener noreferrer nofollow' className={classes} aria-label='Link to Project'>
+      <a href={href} target='_blank' rel='noopener noreferrer nofollow' className={classes} aria-label={label}>
         {children}
       </a>
     )
   }
   return (
-    <Link href={href} className={classes} aria-label='Link to Project'>
+    <Link href={href} className={classes} aria-label={label}>
       {children}
     </Link>
   )

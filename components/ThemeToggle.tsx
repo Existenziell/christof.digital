@@ -52,7 +52,7 @@ export default function ThemeToggle() {
   /* eslint-enable react-hooks/set-state-in-effect */
 
   return (
-    <div className='pt-2 md:pt-1' id='toggle'>
+    <div className='pt-2 md:pt-1'>
       {darkmode === 'light' ? (
         <button type="button" onClick={setDark} aria-label="Switch to dark mode">
           <svg xmlns='http://www.w3.org/2000/svg' className='h-8 w-8 cursor-pointer text-brand-dark hover:text-cta transition-colors' fill='none' viewBox='0 0 24 24' stroke='currentColor'>

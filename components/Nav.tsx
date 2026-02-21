@@ -2,11 +2,11 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import MobileNav from './MobileNav'
+import MobileNav from '@/components/MobileNav'
 
 const mainLinks: { label: string; url: string }[] = [
-  { label: 'Software Engineer', url: '/software-engineer' },
-  { label: 'Teacher/Mentor', url: '/teacher-mentor' },
+  { label: 'Programming', url: '/programming' },
+  { label: 'Teaching', url: '/teaching' },
   { label: 'About', url: '/about' },
 ]
 
@@ -20,7 +20,7 @@ export default function Nav() {
   const rootActive = pathname === '/'
 
   return (
-    <nav className='w-full flex flex-col' id='nav' aria-label='Main'>
+    <nav className='w-full flex flex-col' aria-label='Main'>
       <ul className='desktop-nav hidden md:flex z-20 gap-2 items-center flex-wrap'>
         <li className={rootActive ? 'active-nav' : 'nav'}>
           <Link href='/' className='px-4 py-2 block'>
