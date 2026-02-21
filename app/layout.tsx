@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${gotu.variable} ${lora.variable}`}>
+    <html lang="en" className={`${gotu.variable} ${lora.variable}`} data-scroll-behavior="smooth">
       <body id="top">
         <ThemeProvider>
           <div className='header-bar'>

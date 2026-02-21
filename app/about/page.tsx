@@ -18,9 +18,11 @@ export default function About() {
           <Image
             src="/images/about.webp"
             alt="Christof"
-            width={300}
-            height={600}
-            className="rounded shadow-2xl my-8"
+            width={553}
+            height={848}
+            className="rounded shadow-2xl my-8 h-auto w-full max-w-[300px]"
+            style={{ height: 'auto' }}
+            priority
             unoptimized
           />
         </div>

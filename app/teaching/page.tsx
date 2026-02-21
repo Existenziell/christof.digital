@@ -16,7 +16,8 @@ export default function Teaching() {
       </section>
       <section className='section--alt'>
         <div className='w-full text-left grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8'>
-        {teachings.map((teaching) => {
+        {teachings.map((teaching, index) => {
+          const isLcpImage = index === 0 && !!teaching.image
           const cardContent = (
             <>
               <p className='card-date-badge'>{teaching.date}</p>
@@ -31,6 +32,7 @@ export default function Teaching() {
                     height={360}
                     sizes='(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw'
                     className='w-full h-[400px] object-cover block'
+                    priority={isLcpImage}
                   />
                 </div>
               )}
