@@ -14,7 +14,7 @@ const MAP_CONTAINER_ID = 'yoga-map'
 function usePopupOverrideStyles() {
   useEffect(() => {
     const id = 'yoga-map-popup-overrides'
-    if (document.getElementById(id)) return
+    if (document.getElementById(id)) return () => {}
     const style = document.createElement('style')
     style.id = id
     style.textContent = `
@@ -43,11 +43,11 @@ export default function YogaMap() {
       queueMicrotask(() =>
         setError('NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN is not configured.')
       )
-      return
+      return () => {}
     }
 
     const container = document.getElementById(MAP_CONTAINER_ID)
-    if (!container || initRef.current) return
+    if (!container || initRef.current) return () => {}
 
     initRef.current = true
     mapboxgl.accessToken = accessToken

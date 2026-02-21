@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function YogaTestimonialsPage() {
   return (
-    <div className="flex flex-col items-center w-full overflow-hidden">
+    <div className="flex flex-col items-center w-full">
       <p className="body-text mb-4 max-w-sm text-center">
         Let&apos;s see how students described their experience with shiftHappens Yoga:
       </p>
@@ -24,11 +24,11 @@ export default function YogaTestimonialsPage() {
           unoptimized
         />
       </div>
-      <div className="w-full flex flex-wrap justify-center gap-6 mx-auto md:px-8">
+      <div className="w-full flex flex-wrap justify-center gap-6 mx-auto px-4 sm:px-8">
         {testimonials.map((tm, index) => (
           <article
             key={`${tm.author}-${tm.date}-${index}`}
-            className="card min-w-[480px] max-w-md flex flex-col justify-between"
+            className="card w-full min-w-0 max-w-md flex flex-col justify-between"
           >
             <p className="leading-relaxed whitespace-pre-wrap">
               {tm.text}

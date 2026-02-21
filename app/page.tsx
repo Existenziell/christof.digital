@@ -6,8 +6,11 @@ export default function Home() {
     <section className='section flex flex-1 flex-col lg:flex-row items-center lg:justify-center lg:gap-8 w-full'>
       <div className='flex flex-col md:leading-relaxed lg:w-1/2 lg:text-right lg:border-r-2 lg:border-cta lg:pr-12 rounded'>
         <h1 className='header'>Hi, I am Christof</h1>
-        <p className='body-text mb-10 lg:text-right max-w-md lg:ml-auto'>
-          I build software and love to teach and share my knowledge with others. Pick where you want to go.
+        <p className='body-text mb-2 lg:text-right max-w-md lg:ml-auto'>
+          I build software and love to teach and share my knowledge with others.
+        </p>
+        <p className='mb-10 lg:text-right max-w-md lg:ml-auto'>
+          Currently looking for my next gig — ideally in the Bitcoin open source ecosystem. Please reach out if you are looking for a developer with a passion!
         </p>
         <div className='flex flex-wrap gap-4 justify-center lg:justify-end'>
           <Link href='/programming' className='button-cta min-w-[10rem] text-center'>Programming</Link>

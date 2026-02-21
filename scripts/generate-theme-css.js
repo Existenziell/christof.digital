@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+'use strict'
 /**
  * Generate CSS custom properties from lib/theme.js (single source of truth).
  * Output: styles/_theme-vars.css
@@ -66,4 +67,4 @@ const lines = [
 
 const outPath = path.join(__dirname, '..', 'styles', '_theme-vars.css')
 fs.writeFileSync(outPath, lines.join('\n'), 'utf8')
-console.log('Generated', outPath)
+console.warn('Generated', outPath)

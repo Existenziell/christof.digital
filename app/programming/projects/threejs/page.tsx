@@ -36,7 +36,7 @@ export default function ThreeJS() {
     const instructionsElement = document.getElementById('instructions')
     const resultsElement = document.getElementById('results')
 
-    if (!anchor) return
+    if (!anchor) return () => {}
 
     window.focus()
 

@@ -9,7 +9,7 @@ export default function Teaching() {
         <div className='w-full'>
           <h1 className='header'>Teaching</h1>
           <p className='intro-text'>
-            I have always enjoyed teaching and sharing my knowledge with others. I just cannot get enough of the delight to see students&apos; eyes light up when they have one of these incredible &quot;aha&quot; moments.
+            I have always enjoyed teaching and sharing my knowledge with others. I just don&apos;t seem to get enough of the delight to see students&apos; eyes light up when they have one of these incredible &quot;aha&quot; moments.
           </p>
         </div>
       </section>

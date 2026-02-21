@@ -1,3 +1,4 @@
+'use strict'
 const { colors: themeColors, mauve } = require('./lib/theme.js')
 
 /** Mauve scale as Tailwind colors (e.g. mauve-1 … mauve-12); vars switch in .dark */
