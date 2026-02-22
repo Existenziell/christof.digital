@@ -3,7 +3,7 @@ import type { Project } from '@/types'
 export const projects: Project[] = [
   {
     name: 'Solo Mining Dashboard  ',
-    desc: 'A real-time monitoring dashboard for the NerdQaxe++ Bitcoin Solo Miner and similar ESP based devices.',
+    desc: 'A real-time monitoring dashboard for the NerdQaxe++ Bitcoin Solo Miner and similar ESP based devices. Live miner metrics, fully customizable, network context, API monitoring, pool config, firmware update, self-hosted. This dashboard addresses limitations of the original AxeOS and enables controlled overclocking and advanced monitoring.',
     tech: ['websocket', 'Node.js', 'ASIC'],
     image: 'dashboard.png',
     link: 'https://github.com/Existenziell/miner-dashboard',
@@ -12,7 +12,7 @@ export const projects: Project[] = [
   },
   {
     name: 'Bitcoindev.info',
-    desc: 'Bitcoin development guide for developers. Open source documentation, CLI terminal, Stack Lab, Block Visualizer. No ads. Always free.',
+    desc: 'Bitcoin development guide for developers. Bitcoin education is fragmented. Some resources are too technical, others too superficial. I created BitcoinDev to bridge that gap, providing accessible documentation that covers everything from fundamental concepts to advanced protocol details. Offers interactive tools such as a CLI terminal, Stack Lab, Block Visualizer and more.',
     tech: ['Script', 'Bitcoin', 'RPC/CLI'],
     image: 'bitcoindev.png',
     link: 'https://bitcoindev.info/',
@@ -21,7 +21,8 @@ export const projects: Project[] = [
   },
   {
     name: 'Bitcoin Blockchain Monitoring',
-    desc: 'A suite of Python tools for monitoring Bitcoin blockchain activity and pool mining.',
+    desc: 'A suite of Python tools that enables real-time blockchain monitoring with ZMQ, enhanced block detection, extended block statistics, mining pool identification from coinbase transactions, OP_RETURN data extraction and analysis. All metrics visible and accessible via web interface. Get a complete picture of your node\'s activity and the wider Bitcoin network.',
+
     tech: ['Python', 'ZMQ', 'Blockchain'],
     image: 'monitoring.png',
     link: 'https://github.com/Existenziell/chain-monitor',
@@ -30,7 +31,7 @@ export const projects: Project[] = [
   },
   {
     name: 'Sucré Salé Bakery',
-    desc: 'Just a simple yet beautiful and performant website, built as PWA and seeing quite some traffic.',
+    desc: 'A simple yet beautiful and performant website, for a local French bakery in Cozumel, Mexico. Built as PWA and seeing quite some traffic, it is available in both English and Spanish and allows customers to order online and pick up their order at the bakery. Includes an admin dashboard for managing orders and products. Give them a visit, they are delicious!',
     tech: ['i18n', 'QR Codes', 'Admin Dashboard'],
     image: 'sucre.webp',
     link: 'https://sucre-sale.vercel.app/',
@@ -39,8 +40,8 @@ export const projects: Project[] = [
   },
   {
     name: 'Rick&Morty API',
-    desc: 'Using react-query and the open Rick&Morty API to test clearer data flow without useEffect().',
-    tech: ['react-query', 'Pagination', 'Search'],
+    desc: 'Using TanStack Query (formerly react-query) and the open Rick&Morty API to test clearer data flow without useEffect(). Pagination, search by name, and filters (status, gender). Character detail pages, loading and error states, response caching. Wubba Lubba Dub Dub!',
+    tech: ['TanStack Query', 'Pagination', 'Search', 'Filter'],
     image: 'rick.webp',
     link: '/programming/projects/api',
     linkText: 'Rick&Morty API',
@@ -48,8 +49,8 @@ export const projects: Project[] = [
   },
   {
     name: 'RateMe',
-    desc: 'A fresh approach to customer care. App for restaurants to rate customers for more transparency.',
-    tech: ['framer-motion', 'Mapbox', 'Microservices'],
+    desc: 'A fresh approach to customer care. RateMe allows restaurants to rate customers for more transparency and the ability to reward brand loyalty, increasing customer engagement and retention. This app ran as pilot project on Cozumel island, Mexico. Built with Framer Motion and Mapbox for location-based services and Microservices architecture.',
+    tech: ['Framer Motion', 'Mapbox', 'Microservices'],
     image: 'rateme.webp',
     link: 'https://rate-me-cozumel.vercel.app/',
     linkText: 'RateMe',
@@ -57,7 +58,7 @@ export const projects: Project[] = [
   },
   {
     name: 'Cozumel Taxonomy',
-    desc: 'A taxonomy app for the island of Cozumel in Mexico to raise awareness for endangered endemic species.',
+    desc: 'A taxonomy app for the island of Cozumel in Mexico to raise awareness for endangered endemic species. Built with useSWR and the iNaturalist API, it allows users to explore and learn about the biodiversity of Cozumel. Advanced features include clustering, filtering and detailed species information.',
     tech: ['useSWR', 'iNaturalist API', 'Taxonomy'],
     image: 'cozumon.webp',
     link: 'https://cozumel-taxonomy.vercel.app/',
@@ -66,13 +67,13 @@ export const projects: Project[] = [
   },
   {
     name: 'CZMStem Clinic',
-    desc: 'App for a stem cell clinic with user management, payments and health data visualisation.',
+    desc: 'App for a stem cell clinic with user management, payments and health data visualisation. Built with Plaid API for financial data integration, ThreeJS for 3D visualisation and NextJS for server-side rendering.',
     tech: ['Plaid API', 'ThreeJS', 'NextJS'],
     image: 'czmstem.webp',
   },
   {
     name: 'ThreeJS Game',
-    desc: 'Stack game with Three.js and Cannon.js. Venturing into WebGL and game physics.',
+    desc: 'Stack game with Three.js and Cannon.js. Venturing into WebGL and game physics. Try to stack the blocks as high as possible on top of each other. Click, tap or press Space when a block is above the stack. Enjoy the sound effects!',
     tech: ['ThreeJS', 'WebGL', 'Game Physics'],
     image: 'threejs.webp',
     link: '/programming/projects/threejs',
@@ -81,7 +82,7 @@ export const projects: Project[] = [
   },
   {
     name: 'Annapurna Trek Map',
-    desc: "Website built with Mapbox, trying to display some impressions from the longest trek I've done so far.",
+    desc: "I did the Annapurna Trek in November 2019, a 30 day trek in the Himalayas. This website is built with Mapbox, to display some impressions from the longest trek I've done so far. It was an epic and unforgettable experience.",
     tech: ['Mapbox', 'Geolocation', 'Clustering'],
     image: 'annapurna.webp',
     link: 'https://annapurna-trek-map.vercel.app/',
@@ -90,7 +91,7 @@ export const projects: Project[] = [
   },
   {
     name: 'Moonshire NFT platform',
-    desc: 'Moonshire is a web3 platform, a decentralised service for content creators running on the Blockchain.',
+    desc: 'Moonshire is a web3 platform, a decentralised service for content creators running on the Blockchain. This app was developed during the web3 craze in 2021 and before we all understood that NFTs are not the future of the internet.',
     tech: ['Solidity', 'ether.js', 'hardhat', 'NFTs'],
     image: 'moonshire.webp',
     link: 'https://moonshire.vercel.app/',
@@ -99,7 +100,7 @@ export const projects: Project[] = [
   },
   {
     name: 'AI Image Generation',
-    desc: "The future is here. Testing the possibilities of AI image generation with Dall-E and stable diffusion.",
+    desc: "The future is here. Testing the possibilities of AI image generation with Dall-E and stable diffusion. I realize that this is already obsolete. And these are the only AI generated images on this website.",
     tech: ['Dall-E', 'stable diffusion', 'AI'],
     image: 'ai.webp',
     link: '/programming/projects/ai',
