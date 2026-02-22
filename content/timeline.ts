@@ -152,7 +152,7 @@ export const timeline: TimelineFeatureCollection = {
         image: '7',
         date: 'April/May 2019',
         description:
-          "The NGO <a href='http://www.letsimagine.org/' target='_blank' rel='noreferrer'>Let's Imagine</a> partnered with the Bali Children Foundation to host a Yoga camp in Lovina, Northern Bali, with around 60-100 students aged 8-18. Their vision is to provide an educational pathway for disadvantaged Balinese children – a journey leading to growth and long term sustainability. What a humbling experience to have been part of this project, giving the poorest children of Bali a moment of peace and happiness through Yoga.",
+          "The NGO <a href='http://www.letsimagine.org/' target='_blank' rel='noreferrer'>Let's Imagine</a> partnered with the Bali Children Foundation to host a Yoga camp in Lovina, Northern Bali, with around 60-100 students aged 8-18. Their vision is to provide an educational pathway for disadvantaged Balinese children - a journey leading to growth and long term sustainability. What a humbling experience to have been part of this project, giving the poorest children of Bali a moment of peace and happiness through Yoga.",
         mapOnly: false,
         cluster: false,
         event_count: 1,
@@ -352,7 +352,7 @@ export const timeline: TimelineFeatureCollection = {
         image: '17',
         date: 'March 2020',
         description:
-          "In March 2020 I had the opportunity to organise my first Yoga retreat at a small scale. 2 weeks with Yoga, meditation, walks in the mountains, excellent Nepali food (Dal bhat!) and a beautiful location 10min from Pokhara lakeside in an beautiful area called <a href='https://goo.gl/maps/ema3pCGpCz1hyQRh9' target='_blank' rel='noreferrer'>Happy Village (Khapaudi)</a>. It was fantastic – more to come! The Covid-19 pandemic hit Nepal just when the retreat finished, and the country went into lockdown.",
+          "In March 2020 I had the opportunity to organise my first Yoga retreat at a small scale. 2 weeks with Yoga, meditation, walks in the mountains, excellent Nepali food (Dal bhat!) and a beautiful location 10min from Pokhara lakeside in a beautiful area called <a href='https://goo.gl/maps/ema3pCGpCz1hyQRh9' target='_blank' rel='noreferrer'>Happy Village (Khapaudi)</a>. It was fantastic – more to come! The Covid-19 pandemic hit Nepal just when the retreat finished, and the country went into lockdown.",
         mapOnly: false,
         cluster: false,
         event_count: 1,
@@ -392,7 +392,7 @@ export const timeline: TimelineFeatureCollection = {
         image: '19',
         date: '2021',
         description:
-          "Miel and Alexis created <a href='https://www.casachakras.org/' target='_blank' rel='noreferrer'>Casa Chakras</a>, a Yoga retreat center on the island of Cozumel in Mexico. Together we offer experiences centered around Yoga and the Ocean. The location is absolutely breath-taking, come visit us :)",
+          "Miel and Alexis created <a href='https://www.casachakras.org/' target='_blank' rel='noreferrer'>Casa Chakras</a>, a Yoga retreat center on the island of Cozumel in Mexico. Together we offer experiences centered around Yoga and the Ocean. The location is absolutely breathtaking, come visit us :)",
         mapOnly: false,
         cluster: false,
         event_count: 1,
