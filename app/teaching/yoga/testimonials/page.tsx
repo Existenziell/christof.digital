@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
+import FullscreenImage from '@/components/FullscreenImage'
 import { testimonials } from '@/content/testimonials'
 
 export const metadata: Metadata = {
@@ -12,13 +12,11 @@ export default function YogaTestimonialsPage() {
   return (
     <div className="flex flex-col items-center w-full">
       <div className="card p-0 overflow-hidden rounded-lg max-w-[500px] mb-8">
-        <Image
+        <FullscreenImage
           src="/images/testimonial.jpg"
           alt="Rating"
-          width={500}
-          height={328}
-          className="w-full h-auto block"
-          unoptimized
+          sizes="(max-width: 768px) 100vw, 500px"
+          imageClassName="object-cover"
         />
       </div>
       <div className="w-full flex flex-wrap justify-center gap-6 mx-auto px-4 sm:px-8">

@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import FullscreenImage from '@/components/FullscreenImage'
 import Sorting from '@/components/Sorting'
 import { HeartIcon } from '@/components/Icons'
 import { timeline } from '@/content/timeline'
@@ -35,13 +36,12 @@ export default function Timeline() {
                   imageLeft ? 'md:order-1' : 'md:order-2'
                 }`}
               >
-                <Image
+                <FullscreenImage
                   src={`/images/timeline/${image}.jpg`}
-                  width={800}
-                  height={450}
                   alt={name}
                   priority={index <= 1}
-                  className="w-full h-auto object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  imageClassName="object-cover"
                 />
               </div>
               <div

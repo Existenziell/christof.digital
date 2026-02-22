@@ -1,25 +1,10 @@
-'use client'
-
-import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { ChevronUp, HeartIcon } from '@/components/Icons'
+import { HeartIcon } from '@/components/Icons'
 import ExternalLink from '@/components/ExternalLink'
 import { GITHUB_URL, BITCOINDEV_URL } from '@/lib/constants'
 
-function isPageScrollable() {
-  if (typeof document === 'undefined' || typeof window === 'undefined') return false
-  return document.documentElement.scrollHeight > window.innerHeight
-}
-
-function isAtBottom(threshold = 80) {
-  if (typeof document === 'undefined' || typeof window === 'undefined') return false
-  const { scrollHeight } = document.documentElement
-  const { scrollY, innerHeight } = window
-  return scrollY + innerHeight >= scrollHeight - threshold
-}
-
 export default function Footer() {
- 
+
   return (
     <footer className='static bottom-0 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 w-full py-3 px-4 sm:px-6 text-xs sm:text-sm transition-all border-t border-border bg-header-bg text-header-fg'>
       <div className='flex flex-wrap items-center justify-center gap-x-2 text-muted'>
