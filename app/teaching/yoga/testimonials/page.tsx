@@ -30,7 +30,7 @@ export default function YogaTestimonialsPage() {
             <p className="leading-relaxed whitespace-pre-wrap">
               {tm.text}
             </p>
-            <footer className="mt-4 pt-4 border-t border-gray-dark/10 dark:border-gray/10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+            <div className="mt-4 pt-4 border-t border-gray-dark/10 dark:border-gray/10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
               <cite className="font-semibold not-italic text-cta">
                 {tm.author}
               </cite>
@@ -40,7 +40,7 @@ export default function YogaTestimonialsPage() {
               >
                 {tm.date}
               </time>
-            </footer>
+            </div>
           </article>
         ))}
       </div>
