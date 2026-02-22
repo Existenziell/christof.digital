@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import * as THREE from 'three'
 import * as CANNON from 'cannon-es'
 
-export default function ThreeJS() {
+export default function StackGame() {
   const [score, setScore] = useState(0)
 
   useEffect(() => {
@@ -27,6 +27,7 @@ export default function ThreeJS() {
     let autopilot: boolean
     let gameEnded: boolean
     let robotPrecision: number
+    let lastTouchStartTime = 0
 
     const setRobotPrecision = () => {
       robotPrecision = Math.random() * 1 - 0.5
@@ -192,6 +193,17 @@ export default function ThreeJS() {
         else splitBlockAndAddNextOneIfOverlaps()
       }
 
+      function handleTouchStart(_e: TouchEvent) {
+        lastTouchStartTime = Date.now()
+        eventHandler()
+      }
+
+      function handleMouseDown(_e: MouseEvent) {
+        // Ignore synthetic mousedown from touch (mobile fires touchstart then mousedown for same tap)
+        if (Date.now() - lastTouchStartTime < 400) return
+        eventHandler()
+      }
+
       function startGame() {
         setScore(0)
         playSound('start.mp3')
@@ -253,8 +265,8 @@ export default function ThreeJS() {
 
       renderer.setAnimationLoop(animation)
 
-      anchor!.addEventListener('mousedown', eventHandler)
-      anchor!.addEventListener('touchstart', eventHandler)
+      anchor!.addEventListener('mousedown', handleMouseDown)
+      anchor!.addEventListener('touchstart', handleTouchStart, { passive: true })
       const keyHandler = (event: KeyboardEvent) => {
         if (event.key === ' ') {
           event.preventDefault()
@@ -279,8 +291,8 @@ export default function ThreeJS() {
       window.addEventListener('resize', resizeHandler)
 
       return () => {
-        anchor!.removeEventListener('mousedown', eventHandler)
-        anchor!.removeEventListener('touchstart', eventHandler)
+        anchor!.removeEventListener('mousedown', handleMouseDown)
+        anchor!.removeEventListener('touchstart', handleTouchStart)
         window.removeEventListener('keydown', keyHandler)
         window.removeEventListener('resize', resizeHandler)
         renderer.setAnimationLoop(null)
@@ -294,13 +306,12 @@ export default function ThreeJS() {
 
   return (
     <div className="flex flex-col items-center justify-center w-full">
-      <h1 className="header">ThreeJS</h1>
-      <div className='w-full md:w-2/3 mb-8'>
-        <p className='mb-4'>
-          Stack game with Three.js and Cannon.js.
-          ThreeJS renders the material world whereas CannonJS is responsible for calculating the physics for each object on every tick.
+      <h1 className="header">Stack Game</h1>
+      <div className='w-full md:w-2/3 mb-8 flex flex-col gap-1'>
+        <p>
+          Three.js renders the material world whereas Cannon.js is responsible for calculating the physics for each object on every tick.
         </p>
-        <p className='mb-4'>Goal is to stack the blocks on top of each other. Click, tap or press Space when a block is above the stack.</p>
+        <p>Goal is to stack the blocks on top of each other. Click, tap or press Space when a block is above the stack.</p>
         <p>Can you reach the blue colored blocks?</p>
       </div>
       <div id='anchor' className='shadow-2xl rounded relative'>

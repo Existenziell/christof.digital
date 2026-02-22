@@ -72,12 +72,12 @@ export const projects: Project[] = [
     image: 'czmstem.webp',
   },
   {
-    name: 'ThreeJS Game',
+    name: 'Stack Game',
     desc: 'Stack game with Three.js and Cannon.js. Venturing into WebGL and game physics. Try to stack the blocks as high as possible on top of each other. Click, tap or press Space when a block is above the stack. Enjoy the sound effects!',
     tech: ['ThreeJS', 'WebGL', 'Game Physics'],
     image: 'threejs.webp',
-    link: '/programming/projects/threejs',
-    linkText: 'ThreeJS Game',
+    link: '/programming/projects/stackGame',
+    linkText: 'Stack Game',
     external: false,
   },
   {

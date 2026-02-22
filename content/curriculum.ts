@@ -79,7 +79,7 @@ export const curriculum: CurriculumEntry[] = [
     date: 'Oct 2012 - Jul 2014',
     duration: '1 year 10 months',
     location: 'Hamburg, Germany',
-    desc: 'G&J is (was) the biggest publishing company in Germany with titles like National Geographic, Financial Times Deutschland or Stern. G&J hosted all its infrastructure in house (crazy, I know) and as part of G+J Digital Products we were responsible for keeping it all running... 24/7. Another task was to provide all dev and staging environments for the different teams, deployments, build chains, security, virtualization... G&J was a traditional, huge company and very slow to adjust to challenges of the new digital age, still it was an immensely valuable learning experience for me.',
+    desc: 'G&J is (was?) the biggest publishing company in Germany with titles like National Geographic, Financial Times Deutschland or Stern. G&J hosted all its infrastructure in house (crazy, I know) and as part of G+J Digital Products we were responsible for keeping it all running... 24/7. Another task was to provide all dev and staging environments for the different teams, deployments, build chains, security, virtualization... G&J was a traditional, huge company and very slow to adjust to challenges of the new digital age, still it was an immensely valuable learning experience for me.',
     latestProject: 'Production Setup for Brigitte.de, Gala.de, Geo.de. ',
     skills: ['Shell', 'Perl', 'PHP', 'VMWare', 'Apache', 'NGinx'],
   },

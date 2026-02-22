@@ -1,24 +1,21 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
 import ExternalLink from '@/components/ExternalLink'
+import FullscreenImage from '@/components/FullscreenImage'
 import type { Project, ProjectsListProps } from '@/types'
 
 function ProjectCardContent({ project, priority }: { project: Project; priority?: boolean }) {
   return (
     <>
       <div className='w-full md:max-w-md md:shrink-0'>
-        <div className='relative aspect-video rounded overflow-hidden mb-4 md:mb-0'>
-          <Image
-            src={`/images/projects/${project.image}`}
-            alt={project.name}
-            fill
-            sizes='(max-width: 768px) 100vw, min(400px, 40vw)'
-            className='object-contain'
-            priority={priority}
-          />
-        </div>
+        <FullscreenImage
+          src={`/images/projects/${project.image}`}
+          alt={project.name}
+          priority={priority}
+          sizes='(max-width: 768px) 100vw, min(400px, 40vw)'
+          imageClassName='object-contain'
+        />
       </div>
       <div className='flex flex-col min-w-0 flex-1 justify-between'>
         <div>

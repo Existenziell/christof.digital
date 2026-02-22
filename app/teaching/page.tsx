@@ -1,7 +1,7 @@
-import Image from 'next/image'
 import { teachings } from '@/content/teachings'
 import Link from 'next/link'
 import ExternalLink from '@/components/ExternalLink'
+import FullscreenImage from '@/components/FullscreenImage'
 
 export default function Teaching() {
   return (
@@ -25,16 +25,13 @@ export default function Teaching() {
               <>
                 {teaching.image && (
                   <div className='w-full md:max-w-lg md:shrink-0'>
-                    <div className='relative aspect-video rounded overflow-hidden mb-4 md:mb-0'>
-                      <Image
-                        src={`/images/teachings/${teaching.image}`}
-                        alt=''
-                        fill
-                        sizes='(max-width: 768px) 100vw, min(400px, 40vw)'
-                        className='object-cover'
-                        priority={isLcpImage}
-                      />
-                    </div>
+                    <FullscreenImage
+                      src={`/images/teachings/${teaching.image}`}
+                      alt=''
+                      priority={isLcpImage}
+                      sizes='(max-width: 768px) 100vw, min(400px, 40vw)'
+                      imageClassName='object-cover'
+                    />
                   </div>
                 )}
                 <div className='flex flex-col min-w-0 flex-1'>
