@@ -24,6 +24,7 @@ export default function Home() {
           height={600}
           alt='Christof'
           priority
+          sizes="(max-width: 1024px) 100vw, 50vw"
           style={{ objectFit: 'contain' }}
           className='rounded shadow-2xl block'
         />

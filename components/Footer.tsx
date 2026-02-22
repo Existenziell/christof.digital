@@ -38,9 +38,11 @@ export default function Footer() {
       </div>
 
       <div className='flex flex-wrap items-center justify-center gap-x-2 text-muted'>
-        <span>Made with</span>
-        <HeartIcon className='w-5 h-5 cursor-default -mt-1' />
-        <Link href='/about' className='hover:text-cta transition-all'>by Chris</Link>
+        <Link href='/about' className='hover:text-cta transition-all flex items-center gap-1'>
+          <span>Made with</span>
+          <HeartIcon className='w-5 h-5' />
+          <span>by Chris</span>
+        </Link>
         <span className='text-muted' aria-hidden>|</span>
         <span>Open source</span>
         <span className='text-muted' aria-hidden>•</span>

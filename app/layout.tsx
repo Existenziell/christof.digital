@@ -11,8 +11,8 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = getRootMetadata()
 
-const gotu = Gotu({ weight: '400', subsets: ['latin'], variable: '--font-gotu' })
-const lora = Lora({ weight: ['400', '700'], subsets: ['latin'], variable: '--font-lora' })
+const gotu = Gotu({ weight: '400', subsets: ['latin'], variable: '--font-gotu', display: 'swap' })
+const lora = Lora({ weight: ['400', '700'], subsets: ['latin'], variable: '--font-lora', display: 'swap' })
 
 export default function RootLayout({
   children,

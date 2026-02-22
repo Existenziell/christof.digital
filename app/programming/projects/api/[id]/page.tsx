@@ -49,8 +49,6 @@ export default function ApiDetail() {
                 width={500}
                 height={500}
                 className='rounded block'
-                placeholder="blur"
-                blurDataURL={character.image}
               />
             </div>
             <div>

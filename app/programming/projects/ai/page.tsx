@@ -22,8 +22,6 @@ export default function AI() {
               alt={image.prompt}
               width={800}
               height={800}
-              placeholder="blur"
-              blurDataURL={image.image}
               className='rounded block'
             />
           </div>

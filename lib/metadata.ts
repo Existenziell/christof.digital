@@ -16,22 +16,46 @@ import {
 
 export { SITE_NAME } from '@/lib/constants'
 
-/**
- * Build segment metadata for a page. Use in layout.tsx or page.tsx:
- *   export const metadata = createPageMetadata({ title: 'Contact' })
- */
 export function createPageMetadata({
   title,
   description,
+  openGraph: openGraphOverride,
+  twitter: twitterOverride,
 }: {
   title: string
   description?: string
+  openGraph?: {
+    description?: string
+  }
+  twitter?: {
+    description?: string
+  }
 }): Metadata {
   const fullTitle = title === SITE_NAME ? title : `${title} | ${SITE_NAME}`
-  return {
+  const desc = description ?? fullTitle
+  const base: Metadata = {
     title: fullTitle,
-    description: description ?? fullTitle,
+    description: desc,
   }
+  const defaultOgImage = [{ url: OG_IMAGE_PATH, width: OG_IMAGE_WIDTH, height: OG_IMAGE_HEIGHT, alt: OG_IMAGE_ALT }]
+  if (openGraphOverride) {
+    base.openGraph = {
+      type: 'website',
+      siteName: SITE_NAME,
+      title: fullTitle,
+      description: openGraphOverride.description ?? desc,
+      images: defaultOgImage,
+    }
+  }
+  if (twitterOverride) {
+    base.twitter = {
+      card: 'summary_large_image',
+      title: fullTitle,
+      description: twitterOverride.description ?? desc,
+      images: [OG_IMAGE_PATH],
+    }
+  }
+  return base
 }
 
 /**

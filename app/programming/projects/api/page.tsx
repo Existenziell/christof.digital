@@ -76,8 +76,6 @@ export default function Api() {
                         alt={person.name}
                         width={300}
                         height={300}
-                        placeholder="blur"
-                        blurDataURL={person.image}
                         className='rounded-sm block'
                         style={{ width: '100%', height: 'auto' }}
                       />

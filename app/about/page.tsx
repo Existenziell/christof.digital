@@ -20,6 +20,7 @@ export default function About() {
             alt="Christof"
             width={553}
             height={848}
+            sizes="(max-width: 768px) 100vw, 300px"
             className="rounded shadow-2xl my-8 h-auto w-full max-w-[300px]"
             style={{ height: 'auto' }}
             priority

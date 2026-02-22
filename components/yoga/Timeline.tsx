@@ -41,8 +41,6 @@ export default function Timeline() {
                   height={450}
                   alt={name}
                   priority={index <= 1}
-                  placeholder="blur"
-                  blurDataURL={`/images/timeline/${image}.jpg`}
                   className="w-full h-auto object-cover"
                 />
               </div>
