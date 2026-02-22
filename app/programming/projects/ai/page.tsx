@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { createPageMetadata } from '@/lib/metadata'
 import Image from 'next/image'
-import { ScrollIndicator } from '@/components/ScrollIndicator'
 import { aiImages } from '@/content/aiImages'
 
 export const metadata: Metadata = createPageMetadata({ title: 'AI' })
@@ -9,7 +8,6 @@ export const metadata: Metadata = createPageMetadata({ title: 'AI' })
 export default function AI() {
   return (
     <div className='w-full flex flex-col items-center max-w-7xl mx-auto'>
-      <ScrollIndicator />
       <h1 className='header'>AI</h1>
       <p className='flex flex-col md:flex-row-reverse items-center justify-center w-full md:w-2/3 mb-16'>
         There have recently been an number of AI projects especially in the space of image generation that have absolutely amazed me.

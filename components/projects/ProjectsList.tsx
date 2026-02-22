@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image'
-import TagList from '@/components/TagList'
 import Link from 'next/link'
 import ExternalLink from '@/components/ExternalLink'
 import type { Project, ProjectsListProps } from '@/types'
@@ -30,15 +29,14 @@ function ProjectCardContent({ project, priority }: { project: Project; priority?
           <div className='flex flex-col items-start gap-4'>
             {project.link &&
               (project.external ? (
-                <ExternalLink href={project.link} nofollow className='button-sm'>
+                <ExternalLink href={project.link} nofollow className='button-ghost'>
                   {project.linkText}
                 </ExternalLink>
               ) : (
-                <Link href={project.link} className='button-sm'>
+                <Link href={project.link} className='button-ghost'>
                   {project.linkText}
                 </Link>
               ))}
-            <TagList items={project.tech} />
           </div>
         </div>
       </div>

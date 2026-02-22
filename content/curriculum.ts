@@ -124,6 +124,6 @@ export const curriculum: CurriculumEntry[] = [
     location: 'Hamburg, Germany · Remote',
     desc: 'The space for positive change. Holi is an app that connects existing social apps and digital tools in one home. One codebase for iOS, Android and Web using a fork of the openSource social network Okuna as backend. Beautiful stack, beautiful people.',
     latestProject: 'https://app.holi.social',
-    skills: ['ReactNative', 'NextJS', 'Python', 'Django', 'Expo', 'okuna'],
+    skills: ['ReactNative', 'NextJS', 'Python', 'Django', 'Expo', 'Okuna'],
   },
 ]

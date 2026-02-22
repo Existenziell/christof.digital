@@ -13,8 +13,8 @@ export default function Home() {
           Currently looking for my next gig — ideally in the Bitcoin open source ecosystem. Please reach out if you are looking for a developer with a passion!
         </p>
         <div className='flex flex-wrap gap-4 justify-center lg:justify-end'>
-          <Link href='/programming' className='button-cta min-w-[10rem] text-center'>Programming</Link>
-          <Link href='/teaching' className='button-cta min-w-[10rem] text-center'>Teaching</Link>
+          <Link href='/programming' className='button min-w-[10rem] text-center'>Programming</Link>
+          <Link href='/teaching' className='button min-w-[10rem] text-center'>Teaching</Link>
         </div>
       </div>
       <div className='lg:w-1/2 mt-8 lg:mt-0 align-top block'>

@@ -10,7 +10,9 @@ export default function Teaching() {
         <div className='w-full'>
           <h1 className='header'>Teaching</h1>
           <p className='intro-text'>
-            I have always enjoyed teaching and sharing my knowledge with others. I just don&apos;t seem to get enough of the delight to see students&apos; eyes light up when they have one of these incredible &quot;aha&quot; moments.
+            There&apos;s something about teaching I can&apos;t get enough of — that moment when it clicks and you see it on their face. 
+            Those &quot;aha&quot; moments are what keep me coming back.
+            Over the years I have taught a variety of subjects, please find a selection below.
           </p>
         </div>
       </section>
@@ -41,11 +43,11 @@ export default function Teaching() {
                   <p className='body-text text-base flex-grow'>{teaching.description}</p>
                   {teaching.link &&
                     (teaching.external ? (
-                      <ExternalLink href={teaching.link} nofollow className='button-sm'>
+                      <ExternalLink href={teaching.link} nofollow className='button-ghost'>
                         {teaching.linkText}
                       </ExternalLink>
                     ) : (
-                      <Link href={teaching.link} className='button-sm'>
+                      <Link href={teaching.link} className='button-ghost'>
                         {teaching.linkText}
                       </Link>
                     ))}

@@ -1,4 +1,4 @@
-import type { ReactNode, SVGProps } from 'react'
+import type { SVGProps } from 'react'
 
 /** Nav */
 export interface MainLink {
@@ -31,7 +31,7 @@ export interface Education {
   date: string
   duration: string
   image: string
-  addon?: string
+  certificates?: { name: string; date: string }[]
 }
 
 export interface CurriculumEntry {
@@ -128,11 +128,6 @@ export interface ProjectsListProps {
 
 export interface IconProps extends SVGProps<SVGSVGElement> {
   className?: string
-}
-
-export interface ScrollIndicatorSvgProps {
-  className?: string
-  children: ReactNode
 }
 
 export interface MobileNavProps {

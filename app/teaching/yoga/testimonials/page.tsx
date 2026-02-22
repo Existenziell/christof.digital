@@ -11,9 +11,6 @@ export const metadata: Metadata = {
 export default function YogaTestimonialsPage() {
   return (
     <div className="flex flex-col items-center w-full">
-      <p className="body-text mb-4 max-w-sm text-center">
-        Let&apos;s see how students described their experience with shiftHappens Yoga:
-      </p>
       <div className="card p-0 overflow-hidden rounded-lg max-w-[500px] mb-8">
         <Image
           src="/images/testimonial.jpg"

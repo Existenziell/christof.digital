@@ -41,7 +41,7 @@ Theme vars generated from lib/theme.js (run: node scripts/generate-theme-css.js)
   }
 
   .intro-text {
-    @apply body-text mx-auto max-w-xl text-center mb-8;
+    @apply body-text mx-auto max-w-xl text-center mb-8 leading-relaxed;
   }
 
   /* Cards – unified surface and theme text */
@@ -138,7 +138,7 @@ input[type='radio']:checked:after {
 }
 
 .desktop-nav .nav:hover {
-  @apply border-b-2 border-t-2 border-t-transparent border-cta border-spacing-2;
+  @apply border-b-2 border-t-2 border-t-transparent border-cta border-spacing-2 text-primary;
 }
 
 .desktop-nav .active-nav {
@@ -163,28 +163,33 @@ input[type='radio']:checked:after {
 
 
 /* ==========================================================================
-	Forms 
+	Forms – buttons (light + dark theme, clear hover/focus)
 	========================================================================== */
 
 .button {
-  @apply px-8 py-4 bg-brand-dark text-brand dark:bg-brand dark:text-brand-dark rounded shadow-lg hover:shadow hover:cursor-pointer dark:hover:text-cta transition-all;
+  @apply inline-flex items-center justify-center px-6 py-3 rounded font-medium shadow-md
+    bg-cta text-mauve-1
+    hover:shadow-lg hover:brightness-110 hover:scale-[1.02]
+    focus:outline-none focus-visible:ring-2 focus-visible:ring-cta focus-visible:ring-offset-2 focus-visible:ring-offset-surface
+    transition-all cursor-pointer;
 }
 
 .button-sm {
-  @apply w-auto px-4 py-2 text-sm max-w-max bg-brand-dark text-brand dark:bg-brand dark:text-brand-dark rounded shadow-lg hover:shadow hover:cursor-pointer hover:text-cta dark:hover:text-cta transition-all;
+  @apply button px-4 py-2 text-sm w-auto max-w-max;
 }
 
-.button-cta {
-  @apply inline-flex items-center justify-center px-6 py-3 bg-cta text-mauve-1 rounded cursor-pointer transition-all shadow-md hover:shadow-lg hover:brightness-105 dark:shadow-lg dark:hover:shadow-xl dark:hover:brightness-110 font-bold;
-}
-
-.button-margin-off {
-  @apply px-8 py-4 bg-brand-dark text-brand dark:bg-brand dark:text-brand-dark rounded shadow-lg hover:shadow hover:cursor-pointer hover:text-cta dark:hover:text-cta transition-all;
+.button-ghost {
+  @apply inline-flex items-center justify-center px-4 py-2 text-sm w-auto max-w-max rounded font-medium
+    bg-transparent text-cta border-2 border-cta
+    hover:bg-cta hover:text-mauve-1 hover:shadow-md
+    focus:outline-none focus-visible:ring-2 focus-visible:ring-cta focus-visible:ring-offset-2 focus-visible:ring-offset-surface
+    transition-all cursor-pointer;
 }
 
 .button:disabled,
-.button-sm:disabled {
-  @apply cursor-not-allowed hover:text-brand dark:hover:text-brand-dark hover:shadow-lg;
+.button-sm:disabled,
+.button-ghost:disabled {
+  @apply cursor-not-allowed opacity-60 pointer-events-none;
 }
 
 
@@ -202,86 +207,9 @@ input[type='radio']:checked:after {
 
 
 /* ==========================================================================
-	SVGs 
+	Mapbox 
 	========================================================================== */
 
-svg {
-  cursor: pointer;
-}
-
-#darkGroup {
-  fill: var(--dark-svg-color);
-}
-
-#lightGroup {
-  fill: var(--light-svg-color);
-}
-
-#dark1,
-#light1,
-#dark2 {
-  transition: all 1s ease;
-}
-
-#dark2 {
-  transform: translateX(-100%);
-}
-
-svg:hover #light1 {
-  transform: translateX(20%);
-}
-
-svg:hover #dark1 {
-  transform: translateX(40%);
-  opacity: 0;
-}
-
-svg:hover #dark2 {
-  transform: translateX(0%);
-}
-
-/* Phone */
-#skeleton {
-  animation: fadeInUp 1s;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20%);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-#bolt g {
-  opacity: 0;
-  animation: dropIn 8s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-  animation-delay: calc(var(--order) * 200ms);
-  animation-iteration-count: infinite;
-}
-
-@keyframes dropIn {
-  20% {
-    opacity: 0;
-    transform: translateY(-20%);
-  }
-
-  30%,
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Yoga map popups: hide Mapbox default wrapper so only our styled box shows.
-   Mapbox injects .mapboxgl-popup-content with its own styles (mapbox-gl.css);
-   override with higher specificity and !important so a single tooltip is visible. */
 .mapboxgl-popup .mapboxgl-popup-content {
   padding: 0 !important;
   margin: 0 !important;
@@ -295,12 +223,10 @@ svg:hover #dark2 {
   display: none !important;
 }
 
-/* Remove any outer popup container background */
 .mapboxgl-popup {
   background: transparent !important;
 }
 
-/* Yoga map popups: theme-driven colours */
 .yoga-map-popup {
   position: relative;
   min-width: 360px;
@@ -322,7 +248,6 @@ svg:hover #dark2 {
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
 }
 
-/* Custom close button: absolute top-right corner of the card */
 .yoga-popup-close {
   position: absolute !important;
   top: 0 !important;

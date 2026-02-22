@@ -6,7 +6,6 @@ import Sorting from '@/components/Sorting'
 import TagList from '@/components/TagList'
 import Image from 'next/image'
 import { useState } from 'react'
-import { ScrollIndicator } from '@/components/ScrollIndicator'
 import { DownloadMarkdownIcon } from '@/components/Icons'
 import { curriculum as cv } from '@/content/curriculum'
 import { education } from '@/content/education'
@@ -18,7 +17,6 @@ export default function Curriculum() {
 
   return (
     <div>
-      <ScrollIndicator />
       <div className="w-full flex justify-center mb-8">
         <ul className="flex">
           <li className="mr-2">
@@ -42,35 +40,34 @@ export default function Curriculum() {
             {data.map((job, index) => {
               const { title, company, companyUrl, companyType, date, duration, location, desc, latestProject, skills } = job
               return (
-                <li key={index} className='card card--large w-full px-4 sm:px-8 pt-12 pb-8 relative text-sm'>
+                <li key={index} className='card card--large w-full px-4 sm:px-8 pt-12 pb-8 relative text-sm leading-relaxed'>
                   <p className='card-date-badge'>{date}</p>
-                  <p className='text-2xl mb-6 text-center'>{title}</p>
-                  <p className='mb-1'>Company:{' '}
+                  <p className='text-lg md:text-2xl mb-2 md:text-center'>{title}</p>
+                  <p>Company:{' '}
                     {companyUrl ? (
                       <ExternalLink href={companyUrl} nofollow className='underline hover:text-cta hover:no-underline'>{company}</ExternalLink>
                     ) : (
                       <span>{company}</span>
                     )}
                   </p>
-                  <p className='mb-1'>Location: <span>{location}</span></p>
-                  <p className='mb-1'>Type: <span>{companyType}</span></p>
+                  <p>{location}</p>
+                  <p>{companyType}</p>
                   {duration && <p>Duration: <span>{duration}</span></p>}
-                  <p dangerouslySetInnerHTML={{ __html: desc }} className='text-base my-4 bg-surface-muted text-primary rounded-sm px-6 py-4 max-w-full' />
-                  <div className='mb-2 flex items-center gap-2'>
-                    <span>Skills/Tools:</span>
-                    <TagList items={skills} />
-                  </div>
                   <div className='overflow-hidden'>
                     {!!latestProject && (
-                      <>
+                      <p>
                         <span>Last project:{' '}</span>
                         {latestProject.startsWith('http') ? (
                           <ExternalLink href={latestProject} nofollow className='underline hover:text-cta hover:no-underline'>{latestProject}</ExternalLink>
                         ) : (
                           <span>{latestProject}</span>
                         )}
-                      </>
+                      </p>
                     )}
+                  </div>
+                  <p dangerouslySetInnerHTML={{ __html: desc }} className='text-base my-4 border border-mauve-4 dark:border-mauve-8 text-primary rounded-sm px-6 py-4 max-w-full' />
+                  <div className='flex items-center gap-2'>
+                    <TagList items={skills} />
                   </div>
                 </li>
               )
@@ -81,21 +78,32 @@ export default function Curriculum() {
       {view === 'education' &&
         <div className='w-full'>
           {education.map((e, i) => {
-            const { title, school, location, link, date, duration, image, addon = '' } = e
+            const { title, school, location, link, date, duration, image, certificates = [] } = e
             return (
               <div key={title} className='card card--large relative text-sm text-left mb-8'>
                 <p className='card-date-badge'>{date}</p>
-                <p className='text-2xl mb-6 text-center pt-2'>{title}</p>
-                <p className='mb-1'>School: <ExternalLink href={link} nofollow className='underline hover:text-cta hover:no-underline'>{school}</ExternalLink></p>
-                <p className='mb-1'>Location: <span>{location}</span></p>
-                <p className='mb-4'>Duration: <span>{duration}</span></p>
-                <div className='flex items-center justify-start gap-4 mt-8'>
+                <div className='flex gap-12 items-start pt-2'>
                   {image && (
-                    <div>
+                    <div className='flex-shrink-0'>
                       <Image src={image} width={100} height={100} alt={title} className={i === 0 ? 'invert dark:invert-0' : ''} />
                     </div>
                   )}
-                  {addon && <p dangerouslySetInnerHTML={{ __html: addon }} />}
+                  <div className='flex-1 min-w-0'>
+                    <p className='text-2xl mb-6'>{title}</p>
+                    <ExternalLink href={link} nofollow className='underline hover:text-cta hover:no-underline'>{school}</ExternalLink>
+                    <p>{location}</p>
+                    <p className='mb-4'>Duration: <span>{duration}</span></p>
+                    {certificates.length > 0 &&
+                      <>
+                        <p className='font-bold mb-1 mt-4'>Additional Certificates:</p>
+                        <ul className='leading-relaxed'>
+                          {certificates.map((certificate, index) => (
+                            <li key={index}>{certificate.name} ({certificate.date})</li>
+                          ))}
+                        </ul>
+                      </>
+                    }
+                  </div>
                 </div>
               </div>
             )

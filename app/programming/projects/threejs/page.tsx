@@ -325,7 +325,7 @@ export default function ThreeJS() {
               {score >= 35 && 'You are unbelievable!'}
             </p>
             <p className='hidden sm:block text-sm mt-4'>To restart the game press R</p>
-            <button className='button-margin-off sm:hidden mt-4' type="button" onClick={() => window.location.reload()}>Play again</button>
+            <button className='button-sm mt-4' type="button" onClick={() => window.location.reload()}>Play again</button>
           </div>
         </div>
         <div className='absolute top-8 right-8 text-6xl text-white'>{score}</div>

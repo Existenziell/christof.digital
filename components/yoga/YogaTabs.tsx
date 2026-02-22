@@ -26,10 +26,10 @@ export default function YogaTabs() {
           <Link
             key={tab.url}
             href={tab.url}
-            className={`px-4 py-2 text-base font-medium border-b-2 -mb-0.5 transition-colors hover:text-cta ${
+            className={`px-4 py-2 text-base font-medium border-b-2 -mb-0.5 transition-[color,border-color] duration-200 ease-out hover:text-primary ${
               isActive
-                ? 'font-bold text-cta border-cta'
-                : 'border-transparent text-muted'
+                ? 'font-bold text-primary border-cta'
+                : 'border-transparent text-muted hover:border-cta'
             }`}
             aria-current={isActive ? 'page' : undefined}
           >

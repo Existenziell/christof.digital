@@ -3,7 +3,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Sorting from '@/components/Sorting'
-import { ScrollIndicator } from '@/components/ScrollIndicator'
 import { HeartIcon } from '@/components/Icons'
 import { timeline } from '@/content/timeline'
 import type { TimelineFeature } from '@/types'
@@ -14,10 +13,6 @@ export default function Timeline() {
 
   return (
     <section className="timeline">
-      <p className="intro-text">
-        The following timeline puts all the different places/learnings/teachings I was opportune to experience during my journey in chronological order.</p>
-
-      <ScrollIndicator />
       <div className="mx-auto w-max mt-4">
         <Sorting sortBy={sortBy} toggleSortBy={toggleSortBy} />
       </div>

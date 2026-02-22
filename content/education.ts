@@ -9,7 +9,20 @@ export const education: Education[] = [
     date: '2001 - 2006',
     duration: '6 years',
     image: '/icons/education/hka.svg',
-    addon: `<p className='font-bold mb-1 mt-4'>Additional Certificates:</p><ul className='leading-relaxed'><li>Certificate in Business and Technical French (2003)</li><li>Foundation Certificate in IT Service Management ITIL v3 (2007)</li><li>Google Advertising Professional Certificate (2007)</li></ul>`,
+    certificates: [
+      {
+        name: 'Certificate in Business and Technical French',
+        date: '2003',
+      },
+      {
+        name: 'Foundation Certificate in IT Service Management ITIL v3',
+        date: '2007',
+      },
+      {
+        name: 'Google Advertising Professional Certificate',
+        date: '2007',
+      },
+    ],
   },
   {
     title: 'Yoga Instructor Certification - Level I',

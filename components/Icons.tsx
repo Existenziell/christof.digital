@@ -1,5 +1,5 @@
 import { cn } from '@/lib/cn'
-import type { IconProps, ScrollIndicatorSvgProps } from '@/types'
+import type { IconProps } from '@/types'
 
 // ============================================================================
 // Chevrons / Directional Navigation
@@ -561,28 +561,6 @@ export function SunIcon({ className, ...props }: IconProps) {
   )
 }
 
-// ============================================================================
-// Scroll indicator (path data for framer-motion animation)
-// ============================================================================
-
-export const SCROLL_INDICATOR_CIRCLE_D = 'M 0, 20 a 20, 20 0 1,0 40,0 a 20, 20 0 1,0 -40,0'
-export const SCROLL_INDICATOR_CHECK_D = 'M14,26 L 22,33 L 35,16'
-
-/** SVG wrapper for scroll indicator; pass animated path children from ScrollIndicator. */
-export function ScrollIndicatorSvg({
-  className,
-  children,
-}: ScrollIndicatorSvgProps) {
-  return (
-    <svg
-      className={cn('w-10 md:w-12', className)}
-      viewBox="0 0 60 60"
-      aria-hidden
-    >
-      {children}
-    </svg>
-  )
-}
 
 // ============================================================================
 // Misc (heart, play circle)
